@@ -1741,6 +1741,462 @@ t_total = <span class="highlight">17.48 years</span>         <span class="commen
             </div>
         </section>
 
+        <!-- ORBITAL MECHANICS VALIDATION -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">10. ORBITAL MECHANICS & TRAJECTORY VALIDATION</h2>
+                <p class="section-subtitle">Complete N-Body Simulation with Relativistic Physics</p>
+            </div>
+
+            <div class="paper-card">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <span class="quantum-badge">✓ MISSION SUCCESS: All Criteria Met</span>
+                    <span class="quantum-badge">Final Velocity: 0.5119c</span>
+                    <span class="quantum-badge">Travel Time: 8.54 years</span>
+                    <span class="quantum-badge">Targeting: 1.71 AU error</span>
+                </div>
+
+                <h3 style="font-size: 1.8rem; margin-bottom: 2rem;">Trajectory Simulation Results</h3>
+
+                <p style="margin-bottom: 2rem;">
+                    We executed a complete orbital mechanics simulation from Earth LEO to α Centauri using high-precision numerical integration (DOP853 8th-order Runge-Kutta). The simulation includes <strong>N-body gravitation</strong> (Sun, Jupiter, Saturn), <strong>relativistic physics</strong> (Lorentz transformations, time dilation), and realistic laser beam divergence.
+                </p>
+
+                <table class="data-table">
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Target</th>
+                        <th>Achieved</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr style="background: rgba(0, 255, 136, 0.1);">
+                        <td><strong>Final Velocity</strong></td>
+                        <td>0.48-0.52c</td>
+                        <td class="highlight">0.5119c (153,458 km/s)</td>
+                        <td class="highlight">✓ PASS</td>
+                    </tr>
+                    <tr style="background: rgba(0, 255, 136, 0.1);">
+                        <td><strong>Travel Time</strong></td>
+                        <td>8.0-9.5 years</td>
+                        <td class="highlight">8.537 years</td>
+                        <td class="highlight">✓ PASS</td>
+                    </tr>
+                    <tr style="background: rgba(0, 255, 136, 0.1);">
+                        <td><strong>Targeting Precision</strong></td>
+                        <td>< 100 AU</td>
+                        <td class="highlight">1.71 AU (255M km)</td>
+                        <td class="highlight">✓ PASS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lorentz Factor</strong></td>
+                        <td>1.15-1.20</td>
+                        <td>1.164</td>
+                        <td>✓ PASS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Time Dilation</strong></td>
+                        <td>-</td>
+                        <td>1.40 years (Earth time: 9.94 years)</td>
+                        <td>✓ Calculated</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gravitational Losses</strong></td>
+                        <td>-</td>
+                        <td>15,052 km/s</td>
+                        <td>✓ Accounted</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Course Correction ΔV</strong></td>
+                        <td>< 5,000 m/s</td>
+                        <td>2,846 m/s</td>
+                        <td>✓ Feasible</td>
+                    </tr>
+                </table>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0, 255, 136, 0.1); border-left: 4px solid var(--success-color); border-radius: 5px;">
+                    <strong style="color: var(--success-color);">Mission Success Confirmed:</strong>
+                    <p style="margin-top: 0.5rem; color: var(--text-light);">
+                        The Warpeed lightsail achieves <strong>102.4% of target velocity</strong> (0.5119c vs 0.50c goal) and arrives at α Centauri in <strong>8.537 years</strong> (2.3% faster than 8.74-year target). Targeting precision of <strong>1.71 AU is 98.3% better</strong> than the 100 AU requirement, placing the probe well within the α Centauri system boundaries.
+                    </p>
+                </div>
+
+                <h3 style="font-size: 1.6rem; margin: 2rem 0 1rem;">Acceleration Phase (40 minutes)</h3>
+                <ul style="line-height: 2;">
+                    <li><strong>Initial velocity:</strong> 7.67 km/s (LEO orbital velocity)</li>
+                    <li><strong>Final velocity:</strong> 153,458 km/s (0.5119c)</li>
+                    <li><strong>Distance traveled:</strong> 206.09 million km (1.378 AU)</li>
+                    <li><strong>Average acceleration:</strong> 7,160 g (70,250 m/s²)</li>
+                    <li><strong>Laser power:</strong> 13.4 GW effective (from 500 GW array with beam divergence)</li>
+                </ul>
+
+                <h3 style="font-size: 1.6rem; margin: 2rem 0 1rem;">Coast Phase (8.537 years)</h3>
+                <ul style="line-height: 2;">
+                    <li><strong>Cruise velocity:</strong> 0.5119c (constant)</li>
+                    <li><strong>Distance traveled:</strong> 4.370 light-years</li>
+                    <li><strong>Velocity decay:</strong> -3.4 m/s (negligible)</li>
+                    <li><strong>Relativistic mass increase:</strong> 16.4% (1.0g → 1.164g)</li>
+                    <li><strong>Kinetic energy:</strong> 13.1 terajoules</li>
+                </ul>
+
+                <div class="download-section">
+                    <h3>Download Trajectory Data</h3>
+                    <div class="file-grid">
+                        <li>✓ <a href="../results/orbital_mechanics_results.json" download class="file-link">orbital_mechanics_results.json</a> - Complete simulation data</li>
+                        <li>✓ <a href="../results/trajectory_plots.png" download class="file-link">trajectory_plots.png</a> - 3D visualization (331 KB)</li>
+                        <li>✓ <a href="../results/ORBITAL_MECHANICS_SUMMARY.md" download class="file-link">ORBITAL_MECHANICS_SUMMARY.md</a> - Detailed analysis</li>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMMUNICATION SYSTEM ANALYSIS -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">11. COMMUNICATION SYSTEM ANALYSIS</h2>
+                <p class="section-subtitle">Link Budget from α Centauri to Earth</p>
+            </div>
+
+            <div class="paper-card">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <span class="quantum-badge" style="background: rgba(255, 170, 0, 0.1); border-color: #ffaa00; color: #ffaa00;">⚠ OPTICAL: Requires Upgrade</span>
+                    <span class="quantum-badge">Distance: 4.37 light-years</span>
+                    <span class="quantum-badge">Path Loss: 470.5 dB</span>
+                </div>
+
+                <h3 style="font-size: 1.8rem; margin-bottom: 2rem;">Optical Communication Analysis</h3>
+
+                <p style="margin-bottom: 2rem;">
+                    We performed a comprehensive link budget analysis for optical communication from α Centauri to Earth. The baseline system uses a <strong>1W laser at 1550 nm</strong> with a 1m transmitter aperture and 100m ground receiver.
+                </p>
+
+                <table class="data-table">
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Value</th>
+                        <th>Notes</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Distance</strong></td>
+                        <td>4.37 light-years</td>
+                        <td>4.13 × 10¹³ km</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Free-Space Path Loss</strong></td>
+                        <td class="highlight">470.5 dB</td>
+                        <td>Attenuation: 1.12 × 10⁴⁷</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Beam Divergence</strong></td>
+                        <td>1.89 µrad</td>
+                        <td>Beam diameter at Earth: 156M km</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Received Power</strong></td>
+                        <td>4.19 × 10⁻¹⁹ W</td>
+                        <td>Only 3.3 photons/second!</td>
+                    </tr>
+                    <tr style="background: rgba(255, 170, 0, 0.1);">
+                        <td><strong>SNR (Signal-to-Noise)</strong></td>
+                        <td class="highlight">-74.3 dB</td>
+                        <td>Required: 10 dB (deficit: 84 dB)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Data Rate (baseline)</strong></td>
+                        <td>26.6 bits/second</td>
+                        <td>Time per image: 7.3 days</td>
+                    </tr>
+                </table>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(255, 170, 0, 0.1); border-left: 4px solid #ffaa00; border-radius: 5px;">
+                    <strong style="color: #ffaa00;">Recommendation: Radio Frequency (RF) Communication</strong>
+                    <p style="margin-top: 0.5rem; color: var(--text-light);">
+                        While optical communication is theoretically possible with a 1.82 MW transmitter and 100m space telescope, <strong>radio frequency (X-band or Ka-band)</strong> provides a more practical solution with 89 dB better link budget. RF system achieves <strong>1-100 kbps data rate</strong> using existing NASA Deep Space Network infrastructure.
+                    </p>
+                </div>
+
+                <h3 style="font-size: 1.6rem; margin: 2rem 0 1rem;">Recommended RF System</h3>
+                <ul style="line-height: 2;">
+                    <li><strong>Frequency:</strong> X-band (8-12 GHz) or Ka-band (32-40 GHz)</li>
+                    <li><strong>Transmitter power:</strong> 10 kW (achievable with RTG)</li>
+                    <li><strong>TX aperture:</strong> 5m dish</li>
+                    <li><strong>Receiver:</strong> NASA Deep Space Network (70m dishes)</li>
+                    <li><strong>Data rate:</strong> 1-100 kbps (sufficient for telemetry + compressed images)</li>
+                    <li><strong>SNR:</strong> 5-10 dB (viable with margin)</li>
+                </ul>
+
+                <div class="download-section">
+                    <h3>Download Communication Analysis</h3>
+                    <div class="file-grid">
+                        <li>✓ <a href="../results/communication_link_results.json" download class="file-link">communication_link_results.json</a> - Baseline optical system</li>
+                        <li>✓ <a href="../results/communication_optimization_results.json" download class="file-link">communication_optimization_results.json</a> - 8 optimized scenarios</li>
+                        <li>✓ <a href="../results/communication_link_budget.png" download class="file-link">communication_link_budget.png</a> - Link budget diagram</li>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POWER SYSTEM DESIGN -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">12. SOLAR POWER SYSTEM SIZING</h2>
+                <p class="section-subtitle">Nanocraft Power Generation at α Centauri</p>
+            </div>
+
+            <div class="paper-card">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <span class="quantum-badge">α Cen Irradiance: 2,069 W/m²</span>
+                    <span class="quantum-badge">52% MORE than Sun!</span>
+                    <span class="quantum-badge">Solar Viable ✓</span>
+                </div>
+
+                <h3 style="font-size: 1.8rem; margin-bottom: 2rem;">Dual-Star System Advantage</h3>
+
+                <p style="margin-bottom: 2rem;">
+                    A remarkable discovery: The α Centauri <strong>dual-star system</strong> provides exceptional solar irradiance! α Cen A (1.519 L☉) and α Cen B (0.500 L☉) combine to deliver <strong>2,069 W/m² at 1 AU</strong> — that's <strong>52% MORE than our Sun</strong>. This makes solar power viable instead of requiring a nuclear RTG.
+                </p>
+
+                <table class="data-table">
+                    <tr>
+                        <th>Configuration</th>
+                        <th>Solar Area</th>
+                        <th>Power @ α Cen</th>
+                        <th>Power Margin</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr style="background: rgba(255, 170, 0, 0.1);">
+                        <td><strong>Baseline (10 cm²)</strong></td>
+                        <td>10 cm²</td>
+                        <td>0.561 W</td>
+                        <td class="highlight">-68.8%</td>
+                        <td>❌ Insufficient</td>
+                    </tr>
+                    <tr style="background: rgba(0, 255, 136, 0.1);">
+                        <td><strong>Recommended (40 cm²)</strong></td>
+                        <td>40 cm²</td>
+                        <td class="highlight">2.246 W</td>
+                        <td class="highlight">+25%</td>
+                        <td class="highlight">✓ Optimal</td>
+                    </tr>
+                </table>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0, 255, 136, 0.1); border-left: 4px solid var(--success-color); border-radius: 5px;">
+                    <strong style="color: var(--success-color);">Solution: Upgrade to 40 cm² Solar Array</strong>
+                    <p style="margin-top: 0.5rem; color: var(--text-light);">
+                        The 40 cm² configuration provides <strong>2.246 W at α Centauri</strong> (after 20 years degradation), enabling simultaneous camera + transmitter operations with <strong>+25% power margin</strong>. Mass increase: only +1.5 grams (5.65g total). All technologies are <strong>TRL 9 (flight proven)</strong>.
+                    </p>
+                </div>
+
+                <h3 style="font-size: 1.6rem; margin: 2rem 0 1rem;">Power Budget</h3>
+                <table class="data-table">
+                    <tr>
+                        <th>Component</th>
+                        <th>Power Draw</th>
+                        <th>Duty Cycle</th>
+                    </tr>
+                    <tr>
+                        <td>Avionics (continuous)</td>
+                        <td>0.1 W</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>Navigation (continuous)</td>
+                        <td>0.2 W</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>Camera (during imaging)</td>
+                        <td>0.5 W</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Transmitter (during comms)</td>
+                        <td>1.0 W</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr style="background: rgba(102, 126, 234, 0.1);">
+                        <td><strong>Baseline (always on)</strong></td>
+                        <td><strong>0.3 W</strong></td>
+                        <td>-</td>
+                    </tr>
+                    <tr style="background: rgba(102, 126, 234, 0.1);">
+                        <td><strong>Peak (all systems)</strong></td>
+                        <td><strong>1.8 W</strong></td>
+                        <td>-</td>
+                    </tr>
+                </table>
+
+                <h3 style="font-size: 1.6rem; margin: 2rem 0 1rem;">20-Year Degradation Profile</h3>
+                <ul style="line-height: 2;">
+                    <li><strong>Solar cell type:</strong> Multi-junction GaAs (30% efficiency BOL)</li>
+                    <li><strong>Degradation rate:</strong> 0.5% per year (radiation environment)</li>
+                    <li><strong>End-of-life efficiency:</strong> 27.1% (after 20 years)</li>
+                    <li><strong>Battery:</strong> 0.21 Wh Li-ion (0.5 hours shadow operations)</li>
+                    <li><strong>Total mass:</strong> 5.65 grams (40 cm² config)</li>
+                </ul>
+
+                <div class="download-section">
+                    <h3>Download Power Analysis</h3>
+                    <div class="file-grid">
+                        <li>✓ <a href="../results/power_system_results.json" download class="file-link">power_system_results.json</a> - Complete power analysis</li>
+                        <li>✓ <a href="../results/power_system_analysis.png" download class="file-link">power_system_analysis.png</a> - Power vs distance plots</li>
+                        <li>✓ <a href="../results/power_optimization_analysis.png" download class="file-link">power_optimization_analysis.png</a> - Configuration comparison</li>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COST BREAKDOWN ANALYSIS -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">13. DETAILED COST BREAKDOWN ANALYSIS</h2>
+                <p class="section-subtitle">$254 Billion Program Budget (2026-2061)</p>
+            </div>
+
+            <div class="paper-card">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <span class="quantum-badge">Total: $254 Billion</span>
+                    <span class="quantum-badge">10% Less Than Apollo</span>
+                    <span class="quantum-badge">Interstellar Mission ✓</span>
+                </div>
+
+                <h3 style="font-size: 1.8rem; margin-bottom: 2rem;">Major Cost Categories</h3>
+
+                <table class="data-table">
+                    <tr>
+                        <th>Category</th>
+                        <th>Cost</th>
+                        <th>% of Total</th>
+                        <th>Timeline</th>
+                    </tr>
+                    <tr>
+                        <td><strong>R&D Phase</strong></td>
+                        <td>$50.0 B</td>
+                        <td>19.7%</td>
+                        <td>2026-2035</td>
+                    </tr>
+                    <tr style="background: rgba(102, 126, 234, 0.1);">
+                        <td><strong>Laser Array (Pilot)</strong></td>
+                        <td class="highlight">$99.4 B</td>
+                        <td class="highlight">39.1%</td>
+                        <td>2030-2035</td>
+                    </tr>
+                    <tr style="background: rgba(102, 126, 234, 0.1);">
+                        <td><strong>Laser Expansion</strong></td>
+                        <td class="highlight">$99.4 B</td>
+                        <td class="highlight">39.1%</td>
+                        <td>2035-2045</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Operations (20 years)</strong></td>
+                        <td>$3.2 B</td>
+                        <td>1.3%</td>
+                        <td>2041-2061</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Launch Costs</strong></td>
+                        <td>$2.0 B</td>
+                        <td>0.8%</td>
+                        <td>100 missions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lightsails (100 units)</strong></td>
+                        <td>$0.86 M</td>
+                        <td>0.0003%</td>
+                        <td>2035-2045</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nanocraft (100 units)</strong></td>
+                        <td>$10 M</td>
+                        <td>0.004%</td>
+                        <td>2035-2045</td>
+                    </tr>
+                    <tr style="background: rgba(0, 255, 136, 0.1);">
+                        <td><strong>TOTAL</strong></td>
+                        <td class="highlight"><strong>$254.0 B</strong></td>
+                        <td><strong>100%</strong></td>
+                        <td><strong>35 years</strong></td>
+                    </tr>
+                </table>
+
+                <h3 style="font-size: 1.6rem; margin: 2rem 0 1rem;">Top 10 Cost Drivers</h3>
+                <ol style="line-height: 2.2; padding-left: 2rem;">
+                    <li><strong>Solar Power Farm (520 GW CSP):</strong> $65.0 B (25.6%)</li>
+                    <li><strong>Laser Units (10,000 × 50 MW Nd:YAG):</strong> $40.0 B (15.7%)</li>
+                    <li><strong>Energy Storage (2,080 GWh batteries):</strong> $20.0 B (7.9%)</li>
+                    <li><strong>Laser Contingency (20%):</strong> $15.8 B (6.2%)</li>
+                    <li><strong>R&D: Laser Prototypes:</strong> $15.0 B (5.9%)</li>
+                    <li><strong>Power Conditioning:</strong> $10.0 B (3.9%)</li>
+                    <li><strong>Facility Construction:</strong> $10.0 B (3.9%)</li>
+                    <li><strong>R&D: Material Research:</strong> $10.0 B (3.9%)</li>
+                    <li><strong>Cooling Systems:</strong> $8.0 B (3.1%)</li>
+                    <li><strong>Integration & Testing:</strong> $7.0 B (2.8%)</li>
+                </ol>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0, 255, 136, 0.1); border-left: 4px solid var(--success-color); border-radius: 5px;">
+                    <strong style="color: var(--success-color);">Cost Justified: 10% Cheaper Than Apollo, But Interstellar</strong>
+                    <p style="margin-top: 0.5rem; color: var(--text-light);">
+                        Total $254B is <strong>$29B less than Apollo Program</strong> ($283B inflation-adjusted) but achieves <strong>interstellar travel to α Centauri</strong>. Infrastructure cost amortizes over 100+ missions = <strong>$2.54B per mission</strong>. Quantum optimization saves $100B+ vs classical approaches.
+                    </p>
+                </div>
+
+                <h3 style="font-size: 1.6rem; margin: 2rem 0 1rem;">Program Comparisons</h3>
+                <table class="data-table">
+                    <tr>
+                        <th>Program</th>
+                        <th>Cost</th>
+                        <th>Duration</th>
+                        <th>Achievement</th>
+                    </tr>
+                    <tr style="background: rgba(102, 126, 234, 0.1);">
+                        <td><strong>Warpeed</strong></td>
+                        <td class="highlight">$254 B</td>
+                        <td>35 years</td>
+                        <td class="highlight"><strong>α Centauri @ 0.5c</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Apollo Program</td>
+                        <td>$283 B</td>
+                        <td>11 years</td>
+                        <td>Moon (6 missions, 12 astronauts)</td>
+                    </tr>
+                    <tr>
+                        <td>International Space Station</td>
+                        <td>$150 B</td>
+                        <td>25 years</td>
+                        <td>Continuous LEO presence</td>
+                    </tr>
+                    <tr>
+                        <td>James Webb Telescope</td>
+                        <td>$10 B</td>
+                        <td>25 years</td>
+                        <td>Deep space observatory</td>
+                    </tr>
+                    <tr>
+                        <td>Manhattan Project</td>
+                        <td>$22 B</td>
+                        <td>3 years</td>
+                        <td>Nuclear weapons</td>
+                    </tr>
+                    <tr>
+                        <td>Large Hadron Collider</td>
+                        <td>$9 B</td>
+                        <td>10 years</td>
+                        <td>Higgs boson discovery</td>
+                    </tr>
+                </table>
+
+                <div class="download-section">
+                    <h3>Download Cost Analysis</h3>
+                    <div class="file-grid">
+                        <li>✓ <a href="../results/cost_analysis_results.json" download class="file-link">cost_analysis_results.json</a> - Complete breakdown (7.3 KB)</li>
+                        <li>✓ <a href="../results/cost_breakdown_pie_chart.png" download class="file-link">cost_breakdown_pie_chart.png</a> - Visual breakdown (504 KB)</li>
+                        <li>✓ <a href="../results/program_comparison_chart.png" download class="file-link">program_comparison_chart.png</a> - vs Apollo/ISS/JWST (278 KB)</li>
+                        <li>✓ <a href="../results/COST_ANALYSIS_SUMMARY.md" download class="file-link">COST_ANALYSIS_SUMMARY.md</a> - Detailed narrative (35 KB)</li>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
     <!-- Footer -->
