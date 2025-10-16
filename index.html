@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warpeed | Advanced Materials & Quantum Computing for Space Propulsion</title>
+    <meta name="description" content="Developing quantum-optimized metamaterials for laser propulsion. Near-term revenue from satellite deorbiting and aerospace materials. Long-term: First interstellar probe.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #f093fb;
+            --success-color: #00ff88;
+            --text-light: #e0e0e0;
+            --text-dark: #a0a0a0;
+            --bg-dark: #0a0a0a;
+            --bg-card: #1a1a1a;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background: var(--bg-dark);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+            transition: all 0.3s;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .nav-logo {
+            height: 50px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .nav-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            color: white !important;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 2rem 60px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('lightsail front.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.25;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(10, 10, 10, 0.95) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(0, 255, 136, 0.1);
+            border: 2px solid var(--success-color);
+            color: var(--success-color);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #fff 0%, var(--primary-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .cta-primary {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.5);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 2rem;
+        }
+
+        /* Business Section with Background */
+        #business {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #business::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background-image: url('lasermovingsail.png');
+            background-size: contain;
+            background-position: right center;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        #business .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Revenue Section with Background */
+        #revenue {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #revenue::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background-image: url('material_layer.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            transform: translateY(-50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        #revenue .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Timeline Section with Background */
+        #timeline {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(10,10,10,0.8) 0%, rgba(102,126,234,0.05) 50%, rgba(10,10,10,0.8) 100%);
+        }
+
+        #timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('laser1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.08;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        #timeline .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Business Model Grid */
+        .business-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .business-card {
+            background: var(--bg-card);
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .business-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--accent-color) 100%);
+        }
+
+        .business-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
+            border-color: var(--primary-color);
+        }
+
+        .business-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .business-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .business-revenue {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--success-color);
+            margin: 1rem 0;
+        }
+
+        .business-timeline {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+        }
+
+        .business-description {
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .feature-list li {
+            padding: 0.5rem 0;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            color: var(--success-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 4rem auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary-color) 0%, var(--accent-color) 100%);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: var(--bg-card);
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .timeline-content:hover {
+            border-color: var(--primary-color);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .timeline-year {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-dot {
+            width: 30px;
+            height: 30px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 4px solid var(--bg-dark);
+            z-index: 2;
+        }
+
+        /* Revenue Chart */
+        .revenue-chart {
+            background: var(--bg-card);
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+        }
+
+        .revenue-bars {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 400px;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .revenue-bar {
+            flex: 1;
+            background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 10px 10px 0 0;
+            position: relative;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 1rem 0.5rem;
+        }
+
+        .revenue-bar:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.5);
+        }
+
+        .revenue-bar-label {
+            position: absolute;
+            bottom: -30px;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .revenue-bar-value {
+            font-size: 1rem;
+            font-weight: 800;
+            color: white;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        /* Team Preview */
+        .team-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            background: var(--bg-card);
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: 800;
+            color: white;
+        }
+
+        .team-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-role {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .team-bio {
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Founder Section */
+        .founder-section {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 3rem;
+            align-items: center;
+            padding: 3rem;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 20px;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .founder-photo-home {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.5);
+        }
+
+        .founder-content h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .founder-content .role {
+            font-size: 1.2rem;
+            color: var(--success-color);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .founder-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .founder-photo-home {
+                margin: 0 auto;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-card);
+            border-top: 1px solid rgba(102, 126, 234, 0.2);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .business-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+                align-items: flex-start;
+                padding-left: 60px;
+            }
+
+            .timeline-content {
+                width: 100%;
+            }
+
+            .timeline-dot {
+                left: 30px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .revenue-bars {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <img src="logo.png" alt="Warpeed Logo" class="nav-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <ul class="nav-links">
+                <li><a href="#business">Business</a></li>
+                <li><a href="#revenue">Revenue</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="mission.html">Mission</a></li>
+                <li><a href="#contact" class="nav-cta">Apply Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">🚀 NOW RAISING: $2M SEED ROUND</div>
+
+            <h1>Advanced Materials & Quantum Computing<br>for Space Propulsion</h1>
+
+            <p class="hero-subtitle">
+                Developing quantum-optimized metamaterials for laser propulsion.
+                Generating revenue TODAY from aerospace contracts while building
+                humanity's first interstellar probe.
+            </p>
+
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-value">$250M</div>
+                    <div class="stat-label">Addressable Market (5 years)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">100x</div>
+                    <div class="stat-label">Annual Growth Target</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">$5B</div>
+                    <div class="stat-label">Revenue Target (Year 5)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">2045</div>
+                    <div class="stat-label">First Interstellar Mission</div>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#business" class="cta-button cta-primary">See Business Model</a>
+                <a href="yc-application.html" class="cta-button cta-secondary">YC Application</a>
+                <a href="research.html" class="cta-button cta-secondary">Technical Validation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Model -->
+    <section id="business">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hybrid Business Model</h2>
+                <p class="section-subtitle">
+                    Two revenue streams: Near-term commercial products + long-term interstellar mission.
+                    Both powered by the same core technology: quantum-optimized metamaterials.
+                </p>
+            </div>
+
+            <div class="business-grid">
+                <!-- Stream 1: Materials -->
+                <div class="business-card">
+                    <div class="business-icon">🔬</div>
+                    <h3 class="business-title">Advanced Materials Division</h3>
+                    <div class="business-revenue">$5B by Year 5</div>
+                    <div class="business-timeline">Revenue Stream 1 • Near-term</div>
+                    <p class="business-description">
+                        Manufacturing and licensing quantum-optimized metamaterials for immediate aerospace applications.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Satellite deorbiting systems ($50M market)</li>
+                        <li>CubeSat propulsion modules ($200M market)</li>
+                        <li>Aerospace material licensing (Boeing, Airbus)</li>
+                        <li>Optical coatings for space telescopes</li>
+                        <li>Thermal management systems</li>
+                    </ul>
+                    <div class="business-timeline" style="margin-top: 2rem;">
+                        <strong>Customers:</strong> SpaceX, NASA, ESA, Blue Origin, Boeing, Airbus, Northrop Grumman
+                    </div>
+                </div>
+
+                <!-- Stream 2: Quantum Computing -->
+                <div class="business-card">
+                    <div class="business-icon">⚛️</div>
+                    <h3 class="business-title">Quantum Optimization Services</h3>
+                    <div class="business-revenue">$500M by Year 5</div>
+                    <div class="business-timeline">Revenue Stream 2 • Near-term</div>
+                    <p class="business-description">
+                        Quantum computing consulting and SaaS for aerospace material optimization and mission planning.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Material optimization consulting ($5M/contract)</li>
+                        <li>SaaS platform for aerospace design ($50K/month/client)</li>
+                        <li>IBM Quantum partnership (validated on 133-qubit hardware)</li>
+                        <li>Government contracts (DARPA, NASA)</li>
+                        <li>IP licensing and patents</li>
+                    </ul>
+                    <div class="business-timeline" style="margin-top: 2rem;">
+                        <strong>Customers:</strong> Defense contractors, aerospace primes, research institutions
+                    </div>
+                </div>
+
+                <!-- Stream 3: Interstellar Mission -->
+                <div class="business-card">
+                    <div class="business-icon">🌟</div>
+                    <h3 class="business-title">Interstellar Mission Program</h3>
+                    <div class="business-revenue">$254B by 2045</div>
+                    <div class="business-timeline">Vision • 20-year horizon</div>
+                    <p class="business-description">
+                        First probe to α Centauri. Funded by government consortiums, Breakthrough Initiatives, and mature revenue streams.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Government consortium (NASA, ESA, JAXA, CSA)</li>
+                        <li>Breakthrough Starshot partnership</li>
+                        <li>Commercial payload slots ($10M each)</li>
+                        <li>Media and documentary rights</li>
+                        <li>Technology spinoffs and licensing</li>
+                    </ul>
+                    <div class="business-timeline" style="margin-top: 2rem;">
+                        <strong>Timeline:</strong> Launch 2045 • Arrival 2053 • First images 2061
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Revenue Projection -->
+    <section id="revenue" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Revenue Projection: 100x Annual Growth</h2>
+                <p class="section-subtitle">
+                    Conservative model based on contracts, patents, and manufacturing scale-up.
+                    Path to profitability and interstellar mission funding.
+                </p>
+            </div>
+
+            <div class="revenue-chart">
+                <div class="revenue-bars">
+                    <div class="revenue-bar" style="height: 5%;">
+                        <div class="revenue-bar-value">$500K</div>
+                        <div class="revenue-bar-label">Year 1<br>2026</div>
+                    </div>
+                    <div class="revenue-bar" style="height: 15%;">
+                        <div class="revenue-bar-value">$5M</div>
+                        <div class="revenue-bar-label">Year 2<br>2027</div>
+                    </div>
+                    <div class="revenue-bar" style="height: 35%;">
+                        <div class="revenue-bar-value">$50M</div>
+                        <div class="revenue-bar-label">Year 3<br>2028</div>
+                    </div>
+                    <div class="revenue-bar" style="height: 65%;">
+                        <div class="revenue-bar-value">$500M</div>
+                        <div class="revenue-bar-label">Year 4<br>2029</div>
+                    </div>
+                    <div class="revenue-bar" style="height: 100%;">
+                        <div class="revenue-bar-value">$5B</div>
+                        <div class="revenue-bar-label">Year 5<br>2030</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="business-grid" style="margin-top: 4rem;">
+                <div class="business-card">
+                    <h3 class="business-title">Year 1-2: Seed & Series A</h3>
+                    <div class="business-revenue">$500K → $5M</div>
+                    <ul class="feature-list">
+                        <li>Seed: $2M (YC + angels)</li>
+                        <li>Series A: $15M (Founders Fund, Lux Capital)</li>
+                        <li>NASA NIAC grant: $2M</li>
+                        <li>First 3-5 aerospace contracts</li>
+                        <li>10cm prototype + ground testing</li>
+                        <li>2-3 patents filed</li>
+                    </ul>
+                </div>
+
+                <div class="business-card">
+                    <h3 class="business-title">Year 3-4: Series B & Scale</h3>
+                    <div class="business-revenue">$50M → $500M</div>
+                    <ul class="feature-list">
+                        <li>Series B: $50M (Sequoia, a16z)</li>
+                        <li>20+ commercial contracts</li>
+                        <li>Orbital CubeSat demo mission</li>
+                        <li>Manufacturing facility (Class 10 cleanroom)</li>
+                        <li>Team: 50 → 200 employees</li>
+                        <li>10+ patents granted</li>
+                    </ul>
+                </div>
+
+                <div class="business-card">
+                    <h3 class="business-title">Year 5+: Market Leader</h3>
+                    <div class="business-revenue">$5B+ annually</div>
+                    <ul class="feature-list">
+                        <li>Series C: $200M (Tiger Global, SoftBank)</li>
+                        <li>100+ enterprise customers globally</li>
+                        <li>IPO consideration (2031-2032)</li>
+                        <li>Begin interstellar mission funding</li>
+                        <li>Team: 500+ employees</li>
+                        <li>Dominant position in space propulsion materials</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 20-Year Timeline -->
+    <section id="timeline">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">20-Year Roadmap to α Centauri</h2>
+                <p class="section-subtitle">
+                    From seed funding to interstellar mission. Commercial revenue funds R&D,
+                    government consortiums fund final mission.
+                </p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2026-2027</div>
+                        <h3>Phase 1: Foundation</h3>
+                        <p><strong>Funding:</strong> $17M (Seed + Series A + NIAC grant)</p>
+                        <p><strong>Deliverables:</strong> 10cm × 10cm prototype, 3-5 aerospace contracts, ground-based laser testing (1 MW), first patents</p>
+                        <p><strong>Team:</strong> 15 → 30 employees</p>
+                        <p><strong>Revenue:</strong> $500K → $5M</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2028-2030</div>
+                        <h3>Phase 2: Commercial Traction</h3>
+                        <p><strong>Funding:</strong> $50M Series B</p>
+                        <p><strong>Deliverables:</strong> 1 m² sails, orbital CubeSat demo, manufacturing facility, 20+ contracts, SaaS platform launch</p>
+                        <p><strong>Team:</strong> 30 → 200 employees</p>
+                        <p><strong>Revenue:</strong> $5M → $500M (100x growth)</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2031-2035</div>
+                        <h3>Phase 3: Market Leadership</h3>
+                        <p><strong>Funding:</strong> $200M Series C + IPO ($2B valuation)</p>
+                        <p><strong>Deliverables:</strong> 10 GW laser pilot, lunar orbit test, 100+ enterprise customers, global manufacturing</p>
+                        <p><strong>Team:</strong> 200 → 500 employees</p>
+                        <p><strong>Revenue:</strong> $500M → $5B</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2036-2040</div>
+                        <h3>Phase 4: Interstellar Preparation</h3>
+                        <p><strong>Funding:</strong> $100B (Government consortium: NASA, ESA, JAXA, CSA)</p>
+                        <p><strong>Deliverables:</strong> 100 GW laser array, lunar base construction, full 32 m² lightsail production</p>
+                        <p><strong>Team:</strong> 500 → 2,000 employees</p>
+                        <p><strong>Revenue:</strong> $5B+ annually (sustaining operations)</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2041-2045</div>
+                        <h3>Phase 5: Mission Launch</h3>
+                        <p><strong>Funding:</strong> $154B (additional consortium funding + Breakthrough Initiatives)</p>
+                        <p><strong>Deliverables:</strong> 500 GW lunar laser array complete, 8-stage lightsail system, nanocraft payload (cameras, transmitters)</p>
+                        <p><strong>Launch:</strong> 2045</p>
+                        <p><strong>Mission Duration:</strong> 8.74 years to α Centauri</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2053-2061</div>
+                        <h3>Phase 6: First Contact</h3>
+                        <p><strong>Arrival:</strong> 2053 at α Centauri system</p>
+                        <p><strong>First Images:</strong> 2061 (8.7 year transmission back to Earth)</p>
+                        <p><strong>Legacy:</strong> First close-up images of another star system. Humanity becomes an interstellar species.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Preview -->
+    <section style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">World-Class Team</h2>
+                <p class="section-subtitle">
+                    PhD-level expertise in quantum computing, materials science, and aerospace engineering.
+                    Combined 50+ years experience from NASA, SpaceX, IBM, and leading research institutions.
+                </p>
+            </div>
+
+            <div class="team-preview">
+                <div class="team-card">
+                    <div class="team-avatar">HJ</div>
+                    <div class="team-name">Heinz Jungbluth</div>
+                    <div class="team-role">CEO & Co-Founder</div>
+                    <p class="team-bio">
+                        Quantum computing researcher. Former IBM Quantum contributor.
+                        Led optimization of lightsail design validated on 133-qubit hardware.
+                    </p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">TBH</div>
+                    <div class="team-name">To Be Hired</div>
+                    <div class="team-role">CTO & Co-Founder</div>
+                    <p class="team-bio">
+                        Target: PhD Materials Science or Aerospace Engineering.
+                        Ex-NASA JPL/SpaceX preferred. Expert in metamaterials and laser propulsion.
+                    </p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">TBH</div>
+                    <div class="team-name">To Be Hired</div>
+                    <div class="team-role">Chief Scientist</div>
+                    <p class="team-bio">
+                        Target: PhD Physics with quantum computing expertise.
+                        Published researcher in laser propulsion or optical materials.
+                    </p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">TBH</div>
+                    <div class="team-name">To Be Hired</div>
+                    <div class="team-role">VP Business Development</div>
+                    <p class="team-bio">
+                        Target: Aerospace industry veteran. 10+ years selling to
+                        government contractors. Existing relationships with NASA, ESA, primes.
+                    </p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="team.html" class="cta-button cta-primary">View Full Team & Advisors</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <!-- Founder Section -->
+    <section style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Who's Building This</h2>
+                <p class="section-subtitle">
+                    Led by quantum computing researcher with validated technical results on IBM's 133-qubit hardware
+                </p>
+            </div>
+
+            <div class="founder-section">
+                <img src="heinz-photo.jpg" alt="Heinz Jungbluth Ganoza" class="founder-photo-home">
+                <div class="founder-content">
+                    <h3>Heinz Jungbluth Ganoza</h3>
+                    <div class="role">Founder & CEO</div>
+                    <p style="color: var(--text-dark); line-height: 1.8; margin-bottom: 1.5rem;">
+                        Quantum computing researcher focused on advanced materials for space propulsion.
+                        Led optimization and validation on IBM Torino (133-qubit quantum processor), testing
+                        8,557 fabrication scenarios with 512,000 GPU configurations.
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <div style="font-size: 1.8rem; font-weight: 800; color: var(--primary-color);">512K</div>
+                            <div style="font-size: 0.9rem; color: var(--text-dark);">GPU Configs Tested</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 1.8rem; font-weight: 800; color: var(--primary-color);">8,557</div>
+                            <div style="font-size: 0.9rem; color: var(--text-dark);">Quantum Scenarios</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 1.8rem; font-weight: 800; color: var(--primary-color);">85.87%</div>
+                            <div style="font-size: 0.9rem; color: var(--text-dark);">Manufacturability</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 1.8rem; font-weight: 800; color: var(--primary-color);">100%</div>
+                            <div style="font-size: 0.9rem; color: var(--text-dark);">Success Rate</div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="https://www.linkedin.com/in/heinzjungbluthganoza" target="_blank" style="color: var(--primary-color); text-decoration: none; font-weight: 600; margin-right: 2rem;">
+                            🔗 LinkedIn
+                        </a>
+                        <a href="team.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">
+                            👥 Full Team
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Join the Mission</h2>
+                <p class="section-subtitle">
+                    We're raising $2M seed round to build prototypes and secure first commercial contracts.
+                    Investors, partners, and team members welcome.
+                </p>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="yc-application.html" class="cta-button cta-primary">YC Application</a>
+                <a href="niac-application.html" class="cta-button cta-primary">NASA NIAC Proposal</a>
+                <a href="breakthrough-pitch.html" class="cta-button cta-primary">Breakthrough Initiatives</a>
+                <a href="mailto:invest@warpeed.space" class="cta-button cta-secondary">Investor Inquiry</a>
+                <a href="team.html#careers" class="cta-button cta-secondary">Join Our Team</a>
+            </div>
+
+            <div style="margin-top: 4rem; max-width: 800px; margin-left: auto; margin-right: auto; padding: 2rem; background: rgba(255,255,255,0.03); border-radius: 20px; border: 1px solid rgba(102, 126, 234, 0.3);">
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem; text-align: center;">Contact Information</h3>
+                <p style="text-align: center; color: var(--text-dark); margin-bottom: 1.5rem;">
+                    <strong>Starshot Dynamics Inc.</strong> (DBA: Warpeed)<br>
+                    Delaware C-Corp • Founded 2025
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: center;">
+                    <div>
+                        <strong style="color: var(--primary-color);">General</strong><br>
+                        <a href="mailto:info@warpeed.space">info@warpeed.space</a>
+                    </div>
+                    <div>
+                        <strong style="color: var(--primary-color);">Investors</strong><br>
+                        <a href="mailto:invest@warpeed.space">invest@warpeed.space</a>
+                    </div>
+                    <div>
+                        <strong style="color: var(--primary-color);">Careers</strong><br>
+                        <a href="mailto:careers@warpeed.space">careers@warpeed.space</a>
+                    </div>
+                    <div>
+                        <strong style="color: var(--primary-color);">Press</strong><br>
+                        <a href="mailto:press@warpeed.space">press@warpeed.space</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="margin-bottom: 1rem; font-size: 1.2rem;">
+                <strong>Warpeed</strong> | Advanced Materials & Quantum Computing for Space
+            </p>
+            <p style="color: var(--text-dark); margin-bottom: 1rem;">
+                <a href="index.html">Home</a> •
+                <a href="mission.html">20-Year Mission</a> •
+                <a href="research.html">Research</a> •
+                <a href="team.html">Team</a> •
+                <a href="yc-application.html">YC Application</a>
+            </p>
+            <p style="color: var(--text-dark); font-size: 0.9rem; margin-bottom: 1rem;">
+                Quantum-validated on IBM Torino (133 qubits) • GPU-optimized on NVIDIA A100<br>
+                512,000 configurations tested • 8,557 scenarios validated • 85.87% manufacturability confirmed
+            </p>
+            <p style="margin-top: 2rem; color: #555;">
+                © 2025 Starshot Dynamics Inc. (DBA: Warpeed) • All rights reserved.<br>
+                Delaware C-Corp • Patents Pending
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.business-card, .timeline-item, .team-card, .stat-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

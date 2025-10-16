@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA NIAC Application | Warpeed</title>
+    <meta name="description" content="NASA Innovative Advanced Concepts application for quantum-optimized lightsail propulsion system.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #f093fb;
+            --success-color: #00ff88;
+            --text-light: #e0e0e0;
+            --text-dark: #a0a0a0;
+            --bg-dark: #0a0a0a;
+            --bg-card: #1a1a1a;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text-light);
+            background: var(--bg-dark);
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .nav-logo {
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section with Background */
+        .niac-hero {
+            position: relative;
+            padding: 120px 2rem 40px;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(102, 126, 234, 0.15) 0%, rgba(10,10,10,1) 100%);
+        }
+
+        .niac-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('laser1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .niac-hero h1, .niac-hero .subtitle {
+            position: relative;
+            z-index: 2;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff 0%, var(--primary-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 3rem;
+        }
+
+        .section {
+            background: var(--bg-card);
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.3);
+            padding-bottom: 0.5rem;
+        }
+
+        .section-content {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .section-content strong {
+            color: var(--success-color);
+        }
+
+        .section-content ul {
+            margin: 1rem 0 1rem 2rem;
+            line-height: 2;
+        }
+
+        .highlight-box {
+            background: rgba(102, 126, 234, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 5px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .data-table th {
+            background: rgba(102, 126, 234, 0.2);
+            padding: 1rem;
+            text-align: left;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .data-table td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .data-table tr:hover {
+            background: rgba(102, 126, 234, 0.05);
+        }
+
+        /* Principal Investigator Section */
+        .pi-section {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            padding: 2.5rem;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 15px;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            margin: 2rem 0;
+        }
+
+        .pi-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+            box-shadow: 0 5px 30px rgba(102, 126, 234, 0.5);
+            flex-shrink: 0;
+        }
+
+        .pi-info h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .pi-info .pi-title {
+            font-size: 1.2rem;
+            color: var(--success-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .pi-info ul {
+            margin-top: 1rem;
+            line-height: 2;
+            color: var(--text-light);
+        }
+
+        footer {
+            background: var(--bg-card);
+            border-top: 1px solid rgba(102, 126, 234, 0.2);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <img src="logo.png" alt="Warpeed Logo" class="nav-logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="mission.html">Mission</a></li>
+                <li><a href="yc-application.html">YC Application</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="niac-hero">
+        <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
+            <h1>NASA NIAC Phase I Proposal</h1>
+            <p class="subtitle">Quantum-Optimized Lightsail Propulsion for Rapid Interstellar Probes</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2 class="section-title">1. Executive Summary</h2>
+            <div class="section-content">
+                <p>
+                    We propose a quantum computing-optimized lightsail propulsion system capable of reaching α Centauri in <strong>8.74 years</strong> at <strong>0.5c velocity</strong>. This represents a <strong>2.4× improvement</strong> over existing Breakthrough Starshot proposals while reducing total mission cost from $500B to <strong>$254B</strong>.
+                </p>
+
+                <div class="highlight-box">
+                    <strong>Key Innovation:</strong> First use of quantum computing (IBM Torino, 133 qubits) to validate lightsail materials optimization. <strong>8,557 fabrication scenarios</strong> tested with <strong>85.87% manufacturability</strong> confirmed.
+                </div>
+
+                <p>
+                    The technology enables near-term applications in satellite deorbiting and CubeSat propulsion, creating a sustainable development pathway toward the interstellar mission.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">2. Technical Innovation</h2>
+            <div class="section-content">
+                <h3 style="color: var(--primary-color); margin: 1.5rem 0 1rem;">2.1 Quantum-Optimized Material Design</h3>
+
+                <p><strong>Problem:</strong> Classical optimization of multi-layer metamaterials requires exploring 2^N parameter combinations. For our 8-stage lightsail with 15 design parameters, this is 32,768 configurations.</p>
+
+                <p><strong>Our Solution:</strong> Quantum circuit encoding on IBM Torino:</p>
+
+                <table class="data-table">
+                    <tr>
+                        <th>Quantum Resource</th>
+                        <th>Specification</th>
+                        <th>Achievement</th>
+                    </tr>
+                    <tr>
+                        <td>Backend</td>
+                        <td>IBM Torino (133 qubits)</td>
+                        <td>✓ Validated</td>
+                    </tr>
+                    <tr>
+                        <td>Qubits Used</td>
+                        <td>15 (material parameters)</td>
+                        <td>✓ Sufficient</td>
+                    </tr>
+                    <tr>
+                        <td>Shots per Job</td>
+                        <td>4,000 - 10,000</td>
+                        <td>✓ High fidelity</td>
+                    </tr>
+                    <tr>
+                        <td>Total Scenarios</td>
+                        <td>8,557 validated</td>
+                        <td>✓ Comprehensive</td>
+                    </tr>
+                    <tr>
+                        <td>Success Rate</td>
+                        <td>100% (within tolerances)</td>
+                        <td>✓ Confirmed</td>
+                    </tr>
+                </table>
+
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem;">2.2 8-Stage Cascade Design</h3>
+
+                <p><strong>Innovation:</strong> Progressive mass reduction through 8 deployment stages, each optimized for maximum velocity gain.</p>
+
+                <ul>
+                    <li>Each stage: 32 m² lightsail + payload + separation mechanism</li>
+                    <li>Material: Silicon Carbide (5 nm) + HfO₂/SiO₂ multilayer coating (50 pairs)</li>
+                    <li>Reflectivity: 98.92% at 1064 nm (Nd:YAG laser)</li>
+                    <li>Total mass per stage: 8.64 mg</li>
+                    <li>Acceleration per stage: 381.9 m/s² (38.9g)</li>
+                </ul>
+
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem;">2.3 Lunar-Based Laser Array</h3>
+
+                <p><strong>Why Lunar Surface (vs. Earth-based):</strong></p>
+                <ul>
+                    <li>No atmospheric interference (0% power loss vs. 30-40% on Earth)</li>
+                    <li>Vacuum environment enables tighter beam focus</li>
+                    <li>Continuous solar power (no day/night cycles at poles)</li>
+                    <li>Lower gravity simplifies large structure construction</li>
+                    <li>Stable platform (no weather, seismic activity minimal)</li>
+                </ul>
+
+                <p><strong>Laser Specifications:</strong></p>
+                <ul>
+                    <li>Total power: 500 GW</li>
+                    <li>Configuration: 10,000 phased Nd:YAG lasers (50 MW each)</li>
+                    <li>Wavelength: 1064 nm</li>
+                    <li>Array size: 2 km × 5 km</li>
+                    <li>Acceleration duration: 40 minutes (8 stages × 5 min each)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">3. Mission Architecture</h2>
+            <div class="section-content">
+                <table class="data-table">
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Value</th>
+                        <th>Validation Method</th>
+                    </tr>
+                    <tr>
+                        <td>Final Velocity</td>
+                        <td>149,896,229 m/s (0.5c)</td>
+                        <td>Quantum-validated trajectory</td>
+                    </tr>
+                    <tr>
+                        <td>Travel Time to α Cen</td>
+                        <td>8.74 years</td>
+                        <td>Relativistic corrections applied</td>
+                    </tr>
+                    <tr>
+                        <td>Sail Area (per stage)</td>
+                        <td>32 m²</td>
+                        <td>Quantum optimization</td>
+                    </tr>
+                    <tr>
+                        <td>Sail Thickness</td>
+                        <td>20 nm</td>
+                        <td>Manufacturability confirmed (85.87%)</td>
+                    </tr>
+                    <tr>
+                        <td>Operating Temperature</td>
+                        <td>1926.6 K (96.3% of max)</td>
+                        <td>Stefan-Boltzmann thermal model</td>
+                    </tr>
+                    <tr>
+                        <td>Material Stress</td>
+                        <td>4.16 GPa (SF: 1.20)</td>
+                        <td>Membrane stress analysis</td>
+                    </tr>
+                    <tr>
+                        <td>Total Mass</td>
+                        <td>8.64 mg (per stage)</td>
+                        <td>Component-level validation</td>
+                    </tr>
+                    <tr>
+                        <td>Mission Success (single sail)</td>
+                        <td>47.75%</td>
+                        <td>Quantum Monte Carlo simulation</td>
+                    </tr>
+                    <tr>
+                        <td>Mission Success (5-sail redundancy)</td>
+                        <td>96%</td>
+                        <td>Statistical analysis</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">4. Phase I Work Plan (9 months, $175K)</h2>
+            <div class="section-content">
+                <div class="highlight-box">
+                    <strong>Objective:</strong> Fabricate and test 10 cm × 10 cm prototype lightsail. Validate quantum predictions with physical measurements.
+                </div>
+
+                <h3 style="color: var(--primary-color); margin: 1.5rem 0 1rem;">Months 1-3: Material Synthesis</h3>
+                <ul>
+                    <li><strong>Task 1.1:</strong> Procure 6H-SiC substrate (350 μm) from Wolfspeed</li>
+                    <li><strong>Task 1.2:</strong> Thin substrate to 5 nm via CMP + RIE + ALE</li>
+                    <li><strong>Task 1.3:</strong> Deposit 50 pairs HfO₂/SiO₂ via Ion Beam Sputtering</li>
+                    <li><strong>Milestone:</strong> Achieve 98.92% reflectivity at 1064 nm</li>
+                    <li><strong>Budget:</strong> $60K (materials + fab access)</li>
+                </ul>
+
+                <h3 style="color: var(--primary-color); margin: 1.5rem 0 1rem;">Months 4-6: Characterization</h3>
+                <ul>
+                    <li><strong>Task 2.1:</strong> Spectroscopic reflectivity measurements (Lambda 1050)</li>
+                    <li><strong>Task 2.2:</strong> Thermal cycling tests (-200°C to +1500°C)</li>
+                    <li><strong>Task 2.3:</strong> Mechanical stress testing (tensile strength)</li>
+                    <li><strong>Task 2.4:</strong> SEM/TEM imaging of layer structure</li>
+                    <li><strong>Milestone:</strong> Confirm quantum predictions within ±5%</li>
+                    <li><strong>Budget:</strong> $50K (testing equipment time)</li>
+                </ul>
+
+                <h3 style="color: var(--primary-color); margin: 1.5rem 0 1rem;">Months 7-9: Laser Propulsion Testing</h3>
+                <ul>
+                    <li><strong>Task 3.1:</strong> Partner with university for 1 MW Nd:YAG laser access</li>
+                    <li><strong>Task 3.2:</strong> Vacuum chamber testing (10^-6 Torr)</li>
+                    <li><strong>Task 3.3:</strong> Measure acceleration vs. quantum model predictions</li>
+                    <li><strong>Task 3.4:</strong> Document deviations and optimize next iteration</li>
+                    <li><strong>Milestone:</strong> Demonstrate propulsion in controlled environment</li>
+                    <li><strong>Budget:</strong> $40K (laser facility access + instrumentation)</li>
+                </ul>
+
+                <h3 style="color: var(--primary-color); margin: 1.5rem 0 1rem;">Personnel</h3>
+                <ul>
+                    <li>PI: Heinz Jungbluth (50% FTE) - Quantum computing + project management</li>
+                    <li>Co-I: TBH Materials Scientist (50% FTE) - Fabrication + characterization</li>
+                    <li>Graduate Student: (100% FTE) - Experimental work</li>
+                    <li><strong>Budget:</strong> $25K (salaries + fringe)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">5. Broader Impacts</h2>
+            <div class="section-content">
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">5.1 NASA Strategic Alignment</h3>
+                <ul>
+                    <li><strong>Moon to Mars:</strong> Laser array infrastructure supports lunar base development</li>
+                    <li><strong>Space Debris Mitigation:</strong> Near-term application for satellite deorbiting</li>
+                    <li><strong>Quantum Computing Leadership:</strong> First aerospace application of IBM quantum hardware</li>
+                    <li><strong>International Cooperation:</strong> Natural partnership with ESA, JAXA for funding consortium</li>
+                </ul>
+
+                <h3 style="color: var(--primary-color); margin: 1.5rem 0 1rem;">5.2 Workforce Development</h3>
+                <ul>
+                    <li>Train graduate students in quantum computing + aerospace</li>
+                    <li>Collaborate with IBM Quantum for student internships</li>
+                    <li>Publish research in peer-reviewed journals (target: 3-5 papers)</li>
+                    <li>Present at AIAA, APS conferences</li>
+                </ul>
+
+                <h3 style="color: var(--primary-color); margin: 1.5rem 0 1rem;">5.3 Commercial Spinoffs</h3>
+                <ul>
+                    <li>Metamaterial optical coatings for space telescopes</li>
+                    <li>Quantum optimization SaaS for aerospace industry</li>
+                    <li>CubeSat propulsion modules (immediate market)</li>
+                    <li>Thermal management materials for spacecraft</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">6. Risk Mitigation</h2>
+            <div class="section-content">
+                <table class="data-table">
+                    <tr>
+                        <th>Risk</th>
+                        <th>Probability</th>
+                        <th>Mitigation</th>
+                    </tr>
+                    <tr>
+                        <td>Substrate thinning failure</td>
+                        <td>40% (per quantum analysis)</td>
+                        <td>Procure 5× substrate samples, optimize process parameters</td>
+                    </tr>
+                    <tr>
+                        <td>Coating delamination</td>
+                        <td>5% → 1.13% (mitigated)</td>
+                        <td>Improved adhesion layer, thermal cycling pre-tests</td>
+                    </tr>
+                    <tr>
+                        <td>Reflectivity below target</td>
+                        <td>10%</td>
+                        <td>Layer thickness optimization via quantum simulation</td>
+                    </tr>
+                    <tr>
+                        <td>Laser facility unavailable</td>
+                        <td>15%</td>
+                        <td>Identify 2-3 backup facilities (MIT, LLNL, NIF)</td>
+                    </tr>
+                    <tr>
+                        <td>Budget overrun</td>
+                        <td>20%</td>
+                        <td>10% contingency reserved, prioritize critical experiments</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">7. Path to Phase II</h2>
+            <div class="section-content">
+                <p><strong>If Phase I successful, Phase II proposal will focus on:</strong></p>
+
+                <ul>
+                    <li><strong>1 m² lightsail fabrication</strong> and orbital CubeSat demonstration (3U satellite)</li>
+                    <li><strong>10 MW laser ground station</strong> for LEO propulsion tests</li>
+                    <li><strong>Full 8-stage deployment mechanism</strong> testing in space</li>
+                    <li><strong>Partnership with Breakthrough Starshot</strong> for technology transfer</li>
+                    <li><strong>Estimated Phase II budget:</strong> $2M over 24 months</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>Ultimate Goal (Phase III):</strong> Full-scale interstellar mission with government consortium funding ($254B). Launch by 2045, arrival at α Centauri by 2053, first images received on Earth by 2061.
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">8. Principal Investigator</h2>
+            <div class="section-content">
+                <div class="pi-section">
+                    <img src="heinz-photo.jpg" alt="Heinz Jungbluth Ganoza" class="pi-photo">
+                    <div class="pi-info">
+                        <h3>Heinz Jungbluth Ganoza</h3>
+                        <div class="pi-title">Principal Investigator & Founder</div>
+                        <p style="color: var(--text-dark); line-height: 1.8; margin-bottom: 1rem;">
+                            Quantum computing researcher focused on advanced materials for space propulsion.
+                            Led the quantum optimization validated on IBM Torino (133-qubit processor), testing 8,557 fabrication scenarios
+                            with 85.87% manufacturability confirmation.
+                        </p>
+                        <strong style="color: var(--primary-color);">Key Qualifications:</strong>
+                        <ul>
+                            <li><strong>Quantum Computing:</strong> Direct experience executing quantum circuits on IBM hardware (Job ID: d3nhvh03qtks738edjdg)</li>
+                            <li><strong>GPU Optimization:</strong> 512,000 configurations tested on NVIDIA A100 using JAX framework</li>
+                            <li><strong>Technical Writing:</strong> Complete research documentation with peer-reviewable methodology</li>
+                            <li><strong>Project Management:</strong> Self-funded technical validation with $5K budget (capital efficient)</li>
+                        </ul>
+                        <p style="margin-top: 1rem;">
+                            LinkedIn: <a href="https://www.linkedin.com/in/heinzjungbluthganoza" target="_blank" style="color: var(--primary-color); text-decoration: underline;">linkedin.com/in/heinzjungbluthganoza</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 4rem; padding: 2.5rem; background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%); border-radius: 15px; text-align: center;">
+            <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Supporting Materials</h2>
+            <p style="color: var(--text-light); margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Complete technical validation, quantum job IDs, source code, and peer-reviewable research available for NASA evaluation.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="research.html" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600;">Full Research Documentation</a>
+                <a href="team.html" style="display: inline-block; background: transparent; border: 2px solid #667eea; color: #667eea; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600;">Principal Investigator</a>
+                <a href="mission.html" style="display: inline-block; background: transparent; border: 2px solid #667eea; color: #667eea; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600;">Mission Details</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p style="color: var(--text-dark); margin-bottom: 1rem;">
+                <a href="index.html">Home</a> •
+                <a href="mission.html">Mission</a> •
+                <a href="research.html">Research</a> •
+                <a href="team.html">Team</a> •
+                <a href="niac-application.html">NASA NIAC</a>
+            </p>
+            <p style="margin-top: 2rem; color: #555;">
+                © 2025 Starshot Dynamics Inc. (DBA: Warpeed) • All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
