@@ -1,0 +1,114 @@
+================================================================================
+QUANTUM INTEGRATED SPACECRAFT OPTIMIZATION: DETAILED REPORT
+================================================================================
+
+Optimization Date: 2025-10-15T22:08:37.677066
+Backend: Classical simulation
+
+MISSION PARAMETERS:
+--------------------------------------------------------------------------------
+  Destination: Alpha Centauri
+  Distance: 4.37 light-years
+  Laser Power: 254 GW
+  Sail Area: 16.0 m²
+
+================================================================================
+RECOMMENDED 'SWEET SPOT' DESIGN
+================================================================================
+
+Mission Value: 2.105
+
+POWER SYSTEM:
+  Solar Array: 70.6 cm² @ 34.2% efficiency
+  Battery: 0.79 Wh
+  Power Margin: -30.1%
+
+COMMUNICATION SYSTEM:
+  Type: Hybrid
+  Transmit Power: 3.60 W
+  TX Aperture: 1.99 m
+  Modulation Efficiency: 83.7%
+  SNR: -3.3 dB
+  Data Rate: 3.89 Mbps
+
+SPACECRAFT:
+  Total Mass: 38.02 g
+  Structural Mass: 1.15 g
+  Thermal Mass: 0.71 g
+  Cross-section: 2796.6 mm²
+
+PERFORMANCE:
+  Final Velocity: 0.0892c (8.92% speed of light)
+  Travel Time: 49.0 years
+  Cost: $490,507
+
+CONSTRAINTS:
+  ✗ Constraint violations:
+    - power_margin: 0.501 over limit
+    - rf_eb_n0: 59.960 over limit
+    - mass_target: 31.024 over limit
+    - min_velocity: 0.011 over limit
+
+================================================================================
+ARCHITECTURE COMPARISON
+================================================================================
+
+Speed Priority:
+  Mass: 32.33 g
+  Velocity: 0.1048c
+  Travel Time: 41.7 years
+  Data Rate: 3.83 Mbps
+  Mission Value: 2.092
+  Constraints Met: No
+
+Balanced:
+  Mass: 38.02 g
+  Velocity: 0.0892c
+  Travel Time: 49.0 years
+  Data Rate: 3.89 Mbps
+  Mission Value: 2.105
+  Constraints Met: No
+
+Science Priority:
+  Mass: 30.68 g
+  Velocity: 0.1105c
+  Travel Time: 39.5 years
+  Data Rate: 3.91 Mbps
+  Mission Value: 2.092
+  Constraints Met: No
+
+================================================================================
+PARETO-OPTIMAL DESIGNS
+================================================================================
+
+Found 12 Pareto-optimal designs:
+
+#1: Velocity=0.1451c, Data Rate=4.18 Mbps, Mass=23.4g, Value=2.090
+#2: Velocity=0.1968c, Data Rate=3.47 Mbps, Mass=17.2g, Value=2.050
+#3: Velocity=0.2599c, Data Rate=2.85 Mbps, Mass=13.0g, Value=2.016
+#4: Velocity=0.1524c, Data Rate=3.36 Mbps, Mass=22.2g, Value=2.050
+#5: Velocity=0.1411c, Data Rate=2.95 Mbps, Mass=24.0g, Value=2.031
+#6: Velocity=0.2600c, Data Rate=2.85 Mbps, Mass=13.0g, Value=2.016
+#7: Velocity=0.2527c, Data Rate=2.84 Mbps, Mass=13.4g, Value=2.015
+#8: Velocity=0.1105c, Data Rate=3.91 Mbps, Mass=30.7g, Value=2.092
+#9: Velocity=0.1660c, Data Rate=3.85 Mbps, Mass=20.4g, Value=2.071
+#10: Velocity=0.2600c, Data Rate=2.85 Mbps, Mass=13.0g, Value=2.016
+
+================================================================================
+OPTIMIZATION STATISTICS
+================================================================================
+
+Total designs evaluated: 50
+Constraint-satisfying designs: 0
+Pareto-optimal designs: 12
+
+Design Space Coverage:
+  Mass: 17.8 - 38.1 g
+  Velocity: 0.0889 - 0.1909c
+  Travel Time: 22.9 - 49.1 years
+  Data Rate: 3.48 - 4.26 Mbps
+  Cost: $388,787 - $493,293
+
+================================================================================
+END OF REPORT
+================================================================================

@@ -1,0 +1,223 @@
+{
+  "timestamp": "2025-10-14T23:15:15.572378",
+  "job_id": "d3nhvh03qtks738edjdg",
+  "backend": "ibm_torino",
+  "shots": 4000,
+  "materials_tested": 12,
+  "feasible_count": 283,
+  "best": {
+    "material": "Silicon Carbide + HfO\u2082 Coating",
+    "material_key": "sic_hfo2",
+    "area_m2": 32.0,
+    "thickness_nm": 20.0,
+    "power_GW": 500.0,
+    "stages": "8",
+    "velocity_c": 0.5,
+    "time_alpha_cen_years": 8.74,
+    "temperature_K": 1926.6451913177766,
+    "stress_MPa": 4158.52564994973,
+    "quantum_counts": 3
+  },
+  "top_10": [
+    {
+      "bitstring": "100111000101011",
+      "count": 3,
+      "params": {
+        "material": "sic_hfo2",
+        "area": 32.0,
+        "thickness": 2e-08,
+        "power": 500000000000.0,
+        "stages": "8"
+      },
+      "performance": {
+        "v_final": 149896229.0,
+        "v_c": 0.5,
+        "temperature": 1926.6451913177766,
+        "stress": 4158525649.9497304,
+        "mass": 0.0086393334656,
+        "feasible": "True",
+        "material": "Silicon Carbide + HfO\u2082 Coating"
+      }
+    },
+    {
+      "bitstring": "100111000101111",
+      "count": 2,
+      "params": {
+        "material": "sic_hfo2",
+        "area": 32.0,
+        "thickness": 2e-08,
+        "power": 1000000000000.0,
+        "stages": "8"
+      },
+      "performance": {
+        "v_final": 149896229.0,
+        "v_c": 0.5,
+        "temperature": 2291.180169600879,
+        "stress": 8317051299.899461,
+        "mass": 0.0086393334656,
+        "feasible": "True",
+        "material": "Silicon Carbide + HfO\u2082 Coating"
+      }
+    },
+    {
+      "bitstring": "100111100001011",
+      "count": 1,
+      "params": {
+        "material": "sic_hfo2",
+        "area": 64.0,
+        "thickness": 1e-08,
+        "power": 500000000000.0,
+        "stages": "8"
+      },
+      "performance": {
+        "v_final": 149896229.0,
+        "v_c": 0.5,
+        "temperature": 1620.1090348449254,
+        "stress": 5881043373.635298,
+        "mass": 0.0086393334656,
+        "feasible": "True",
+        "material": "Silicon Carbide + HfO\u2082 Coating"
+      }
+    },
+    {
+      "bitstring": "011111100001011",
+      "count": 1,
+      "params": {
+        "material": "graphene_hfo2",
+        "area": 64.0,
+        "thickness": 1e-08,
+        "power": 500000000000.0,
+        "stages": "8"
+      },
+      "performance": {
+        "v_final": 149896229.0,
+        "v_c": 0.5,
+        "temperature": 1620.1090348449254,
+        "stress": 5881043373.635298,
+        "mass": 0.008036228192,
+        "feasible": "True",
+        "material": "Graphene + HfO\u2082 Coating"
+      }
+    },
+    {
+      "bitstring": "011111100001111",
+      "count": 2,
+      "params": {
+        "material": "graphene_hfo2",
+        "area": 64.0,
+        "thickness": 1e-08,
+        "power": 1000000000000.0,
+        "stages": "8"
+      },
+      "performance": {
+        "v_final": 149896229.0,
+        "v_c": 0.5,
+        "temperature": 1926.6451913177766,
+        "stress": 11762086747.270596,
+        "mass": 0.008036228192,
+        "feasible": "True",
+        "material": "Graphene + HfO\u2082 Coating"
+      }
+    },
+    {
+      "bitstring": "011111100110011",
+      "count": 8,
+      "params": {
+        "material": "graphene_hfo2",
+        "area": 64.0,
+        "thickness": 2e-08,
+        "power": 2000000000000.0,
+        "stages": "8"
+      },
+      "performance": {
+        "v_final": 149896229.0,
+        "v_c": 0.5,
+        "temperature": 2291.180169600879,
+        "stress": 11762086747.270596,
+        "mass": 0.015072456384,
+        "feasible": "True",
+        "material": "Graphene + HfO\u2082 Coating"
+      }
+    },
+    {
+      "bitstring": "011111000110011",
+      "count": 2,
+      "params": {
+        "material": "graphene_hfo2",
+        "area": 32.0,
+        "thickness": 2e-08,
+        "power": 2000000000000.0,
+        "stages": "8"
+      },
+      "performance": {
+        "v_final": 149896229.0,
+        "v_c": 0.5,
+        "temperature": 2724.687759442506,
+        "stress": 16634102599.798922,
+        "mass": 0.008036228192,
+        "feasible": "True",
+        "material": "Graphene + HfO\u2082 Coating"
+      }
+    },
+    {
+      "bitstring": "100110101101111",
+      "count": 1,
+      "params": {
+        "material": "sic_hfo2",
+        "area": 16.0,
+        "thickness": 1.0000000000000001e-07,
+        "power": 1000000000000.0,
+        "stages": "8"
+      },
+      "performance": {
+        "v_final": 149896229.0,
+        "v_c": 0.5,
+        "temperature": 2724.687759442506,
+        "stress": 2352417349.454119,
+        "mass": 0.020098333663999997,
+        "feasible": "True",
+        "material": "Silicon Carbide + HfO\u2082 Coating"
+      }
+    },
+    {
+      "bitstring": "100111100101111",
+      "count": 3,
+      "params": {
+        "material": "sic_hfo2",
+        "area": 64.0,
+        "thickness": 2e-08,
+        "power": 1000000000000.0,
+        "stages": "8"
+      },
+      "performance": {
+        "v_final": 149896229.0,
+        "v_c": 0.5,
+        "temperature": 1926.6451913177766,
+        "stress": 5881043373.635298,
+        "mass": 0.0162786669312,
+        "feasible": "True",
+        "material": "Silicon Carbide + HfO\u2082 Coating"
+      }
+    },
+    {
+      "bitstring": "011111100110010",
+      "count": 1,
+      "params": {
+        "material": "graphene_hfo2",
+        "area": 64.0,
+        "thickness": 2e-08,
+        "power": 2000000000000.0,
+        "stages": "4"
+      },
+      "performance": {
+        "v_final": 149896229.0,
+        "v_c": 0.5,
+        "temperature": 2291.180169600879,
+        "stress": 11762086747.270596,
+        "mass": 0.012347839999999999,
+        "feasible": "True",
+        "material": "Graphene + HfO\u2082 Coating"
+      }
+    }
+  ]
+}

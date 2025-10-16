@@ -1,0 +1,1676 @@
+{
+  "timestamp": "2025-10-15T22:10:56.878375",
+  "backend": "ibm_torino",
+  "num_qubits": 133,
+  "shots": 10000,
+  "mission_parameters": {
+    "distance_au": 10,
+    "duration_days": 365,
+    "optical_availability": 0.1,
+    "rf_availability": 1.0
+  },
+  "constraints": {
+    "total_mass_budget_grams": 4.0,
+    "avg_power_budget_watts": 3.0,
+    "peak_power_budget_watts": 5.0,
+    "min_rf_ebn0_db": 8.0,
+    "min_optical_snr_db": 6.0
+  },
+  "statistics": {
+    "total_solutions": 7311,
+    "feasible_solutions": 0,
+    "top_solutions_returned": 30
+  },
+  "top_30_solutions": [
+    {
+      "bitstring": "10111111000011000000",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 2.0,
+        "rf_antenna_size": 1.5,
+        "optical_wavelength": "1064nm",
+        "optical_power": 1.5714285714285714,
+        "optical_aperture": 1.3571428571428572,
+        "power_allocation": "RF_heavy",
+        "switching_logic": "Sequential"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 51.806909610837614,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 2.6496710129389385,
+          "snr_db": 22.64967101293894,
+          "data_rate_bps": 1,
+          "mass_grams": 2.3000000000000003,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 9.564800000000002e-07,
+          "geometric_loss_db": -109.13274965103221,
+          "snr_db": 47.115886217341725,
+          "data_rate_bps": 10000,
+          "mass_grams": 3.0571428571428574,
+          "feasible": true
+        },
+        "total_mass_grams": 6.057142857142858,
+        "avg_power_watts": 2.3620129870129873,
+        "peak_power_watts": 4.058441558441558,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 55.56043272775347,
+        "score": -5552.097330775347,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10110111101010000110",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 1.7857142857142856,
+        "rf_antenna_size": 1.5,
+        "optical_wavelength": "850nm",
+        "optical_power": 3.8571428571428568,
+        "optical_aperture": 0.5,
+        "power_allocation": "Balanced",
+        "switching_logic": "Priority"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 51.806909610837614,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 2.1574907862371333,
+          "snr_db": 22.157490786237133,
+          "data_rate_bps": 1,
+          "mass_grams": 2.2357142857142858,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 2.074e-06,
+          "geometric_loss_db": -115.85540682490893,
+          "snr_db": 43.31771281102529,
+          "data_rate_bps": 10000,
+          "mass_grams": 2.9428571428571426,
+          "feasible": true
+        },
+        "total_mass_grams": 5.878571428571429,
+        "avg_power_watts": 1.6558441558441557,
+        "peak_power_watts": 6.412337662337662,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 61.716001228537756,
+        "score": -6167.654180853775,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": false,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10111110000000000000",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 2.0,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1064nm",
+        "optical_power": 1.0,
+        "optical_aperture": 0.5,
+        "power_allocation": "RF_heavy",
+        "switching_logic": "Sequential"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 1.7803571373171394,
+          "snr_db": 21.78035713731714,
+          "data_rate_bps": 1,
+          "mass_grams": 2.185714285714286,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 2.5961600000000004e-06,
+          "geometric_loss_db": -117.80586086980365,
+          "snr_db": 36.479828547130715,
+          "data_rate_bps": 4446.1371444805145,
+          "mass_grams": 1.7999999999999998,
+          "feasible": true
+        },
+        "total_mass_grams": 4.685714285714286,
+        "avg_power_watts": 2.329545454545454,
+        "peak_power_watts": 3.409090909090909,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 14021338098.83375,
+        "total_data_bits_per_year": 14052874098.83375,
+        "data_volume_gb_per_year": 1.7566092623542187,
+        "rf_margin": 86.4,
+        "optical_margin": 2696.411172852644,
+        "total_violation": 62.88214291254289,
+        "score": -6286.457681991935,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10111110000010000001",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 2.0,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1064nm",
+        "optical_power": 1.5714285714285714,
+        "optical_aperture": 0.5,
+        "power_allocation": "RF_heavy",
+        "switching_logic": "Opportunistic"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 1.7803571373171394,
+          "snr_db": 21.78035713731714,
+          "data_rate_bps": 1,
+          "mass_grams": 2.185714285714286,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 2.5961600000000004e-06,
+          "geometric_loss_db": -117.80586086980365,
+          "snr_db": 38.44277499857034,
+          "data_rate_bps": 6986.786941326499,
+          "mass_grams": 2.0285714285714285,
+          "feasible": true
+        },
+        "total_mass_grams": 4.914285714285715,
+        "avg_power_watts": 2.3620129870129873,
+        "peak_power_watts": 4.058441558441558,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 22033531298.167248,
+        "total_data_bits_per_year": 22065067298.167248,
+        "data_volume_gb_per_year": 2.758133412270906,
+        "rf_margin": 86.4,
+        "optical_margin": 4237.217557339855,
+        "total_violation": 63.11071434111432,
+        "score": -6308.313300699161,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10111110000001000100",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 2.0,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1064nm",
+        "optical_power": 1.0,
+        "optical_aperture": 1.3571428571428572,
+        "power_allocation": "Balanced",
+        "switching_logic": "Sequential"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 1.7803571373171394,
+          "snr_db": 21.78035713731714,
+          "data_rate_bps": 1,
+          "mass_grams": 2.185714285714286,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 9.564800000000002e-07,
+          "geometric_loss_db": -109.13274965103221,
+          "snr_db": 45.15293976590207,
+          "data_rate_bps": 10000,
+          "mass_grams": 2.8285714285714287,
+          "feasible": true
+        },
+        "total_mass_grams": 5.714285714285714,
+        "avg_power_watts": 1.4772727272727273,
+        "peak_power_watts": 3.409090909090909,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 63.91071434111432,
+        "score": -6387.125492111431,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10111110000100111001",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 2.0,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1064nm",
+        "optical_power": 2.142857142857143,
+        "optical_aperture": 1.1428571428571428,
+        "power_allocation": "Optical_heavy",
+        "switching_logic": "Opportunistic"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 1.7803571373171394,
+          "snr_db": 21.78035713731714,
+          "data_rate_bps": 1,
+          "mass_grams": 2.185714285714286,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 1.1358200000000003e-06,
+          "geometric_loss_db": -110.62542201697029,
+          "snr_db": 46.97019959037823,
+          "data_rate_bps": 10000,
+          "mass_grams": 3.0285714285714285,
+          "feasible": true
+        },
+        "total_mass_grams": 5.914285714285715,
+        "avg_power_watts": 1.047077922077922,
+        "peak_power_watts": 4.707792207792207,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 64.11071434111432,
+        "score": -6407.125492111431,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10111110000101000000",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 2.0,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1064nm",
+        "optical_power": 2.142857142857143,
+        "optical_aperture": 1.3571428571428572,
+        "power_allocation": "RF_heavy",
+        "switching_logic": "Sequential"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 1.7803571373171394,
+          "snr_db": 21.78035713731714,
+          "data_rate_bps": 1,
+          "mass_grams": 2.185714285714286,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 9.564800000000002e-07,
+          "geometric_loss_db": -109.13274965103221,
+          "snr_db": 48.462871956316306,
+          "data_rate_bps": 10000,
+          "mass_grams": 3.285714285714286,
+          "feasible": true
+        },
+        "total_mass_grams": 6.171428571428572,
+        "avg_power_watts": 2.3944805194805197,
+        "peak_power_watts": 4.707792207792207,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 64.36785719825718,
+        "score": -6432.839777825719,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10101111000010000001",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 1.5714285714285714,
+        "rf_antenna_size": 1.5,
+        "optical_wavelength": "1064nm",
+        "optical_power": 1.5714285714285714,
+        "optical_aperture": 0.5,
+        "power_allocation": "RF_heavy",
+        "switching_logic": "Opportunistic"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 51.806909610837614,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 1.6023175077388032,
+          "snr_db": 21.602317507738803,
+          "data_rate_bps": 1,
+          "mass_grams": 2.1714285714285717,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 2.5961600000000004e-06,
+          "geometric_loss_db": -117.80586086980365,
+          "snr_db": 38.44277499857034,
+          "data_rate_bps": 6986.786941326499,
+          "mass_grams": 2.0285714285714285,
+          "feasible": true
+        },
+        "total_mass_grams": 4.9,
+        "avg_power_watts": 1.875,
+        "peak_power_watts": 3.571428571428571,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 22033531298.167248,
+        "total_data_bits_per_year": 22065067298.167248,
+        "data_volume_gb_per_year": 2.758133412270906,
+        "rf_margin": 86.4,
+        "optical_margin": 4237.217557339855,
+        "total_violation": 64.87682492261197,
+        "score": -6484.924358848927,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10111110001010001101",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 2.0,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1064nm",
+        "optical_power": 3.8571428571428568,
+        "optical_aperture": 0.5,
+        "power_allocation": "Adaptive",
+        "switching_logic": "Opportunistic"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 1.7803571373171394,
+          "snr_db": 21.78035713731714,
+          "data_rate_bps": 1,
+          "mass_grams": 2.185714285714286,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 2.5961600000000004e-06,
+          "geometric_loss_db": -117.80586086980365,
+          "snr_db": 42.342485788577946,
+          "data_rate_bps": 10000,
+          "mass_grams": 2.9428571428571426,
+          "feasible": true
+        },
+        "total_mass_grams": 5.828571428571428,
+        "avg_power_watts": 2.5714285714285716,
+        "peak_power_watts": 6.6558441558441555,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 65.68084421124419,
+        "score": -6564.138479124419,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": false,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10111110001001000110",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 2.0,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1064nm",
+        "optical_power": 3.2857142857142856,
+        "optical_aperture": 1.3571428571428572,
+        "power_allocation": "Balanced",
+        "switching_logic": "Priority"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 1.7803571373171394,
+          "snr_db": 21.78035713731714,
+          "data_rate_bps": 1,
+          "mass_grams": 2.185714285714286,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 9.564800000000002e-07,
+          "geometric_loss_db": -109.13274965103221,
+          "snr_db": 50.31923772593542,
+          "data_rate_bps": 10000,
+          "mass_grams": 3.742857142857143,
+          "feasible": true
+        },
+        "total_mass_grams": 6.628571428571429,
+        "avg_power_watts": 1.737012987012987,
+        "peak_power_watts": 6.0064935064935066,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 65.83149356189354,
+        "score": -6579.203414189354,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": false,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10111110101011000100",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 2.0,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "850nm",
+        "optical_power": 3.8571428571428568,
+        "optical_aperture": 1.3571428571428572,
+        "power_allocation": "Balanced",
+        "switching_logic": "Sequential"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 1.7803571373171394,
+          "snr_db": 21.78035713731714,
+          "data_rate_bps": 1,
+          "mass_grams": 2.185714285714286,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 7.641052631578947e-07,
+          "geometric_loss_db": -107.18229560613749,
+          "snr_db": 51.99082402979671,
+          "data_rate_bps": 10000,
+          "mass_grams": 3.9714285714285715,
+          "feasible": true
+        },
+        "total_mass_grams": 6.857142857142858,
+        "avg_power_watts": 1.8019480519480517,
+        "peak_power_watts": 6.6558441558441555,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 66.70941563981562,
+        "score": -6666.995621981561,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": false,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10110110000000000100",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 1.7857142857142856,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1064nm",
+        "optical_power": 1.0,
+        "optical_aperture": 0.5,
+        "power_allocation": "Balanced",
+        "switching_logic": "Sequential"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 1.2881769106153058,
+          "snr_db": 21.288176910615306,
+          "data_rate_bps": 1,
+          "mass_grams": 2.1214285714285714,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 2.5961600000000004e-06,
+          "geometric_loss_db": -117.80586086980365,
+          "snr_db": 36.479828547130715,
+          "data_rate_bps": 4446.1371444805145,
+          "mass_grams": 1.7999999999999998,
+          "feasible": true
+        },
+        "total_mass_grams": 4.621428571428572,
+        "avg_power_watts": 1.3311688311688312,
+        "peak_power_watts": 3.1655844155844153,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 14021338098.83375,
+        "total_data_bits_per_year": 14052874098.83375,
+        "data_volume_gb_per_year": 1.7566092623542187,
+        "rf_margin": 86.4,
+        "optical_margin": 2696.411172852644,
+        "total_violation": 67.73965946527551,
+        "score": -6772.209337265197,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10110110000010010001",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 1.7857142857142856,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1064nm",
+        "optical_power": 1.5714285714285714,
+        "optical_aperture": 0.7142857142857143,
+        "power_allocation": "RF_heavy",
+        "switching_logic": "Opportunistic"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 1.2881769106153058,
+          "snr_db": 21.288176910615306,
+          "data_rate_bps": 1,
+          "mass_grams": 2.1214285714285714,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 1.8173120000000003e-06,
+          "geometric_loss_db": -114.70782167008879,
+          "snr_db": 41.540814198285176,
+          "data_rate_bps": 10000,
+          "mass_grams": 2.2857142857142856,
+          "feasible": true
+        },
+        "total_mass_grams": 5.107142857142857,
+        "avg_power_watts": 2.1185064935064934,
+        "peak_power_watts": 3.8149350649350646,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 68.2253737509898,
+        "score": -6818.59143309898,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10110110010011000001",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 1.7857142857142856,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1550nm",
+        "optical_power": 1.5714285714285714,
+        "optical_aperture": 1.3571428571428572,
+        "power_allocation": "RF_heavy",
+        "switching_logic": "Opportunistic"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 1.2881769106153058,
+          "snr_db": 21.288176910615306,
+          "data_rate_bps": 1,
+          "mass_grams": 2.1214285714285714,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 1.3933684210526314e-06,
+          "geometric_loss_db": -112.40055105525744,
+          "snr_db": 45.48198551522912,
+          "data_rate_bps": 10000,
+          "mass_grams": 3.0571428571428574,
+          "feasible": true
+        },
+        "total_mass_grams": 5.878571428571429,
+        "avg_power_watts": 2.1185064935064934,
+        "peak_power_watts": 3.8149350649350646,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 68.99680232241838,
+        "score": -6895.734290241837,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10110110000111100000",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 1.7857142857142856,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1064nm",
+        "optical_power": 2.7142857142857144,
+        "optical_aperture": 1.7857142857142856,
+        "power_allocation": "RF_heavy",
+        "switching_logic": "Sequential"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 1.2881769106153058,
+          "snr_db": 21.288176910615306,
+          "data_rate_bps": 1,
+          "mass_grams": 2.1214285714285714,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 7.269248000000002e-07,
+          "geometric_loss_db": -106.74902149664804,
+          "snr_db": 51.87322352967195,
+          "data_rate_bps": 10000,
+          "mass_grams": 4.0285714285714285,
+          "feasible": true
+        },
+        "total_mass_grams": 6.8500000000000005,
+        "avg_power_watts": 2.183441558441558,
+        "peak_power_watts": 5.113636363636363,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 70.08186725748331,
+        "score": -7004.240783748331,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": false,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10100111000000000100",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 1.3571428571428572,
+        "rf_antenna_size": 1.5,
+        "optical_wavelength": "1064nm",
+        "optical_power": 1.0,
+        "optical_aperture": 0.5,
+        "power_allocation": "Balanced",
+        "switching_logic": "Sequential"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 51.806909610837614,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 0.9656267090450399,
+          "snr_db": 20.96562670904504,
+          "data_rate_bps": 1,
+          "mass_grams": 2.107142857142857,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 2.5961600000000004e-06,
+          "geometric_loss_db": -117.80586086980365,
+          "snr_db": 36.479828547130715,
+          "data_rate_bps": 4446.1371444805145,
+          "mass_grams": 1.7999999999999998,
+          "feasible": true
+        },
+        "total_mass_grams": 4.607142857142858,
+        "avg_power_watts": 1.0389610389610389,
+        "peak_power_watts": 2.678571428571429,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 14021338098.83375,
+        "total_data_bits_per_year": 14052874098.83375,
+        "data_volume_gb_per_year": 1.7566092623542187,
+        "rf_margin": 86.4,
+        "optical_margin": 2696.411172852644,
+        "total_violation": 70.95087576669246,
+        "score": -7093.330967406892,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10100111010000000000",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 1.3571428571428572,
+        "rf_antenna_size": 1.5,
+        "optical_wavelength": "1550nm",
+        "optical_power": 1.0,
+        "optical_aperture": 0.5,
+        "power_allocation": "RF_heavy",
+        "switching_logic": "Sequential"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 51.806909610837614,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 0.9656267090450399,
+          "snr_db": 20.96562670904504,
+          "data_rate_bps": 1,
+          "mass_grams": 2.107142857142857,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 3.782e-06,
+          "geometric_loss_db": -121.0736622740289,
+          "snr_db": 34.84592784501811,
+          "data_rate_bps": 3052.0580140175766,
+          "mass_grams": 1.7999999999999998,
+          "feasible": true
+        },
+        "total_mass_grams": 4.607142857142858,
+        "avg_power_watts": 1.5990259740259742,
+        "peak_power_watts": 2.678571428571429,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 9624970153.00583,
+        "total_data_bits_per_year": 9656506153.00583,
+        "data_volume_gb_per_year": 1.2070632691257288,
+        "rf_margin": 86.4,
+        "optical_margin": 1850.9557986549676,
+        "total_violation": 70.95087576669246,
+        "score": -7093.88051340012,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10110110001101000000",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 1.7857142857142856,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1064nm",
+        "optical_power": 4.428571428571429,
+        "optical_aperture": 1.3571428571428572,
+        "power_allocation": "RF_heavy",
+        "switching_logic": "Sequential"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 1.2881769106153058,
+          "snr_db": 21.288176910615306,
+          "data_rate_bps": 1,
+          "mass_grams": 2.1214285714285714,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 9.564800000000002e-07,
+          "geometric_loss_db": -109.13274965103221,
+          "snr_db": 51.615576304102206,
+          "data_rate_bps": 10000,
+          "mass_grams": 4.2,
+          "feasible": true
+        },
+        "total_mass_grams": 7.021428571428571,
+        "avg_power_watts": 2.280844155844156,
+        "peak_power_watts": 7.061688311688312,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 72.20134777696383,
+        "score": -7216.188835696383,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": false,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10111101010000100100",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 2.0,
+        "rf_antenna_size": 1.2142857142857142,
+        "optical_wavelength": "1550nm",
+        "optical_power": 1.0,
+        "optical_aperture": 0.9285714285714286,
+        "power_allocation": "Balanced",
+        "switching_logic": "Sequential"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 49.971502143724706,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 0.8142635458260372,
+          "snr_db": 20.814263545826037,
+          "data_rate_bps": 1,
+          "mass_grams": 2.0714285714285716,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 2.0364615384615384e-06,
+          "geometric_loss_db": -115.6967560281773,
+          "snr_db": 40.22283409086961,
+          "data_rate_bps": 10000,
+          "mass_grams": 2.3142857142857145,
+          "feasible": true
+        },
+        "total_mass_grams": 5.085714285714286,
+        "avg_power_watts": 1.4772727272727273,
+        "peak_power_watts": 3.409090909090909,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 72.94307882745392,
+        "score": -7290.361940745392,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10101110000000000001",
+      "count": 2,
+      "probability": 0.0002,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 1.5714285714285714,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1064nm",
+        "optical_power": 1.0,
+        "optical_aperture": 0.5,
+        "power_allocation": "RF_heavy",
+        "switching_logic": "Opportunistic"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 0.7330036321170041,
+          "snr_db": 20.733003632117004,
+          "data_rate_bps": 1,
+          "mass_grams": 2.0571428571428574,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 2.5961600000000004e-06,
+          "geometric_loss_db": -117.80586086980365,
+          "snr_db": 36.479828547130715,
+          "data_rate_bps": 4446.1371444805145,
+          "mass_grams": 1.7999999999999998,
+          "feasible": true
+        },
+        "total_mass_grams": 4.557142857142858,
+        "avg_power_watts": 1.8425324675324675,
+        "peak_power_watts": 2.922077922077922,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 14021338098.83375,
+        "total_data_bits_per_year": 14052874098.83375,
+        "data_volume_gb_per_year": 1.7566092623542187,
+        "rf_margin": 86.4,
+        "optical_margin": 2696.411172852644,
+        "total_violation": 73.22710653597282,
+        "score": -7320.954044334929,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10111101010001000001",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 2.0,
+        "rf_antenna_size": 1.2142857142857142,
+        "optical_wavelength": "1550nm",
+        "optical_power": 1.0,
+        "optical_aperture": 1.3571428571428572,
+        "power_allocation": "RF_heavy",
+        "switching_logic": "Opportunistic"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 49.971502143724706,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 0.8142635458260372,
+          "snr_db": 20.814263545826037,
+          "data_rate_bps": 1,
+          "mass_grams": 2.0714285714285716,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 1.3933684210526314e-06,
+          "geometric_loss_db": -112.40055105525744,
+          "snr_db": 43.519039063789464,
+          "data_rate_bps": 10000,
+          "mass_grams": 2.8285714285714287,
+          "feasible": true
+        },
+        "total_mass_grams": 5.6000000000000005,
+        "avg_power_watts": 2.329545454545454,
+        "peak_power_watts": 3.409090909090909,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 73.45736454173962,
+        "score": -7341.790512173962,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10101110000010000000",
+      "count": 3,
+      "probability": 0.0003,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 1.5714285714285714,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1064nm",
+        "optical_power": 1.5714285714285714,
+        "optical_aperture": 0.5,
+        "power_allocation": "RF_heavy",
+        "switching_logic": "Sequential"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 0.7330036321170041,
+          "snr_db": 20.733003632117004,
+          "data_rate_bps": 1,
+          "mass_grams": 2.0571428571428574,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 2.5961600000000004e-06,
+          "geometric_loss_db": -117.80586086980365,
+          "snr_db": 38.44277499857034,
+          "data_rate_bps": 6986.786941326499,
+          "mass_grams": 2.0285714285714285,
+          "feasible": true
+        },
+        "total_mass_grams": 4.785714285714286,
+        "avg_power_watts": 1.875,
+        "peak_power_watts": 3.571428571428571,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 22033531298.167248,
+        "total_data_bits_per_year": 22065067298.167248,
+        "data_volume_gb_per_year": 2.758133412270906,
+        "rf_margin": 86.4,
+        "optical_margin": 4237.217557339855,
+        "total_violation": 73.45567796454425,
+        "score": -7342.809663042154,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10101110000000011001",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 1.5714285714285714,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1064nm",
+        "optical_power": 1.0,
+        "optical_aperture": 0.7142857142857143,
+        "power_allocation": "Optical_heavy",
+        "switching_logic": "Opportunistic"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 0.7330036321170041,
+          "snr_db": 20.733003632117004,
+          "data_rate_bps": 1,
+          "mass_grams": 2.0571428571428574,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 1.8173120000000003e-06,
+          "geometric_loss_db": -114.70782167008879,
+          "snr_db": 39.57786774684552,
+          "data_rate_bps": 9073.749274450025,
+          "mass_grams": 2.057142857142857,
+          "feasible": true
+        },
+        "total_mass_grams": 4.814285714285714,
+        "avg_power_watts": 0.7061688311688312,
+        "peak_power_watts": 2.922077922077922,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 28614975711.905598,
+        "total_data_bits_per_year": 28646511711.905598,
+        "data_volume_gb_per_year": 3.5808139639881995,
+        "rf_margin": 86.4,
+        "optical_margin": 5502.87994459723,
+        "total_violation": 73.48424939311568,
+        "score": -7344.844125347579,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10111101010011000100",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 2.0,
+        "rf_antenna_size": 1.2142857142857142,
+        "optical_wavelength": "1550nm",
+        "optical_power": 1.5714285714285714,
+        "optical_aperture": 1.3571428571428572,
+        "power_allocation": "Balanced",
+        "switching_logic": "Sequential"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 49.971502143724706,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 0.8142635458260372,
+          "snr_db": 20.814263545826037,
+          "data_rate_bps": 1,
+          "mass_grams": 2.0714285714285716,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 1.3933684210526314e-06,
+          "geometric_loss_db": -112.40055105525744,
+          "snr_db": 45.48198551522912,
+          "data_rate_bps": 10000,
+          "mass_grams": 3.0571428571428574,
+          "feasible": true
+        },
+        "total_mass_grams": 5.828571428571429,
+        "avg_power_watts": 1.5422077922077924,
+        "peak_power_watts": 4.058441558441558,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 73.68593597031105,
+        "score": -7364.6476550311045,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10101110100010010000",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 1.5714285714285714,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "850nm",
+        "optical_power": 1.5714285714285714,
+        "optical_aperture": 0.7142857142857143,
+        "power_allocation": "RF_heavy",
+        "switching_logic": "Sequential"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 0.7330036321170041,
+          "snr_db": 20.733003632117004,
+          "data_rate_bps": 1,
+          "mass_grams": 2.0571428571428574,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 1.4518e-06,
+          "geometric_loss_db": -112.75736762519406,
+          "snr_db": 42.51604122073253,
+          "data_rate_bps": 10000,
+          "mass_grams": 2.2857142857142856,
+          "feasible": true
+        },
+        "total_mass_grams": 5.042857142857144,
+        "avg_power_watts": 1.875,
+        "peak_power_watts": 3.571428571428571,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 73.7128208216871,
+        "score": -7367.33614016871,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10101110010010010100",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 1.5714285714285714,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1550nm",
+        "optical_power": 1.5714285714285714,
+        "optical_aperture": 0.7142857142857143,
+        "power_allocation": "Balanced",
+        "switching_logic": "Sequential"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 0.7330036321170041,
+          "snr_db": 20.733003632117004,
+          "data_rate_bps": 1,
+          "mass_grams": 2.0571428571428574,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 2.6474e-06,
+          "geometric_loss_db": -117.97562307431403,
+          "snr_db": 39.90691349617258,
+          "data_rate_bps": 9787.941152826088,
+          "mass_grams": 2.2857142857142856,
+          "feasible": true
+        },
+        "total_mass_grams": 5.042857142857144,
+        "avg_power_watts": 1.25,
+        "peak_power_watts": 3.571428571428571,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 30867251219.552353,
+        "total_data_bits_per_year": 30898787219.552353,
+        "data_volume_gb_per_year": 3.862348402444044,
+        "rf_margin": 86.4,
+        "optical_margin": 5936.009849913914,
+        "total_violation": 73.7128208216871,
+        "score": -7367.419733766266,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10101110000000100100",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 1.5714285714285714,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1064nm",
+        "optical_power": 1.0,
+        "optical_aperture": 0.9285714285714286,
+        "power_allocation": "Balanced",
+        "switching_logic": "Sequential"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 0.7330036321170041,
+          "snr_db": 20.733003632117004,
+          "data_rate_bps": 1,
+          "mass_grams": 2.0571428571428574,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 1.397932307692308e-06,
+          "geometric_loss_db": -112.42895462395205,
+          "snr_db": 41.856734792982245,
+          "data_rate_bps": 10000,
+          "mass_grams": 2.3142857142857145,
+          "feasible": true
+        },
+        "total_mass_grams": 5.071428571428572,
+        "avg_power_watts": 1.1850649350649352,
+        "peak_power_watts": 2.922077922077922,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 73.74139225025853,
+        "score": -7370.193283025853,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10101110000110000000",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 1.5714285714285714,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1064nm",
+        "optical_power": 2.7142857142857144,
+        "optical_aperture": 0.5,
+        "power_allocation": "RF_heavy",
+        "switching_logic": "Sequential"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 0.7330036321170041,
+          "snr_db": 20.733003632117004,
+          "data_rate_bps": 1,
+          "mass_grams": 2.0571428571428574,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 2.5961600000000004e-06,
+          "geometric_loss_db": -117.80586086980365,
+          "snr_db": 40.816384156516364,
+          "data_rate_bps": 10000,
+          "mass_grams": 2.4857142857142858,
+          "feasible": true
+        },
+        "total_mass_grams": 5.242857142857143,
+        "avg_power_watts": 1.9399350649350648,
+        "peak_power_watts": 4.87012987012987,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 73.9128208216871,
+        "score": -7387.336140168711,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10101110100110000101",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 1.5714285714285714,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "850nm",
+        "optical_power": 2.7142857142857144,
+        "optical_aperture": 0.5,
+        "power_allocation": "Balanced",
+        "switching_logic": "Opportunistic"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 0.7330036321170041,
+          "snr_db": 20.733003632117004,
+          "data_rate_bps": 1,
+          "mass_grams": 2.0571428571428574,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 2.074e-06,
+          "geometric_loss_db": -115.85540682490893,
+          "snr_db": 41.791611178963734,
+          "data_rate_bps": 10000,
+          "mass_grams": 2.4857142857142858,
+          "feasible": true
+        },
+        "total_mass_grams": 5.242857142857143,
+        "avg_power_watts": 1.37987012987013,
+        "peak_power_watts": 4.87012987012987,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 31536000000.0,
+        "total_data_bits_per_year": 31567536000.0,
+        "data_volume_gb_per_year": 3.945942,
+        "rf_margin": 86.4,
+        "optical_margin": 6064.615384615385,
+        "total_violation": 73.9128208216871,
+        "score": -7387.336140168711,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    },
+    {
+      "bitstring": "10101110010110000011",
+      "count": 1,
+      "probability": 0.0001,
+      "parameters": {
+        "rf_frequency": "Ka-band",
+        "rf_power": 1.5714285714285714,
+        "rf_antenna_size": 1.3571428571428572,
+        "optical_wavelength": "1550nm",
+        "optical_power": 2.7142857142857144,
+        "optical_aperture": 0.5,
+        "power_allocation": "RF_heavy",
+        "switching_logic": "Hybrid"
+      },
+      "performance": {
+        "rf_performance": {
+          "path_loss_db": 306.05163143696694,
+          "tx_gain_db": 50.9375957352158,
+          "rx_gain_db": 79.2622838331612,
+          "ebn0_db": 0.7330036321170041,
+          "snr_db": 20.733003632117004,
+          "data_rate_bps": 1,
+          "mass_grams": 2.0571428571428574,
+          "feasible": false
+        },
+        "optical_performance": {
+          "beam_divergence_rad": 3.782e-06,
+          "geometric_loss_db": -121.0736622740289,
+          "snr_db": 39.18248345440376,
+          "data_rate_bps": 8284.157466619166,
+          "mass_grams": 2.4857142857142858,
+          "feasible": true
+        },
+        "total_mass_grams": 5.242857142857143,
+        "avg_power_watts": 1.9399350649350648,
+        "peak_power_watts": 4.87012987012987,
+        "rf_data_bits_per_year": 31536000.0,
+        "optical_data_bits_per_year": 26124918986.730206,
+        "total_data_bits_per_year": 26156454986.730206,
+        "data_volume_gb_per_year": 3.269556873341276,
+        "rf_margin": 86.4,
+        "optical_margin": 5024.022882063501,
+        "total_violation": 73.9128208216871,
+        "score": -7388.012525295369,
+        "reliability": 0,
+        "feasible": false,
+        "constraints_met": {
+          "mass": false,
+          "avg_power": true,
+          "peak_power": true,
+          "rf_ebn0": false,
+          "optical_snr": true
+        }
+      }
+    }
+  ]
+}

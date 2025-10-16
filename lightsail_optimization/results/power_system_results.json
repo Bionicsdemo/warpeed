@@ -1,0 +1,107 @@
+{
+  "mission_info": {
+    "spacecraft": "Warpeed Nanocraft",
+    "mission": "Interstellar voyage to \u03b1 Centauri",
+    "analysis_date": "2025-10-15T17:46:00.880109",
+    "mission_duration_years": 20
+  },
+  "solar_cell_specifications": {
+    "type": "Multi-junction GaAs",
+    "solar_cell_area_cm2": 10.0,
+    "efficiency_BOL_percent": 30.0,
+    "efficiency_EOL_percent": 27.13831440823852,
+    "degradation_rate_percent_per_year": 0.5
+  },
+  "power_generation": {
+    "power_at_earth_W": 0.4083,
+    "power_at_earth_EOL_W": 0.3693524590961263,
+    "power_at_4.37AU_EOL_W": 0.019340964192938452,
+    "power_at_alpha_cen_W": 0.5613836565876091,
+    "alpha_centauri_irradiance_W_m2": 2068.6017861786836
+  },
+  "power_loads": {
+    "avionics_W": 0.1,
+    "navigation_W": 0.2,
+    "camera_W": 0.5,
+    "transmitter_W": 1.0,
+    "baseline_W": 0.30000000000000004,
+    "peak_W": 1.8
+  },
+  "battery_system": {
+    "battery_capacity_Wh": 0.20833333333333334,
+    "shadow_duration_hours": 0.5,
+    "depth_of_discharge_percent": 80.0,
+    "efficiency_percent": 90.0
+  },
+  "mass_budget": {
+    "solar_cells_grams": 0.5,
+    "battery_grams": 3.125,
+    "substrate_electronics_grams": 0.5,
+    "total_mass_grams": 4.125
+  },
+  "performance_analysis": {
+    "power_margin_at_alpha_cen_percent": -68.81201907846616,
+    "baseline_viable": true,
+    "imaging_viable": false,
+    "full_ops_viable": false,
+    "power_system_viable": false
+  },
+  "mission_phases": {
+    "LEO_deployment": {
+      "location": "1.00 AU",
+      "distance_au": 1.0,
+      "years_in_space": 0,
+      "irradiance_W_m2": 1361.0,
+      "cell_efficiency": 0.3,
+      "power_output_W": 0.4083
+    },
+    "cruise_1AU": {
+      "location": "1.00 AU",
+      "distance_au": 1.0,
+      "years_in_space": 0.1,
+      "irradiance_W_m2": 1361.0,
+      "cell_efficiency": 0.29984966142736064,
+      "power_output_W": 0.4080953892026378
+    },
+    "cruise_2AU": {
+      "location": "2.00 AU",
+      "distance_au": 2.0,
+      "years_in_space": 2,
+      "irradiance_W_m2": 340.25,
+      "cell_efficiency": 0.2970075,
+      "power_output_W": 0.10105680187499999
+    },
+    "cruise_3AU": {
+      "location": "3.00 AU",
+      "distance_au": 3.0,
+      "years_in_space": 8,
+      "irradiance_W_m2": 151.22222222222223,
+      "cell_efficiency": 0.28820791307263105,
+      "power_output_W": 0.04358344107687232
+    },
+    "cruise_4AU": {
+      "location": "4.00 AU",
+      "distance_au": 4.0,
+      "years_in_space": 15,
+      "irradiance_W_m2": 85.0625,
+      "cell_efficiency": 0.27827069064549836,
+      "power_output_W": 0.023670400623032703
+    },
+    "cruise_4.37AU": {
+      "location": "4.37 AU",
+      "distance_au": 4.37,
+      "years_in_space": 18,
+      "irradiance_W_m2": 71.268111578319,
+      "cell_efficiency": 0.27411746580377794,
+      "power_output_W": 0.01953583413846969
+    },
+    "alpha_centauri_arrival": {
+      "location": "\u03b1 Cen A+B",
+      "distance_au": 1.0,
+      "years_in_space": 20,
+      "irradiance_W_m2": 2068.6017861786836,
+      "cell_efficiency": 0.27138314408238523,
+      "power_output_W": 0.5613836565876091
+    }
+  }
+}

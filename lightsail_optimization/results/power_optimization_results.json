@@ -1,0 +1,95 @@
+{
+  "analysis_type": "Solar power system optimization",
+  "date": "2025-10-15",
+  "alpha_centauri_irradiance_W_m2": 2068.6017861786836,
+  "cell_efficiency_eol": 0.27138314408238523,
+  "power_requirements": {
+    "baseline_W": 0.3,
+    "imaging_W": 0.8,
+    "full_operations_W": 1.8
+  },
+  "required_areas": {
+    "baseline_cm2": 5.343938970784452,
+    "imaging_cm2": 14.250503922091871,
+    "full_ops_cm2": 32.063633824706706
+  },
+  "configurations": [
+    {
+      "name": "Minimum (baseline)",
+      "area_cm2": 5.0,
+      "power_W": 0.28069182829380457,
+      "baseline_margin": -6.436057235398474,
+      "imaging_margin": -64.91352146327442,
+      "full_ops_margin": -84.40600953923308,
+      "can_baseline": false,
+      "can_imaging": false,
+      "can_full_ops": false,
+      "mass_g": 3.9
+    },
+    {
+      "name": "Baseline",
+      "area_cm2": 10.0,
+      "power_W": 0.5613836565876091,
+      "baseline_margin": 87.12788552920306,
+      "imaging_margin": -29.827042926548863,
+      "full_ops_margin": -68.81201907846616,
+      "can_baseline": true,
+      "can_imaging": false,
+      "can_full_ops": false,
+      "mass_g": 4.15
+    },
+    {
+      "name": "Enhanced",
+      "area_cm2": 15.0,
+      "power_W": 0.8420754848814138,
+      "baseline_margin": 180.69182829380458,
+      "imaging_margin": 5.2594356101767215,
+      "full_ops_margin": -53.21802861769923,
+      "can_baseline": true,
+      "can_imaging": true,
+      "can_full_ops": false,
+      "mass_g": 4.4
+    },
+    {
+      "name": "Imaging capable",
+      "area_cm2": 20.0,
+      "power_W": 1.1227673131752183,
+      "baseline_margin": 274.2557710584061,
+      "imaging_margin": 40.34591414690228,
+      "full_ops_margin": -37.62403815693232,
+      "can_baseline": true,
+      "can_imaging": true,
+      "can_full_ops": false,
+      "mass_g": 4.65
+    },
+    {
+      "name": "Full operations",
+      "area_cm2": 32.0,
+      "power_W": 1.7964277010803493,
+      "baseline_margin": 498.8092336934498,
+      "imaging_margin": 124.55346263504366,
+      "full_ops_margin": -0.19846105109170656,
+      "can_baseline": true,
+      "can_imaging": true,
+      "can_full_ops": false,
+      "mass_g": 5.25
+    },
+    {
+      "name": "High margin",
+      "area_cm2": 40.0,
+      "power_W": 2.2455346263504365,
+      "baseline_margin": 648.5115421168122,
+      "imaging_margin": 180.69182829380455,
+      "full_ops_margin": 24.75192368613536,
+      "can_baseline": true,
+      "can_imaging": true,
+      "can_full_ops": true,
+      "mass_g": 5.65
+    }
+  ],
+  "recommendations": {
+    "minimum_viable": "20 cm\u00b2 for sequential operations",
+    "optimal": "32 cm\u00b2 for simultaneous operations",
+    "conservative": "40 cm\u00b2 for high margin"
+  }
+}

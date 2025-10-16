@@ -1,0 +1,168 @@
+{
+  "summary": {
+    "viable_communication_possible": false,
+    "closest_scenario": "Ultimate (100W, 10m TX, 100m RX, Space)",
+    "closest_parameters": {
+      "tx_power_W": 100.0,
+      "tx_diameter_m": 10.0,
+      "rx_diameter_m": 100.0,
+      "atmospheric_transmission": 1.0
+    },
+    "closest_results": {
+      "SNR_dB": -32.548192091767646,
+      "link_margin_dB": -42.548192091767646,
+      "data_rate_bps": 401055.6128482977,
+      "data_rate_Mbps": 0.4010556128482977,
+      "time_per_image_hours": 0.011620178420344377,
+      "images_per_year": 754377.4013532065,
+      "viable": false
+    },
+    "snr_deficit_dB": 42.548192091767646
+  },
+  "all_scenarios": [
+    {
+      "name": "Baseline (1W, 1m TX, 100m RX)",
+      "parameters": {
+        "tx_power_W": 1.0,
+        "tx_diameter_m": 1.0,
+        "rx_diameter_m": 100.0,
+        "atmospheric_transmission": 0.7
+      },
+      "results": {
+        "SNR_dB": -74.33684508386946,
+        "link_margin_dB": -84.33684508386946,
+        "data_rate_bps": 26.574189529883657,
+        "data_rate_Mbps": 2.6574189529883656e-05,
+        "time_per_image_hours": 175.37083388891523,
+        "images_per_year": 49.9855067436848,
+        "viable": false
+      }
+    },
+    {
+      "name": "10W Transmitter",
+      "parameters": {
+        "tx_power_W": 10.0,
+        "tx_diameter_m": 1.0,
+        "rx_diameter_m": 100.0,
+        "atmospheric_transmission": 0.7
+      },
+      "results": {
+        "SNR_dB": -64.33684508433082,
+        "link_margin_dB": -74.33684508433082,
+        "data_rate_bps": 265.7418504437187,
+        "data_rate_Mbps": 0.0002657418504437187,
+        "time_per_image_hours": 17.53708634901219,
+        "images_per_year": 499.8549830652891,
+        "viable": false
+      }
+    },
+    {
+      "name": "100W Transmitter",
+      "parameters": {
+        "tx_power_W": 100.0,
+        "tx_diameter_m": 1.0,
+        "rx_diameter_m": 100.0,
+        "atmospheric_transmission": 0.7
+      },
+      "results": {
+        "SNR_dB": -54.33684508894444,
+        "link_margin_dB": -64.33684508894444,
+        "data_rate_bps": 2657.414096459044,
+        "data_rate_Mbps": 0.0026574140964590437,
+        "time_per_image_hours": 1.7537115438604747,
+        "images_per_year": 4998.5415393362,
+        "viable": false
+      }
+    },
+    {
+      "name": "10m Transmitter Aperture",
+      "parameters": {
+        "tx_power_W": 1.0,
+        "tx_diameter_m": 10.0,
+        "rx_diameter_m": 100.0,
+        "atmospheric_transmission": 0.7
+      },
+      "results": {
+        "SNR_dB": -54.33684508894444,
+        "link_margin_dB": -64.33684508894444,
+        "data_rate_bps": 2657.414096459044,
+        "data_rate_Mbps": 0.0026574140964590437,
+        "time_per_image_hours": 1.7537115438604747,
+        "images_per_year": 4998.5415393362,
+        "viable": false
+      }
+    },
+    {
+      "name": "ELT-class Receiver (39m)",
+      "parameters": {
+        "tx_power_W": 1.0,
+        "tx_diameter_m": 1.0,
+        "rx_diameter_m": 39.0,
+        "atmospheric_transmission": 0.7
+      },
+      "results": {
+        "SNR_dB": -82.40980897129212,
+        "link_margin_dB": -92.40980897129212,
+        "data_rate_bps": 4.1415569911062216,
+        "data_rate_Mbps": 4.141556991106221e-06,
+        "time_per_image_hours": 1125.2622595283879,
+        "images_per_year": 7.7901839555820045,
+        "viable": false
+      }
+    },
+    {
+      "name": "100W + 10m TX + 100m RX",
+      "parameters": {
+        "tx_power_W": 100.0,
+        "tx_diameter_m": 10.0,
+        "rx_diameter_m": 100.0,
+        "atmospheric_transmission": 0.7
+      },
+      "results": {
+        "SNR_dB": -34.336845596443155,
+        "link_margin_dB": -44.336845596443155,
+        "data_rate_bps": 265692.9309277772,
+        "data_rate_Mbps": 0.2656929309277772,
+        "time_per_image_hours": 0.01754031528616239,
+        "images_per_year": 499762.966456796,
+        "viable": false
+      }
+    },
+    {
+      "name": "Space Receiver (10W, 5m TX, 100m RX)",
+      "parameters": {
+        "tx_power_W": 10.0,
+        "tx_diameter_m": 5.0,
+        "rx_diameter_m": 100.0,
+        "atmospheric_transmission": 1.0
+      },
+      "results": {
+        "SNR_dB": -48.56879125052905,
+        "link_margin_dB": -58.56879125052905,
+        "data_rate_bps": 10029.110102935292,
+        "data_rate_Mbps": 0.010029110102935291,
+        "time_per_image_hours": 0.4646810863521982,
+        "images_per_year": 18864.55088760798,
+        "viable": false
+      }
+    },
+    {
+      "name": "Ultimate (100W, 10m TX, 100m RX, Space)",
+      "parameters": {
+        "tx_power_W": 100.0,
+        "tx_diameter_m": 10.0,
+        "rx_diameter_m": 100.0,
+        "atmospheric_transmission": 1.0
+      },
+      "results": {
+        "SNR_dB": -32.548192091767646,
+        "link_margin_dB": -42.548192091767646,
+        "data_rate_bps": 401055.6128482977,
+        "data_rate_Mbps": 0.4010556128482977,
+        "time_per_image_hours": 0.011620178420344377,
+        "images_per_year": 754377.4013532065,
+        "viable": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,1038 @@
+{
+  "timestamp": "2025-10-15T08:35:00.177905",
+  "backend": "ibm_torino",
+  "job_id": "d3nq5ub4kkus739f1d30",
+  "shots": 8000,
+  "num_qubits": 15,
+  "success_rate_pct": 100.0,
+  "avg_success_pct": 100.0,
+  "total_scenarios": 7067,
+  "recommended_tolerances": {
+    "thickness_pct": 5.0,
+    "reflectivity_pct": 1.0,
+    "mass_pct": 3.0,
+    "alignment_deg": 10.0
+  },
+  "best_case": {
+    "thickness_error_pct": 5.0,
+    "reflectivity_error_pct": 1.0,
+    "mass_error_pct": -1.4,
+    "alignment_error_deg": 2.8571428571428568,
+    "final_velocity_c": 0.5007810516256966,
+    "temperature_K": 1587.7894186872636,
+    "success_probability": 1.0,
+    "quantum_counts": 1
+  },
+  "worst_acceptable": {
+    "thickness_error_pct": 1.0,
+    "reflectivity_error_pct": 0.9333333333333333,
+    "mass_error_pct": 0.5999999999999996,
+    "alignment_error_deg": 2.8571428571428568,
+    "final_velocity_c": 0.4911556879047359,
+    "temperature_K": 1618.9255084716524,
+    "success_probability": 1.0,
+    "quantum_counts": 1
+  },
+  "all_scenarios": [
+    {
+      "thickness_error_pct": 5.0,
+      "reflectivity_error_pct": 1.0,
+      "mass_error_pct": -1.4,
+      "alignment_error_deg": 2.8571428571428568,
+      "final_velocity_c": 0.5007810516256966,
+      "temperature_K": 1587.7894186872636,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -3.0,
+      "reflectivity_error_pct": 0.4,
+      "mass_error_pct": 2.2,
+      "alignment_error_deg": 7.142857142857143,
+      "final_velocity_c": 0.4797458358816442,
+      "temperature_K": 1651.9682106723983,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 3.666666666666668,
+      "reflectivity_error_pct": 0.06666666666666667,
+      "mass_error_pct": -1.4,
+      "alignment_error_deg": 7.142857142857143,
+      "final_velocity_c": 0.4989261075147714,
+      "temperature_K": 1597.9676602130646,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 4.333333333333334,
+      "reflectivity_error_pct": 0.2,
+      "mass_error_pct": 0.5999999999999996,
+      "alignment_error_deg": 1.4285714285714284,
+      "final_velocity_c": 0.49571555849316207,
+      "temperature_K": 1592.854150588786,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 1.666666666666666,
+      "reflectivity_error_pct": 0.2,
+      "mass_error_pct": -1.7999999999999998,
+      "alignment_error_deg": 10.0,
+      "final_velocity_c": 0.49282414346851744,
+      "temperature_K": 1613.6088257762322,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": 3.0,
+      "reflectivity_error_pct": 0.2,
+      "mass_error_pct": -0.20000000000000018,
+      "alignment_error_deg": 1.4285714285714284,
+      "final_velocity_c": 0.49968923030473056,
+      "temperature_K": 1603.130735573305,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -1.0,
+      "reflectivity_error_pct": 0.6,
+      "mass_error_pct": -1.7999999999999998,
+      "alignment_error_deg": 2.8571428571428568,
+      "final_velocity_c": 0.5048524925440959,
+      "temperature_K": 1635.1965254267382,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -3.666666666666667,
+      "reflectivity_error_pct": 0.6666666666666666,
+      "mass_error_pct": 0.20000000000000018,
+      "alignment_error_deg": 5.7142857142857135,
+      "final_velocity_c": 0.490761311858671,
+      "temperature_K": 1657.6745081850372,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": 0.33333333333333304,
+      "reflectivity_error_pct": 0.9333333333333333,
+      "mass_error_pct": -2.2,
+      "alignment_error_deg": 4.285714285714286,
+      "final_velocity_c": 0.5036473428375154,
+      "temperature_K": 1624.2950937237408,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 3.0,
+      "reflectivity_error_pct": 0.13333333333333333,
+      "mass_error_pct": 1.8000000000000007,
+      "alignment_error_deg": 4.285714285714286,
+      "final_velocity_c": 0.4877649930722401,
+      "temperature_K": 1603.130735573305,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": -2.3333333333333335,
+      "reflectivity_error_pct": 0.2,
+      "mass_error_pct": 1.0,
+      "alignment_error_deg": 7.142857142857143,
+      "final_velocity_c": 0.48642057714272763,
+      "temperature_K": 1646.3204395745963,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -1.666666666666667,
+      "reflectivity_error_pct": 1.0,
+      "mass_error_pct": -3.0,
+      "alignment_error_deg": 0.0,
+      "final_velocity_c": 0.5103092783505155,
+      "temperature_K": 1640.7302012275932,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": 0.33333333333333304,
+      "reflectivity_error_pct": 0.6666666666666666,
+      "mass_error_pct": 2.2,
+      "alignment_error_deg": 10.0,
+      "final_velocity_c": 0.47132126630316423,
+      "temperature_K": 1624.2950937237408,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -5.0,
+      "reflectivity_error_pct": 0.6,
+      "mass_error_pct": -1.7999999999999998,
+      "alignment_error_deg": 5.7142857142857135,
+      "final_velocity_c": 0.501092528747824,
+      "temperature_K": 1669.2667788425458,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": -3.666666666666667,
+      "reflectivity_error_pct": 0.7333333333333333,
+      "mass_error_pct": 2.2,
+      "alignment_error_deg": 7.142857142857143,
+      "final_velocity_c": 0.47814026079502564,
+      "temperature_K": 1657.6745081850372,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 5.0,
+      "reflectivity_error_pct": 0.6666666666666666,
+      "mass_error_pct": 0.20000000000000018,
+      "alignment_error_deg": 4.285714285714286,
+      "final_velocity_c": 0.492907174164245,
+      "temperature_K": 1587.7894186872636,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 1.0,
+      "reflectivity_error_pct": 1.0,
+      "mass_error_pct": -3.0,
+      "alignment_error_deg": 1.4285714285714284,
+      "final_velocity_c": 0.5099921010326632,
+      "temperature_K": 1618.9255084716524,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -4.333333333333333,
+      "reflectivity_error_pct": 1.0,
+      "mass_error_pct": 0.5999999999999996,
+      "alignment_error_deg": 7.142857142857143,
+      "final_velocity_c": 0.48443998841122937,
+      "temperature_K": 1663.440349970328,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 3.0,
+      "reflectivity_error_pct": 0.26666666666666666,
+      "mass_error_pct": 0.5999999999999996,
+      "alignment_error_deg": 7.142857142857143,
+      "final_velocity_c": 0.48802843276983104,
+      "temperature_K": 1603.130735573305,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -1.0,
+      "reflectivity_error_pct": 0.0,
+      "mass_error_pct": 0.20000000000000018,
+      "alignment_error_deg": 0.0,
+      "final_velocity_c": 0.499001996007984,
+      "temperature_K": 1635.1965254267382,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -4.333333333333333,
+      "reflectivity_error_pct": 0.13333333333333333,
+      "mass_error_pct": -1.4,
+      "alignment_error_deg": 2.8571428571428568,
+      "final_velocity_c": 0.5051649934917801,
+      "temperature_K": 1663.440349970328,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -5.0,
+      "reflectivity_error_pct": 0.8666666666666667,
+      "mass_error_pct": 2.2,
+      "alignment_error_deg": 5.7142857142857135,
+      "final_velocity_c": 0.4801885990591625,
+      "temperature_K": 1669.2667788425458,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 5.0,
+      "reflectivity_error_pct": 0.06666666666666667,
+      "mass_error_pct": -1.7999999999999998,
+      "alignment_error_deg": 10.0,
+      "final_velocity_c": 0.49348255915785405,
+      "temperature_K": 1587.7894186872636,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 1.0,
+      "reflectivity_error_pct": 0.4666666666666667,
+      "mass_error_pct": 1.0,
+      "alignment_error_deg": 1.4285714285714284,
+      "final_velocity_c": 0.49243301705938125,
+      "temperature_K": 1618.9255084716524,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": -4.333333333333333,
+      "reflectivity_error_pct": 1.0,
+      "mass_error_pct": 0.20000000000000018,
+      "alignment_error_deg": 5.7142857142857135,
+      "final_velocity_c": 0.4891144618188768,
+      "temperature_K": 1663.440349970328,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -0.33333333333333304,
+      "reflectivity_error_pct": 0.3333333333333333,
+      "mass_error_pct": 1.0,
+      "alignment_error_deg": 4.285714285714286,
+      "final_velocity_c": 0.4906439084499285,
+      "temperature_K": 1629.718464719441,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -2.3333333333333335,
+      "reflectivity_error_pct": 0.4,
+      "mass_error_pct": 2.2,
+      "alignment_error_deg": 2.8571428571428568,
+      "final_velocity_c": 0.48606914194323375,
+      "temperature_K": 1646.3204395745963,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -1.0,
+      "reflectivity_error_pct": 0.06666666666666667,
+      "mass_error_pct": -2.2,
+      "alignment_error_deg": 8.571428571428571,
+      "final_velocity_c": 0.49955753849240364,
+      "temperature_K": 1635.1965254267382,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 2.333333333333333,
+      "reflectivity_error_pct": 0.7333333333333333,
+      "mass_error_pct": 1.0,
+      "alignment_error_deg": 2.8571428571428568,
+      "final_velocity_c": 0.4901981558612347,
+      "temperature_K": 1608.344182621365,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -0.33333333333333304,
+      "reflectivity_error_pct": 0.6,
+      "mass_error_pct": 0.20000000000000018,
+      "alignment_error_deg": 7.142857142857143,
+      "final_velocity_c": 0.48833902757278025,
+      "temperature_K": 1629.718464719441,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -2.3333333333333335,
+      "reflectivity_error_pct": 0.6,
+      "mass_error_pct": 0.5999999999999996,
+      "alignment_error_deg": 2.8571428571428568,
+      "final_velocity_c": 0.4928082978909565,
+      "temperature_K": 1646.3204395745963,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 1.0,
+      "reflectivity_error_pct": 0.5333333333333333,
+      "mass_error_pct": 1.0,
+      "alignment_error_deg": 2.8571428571428568,
+      "final_velocity_c": 0.49118579485894037,
+      "temperature_K": 1618.9255084716524,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": -1.666666666666667,
+      "reflectivity_error_pct": 1.0,
+      "mass_error_pct": -2.2,
+      "alignment_error_deg": 0.0,
+      "final_velocity_c": 0.5061349693251533,
+      "temperature_K": 1640.7302012275932,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -0.33333333333333304,
+      "reflectivity_error_pct": 0.2,
+      "mass_error_pct": -3.0,
+      "alignment_error_deg": 10.0,
+      "final_velocity_c": 0.49892093699596307,
+      "temperature_K": 1629.718464719441,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 5.0,
+      "reflectivity_error_pct": 0.5333333333333333,
+      "mass_error_pct": -1.4,
+      "alignment_error_deg": 7.142857142857143,
+      "final_velocity_c": 0.49659623242964585,
+      "temperature_K": 1587.7894186872636,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 3.666666666666668,
+      "reflectivity_error_pct": 0.06666666666666667,
+      "mass_error_pct": -1.7999999999999998,
+      "alignment_error_deg": 8.571428571428571,
+      "final_velocity_c": 0.4975226809018032,
+      "temperature_K": 1597.9676602130646,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 5.0,
+      "reflectivity_error_pct": 0.3333333333333333,
+      "mass_error_pct": -1.7999999999999998,
+      "alignment_error_deg": 10.0,
+      "final_velocity_c": 0.49216572777918066,
+      "temperature_K": 1587.7894186872636,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 3.666666666666668,
+      "reflectivity_error_pct": 0.0,
+      "mass_error_pct": 0.5999999999999996,
+      "alignment_error_deg": 4.285714285714286,
+      "final_velocity_c": 0.49424225303805375,
+      "temperature_K": 1597.9676602130646,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 2.333333333333333,
+      "reflectivity_error_pct": 0.4666666666666667,
+      "mass_error_pct": -2.6,
+      "alignment_error_deg": 2.8571428571428568,
+      "final_velocity_c": 0.5096818869987243,
+      "temperature_K": 1608.344182621365,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 5.0,
+      "reflectivity_error_pct": 0.0,
+      "mass_error_pct": -0.5999999999999996,
+      "alignment_error_deg": 4.285714285714286,
+      "final_velocity_c": 0.5002089603181913,
+      "temperature_K": 1587.7894186872636,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 3.666666666666668,
+      "reflectivity_error_pct": 0.6,
+      "mass_error_pct": 1.3999999999999995,
+      "alignment_error_deg": 4.285714285714286,
+      "final_velocity_c": 0.4874008484388012,
+      "temperature_K": 1597.9676602130646,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 1.0,
+      "reflectivity_error_pct": 1.0,
+      "mass_error_pct": -2.2,
+      "alignment_error_deg": 7.142857142857143,
+      "final_velocity_c": 0.4983094359322053,
+      "temperature_K": 1618.9255084716524,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -1.0,
+      "reflectivity_error_pct": 0.2,
+      "mass_error_pct": 2.5999999999999996,
+      "alignment_error_deg": 0.0,
+      "final_velocity_c": 0.48635477582846,
+      "temperature_K": 1635.1965254267382,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 1.0,
+      "reflectivity_error_pct": 0.2,
+      "mass_error_pct": -0.5999999999999996,
+      "alignment_error_deg": 2.8571428571428568,
+      "final_velocity_c": 0.5007647670560038,
+      "temperature_K": 1618.9255084716524,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 3.666666666666668,
+      "reflectivity_error_pct": 0.13333333333333333,
+      "mass_error_pct": 0.20000000000000018,
+      "alignment_error_deg": 10.0,
+      "final_velocity_c": 0.48330997104745355,
+      "temperature_K": 1597.9676602130646,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -0.33333333333333304,
+      "reflectivity_error_pct": 0.6666666666666666,
+      "mass_error_pct": 2.2,
+      "alignment_error_deg": 5.7142857142857135,
+      "final_velocity_c": 0.48115737229196515,
+      "temperature_K": 1629.718464719441,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": -5.0,
+      "reflectivity_error_pct": 0.13333333333333333,
+      "mass_error_pct": 2.5999999999999996,
+      "alignment_error_deg": 10.0,
+      "final_velocity_c": 0.4720044746486826,
+      "temperature_K": 1669.2667788425458,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -1.0,
+      "reflectivity_error_pct": 0.6,
+      "mass_error_pct": -3.0,
+      "alignment_error_deg": 8.571428571428571,
+      "final_velocity_c": 0.5009895280802639,
+      "temperature_K": 1635.1965254267382,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 1.0,
+      "reflectivity_error_pct": 0.8666666666666667,
+      "mass_error_pct": -1.0,
+      "alignment_error_deg": 0.0,
+      "final_velocity_c": 0.5006734006734007,
+      "temperature_K": 1618.9255084716524,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 3.666666666666668,
+      "reflectivity_error_pct": 0.13333333333333333,
+      "mass_error_pct": 2.5999999999999996,
+      "alignment_error_deg": 7.142857142857143,
+      "final_velocity_c": 0.4791549341733526,
+      "temperature_K": 1597.9676602130646,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -1.666666666666667,
+      "reflectivity_error_pct": 0.6,
+      "mass_error_pct": 1.0,
+      "alignment_error_deg": 10.0,
+      "final_velocity_c": 0.47724120422306743,
+      "temperature_K": 1640.7302012275932,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -1.666666666666667,
+      "reflectivity_error_pct": 0.7333333333333333,
+      "mass_error_pct": -1.0,
+      "alignment_error_deg": 1.4285714285714284,
+      "final_velocity_c": 0.5010351945614437,
+      "temperature_K": 1640.7302012275932,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -1.666666666666667,
+      "reflectivity_error_pct": 0.06666666666666667,
+      "mass_error_pct": 1.3999999999999995,
+      "alignment_error_deg": 4.285714285714286,
+      "final_velocity_c": 0.4900160106034628,
+      "temperature_K": 1640.7302012275932,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 1.666666666666666,
+      "reflectivity_error_pct": 0.06666666666666667,
+      "mass_error_pct": -0.5999999999999996,
+      "alignment_error_deg": 0.0,
+      "final_velocity_c": 0.5026827632461436,
+      "temperature_K": 1613.6088257762322,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": -3.0,
+      "reflectivity_error_pct": 0.2,
+      "mass_error_pct": -1.4,
+      "alignment_error_deg": 2.8571428571428568,
+      "final_velocity_c": 0.504827767194389,
+      "temperature_K": 1651.9682106723983,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": 1.0,
+      "reflectivity_error_pct": 0.3333333333333333,
+      "mass_error_pct": -2.2,
+      "alignment_error_deg": 8.571428571428571,
+      "final_velocity_c": 0.49822449636167015,
+      "temperature_K": 1618.9255084716524,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -5.0,
+      "reflectivity_error_pct": 0.5333333333333333,
+      "mass_error_pct": -1.4,
+      "alignment_error_deg": 10.0,
+      "final_velocity_c": 0.48918549530300465,
+      "temperature_K": 1669.2667788425458,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -1.666666666666667,
+      "reflectivity_error_pct": 0.5333333333333333,
+      "mass_error_pct": -2.2,
+      "alignment_error_deg": 1.4285714285714284,
+      "final_velocity_c": 0.5082047250270334,
+      "temperature_K": 1640.7302012275932,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -4.333333333333333,
+      "reflectivity_error_pct": 0.4666666666666667,
+      "mass_error_pct": 0.5999999999999996,
+      "alignment_error_deg": 4.285714285714286,
+      "final_velocity_c": 0.4919357891905428,
+      "temperature_K": 1663.440349970328,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -1.0,
+      "reflectivity_error_pct": 0.06666666666666667,
+      "mass_error_pct": -2.2,
+      "alignment_error_deg": 10.0,
+      "final_velocity_c": 0.49550089273314185,
+      "temperature_K": 1635.1965254267382,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 5.0,
+      "reflectivity_error_pct": 0.8,
+      "mass_error_pct": -2.2,
+      "alignment_error_deg": 0.0,
+      "final_velocity_c": 0.5071574642126789,
+      "temperature_K": 1587.7894186872636,
+      "success_probability": 1.0,
+      "quantum_counts": 3
+    },
+    {
+      "thickness_error_pct": -1.666666666666667,
+      "reflectivity_error_pct": 1.0,
+      "mass_error_pct": 3.0,
+      "alignment_error_deg": 0.0,
+      "final_velocity_c": 0.4805825242718446,
+      "temperature_K": 1640.7302012275932,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": -0.33333333333333304,
+      "reflectivity_error_pct": 0.0,
+      "mass_error_pct": 3.0,
+      "alignment_error_deg": 1.4285714285714284,
+      "final_velocity_c": 0.4851351750531364,
+      "temperature_K": 1629.718464719441,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 0.33333333333333304,
+      "reflectivity_error_pct": 0.0,
+      "mass_error_pct": 3.0,
+      "alignment_error_deg": 2.8571428571428568,
+      "final_velocity_c": 0.48423077071975756,
+      "temperature_K": 1624.2950937237408,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 5.0,
+      "reflectivity_error_pct": 0.06666666666666667,
+      "mass_error_pct": -1.4,
+      "alignment_error_deg": 7.142857142857143,
+      "final_velocity_c": 0.4989261075147714,
+      "temperature_K": 1587.7894186872636,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -2.3333333333333335,
+      "reflectivity_error_pct": 0.7333333333333333,
+      "mass_error_pct": 0.20000000000000018,
+      "alignment_error_deg": 5.7142857142857135,
+      "final_velocity_c": 0.4904319418507122,
+      "temperature_K": 1646.3204395745963,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 1.666666666666666,
+      "reflectivity_error_pct": 0.8666666666666667,
+      "mass_error_pct": -1.4,
+      "alignment_error_deg": 7.142857142857143,
+      "final_velocity_c": 0.49493203594027024,
+      "temperature_K": 1613.6088257762322,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 1.666666666666666,
+      "reflectivity_error_pct": 0.8,
+      "mass_error_pct": -3.0,
+      "alignment_error_deg": 10.0,
+      "final_velocity_c": 0.49592141232464465,
+      "temperature_K": 1613.6088257762322,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": 1.0,
+      "reflectivity_error_pct": 0.0,
+      "mass_error_pct": -0.5999999999999996,
+      "alignment_error_deg": 8.571428571428571,
+      "final_velocity_c": 0.49184426704882817,
+      "temperature_K": 1618.9255084716524,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 2.333333333333333,
+      "reflectivity_error_pct": 0.2,
+      "mass_error_pct": -3.0,
+      "alignment_error_deg": 5.7142857142857135,
+      "final_velocity_c": 0.5093330265136203,
+      "temperature_K": 1608.344182621365,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": 3.666666666666668,
+      "reflectivity_error_pct": 0.8,
+      "mass_error_pct": 1.8000000000000007,
+      "alignment_error_deg": 1.4285714285714284,
+      "final_velocity_c": 0.4869270299236667,
+      "temperature_K": 1597.9676602130646,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 2.333333333333333,
+      "reflectivity_error_pct": 0.3333333333333333,
+      "mass_error_pct": -3.0,
+      "alignment_error_deg": 0.0,
+      "final_velocity_c": 0.513745704467354,
+      "temperature_K": 1608.344182621365,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -3.666666666666667,
+      "reflectivity_error_pct": 0.9333333333333333,
+      "mass_error_pct": -1.4,
+      "alignment_error_deg": 8.571428571428571,
+      "final_velocity_c": 0.4912070975994261,
+      "temperature_K": 1657.6745081850372,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 0.33333333333333304,
+      "reflectivity_error_pct": 0.8666666666666667,
+      "mass_error_pct": 0.20000000000000018,
+      "alignment_error_deg": 5.7142857142857135,
+      "final_velocity_c": 0.4897732018347945,
+      "temperature_K": 1624.2950937237408,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -3.0,
+      "reflectivity_error_pct": 0.7333333333333333,
+      "mass_error_pct": -1.4,
+      "alignment_error_deg": 0.0,
+      "final_velocity_c": 0.5033806626098716,
+      "temperature_K": 1651.9682106723983,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 3.666666666666668,
+      "reflectivity_error_pct": 0.4,
+      "mass_error_pct": 0.5999999999999996,
+      "alignment_error_deg": 1.4285714285714284,
+      "final_velocity_c": 0.49472214054027,
+      "temperature_K": 1597.9676602130646,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": 0.33333333333333304,
+      "reflectivity_error_pct": 0.6666666666666666,
+      "mass_error_pct": 0.5999999999999996,
+      "alignment_error_deg": 10.0,
+      "final_velocity_c": 0.4788174295843278,
+      "temperature_K": 1624.2950937237408,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 2.333333333333333,
+      "reflectivity_error_pct": 0.6,
+      "mass_error_pct": -1.0,
+      "alignment_error_deg": 1.4285714285714284,
+      "final_velocity_c": 0.5017081766898002,
+      "temperature_K": 1608.344182621365,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": 3.666666666666668,
+      "reflectivity_error_pct": 0.7333333333333333,
+      "mass_error_pct": 3.0,
+      "alignment_error_deg": 10.0,
+      "final_velocity_c": 0.46734665248385393,
+      "temperature_K": 1597.9676602130646,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": 4.333333333333334,
+      "reflectivity_error_pct": 0.7333333333333333,
+      "mass_error_pct": 0.20000000000000018,
+      "alignment_error_deg": 7.142857142857143,
+      "final_velocity_c": 0.48768397857536544,
+      "temperature_K": 1592.854150588786,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -5.0,
+      "reflectivity_error_pct": 0.06666666666666667,
+      "mass_error_pct": -1.7999999999999998,
+      "alignment_error_deg": 2.8571428571428568,
+      "final_velocity_c": 0.5075612919675384,
+      "temperature_K": 1669.2667788425458,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -1.0,
+      "reflectivity_error_pct": 0.3333333333333333,
+      "mass_error_pct": 1.0,
+      "alignment_error_deg": 8.571428571428571,
+      "final_velocity_c": 0.4824391657838746,
+      "temperature_K": 1635.1965254267382,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -1.0,
+      "reflectivity_error_pct": 0.6666666666666666,
+      "mass_error_pct": 2.5999999999999996,
+      "alignment_error_deg": 10.0,
+      "final_velocity_c": 0.46948375649301544,
+      "temperature_K": 1635.1965254267382,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 5.0,
+      "reflectivity_error_pct": 0.6666666666666666,
+      "mass_error_pct": -3.0,
+      "alignment_error_deg": 0.0,
+      "final_velocity_c": 0.5120274914089348,
+      "temperature_K": 1587.7894186872636,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": 3.666666666666668,
+      "reflectivity_error_pct": 0.3333333333333333,
+      "mass_error_pct": -1.4,
+      "alignment_error_deg": 4.285714285714286,
+      "final_velocity_c": 0.5025865593655454,
+      "temperature_K": 1597.9676602130646,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 1.0,
+      "reflectivity_error_pct": 0.13333333333333333,
+      "mass_error_pct": 1.8000000000000007,
+      "alignment_error_deg": 7.142857142857143,
+      "final_velocity_c": 0.4829203953456383,
+      "temperature_K": 1618.9255084716524,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -1.0,
+      "reflectivity_error_pct": 0.06666666666666667,
+      "mass_error_pct": 0.20000000000000018,
+      "alignment_error_deg": 1.4285714285714284,
+      "final_velocity_c": 0.4983593853804332,
+      "temperature_K": 1635.1965254267382,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": -1.666666666666667,
+      "reflectivity_error_pct": 0.26666666666666666,
+      "mass_error_pct": 1.3999999999999995,
+      "alignment_error_deg": 1.4285714285714284,
+      "final_velocity_c": 0.4914760608388408,
+      "temperature_K": 1640.7302012275932,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 5.0,
+      "reflectivity_error_pct": 0.8666666666666667,
+      "mass_error_pct": 0.20000000000000018,
+      "alignment_error_deg": 0.0,
+      "final_velocity_c": 0.4946773120425815,
+      "temperature_K": 1587.7894186872636,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 3.0,
+      "reflectivity_error_pct": 0.13333333333333333,
+      "mass_error_pct": -1.0,
+      "alignment_error_deg": 2.8571428571428568,
+      "final_velocity_c": 0.5031239228110054,
+      "temperature_K": 1603.130735573305,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 3.666666666666668,
+      "reflectivity_error_pct": 0.2,
+      "mass_error_pct": 0.5999999999999996,
+      "alignment_error_deg": 0.0,
+      "final_velocity_c": 0.49602385685884687,
+      "temperature_K": 1597.9676602130646,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 0.33333333333333304,
+      "reflectivity_error_pct": 0.26666666666666666,
+      "mass_error_pct": 2.5999999999999996,
+      "alignment_error_deg": 0.0,
+      "final_velocity_c": 0.48602988953866144,
+      "temperature_K": 1624.2950937237408,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 1.666666666666666,
+      "reflectivity_error_pct": 0.9333333333333333,
+      "mass_error_pct": -1.4,
+      "alignment_error_deg": 0.0,
+      "final_velocity_c": 0.5023664638269101,
+      "temperature_K": 1613.6088257762322,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 2.333333333333333,
+      "reflectivity_error_pct": 0.5333333333333333,
+      "mass_error_pct": 1.0,
+      "alignment_error_deg": 2.8571428571428568,
+      "final_velocity_c": 0.49118579485894037,
+      "temperature_K": 1608.344182621365,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": 0.33333333333333304,
+      "reflectivity_error_pct": 0.6,
+      "mass_error_pct": 0.5999999999999996,
+      "alignment_error_deg": 0.0,
+      "final_velocity_c": 0.49403578528827036,
+      "temperature_K": 1624.2950937237408,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -1.0,
+      "reflectivity_error_pct": 0.8,
+      "mass_error_pct": -1.0,
+      "alignment_error_deg": 8.571428571428571,
+      "final_velocity_c": 0.4898808644797605,
+      "temperature_K": 1635.1965254267382,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -3.666666666666667,
+      "reflectivity_error_pct": 0.3333333333333333,
+      "mass_error_pct": -2.6,
+      "alignment_error_deg": 1.4285714285714284,
+      "final_velocity_c": 0.5113178640010761,
+      "temperature_K": 1657.6745081850372,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -5.0,
+      "reflectivity_error_pct": 0.8666666666666667,
+      "mass_error_pct": -2.2,
+      "alignment_error_deg": 5.7142857142857135,
+      "final_velocity_c": 0.501792176112949,
+      "temperature_K": 1669.2667788425458,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    },
+    {
+      "thickness_error_pct": -2.3333333333333335,
+      "reflectivity_error_pct": 0.4666666666666667,
+      "mass_error_pct": -3.0,
+      "alignment_error_deg": 2.8571428571428568,
+      "final_velocity_c": 0.5117836679760386,
+      "temperature_K": 1646.3204395745963,
+      "success_probability": 1.0,
+      "quantum_counts": 1
+    },
+    {
+      "thickness_error_pct": -2.3333333333333335,
+      "reflectivity_error_pct": 0.8666666666666667,
+      "mass_error_pct": 0.20000000000000018,
+      "alignment_error_deg": 10.0,
+      "final_velocity_c": 0.4797609659196017,
+      "temperature_K": 1646.3204395745963,
+      "success_probability": 1.0,
+      "quantum_counts": 2
+    }
+  ]
+}
