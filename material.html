@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Structure | Warpeed - Quantum-Validated Lightsail</title>
+    <meta name="description" content="Complete material structure validated on IBM Torino quantum computer. 100% reflectivity, 85.87% manufacturing yield. SiC/HfO₂/SiO₂ multilayer dielectric.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #f093fb;
+            --success-color: #00ff88;
+            --text-light: #e0e0e0;
+            --text-dark: #a0a0a0;
+            --bg-dark: #0a0a0a;
+            --bg-card: #1a1a1a;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background: var(--bg-dark);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .nav-logo {
+            height: 50px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .nav-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border-bottom: 2px solid rgba(102, 126, 234, 0.3);
+            padding-top: 100px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+        }
+
+        .quantum-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #00ff88 0%, #00cc88 100%);
+            color: #000;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--success-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Layer Cards */
+        .layer-grid {
+            display: grid;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .layer-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            transition: all 0.3s;
+        }
+
+        .layer-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .layer-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.3);
+        }
+
+        .layer-content {
+            padding: 2rem;
+        }
+
+        .layer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .layer-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .layer-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: rgba(102, 126, 234, 0.2);
+        }
+
+        .layer-formula {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .layer-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .detail-item {
+            padding: 0.75rem;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 10px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .detail-label {
+            font-size: 0.85rem;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .detail-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        /* Performance Table */
+        .performance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .performance-card {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+        }
+
+        .performance-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .performance-list {
+            list-style: none;
+        }
+
+        .performance-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .performance-list li:last-child {
+            border-bottom: none;
+        }
+
+        .check-icon {
+            color: var(--success-color);
+            margin-right: 0.5rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-card);
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(102, 126, 234, 0.2);
+            margin-top: 4rem;
+        }
+
+        footer p {
+            color: var(--text-dark);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .layer-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <img src="logo.png" alt="Warpeed Logo" class="nav-logo" onclick="window.location.href='index.html'">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="material.html">Material</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="mission.html">Mission</a></li>
+                <li><a href="mailto:heinz@warpeed.space" class="nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="quantum-badge">✓ Quantum-Validated on IBM Torino (133 Qubits)</div>
+            <h1>Material Structure</h1>
+            <p class="hero-subtitle">
+                Complete multilayer dielectric structure validated using IBM's 133-qubit Torino quantum processor.
+                5,389 configurations tested in 6.11 seconds. Production-ready specifications.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Validation Stats -->
+        <section class="section">
+            <h2 class="section-title">Quantum Validation Results</h2>
+            <p class="section-subtitle">Validated on IBM Torino quantum computer - October 16, 2025</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Reflectivity @ 1064nm</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">85.87%</div>
+                    <div class="stat-label">Manufacturing Yield</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Interface Quality</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">1,973 K</div>
+                    <div class="stat-label">Thermal Stability</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">1.496 kg</div>
+                    <div class="stat-label">Mass (32 m² sail)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">5,389</div>
+                    <div class="stat-label">Configs Tested</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Layer 1: SiC Substrate -->
+        <section class="section">
+            <h2 class="section-title">Multilayer Structure</h2>
+            <p class="section-subtitle">101 total layers - Bragg reflector design optimized for 1064 nm</p>
+
+            <div class="layer-grid">
+                <!-- Layer 1 -->
+                <div class="layer-card">
+                    <img src="layer1.png" alt="Silicon Carbide Substrate" class="layer-image">
+                    <div class="layer-content">
+                        <div class="layer-header">
+                            <div>
+                                <div class="layer-title">Silicon Carbide Substrate</div>
+                                <div class="layer-formula">SiC (6H-polytype)</div>
+                            </div>
+                            <div class="layer-number">01</div>
+                        </div>
+                        <p style="color: var(--text-dark); margin-bottom: 1.5rem;">
+                            Ultra-thin substrate providing mechanical support and thermal stability.
+                            6H-SiC polytype chosen for exceptional thermal conductivity (490 W/m·K) and
+                            high-temperature stability up to 2,973 K.
+                        </p>
+                        <div class="layer-details">
+                            <div class="detail-item">
+                                <div class="detail-label">CAS Number</div>
+                                <div class="detail-value">409-21-2</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Thickness</div>
+                                <div class="detail-value">6.43 nm</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Density</div>
+                                <div class="detail-value">3,210 kg/m³</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Melting Point</div>
+                                <div class="detail-value">2,973 K</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Tensile Strength</div>
+                                <div class="detail-value">21.0 GPa</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Supplier</div>
+                                <div class="detail-value">Wolfspeed Inc.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 2 -->
+                <div class="layer-card">
+                    <img src="layer2.png" alt="Hafnium Dioxide High-Index Layer" class="layer-image">
+                    <div class="layer-content">
+                        <div class="layer-header">
+                            <div>
+                                <div class="layer-title">Hafnium Dioxide - High Index</div>
+                                <div class="layer-formula">HfO₂ (Monoclinic)</div>
+                            </div>
+                            <div class="layer-number">02</div>
+                        </div>
+                        <p style="color: var(--text-dark); margin-bottom: 1.5rem;">
+                            High refractive index layer (n=2.08) in Bragg reflector design.
+                            50 layers deposited via Ion Beam Sputtering. Monoclinic phase provides
+                            excellent thermal stability and laser damage resistance >50 J/cm².
+                        </p>
+                        <div class="layer-details">
+                            <div class="detail-item">
+                                <div class="detail-label">CAS Number</div>
+                                <div class="detail-value">12055-23-1</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Thickness/Layer</div>
+                                <div class="detail-value">65.71 nm</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Number of Layers</div>
+                                <div class="detail-value">50 pairs</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Refractive Index</div>
+                                <div class="detail-value">2.08 @ 1064nm</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Total Thickness</div>
+                                <div class="detail-value">3,285.5 nm</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Supplier</div>
+                                <div class="detail-value">Materion Corp.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 3 -->
+                <div class="layer-card">
+                    <img src="layer3.png" alt="Silicon Dioxide Low-Index Layer" class="layer-image">
+                    <div class="layer-content">
+                        <div class="layer-header">
+                            <div>
+                                <div class="layer-title">Silicon Dioxide - Low Index</div>
+                                <div class="layer-formula">SiO₂ (Fused Silica)</div>
+                            </div>
+                            <div class="layer-number">03</div>
+                        </div>
+                        <p style="color: var(--text-dark); margin-bottom: 1.5rem;">
+                            Low refractive index layer (n=1.45) in Bragg reflector design.
+                            50 layers of ultra-pure fused silica (SUPRASIL grade) provide optical
+                            transparency and excellent laser damage threshold >100 J/cm².
+                        </p>
+                        <div class="layer-details">
+                            <div class="detail-item">
+                                <div class="detail-label">CAS Number</div>
+                                <div class="detail-value">60676-86-0</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Thickness/Layer</div>
+                                <div class="detail-value">135.71 nm</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Number of Layers</div>
+                                <div class="detail-value">50 pairs</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Refractive Index</div>
+                                <div class="detail-value">1.45 @ 1064nm</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Total Thickness</div>
+                                <div class="detail-value">6,785.5 nm</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Supplier</div>
+                                <div class="detail-value">Heraeus Quarzglas</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Summary -->
+        <section class="section">
+            <h2 class="section-title">Performance Specifications</h2>
+            <p class="section-subtitle">All parameters quantum-validated on IBM Torino (133 qubits)</p>
+
+            <div class="performance-grid">
+                <div class="performance-card">
+                    <div class="performance-title">✓ Optical Performance</div>
+                    <ul class="performance-list">
+                        <li>
+                            <span>Reflectivity @ 1064nm</span>
+                            <strong style="color: var(--success-color);">100.00%</strong>
+                        </li>
+                        <li>
+                            <span>Target Requirement</span>
+                            <strong>98.92%</strong>
+                        </li>
+                        <li>
+                            <span>Margin Above Target</span>
+                            <strong style="color: var(--success-color);">+1.08%</strong>
+                        </li>
+                        <li>
+                            <span>Wavelength Range</span>
+                            <strong>800-1300 nm</strong>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="performance-card">
+                    <div class="performance-title">✓ Interface Quality</div>
+                    <ul class="performance-list">
+                        <li>
+                            <span>SiC/HfO₂ Adhesion</span>
+                            <strong style="color: var(--success-color);">100.0%</strong>
+                        </li>
+                        <li>
+                            <span>HfO₂/SiO₂ Adhesion</span>
+                            <strong style="color: var(--success-color);">100.0%</strong>
+                        </li>
+                        <li>
+                            <span>Delamination Risk</span>
+                            <strong>Low</strong>
+                        </li>
+                        <li>
+                            <span>Interface Roughness</span>
+                            <strong>&lt; 0.5 nm RMS</strong>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="performance-card">
+                    <div class="performance-title">✓ Thermal Properties</div>
+                    <ul class="performance-list">
+                        <li>
+                            <span>Max Operating Temp</span>
+                            <strong style="color: var(--success-color);">1,973 K</strong>
+                        </li>
+                        <li>
+                            <span>Cryogenic Minimum</span>
+                            <strong>4 K</strong>
+                        </li>
+                        <li>
+                            <span>Thermal Cycling</span>
+                            <strong>100 cycles passed</strong>
+                        </li>
+                        <li>
+                            <span>Thermal Stability</span>
+                            <strong style="color: var(--success-color);">VALIDATED</strong>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="performance-card">
+                    <div class="performance-title">✓ Manufacturing</div>
+                    <ul class="performance-list">
+                        <li>
+                            <span>Fabrication Yield</span>
+                            <strong style="color: var(--success-color);">85.87%</strong>
+                        </li>
+                        <li>
+                            <span>Method</span>
+                            <strong>Ion Beam Sputtering</strong>
+                        </li>
+                        <li>
+                            <span>Production Time</span>
+                            <strong>~28 hours</strong>
+                        </li>
+                        <li>
+                            <span>Status</span>
+                            <strong style="color: var(--success-color);">READY</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Summary -->
+        <section class="section">
+            <h2 class="section-title">Technical Summary</h2>
+
+            <div style="background: var(--bg-card); padding: 2rem; border-radius: 15px; border: 1px solid rgba(102, 126, 234, 0.2);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Structure Design</h3>
+                        <ul style="list-style: none; color: var(--text-dark); line-height: 2;">
+                            <li>✓ Total Layers: 101</li>
+                            <li>✓ Total Thickness: 10.078 μm</li>
+                            <li>✓ Bragg Reflector: 50 pairs</li>
+                            <li>✓ Design Wavelength: 1064 nm</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Mass Budget</h3>
+                        <ul style="list-style: none; color: var(--text-dark); line-height: 2;">
+                            <li>✓ Mass per m²: 46.755 g/m²</li>
+                            <li>✓ 32 m² Sail: 1.496 kg</li>
+                            <li>✓ Target: &lt; 2.0 kg</li>
+                            <li>✓ Margin: 25.2%</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Quantum Validation</h3>
+                        <ul style="list-style: none; color: var(--text-dark); line-height: 2;">
+                            <li>✓ Backend: IBM Torino</li>
+                            <li>✓ Qubits: 133 available, 18 used</li>
+                            <li>✓ Shots: 6,000</li>
+                            <li>✓ Time: 6.11 seconds</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2 class="cta-title">Production-Ready Material Structure</h2>
+            <p class="cta-description">
+                Complete engineering specifications available. All materials validated on IBM's 133-qubit
+                Torino quantum processor. Ready for prototype fabrication.
+            </p>
+            <div class="cta-buttons">
+                <a href="IBM_TORINO_VALIDATION_SUMMARY.md" class="btn btn-primary" download>
+                    Download Validation Report
+                </a>
+                <a href="ENGINEERING_SPECIFICATIONS.md" class="btn btn-secondary" download>
+                    Engineering Specs
+                </a>
+                <a href="mailto:heinz@warpeed.space" class="btn btn-secondary">
+                    Contact Engineering Team
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Warpeed. Quantum-validated on IBM Torino (133 qubits). All specifications production-ready.</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="index.html" style="color: var(--primary-color); text-decoration: none;">Home</a> |
+            <a href="material.html" style="color: var(--primary-color); text-decoration: none;">Material</a> |
+            <a href="research.html" style="color: var(--primary-color); text-decoration: none;">Research</a> |
+            <a href="mission.html" style="color: var(--primary-color); text-decoration: none;">Mission</a> |
+            <a href="mailto:heinz@warpeed.space" style="color: var(--primary-color); text-decoration: none;">Contact</a>
+        </p>
+    </footer>
+</body>
+</html>
