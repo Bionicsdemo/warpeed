@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPECTRIX Deployment Animation | Warpeed</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 3rem;
+        }
+
+        /* Animation Container */
+        .animation-stage {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            background: radial-gradient(ellipse at center, #1a1a2e 0%, #0a0a0a 100%);
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        /* Earth */
+        .earth {
+            position: absolute;
+            bottom: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle at 30% 30%, #4a90e2, #2c5aa0);
+            border-radius: 50%;
+            box-shadow:
+                inset -30px -30px 50px rgba(0,0,0,0.5),
+                0 0 100px rgba(74, 144, 226, 0.3);
+            animation: earthRotate 60s linear infinite;
+        }
+
+        @keyframes earthRotate {
+            from { transform: translateX(-50%) rotate(0deg); }
+            to { transform: translateX(-50%) rotate(360deg); }
+        }
+
+        /* CubeSat */
+        .cubesat {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 60px;
+            background: linear-gradient(135deg, #c0c0c0, #808080);
+            border-radius: 2px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.5);
+            z-index: 10;
+            animation: cubesatFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes cubesatFloat {
+            0%, 100% { transform: translate(-50%, -50%) translateY(0px); }
+            50% { transform: translate(-50%, -50%) translateY(-10px); }
+        }
+
+        /* Solar Panels */
+        .solar-panel {
+            position: absolute;
+            width: 80px;
+            height: 40px;
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            border: 1px solid #60a5fa;
+            transform-origin: center;
+            opacity: 0;
+        }
+
+        .solar-panel.left {
+            left: -81px;
+            top: 10px;
+            transform: rotateY(90deg);
+        }
+
+        .solar-panel.right {
+            right: -81px;
+            top: 10px;
+            transform: rotateY(-90deg);
+        }
+
+        .solar-panel.top {
+            left: -20px;
+            top: -41px;
+            width: 40px;
+            height: 80px;
+            transform: rotateX(90deg);
+        }
+
+        .solar-panel.bottom {
+            left: -20px;
+            bottom: -41px;
+            width: 40px;
+            height: 80px;
+            transform: rotateX(-90deg);
+        }
+
+        /* Deploy solar panels animation */
+        .cubesat.deploy-panels .solar-panel {
+            animation: deployPanel 2s ease-out forwards;
+        }
+
+        @keyframes deployPanel {
+            0% {
+                opacity: 0;
+                transform: rotateY(90deg) scale(0);
+            }
+            100% {
+                opacity: 1;
+                transform: rotateY(0deg) scale(1);
+            }
+        }
+
+        .cubesat.deploy-panels .solar-panel.left {
+            animation: deployPanelLeft 2s ease-out forwards;
+        }
+
+        .cubesat.deploy-panels .solar-panel.right {
+            animation: deployPanelRight 2s ease-out forwards;
+        }
+
+        @keyframes deployPanelLeft {
+            0% {
+                opacity: 0;
+                transform: rotateY(90deg) translateX(40px);
+            }
+            100% {
+                opacity: 1;
+                transform: rotateY(0deg) translateX(0);
+            }
+        }
+
+        @keyframes deployPanelRight {
+            0% {
+                opacity: 0;
+                transform: rotateY(-90deg) translateX(-40px);
+            }
+            100% {
+                opacity: 1;
+                transform: rotateY(0deg) translateX(0);
+            }
+        }
+
+        /* Lightsail */
+        .lightsail {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            transform: translate(-50%, -50%);
+            transform-origin: center;
+            opacity: 0;
+            z-index: 5;
+        }
+
+        .sail-membrane {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background:
+                linear-gradient(45deg,
+                    rgba(102, 126, 234, 0.3) 0%,
+                    rgba(118, 75, 162, 0.2) 50%,
+                    rgba(240, 147, 251, 0.3) 100%);
+            border: 2px solid rgba(102, 126, 234, 0.5);
+            transform: translate(-150px, -150px);
+            backdrop-filter: blur(2px);
+            box-shadow:
+                0 0 50px rgba(102, 126, 234, 0.4),
+                inset 0 0 50px rgba(255,255,255,0.1);
+        }
+
+        .sail-boom {
+            position: absolute;
+            background: #333;
+            transform-origin: center;
+        }
+
+        .sail-boom.diagonal1 {
+            width: 424px;
+            height: 2px;
+            top: 0;
+            left: 0;
+            transform: translate(-212px, -1px) rotate(45deg);
+        }
+
+        .sail-boom.diagonal2 {
+            width: 424px;
+            height: 2px;
+            top: 0;
+            left: 0;
+            transform: translate(-212px, -1px) rotate(-45deg);
+        }
+
+        /* Deploy lightsail animation */
+        .lightsail.deploy {
+            animation: deploySail 3s ease-out forwards;
+        }
+
+        @keyframes deploySail {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0) rotate(0deg);
+            }
+            50% {
+                opacity: 0.5;
+                transform: translate(-50%, -50%) scale(0.5) rotate(180deg);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1) rotate(360deg);
+            }
+        }
+
+        .sail-membrane {
+            animation: sailShimmer 4s ease-in-out infinite;
+        }
+
+        @keyframes sailShimmer {
+            0%, 100% {
+                box-shadow:
+                    0 0 50px rgba(102, 126, 234, 0.4),
+                    inset 0 0 50px rgba(255,255,255,0.1);
+            }
+            50% {
+                box-shadow:
+                    0 0 80px rgba(118, 75, 162, 0.6),
+                    inset 0 0 80px rgba(255,255,255,0.2);
+            }
+        }
+
+        /* Acceleration phase */
+        .cubesat.accelerate {
+            animation: accelerateAway 5s ease-in forwards;
+        }
+
+        @keyframes accelerateAway {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -300%) scale(0.1);
+                opacity: 0;
+            }
+        }
+
+        .lightsail.accelerate {
+            animation: sailAccelerate 5s ease-in forwards;
+        }
+
+        @keyframes sailAccelerate {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -300%) scale(0.1);
+                opacity: 0;
+            }
+        }
+
+        /* Laser beam */
+        .laser-beam {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            height: 0;
+            background: linear-gradient(to top,
+                rgba(102, 255, 102, 1) 0%,
+                rgba(102, 255, 102, 0) 100%);
+            transform: translateX(-50%);
+            box-shadow: 0 0 20px rgba(102, 255, 102, 0.8);
+            opacity: 0;
+            filter: blur(2px);
+        }
+
+        .laser-beam.active {
+            animation: laserFire 5s ease-out forwards;
+        }
+
+        @keyframes laserFire {
+            0% {
+                height: 0;
+                opacity: 0;
+            }
+            10% {
+                height: 100%;
+                opacity: 1;
+            }
+            90% {
+                height: 100%;
+                opacity: 1;
+            }
+            100% {
+                height: 100%;
+                opacity: 0;
+            }
+        }
+
+        /* Stars background */
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* Control Panel */
+        .controls {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .control-btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .control-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .control-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Timeline Display */
+        .timeline-display {
+            background: rgba(26, 26, 26, 0.8);
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-step {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 10px;
+            transition: all 0.3s;
+            opacity: 0.3;
+        }
+
+        .timeline-step.active {
+            background: rgba(102, 126, 234, 0.2);
+            opacity: 1;
+            border-left: 4px solid #667eea;
+        }
+
+        .timeline-step.completed {
+            opacity: 0.6;
+            border-left: 4px solid #00ff88;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-info {
+            flex-grow: 1;
+        }
+
+        .step-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .step-time {
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+
+        /* Stats Counter */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(26, 26, 26, 0.8);
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+
+        /* Speed counter animation */
+        .stat-value.counting {
+            animation: pulse 0.5s ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SPECTRIX Deployment Animation</h1>
+
+        <!-- Timeline Display -->
+        <div class="timeline-display">
+            <div class="timeline-step" id="step1">
+                <div class="step-number">1</div>
+                <div class="step-info">
+                    <div class="step-title">Launch & Initial Orbit</div>
+                    <div class="step-time">T+0: Deploy from rocket into LEO</div>
+                </div>
+            </div>
+            <div class="timeline-step" id="step2">
+                <div class="step-number">2</div>
+                <div class="step-info">
+                    <div class="step-title">Solar Panel Deployment</div>
+                    <div class="step-time">T+10 minutes: Power systems online</div>
+                </div>
+            </div>
+            <div class="timeline-step" id="step3">
+                <div class="step-number">3</div>
+                <div class="step-info">
+                    <div class="step-title">Lightsail Deployment</div>
+                    <div class="step-time">T+2 weeks: 100 m² sail unfolds in 30 seconds</div>
+                </div>
+            </div>
+            <div class="timeline-step" id="step4">
+                <div class="step-number">4</div>
+                <div class="step-info">
+                    <div class="step-title">Laser Acceleration</div>
+                    <div class="step-time">T+4 weeks: 50 GW laser fires for 15 minutes</div>
+                </div>
+            </div>
+            <div class="timeline-step" id="step5">
+                <div class="step-number">5</div>
+                <div class="step-info">
+                    <div class="step-title">Interstellar Coast</div>
+                    <div class="step-time">0.15c → Pluto in 36 hours</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="controls">
+            <button class="control-btn" onclick="playFullSequence()">▶ Play Full Sequence</button>
+            <button class="control-btn" onclick="deploySolarPanels()">☀️ Deploy Solar Panels</button>
+            <button class="control-btn" onclick="deployLightsail()">🪂 Deploy Lightsail</button>
+            <button class="control-btn" onclick="fireLaser()">🔥 Fire Laser</button>
+            <button class="control-btn" onclick="resetAnimation()">↺ Reset</button>
+        </div>
+
+        <!-- Animation Stage -->
+        <div class="animation-stage" id="stage">
+            <!-- Stars -->
+            <div class="stars-container"></div>
+
+            <!-- Earth -->
+            <div class="earth"></div>
+
+            <!-- Laser Beam -->
+            <div class="laser-beam" id="laser"></div>
+
+            <!-- Lightsail -->
+            <div class="lightsail" id="sail">
+                <div class="sail-membrane"></div>
+                <div class="sail-boom diagonal1"></div>
+                <div class="sail-boom diagonal2"></div>
+            </div>
+
+            <!-- CubeSat -->
+            <div class="cubesat" id="cubesat">
+                <div class="solar-panel left"></div>
+                <div class="solar-panel right"></div>
+                <div class="solar-panel top"></div>
+                <div class="solar-panel bottom"></div>
+            </div>
+        </div>
+
+        <!-- Stats Display -->
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value" id="velocity">0 km/s</div>
+                <div class="stat-label">Velocity</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="distance">0 km</div>
+                <div class="stat-label">Distance from Earth</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="time">T+0</div>
+                <div class="stat-label">Mission Time</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="phase">Stowed</div>
+                <div class="stat-label">Mission Phase</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Generate random stars
+        const starsContainer = document.querySelector('.stars-container');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
+
+        const cubesat = document.getElementById('cubesat');
+        const sail = document.getElementById('sail');
+        const laser = document.getElementById('laser');
+
+        function updateStep(stepNumber, state) {
+            const steps = document.querySelectorAll('.timeline-step');
+            steps.forEach((step, index) => {
+                if (index < stepNumber - 1) {
+                    step.classList.remove('active');
+                    step.classList.add('completed');
+                } else if (index === stepNumber - 1) {
+                    step.classList.add('active');
+                    step.classList.remove('completed');
+                } else {
+                    step.classList.remove('active', 'completed');
+                }
+            });
+        }
+
+        function updateStats(velocity, distance, time, phase) {
+            document.getElementById('velocity').textContent = velocity;
+            document.getElementById('distance').textContent = distance;
+            document.getElementById('time').textContent = time;
+            document.getElementById('phase').textContent = phase;
+
+            document.getElementById('velocity').classList.add('counting');
+            setTimeout(() => {
+                document.getElementById('velocity').classList.remove('counting');
+            }, 500);
+        }
+
+        function resetAnimation() {
+            cubesat.className = 'cubesat';
+            sail.className = 'lightsail';
+            laser.className = 'laser-beam';
+            updateStep(1);
+            updateStats('0 km/s', '0 km', 'T+0', 'Stowed');
+        }
+
+        function deploySolarPanels() {
+            cubesat.classList.add('deploy-panels');
+            updateStep(2);
+            updateStats('7.8 km/s', '500 km', 'T+10 min', 'Solar Deployed');
+        }
+
+        function deployLightsail() {
+            sail.classList.add('deploy');
+            updateStep(3);
+            updateStats('7.8 km/s', '500 km', 'T+2 weeks', 'Sail Deployed');
+        }
+
+        function fireLaser() {
+            laser.classList.add('active');
+            cubesat.classList.add('accelerate');
+            sail.classList.add('accelerate');
+            updateStep(4);
+
+            // Animate velocity counter
+            let velocity = 7.8;
+            const targetVelocity = 45000;
+            const duration = 5000; // 5 seconds
+            const steps = 100;
+            const increment = (targetVelocity - velocity) / steps;
+            const interval = duration / steps;
+
+            let currentStep = 0;
+            const counter = setInterval(() => {
+                velocity += increment;
+                currentStep++;
+
+                if (currentStep < 50) {
+                    updateStats(
+                        Math.round(velocity) + ' km/s',
+                        Math.round(velocity * 60) + ' km',
+                        'T+4 weeks',
+                        'Accelerating'
+                    );
+                } else if (currentStep === steps) {
+                    updateStats(
+                        '45,000 km/s',
+                        '2.7M km',
+                        'T+4 weeks + 15 min',
+                        'Coast (0.15c)'
+                    );
+                    updateStep(5);
+                    clearInterval(counter);
+                }
+            }, interval);
+        }
+
+        function playFullSequence() {
+            resetAnimation();
+
+            setTimeout(() => {
+                updateStep(1);
+                updateStats('0 km/s', '0 km', 'T+0', 'Launch');
+            }, 500);
+
+            setTimeout(() => {
+                deploySolarPanels();
+            }, 2000);
+
+            setTimeout(() => {
+                deployLightsail();
+            }, 5000);
+
+            setTimeout(() => {
+                fireLaser();
+            }, 9000);
+        }
+
+        // Initialize
+        updateStep(1);
+    </script>
+</body>
+</html>

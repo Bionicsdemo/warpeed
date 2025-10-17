@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPECTRIX Mission Trajectory Animation | Warpeed</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 2rem;
+        }
+
+        .svg-container {
+            background: radial-gradient(ellipse at center, #1a1a2e 0%, #0a0a0a 100%);
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        button {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SPECTRIX Mission Trajectory</h1>
+
+        <div class="svg-container">
+            <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+                <!-- Definitions -->
+                <defs>
+                    <!-- Gradients -->
+                    <radialGradient id="sunGradient" cx="50%" cy="50%">
+                        <stop offset="0%" style="stop-color:#ffeb3b;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#ffc107;stop-opacity:0.8" />
+                        <stop offset="100%" style="stop-color:#ff9800;stop-opacity:0.3" />
+                    </radialGradient>
+
+                    <radialGradient id="earthGradient" cx="30%" cy="30%">
+                        <stop offset="0%" style="stop-color:#4fc3f7;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#0277bd;stop-opacity:1" />
+                    </radialGradient>
+
+                    <radialGradient id="marsGradient" cx="30%" cy="30%">
+                        <stop offset="0%" style="stop-color:#ff7043;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#d32f2f;stop-opacity:1" />
+                    </radialGradient>
+
+                    <radialGradient id="jupiterGradient" cx="30%" cy="30%">
+                        <stop offset="0%" style="stop-color:#ffccbc;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#bf360c;stop-opacity:1" />
+                    </radialGradient>
+
+                    <radialGradient id="plutoGradient" cx="30%" cy="30%">
+                        <stop offset="0%" style="stop-color:#e0e0e0;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#757575;stop-opacity:1" />
+                    </radialGradient>
+
+                    <!-- Glow filter -->
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+
+                    <!-- Marker for trajectory arrow -->
+                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                        <polygon points="0 0, 10 3, 0 6" fill="#667eea" />
+                    </marker>
+                </defs>
+
+                <!-- Background stars -->
+                <g id="stars">
+                    <circle cx="100" cy="50" r="1" fill="white" opacity="0.8">
+                        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="300" cy="100" r="1.5" fill="white" opacity="0.6">
+                        <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="500" cy="75" r="1" fill="white" opacity="0.7">
+                        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2.5s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="700" cy="150" r="1" fill="white" opacity="0.9">
+                        <animate attributeName="opacity" values="0.9;0.4;0.9" dur="3.5s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="900" cy="80" r="1.5" fill="white" opacity="0.5">
+                        <animate attributeName="opacity" values="0.5;1;0.5" dur="4.5s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="1100" cy="120" r="1" fill="white" opacity="0.8">
+                        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                </g>
+
+                <!-- Sun -->
+                <g id="sun">
+                    <circle cx="100" cy="400" r="40" fill="url(#sunGradient)" filter="url(#glow)"/>
+                    <text x="100" y="460" text-anchor="middle" fill="#ffeb3b" font-size="14" font-weight="bold">Sun</text>
+                </g>
+
+                <!-- Planets -->
+                <!-- Earth -->
+                <g id="earth">
+                    <circle cx="250" cy="400" r="15" fill="url(#earthGradient)" filter="url(#glow)"/>
+                    <text x="250" y="430" text-anchor="middle" fill="#4fc3f7" font-size="12">Earth</text>
+                    <text x="250" y="445" text-anchor="middle" fill="#a0a0a0" font-size="10">1 AU</text>
+                </g>
+
+                <!-- Mars -->
+                <g id="mars">
+                    <circle cx="380" cy="400" r="10" fill="url(#marsGradient)"/>
+                    <text x="380" y="425" text-anchor="middle" fill="#ff7043" font-size="12">Mars</text>
+                    <text x="380" y="440" text-anchor="middle" fill="#a0a0a0" font-size="10">1.5 AU</text>
+                </g>
+
+                <!-- Jupiter -->
+                <g id="jupiter">
+                    <circle cx="600" cy="400" r="25" fill="url(#jupiterGradient)"/>
+                    <text x="600" y="440" text-anchor="middle" fill="#ffccbc" font-size="12">Jupiter</text>
+                    <text x="600" y="455" text-anchor="middle" fill="#a0a0a0" font-size="10">5.2 AU</text>
+                </g>
+
+                <!-- Pluto -->
+                <g id="pluto">
+                    <circle cx="950" cy="400" r="8" fill="url(#plutoGradient)"/>
+                    <text x="950" y="425" text-anchor="middle" fill="#e0e0e0" font-size="12">Pluto</text>
+                    <text x="950" y="440" text-anchor="middle" fill="#a0a0a0" font-size="10">39.5 AU</text>
+                </g>
+
+                <!-- Oort Cloud -->
+                <g id="oortcloud">
+                    <circle cx="1100" cy="400" r="3" fill="#9575cd" opacity="0.5"/>
+                    <circle cx="1110" cy="405" r="2" fill="#9575cd" opacity="0.4"/>
+                    <circle cx="1095" cy="410" r="2.5" fill="#9575cd" opacity="0.6"/>
+                    <text x="1100" y="430" text-anchor="middle" fill="#9575cd" font-size="12">Oort Cloud</text>
+                    <text x="1100" y="445" text-anchor="middle" fill="#a0a0a0" font-size="10">2000+ AU</text>
+                </g>
+
+                <!-- Mission Trajectory -->
+                <path id="trajectory"
+                      d="M 250 400 L 380 400 L 600 400 L 950 400 L 1100 400"
+                      stroke="#667eea"
+                      stroke-width="3"
+                      fill="none"
+                      stroke-dasharray="10,5"
+                      opacity="0.6"
+                      marker-end="url(#arrowhead)">
+                    <animate attributeName="stroke-dashoffset"
+                             from="1000"
+                             to="0"
+                             dur="3s"
+                             fill="freeze"/>
+                </path>
+
+                <!-- CubeSat (animated along path) -->
+                <g id="cubesat" opacity="0">
+                    <!-- Lightsail -->
+                    <polygon points="-15,-15 15,-15 15,15 -15,15"
+                             fill="rgba(102, 126, 234, 0.3)"
+                             stroke="#667eea"
+                             stroke-width="2"
+                             filter="url(#glow)"/>
+                    <!-- CubeSat body -->
+                    <rect x="-3" y="-5" width="6" height="10" fill="#c0c0c0" stroke="#808080"/>
+
+                    <!-- Animation along path -->
+                    <animateMotion
+                        id="cubeSatMotion"
+                        begin="indefinite"
+                        dur="10s"
+                        fill="freeze">
+                        <mpath href="#trajectory"/>
+                    </animateMotion>
+
+                    <!-- Fade in -->
+                    <animate
+                        id="cubeSatFadeIn"
+                        attributeName="opacity"
+                        from="0"
+                        to="1"
+                        dur="0.5s"
+                        begin="indefinite"
+                        fill="freeze"/>
+                </g>
+
+                <!-- Milestone markers -->
+                <g id="milestones">
+                    <!-- Earth departure -->
+                    <g id="milestone1" opacity="0">
+                        <circle cx="250" cy="380" r="5" fill="#00ff88" filter="url(#glow)"/>
+                        <text x="250" y="365" text-anchor="middle" fill="#00ff88" font-size="11" font-weight="bold">T+4 weeks</text>
+                        <text x="250" y="355" text-anchor="middle" fill="#a0a0a0" font-size="9">Laser Accel</text>
+                        <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1s" fill="freeze"/>
+                    </g>
+
+                    <!-- Mars -->
+                    <g id="milestone2" opacity="0">
+                        <circle cx="380" cy="380" r="5" fill="#00ff88" filter="url(#glow)"/>
+                        <text x="380" y="365" text-anchor="middle" fill="#00ff88" font-size="11" font-weight="bold">T+1.7 hrs</text>
+                        <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="3s" fill="freeze"/>
+                    </g>
+
+                    <!-- Jupiter -->
+                    <g id="milestone3" opacity="0">
+                        <circle cx="600" cy="380" r="5" fill="#00ff88" filter="url(#glow)"/>
+                        <text x="600" y="365" text-anchor="middle" fill="#00ff88" font-size="11" font-weight="bold">T+9.6 hrs</text>
+                        <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="5s" fill="freeze"/>
+                    </g>
+
+                    <!-- Pluto -->
+                    <g id="milestone4" opacity="0">
+                        <circle cx="950" cy="380" r="5" fill="#00ff88" filter="url(#glow)"/>
+                        <text x="950" y="365" text-anchor="middle" fill="#00ff88" font-size="11" font-weight="bold">T+36 hrs</text>
+                        <text x="950" y="355" text-anchor="middle" fill="#ffd93d" font-size="9">PRIMARY TARGET</text>
+                        <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="7s" fill="freeze"/>
+                    </g>
+
+                    <!-- Oort Cloud -->
+                    <g id="milestone5" opacity="0">
+                        <circle cx="1100" cy="380" r="5" fill="#00ff88" filter="url(#glow)"/>
+                        <text x="1100" y="365" text-anchor="middle" fill="#00ff88" font-size="11" font-weight="bold">T+138 days</text>
+                        <text x="1100" y="355" text-anchor="middle" fill="#9575cd" font-size="9">DEEP SPACE</text>
+                        <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="9s" fill="freeze"/>
+                    </g>
+                </g>
+
+                <!-- Timeline bar at bottom -->
+                <g id="timeline" transform="translate(100, 650)">
+                    <rect x="0" y="0" width="1000" height="4" fill="rgba(102, 126, 234, 0.3)"/>
+                    <rect x="0" y="0" width="0" height="4" fill="#667eea" id="timelineProgress">
+                        <animate attributeName="width" from="0" to="1000" dur="10s" begin="indefinite" fill="freeze"/>
+                    </rect>
+
+                    <!-- Time markers -->
+                    <text x="0" y="25" fill="#a0a0a0" font-size="12">T+0</text>
+                    <text x="250" y="25" fill="#a0a0a0" font-size="12">T+10 hrs</text>
+                    <text x="500" y="25" fill="#a0a0a0" font-size="12">T+36 hrs</text>
+                    <text x="750" y="25" fill="#a0a0a0" font-size="12">T+100 days</text>
+                    <text x="950" y="25" fill="#a0a0a0" font-size="12">T+138 days</text>
+
+                    <!-- Current time display -->
+                    <text x="500" y="-20" text-anchor="middle" fill="#667eea" font-size="16" font-weight="bold" id="currentTime">T+0</text>
+                </g>
+
+                <!-- Speed indicator -->
+                <g id="speedometer" transform="translate(50, 50)">
+                    <rect x="0" y="0" width="180" height="80" fill="rgba(26, 26, 26, 0.8)" rx="10" stroke="rgba(102, 126, 234, 0.3)" stroke-width="2"/>
+                    <text x="90" y="25" text-anchor="middle" fill="#a0a0a0" font-size="12">Velocity</text>
+                    <text x="90" y="50" text-anchor="middle" fill="#667eea" font-size="20" font-weight="bold" id="speedDisplay">0 km/s</text>
+                    <text x="90" y="70" text-anchor="middle" fill="#a0a0a0" font-size="11" id="speedPercent">(0% c)</text>
+                </g>
+            </svg>
+        </div>
+
+        <div class="controls">
+            <button onclick="playAnimation()">▶ Play Animation</button>
+            <button onclick="pauseAnimation()">⏸ Pause</button>
+            <button onclick="resetAnimation()">↺ Reset</button>
+        </div>
+    </div>
+
+    <script>
+        let animationRunning = false;
+        let currentSpeed = 0;
+        const maxSpeed = 45000; // km/s
+        const speedOfLight = 300000; // km/s
+
+        function playAnimation() {
+            if (animationRunning) return;
+            animationRunning = true;
+
+            // Start CubeSat animation
+            document.getElementById('cubeSatFadeIn').beginElement();
+            document.getElementById('cubeSatMotion').beginElement();
+            document.getElementById('timelineProgress').querySelector('animate').beginElement();
+
+            // Animate speed counter
+            animateSpeed();
+
+            // Update time display
+            updateTimeDisplay();
+        }
+
+        function animateSpeed() {
+            let startTime = Date.now();
+            const duration = 10000; // 10 seconds
+
+            function updateSpeed() {
+                if (!animationRunning) return;
+
+                const elapsed = Date.now() - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+
+                // Accelerate to max speed in first 2 seconds, then maintain
+                let speed;
+                if (progress < 0.2) {
+                    speed = maxSpeed * (progress / 0.2);
+                } else {
+                    speed = maxSpeed;
+                }
+
+                currentSpeed = Math.round(speed);
+                const percentC = ((currentSpeed / speedOfLight) * 100).toFixed(2);
+
+                document.getElementById('speedDisplay').textContent = currentSpeed.toLocaleString() + ' km/s';
+                document.getElementById('speedPercent').textContent = `(${percentC}% c)`;
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateSpeed);
+                }
+            }
+
+            updateSpeed();
+        }
+
+        function updateTimeDisplay() {
+            const milestones = [
+                { time: 0, label: 'T+0' },
+                { time: 1000, label: 'T+10 min' },
+                { time: 2000, label: 'T+2 weeks' },
+                { time: 3000, label: 'T+4 weeks' },
+                { time: 5000, label: 'T+10 hours' },
+                { time: 7000, label: 'T+36 hours' },
+                { time: 9000, label: 'T+100 days' },
+                { time: 10000, label: 'T+138 days' }
+            ];
+
+            let startTime = Date.now();
+
+            function update() {
+                if (!animationRunning) return;
+
+                const elapsed = Date.now() - startTime;
+                const currentMilestone = milestones.reverse().find(m => elapsed >= m.time);
+
+                if (currentMilestone) {
+                    document.getElementById('currentTime').textContent = currentMilestone.label;
+                }
+
+                if (elapsed < 10000) {
+                    requestAnimationFrame(update);
+                }
+            }
+
+            update();
+        }
+
+        function pauseAnimation() {
+            animationRunning = false;
+            // Pause SVG animations
+            document.querySelectorAll('animate, animateMotion').forEach(anim => {
+                anim.pauseAnimations();
+            });
+        }
+
+        function resetAnimation() {
+            animationRunning = false;
+            currentSpeed = 0;
+            location.reload();
+        }
+    </script>
+</body>
+</html>

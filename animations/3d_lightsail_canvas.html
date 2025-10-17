@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Lightsail Animation | Warpeed</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+            background: radial-gradient(ellipse at center, #1a1a2e 0%, #0a0a0a 100%);
+        }
+
+        .info-panel {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(26, 26, 26, 0.9);
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
+            min-width: 300px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .stat-label {
+            color: #a0a0a0;
+        }
+
+        .stat-value {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+        }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .legend {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(26, 26, 26, 0.9);
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
+            min-width: 200px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <div class="info-panel">
+        <h1>SPECTRIX Lightsail</h1>
+        <div class="stat">
+            <span class="stat-label">Sail Area:</span>
+            <span class="stat-value">100 m²</span>
+        </div>
+        <div class="stat">
+            <span class="stat-label">Total Mass:</span>
+            <span class="stat-value">250 grams</span>
+        </div>
+        <div class="stat">
+            <span class="stat-label">Reflectivity:</span>
+            <span class="stat-value">>99% @ 1064nm</span>
+        </div>
+        <div class="stat">
+            <span class="stat-label">Rotation:</span>
+            <span class="stat-value" id="rotation">0°</span>
+        </div>
+        <div class="stat">
+            <span class="stat-label">Photon Impacts:</span>
+            <span class="stat-value" id="photons">0</span>
+        </div>
+    </div>
+
+    <div class="legend">
+        <h3 style="color: #667eea; margin-bottom: 1rem; font-size: 1.1rem;">Components</h3>
+        <div class="legend-item">
+            <div class="legend-color" style="background: rgba(102, 126, 234, 0.3); border: 2px solid #667eea;"></div>
+            <span>Lightsail Membrane</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #333;"></div>
+            <span>Carbon Fiber Booms</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #c0c0c0;"></div>
+            <span>CubeSat (6U)</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #66ff66;"></div>
+            <span>Laser Photons</span>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button onclick="toggleRotation()">⏯ Pause/Play</button>
+        <button onclick="togglePhotons()">💡 Toggle Photons</button>
+        <button onclick="changeView()">🔄 Change View</button>
+        <button onclick="resetView()">↺ Reset</button>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Set canvas size
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Animation state
+        let rotation = 0;
+        let rotating = true;
+        let showPhotons = true;
+        let viewAngle = 0;
+        let photonCount = 0;
+
+        // 3D Projection
+        const fov = 500;
+        const viewDistance = 800;
+
+        class Point3D {
+            constructor(x, y, z) {
+                this.x = x;
+                this.y = y;
+                this.z = z;
+            }
+
+            project() {
+                const scale = fov / (fov + this.z + viewDistance);
+                const x2d = this.x * scale + canvas.width / 2;
+                const y2d = this.y * scale + canvas.height / 2;
+                return { x: x2d, y: y2d, scale };
+            }
+
+            rotateY(angle) {
+                const cos = Math.cos(angle);
+                const sin = Math.sin(angle);
+                const x = this.x * cos - this.z * sin;
+                const z = this.x * sin + this.z * cos;
+                return new Point3D(x, this.y, z);
+            }
+
+            rotateX(angle) {
+                const cos = Math.cos(angle);
+                const sin = Math.sin(angle);
+                const y = this.y * cos - this.z * sin;
+                const z = this.y * sin + this.z * cos;
+                return new Point3D(this.x, y, z);
+            }
+        }
+
+        // Create lightsail geometry
+        const sailSize = 150;
+        const cubesatSize = 20;
+
+        // Sail corners
+        const sailCorners = [
+            new Point3D(-sailSize, -sailSize, 0),
+            new Point3D(sailSize, -sailSize, 0),
+            new Point3D(sailSize, sailSize, 0),
+            new Point3D(-sailSize, sailSize, 0)
+        ];
+
+        // Carbon fiber booms
+        const booms = [
+            [new Point3D(0, 0, 0), new Point3D(-sailSize, -sailSize, 0)],
+            [new Point3D(0, 0, 0), new Point3D(sailSize, -sailSize, 0)],
+            [new Point3D(0, 0, 0), new Point3D(sailSize, sailSize, 0)],
+            [new Point3D(0, 0, 0), new Point3D(-sailSize, sailSize, 0)]
+        ];
+
+        // CubeSat (6U)
+        const cubesatH = 30;
+        const cubesat = [
+            new Point3D(-cubesatSize/2, -cubesatH/2, 5),
+            new Point3D(cubesatSize/2, -cubesatH/2, 5),
+            new Point3D(cubesatSize/2, cubesatH/2, 5),
+            new Point3D(-cubesatSize/2, cubesatH/2, 5),
+            new Point3D(-cubesatSize/2, -cubesatH/2, -5),
+            new Point3D(cubesatSize/2, -cubesatH/2, -5),
+            new Point3D(cubesatSize/2, cubesatH/2, -5),
+            new Point3D(-cubesatSize/2, cubesatH/2, -5)
+        ];
+
+        // Photon particles
+        class Photon {
+            constructor() {
+                this.x = (Math.random() - 0.5) * 400;
+                this.y = (Math.random() - 0.5) * 400;
+                this.z = -500;
+                this.speed = 5 + Math.random() * 3;
+                this.size = 2 + Math.random() * 2;
+                this.opacity = 0.5 + Math.random() * 0.5;
+            }
+
+            update() {
+                this.z += this.speed;
+                if (this.z > 50) {
+                    this.z = -500;
+                    this.x = (Math.random() - 0.5) * 400;
+                    this.y = (Math.random() - 0.5) * 400;
+                    photonCount++;
+                }
+            }
+
+            draw() {
+                const point = new Point3D(this.x, this.y, this.z);
+                const rotated = point.rotateY(rotation + viewAngle).rotateX(Math.PI / 6);
+                const projected = rotated.project();
+
+                if (rotated.z > -viewDistance) {
+                    ctx.fillStyle = `rgba(102, 255, 102, ${this.opacity * projected.scale})`;
+                    ctx.beginPath();
+                    ctx.arc(projected.x, projected.y, this.size * projected.scale, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    // Photon trail
+                    ctx.strokeStyle = `rgba(102, 255, 102, ${0.2 * projected.scale})`;
+                    ctx.lineWidth = 1;
+                    ctx.beginPath();
+                    ctx.moveTo(projected.x, projected.y);
+                    const trailPoint = new Point3D(this.x, this.y, this.z - 20)
+                        .rotateY(rotation + viewAngle)
+                        .rotateX(Math.PI / 6)
+                        .project();
+                    ctx.lineTo(trailPoint.x, trailPoint.y);
+                    ctx.stroke();
+                }
+            }
+        }
+
+        const photons = Array.from({ length: 200 }, () => new Photon());
+
+        function drawSail() {
+            // Rotate and project sail corners
+            const rotatedCorners = sailCorners.map(p =>
+                p.rotateY(rotation + viewAngle).rotateX(Math.PI / 6)
+            );
+            const projectedCorners = rotatedCorners.map(p => p.project());
+
+            // Draw sail membrane with gradient
+            const gradient = ctx.createLinearGradient(
+                projectedCorners[0].x, projectedCorners[0].y,
+                projectedCorners[2].x, projectedCorners[2].y
+            );
+            gradient.addColorStop(0, 'rgba(102, 126, 234, 0.2)');
+            gradient.addColorStop(0.5, 'rgba(118, 75, 162, 0.3)');
+            gradient.addColorStop(1, 'rgba(240, 147, 251, 0.2)');
+
+            ctx.fillStyle = gradient;
+            ctx.strokeStyle = 'rgba(102, 126, 234, 0.6)';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(projectedCorners[0].x, projectedCorners[0].y);
+            for (let i = 1; i < projectedCorners.length; i++) {
+                ctx.lineTo(projectedCorners[i].x, projectedCorners[i].y);
+            }
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+
+            // Add shimmer effect
+            ctx.shadowBlur = 20;
+            ctx.shadowColor = 'rgba(102, 126, 234, 0.5)';
+            ctx.stroke();
+            ctx.shadowBlur = 0;
+        }
+
+        function drawBooms() {
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 3;
+
+            booms.forEach(boom => {
+                const rotated = boom.map(p =>
+                    p.rotateY(rotation + viewAngle).rotateX(Math.PI / 6)
+                );
+                const projected = rotated.map(p => p.project());
+
+                ctx.beginPath();
+                ctx.moveTo(projected[0].x, projected[0].y);
+                ctx.lineTo(projected[1].x, projected[1].y);
+                ctx.stroke();
+            });
+        }
+
+        function drawCubeSat() {
+            const rotated = cubesat.map(p =>
+                p.rotateY(rotation + viewAngle).rotateX(Math.PI / 6)
+            );
+            const projected = rotated.map(p => p.project());
+
+            // Draw faces
+            const faces = [
+                [0, 1, 2, 3], // Front
+                [4, 5, 6, 7], // Back
+                [0, 1, 5, 4], // Bottom
+                [2, 3, 7, 6], // Top
+                [0, 3, 7, 4], // Left
+                [1, 2, 6, 5]  // Right
+            ];
+
+            faces.forEach((face, index) => {
+                const brightness = 180 + index * 15;
+                ctx.fillStyle = `rgb(${brightness}, ${brightness}, ${brightness})`;
+                ctx.strokeStyle = '#808080';
+                ctx.lineWidth = 1;
+
+                ctx.beginPath();
+                ctx.moveTo(projected[face[0]].x, projected[face[0]].y);
+                for (let i = 1; i < face.length; i++) {
+                    ctx.lineTo(projected[face[i]].x, projected[face[i]].y);
+                }
+                ctx.closePath();
+                ctx.fill();
+                ctx.stroke();
+            });
+        }
+
+        function draw() {
+            // Clear canvas
+            ctx.fillStyle = 'rgba(10, 10, 10, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Update and draw photons
+            if (showPhotons) {
+                photons.forEach(photon => {
+                    photon.update();
+                    photon.draw();
+                });
+            }
+
+            // Draw 3D objects (back to front)
+            drawSail();
+            drawBooms();
+            drawCubeSat();
+
+            // Update rotation
+            if (rotating) {
+                rotation += 0.01;
+            }
+
+            // Update UI
+            document.getElementById('rotation').textContent = Math.round((rotation % (2 * Math.PI)) * 180 / Math.PI) + '°';
+            document.getElementById('photons').textContent = photonCount.toLocaleString();
+
+            requestAnimationFrame(draw);
+        }
+
+        function toggleRotation() {
+            rotating = !rotating;
+        }
+
+        function togglePhotons() {
+            showPhotons = !showPhotons;
+        }
+
+        function changeView() {
+            viewAngle += Math.PI / 4;
+        }
+
+        function resetView() {
+            rotation = 0;
+            viewAngle = 0;
+            photonCount = 0;
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Start animation
+        draw();
+    </script>
+</body>
+</html>
