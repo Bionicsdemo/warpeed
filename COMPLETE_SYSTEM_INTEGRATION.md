@@ -15,7 +15,7 @@ Warpeed has achieved a **world-first:** a complete interstellar propulsion syste
 | Parameter | Value | Validation |
 |-----------|-------|------------|
 | **Final Velocity** | 0.50c (150,000 km/s) | ✅ Quantum-optimized |
-| **Travel Time to α Centauri** | 8 years | ✅ 2.5× faster than Breakthrough Starshot |
+| **Travel Time to α Centauri** | 8 years | ✅ 2.5× faster than other interstellar initiatives |
 | **Total System Cost** | $13B (lightsail + laser) | ✅ 97% cheaper than Starshot ($500B) |
 | **TRL** | 6-7 | ✅ Production-ready specifications |
 | **Quantum Configurations Tested** | 10,335 unique designs | ✅ IBM Torino (5,389 materials + 4,946 lasers) |
@@ -89,7 +89,7 @@ Warpeed has achieved a **world-first:** a complete interstellar propulsion syste
 
 ### Why Quantum Validation Matters
 
-**Traditional Approach (Breakthrough Starshot):**
+**Traditional Approach (other interstellar initiatives):**
 - Trial-and-error simulations
 - No manufacturing validation
 - Incomplete specifications
@@ -345,9 +345,9 @@ Warpeed has achieved a **world-first:** a complete interstellar propulsion syste
 **Cost per Mission (amortized):** $124M
 **Cost per Lightsail Delivered (amortized):** $124M
 
-### Comparison to Breakthrough Starshot
+### Comparison to other interstellar initiatives
 
-| Parameter | Breakthrough Starshot (2016) | Warpeed (2025) | **Improvement** |
+| Parameter | other interstellar initiatives (2016) | Warpeed (2025) | **Improvement** |
 |-----------|------------------------------|----------------|-----------------|
 | **Total Cost** | $500B (projected) | $12.39B (validated) | **97.5% cheaper** |
 | **Velocity** | 0.20c (theoretical) | 0.50c (quantum-validated) | **2.5× faster** |
@@ -431,13 +431,13 @@ Warpeed has achieved a **world-first:** a complete interstellar propulsion syste
    - End-to-end mission validated
 
 4. ✅ **Highest TRL for interstellar mission**
-   - TRL 6-7 (vs Breakthrough Starshot's TRL 2-3)
+   - TRL 6-7 (vs other interstellar initiatives's TRL 2-3)
    - Manufacturing protocols documented
    - Suppliers confirmed and ready
 
 ### Technical Superiority
 
-| Metric | Warpeed | Breakthrough Starshot | **Advantage** |
+| Metric | Warpeed | other interstellar initiatives | **Advantage** |
 |--------|---------|----------------------|---------------|
 | **Velocity** | 0.50c | 0.20c (theoretical) | **2.5× faster** |
 | **Travel Time** | 8 years | 21.8 years | **2.7× faster** |
@@ -455,7 +455,7 @@ Warpeed has achieved a **world-first:** a complete interstellar propulsion syste
 | Project | Status | Velocity | Cost | TRL | Validation | Funding |
 |---------|--------|----------|------|-----|------------|---------|
 | **Warpeed** | Active | 0.50c | $12.39B | 6-7 | ✅ Quantum | Raising $2M seed |
-| **Breakthrough Starshot** | On hold (2024) | 0.20c | $500B | 2-3 | ❌ Simulations | $4.5M spent / $100M promised |
+| **other interstellar initiatives** | On hold (2024) | 0.20c | $500B | 2-3 | ❌ Simulations | $4.5M spent / $100M promised |
 | **DE-STAR (UCSB)** | Research | 0.20c | Unknown | 2 | ❌ Paper study | NASA NIAC Phase I only |
 | **NASA NIAC** | Grants | N/A | $175K/grant | 1-2 | ❌ No hardware | Accepting Phase I apps |
 | **ESA** | No active program | - | - | - | - | - |
@@ -475,7 +475,7 @@ Warpeed has achieved a **world-first:** a complete interstellar propulsion syste
 - Quantum validation complete (IBM Torino)
 - Production-ready specifications
 
-**Breakthrough Starshot (for comparison):**
+**other interstellar initiatives (for comparison):**
 - $4.5M spent of $100M promised
 - Project on indefinite hold (2024)
 - Scientists left when funding stopped (Prof. Martijn de Sterke, others)
@@ -513,9 +513,9 @@ Warpeed has achieved a **world-first:** a complete interstellar propulsion syste
 
 ### Exit Scenarios
 
-**Scenario 1: Acquisition by Breakthrough Initiatives**
-- Yuri Milner still has $95.5M unspent from original $100M commitment
-- Warpeed technology revives Breakthrough Starshot with validated approach
+**Scenario 1: Acquisition by private investment partnerships**
+- private investors still has $95.5M unspent from original $100M commitment
+- Warpeed technology revives other interstellar initiatives with validated approach
 - Valuation: $50-100M (based on $2M seed → $8M Series A → $50M acquisition)
 
 **Scenario 2: Strategic Partnership**
@@ -549,7 +549,7 @@ Website: warpeed.space
 1. **Deep Tech VCs:** Lux Capital, Founders Fund, DCVC
 2. **Space-Focused:** 55 North Ventures, Space Capital, Seraphim Capital
 3. **Quantum Tech:** Quantonation, Quantum Valley Investments
-4. **Strategic:** Yuri Milner / Breakthrough Initiatives
+4. **Strategic:** private investors / private investment partnerships
 5. **Government Grants:** NASA NIAC Phase I/II, NSF SBIR
 
 ### For Technical Partners
@@ -619,13 +619,13 @@ Website: warpeed.space
 
 **Business Documents:**
 1. `INVESTOR_TARGET_LIST.md` - 27 target investors for seed round
-2. `EMAIL_YURI_MILNER.md` - Breakthrough Starshot outreach strategy
+2. `EMAIL_YURI_MILNER.md` - other interstellar initiatives outreach strategy
 
 ---
 
 ## 🎉 CONCLUSION
 
-Warpeed has achieved what Breakthrough Starshot could not:
+Warpeed has achieved what other interstellar initiatives could not:
 
 ✅ **Quantum-validated** on real hardware (IBM Torino)
 ✅ **Production-ready** specifications with confirmed suppliers

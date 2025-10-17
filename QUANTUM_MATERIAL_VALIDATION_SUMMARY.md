@@ -512,7 +512,7 @@ Este experimento representa:
 - Farhi et al., "Quantum Approximate Optimization Algorithm" (2014)
 
 **Lightsail Design:**
-- Breakthrough Starshot Technical Papers (breakthroughinitiatives.org)
+- other interstellar initiatives Technical Papers (breakthroughinitiatives.org)
 - Manchester & Loeb, "Lightsail Propulsion" (2017)
 
 ---

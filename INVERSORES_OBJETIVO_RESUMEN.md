@@ -5,9 +5,9 @@
 
 ## ⭐ TOP 5 PRIORIDAD MÁXIMA
 
-### 1. **Yuri Milner / Breakthrough Initiatives** 🔥🔥🔥
+### 1. **private investors / private investment partnerships** 🔥🔥🔥
 **Por qué es #1:**
-- Fundador de Breakthrough Starshot ($100M invertidos)
+- Fundador de other interstellar initiatives ($100M invertidos)
 - **Su proyecto se quedó sin funding en 2024**
 - Nuestro tech es 2.5× más rápido y 97% más barato
 - **OPORTUNIDAD ÚNICA**: Puede salvar su proyecto con nuestra tecnología
@@ -67,7 +67,6 @@
 ## 📋 PLAN DE ACCIÓN SEMANA POR SEMANA
 
 ### **Semana 1 (AHORA):**
-- [ ] Email a Yuri Milner/Breakthrough
 - [ ] Contacto 55 North Ventures
 - [ ] Apply Y Combinator W26
 - [ ] Email Quantonation
@@ -91,7 +90,7 @@
 **Target:** $2M
 **Estructura sugerida:**
 
-1. **Yuri Milner** - $500K-$1M (lead/co-lead)
+1. **private investors** - $500K-$1M (lead/co-lead)
 2. **Quantonation** - €500K (~$550K)
 3. **55 North** - €500K (~$550K)
 4. **Lux o Founders Fund** - $300-500K
@@ -123,13 +122,12 @@
 
 ## 📧 TEMPLATES DE EMAIL
 
-### **Para Yuri Milner:**
+### **Para private investors:**
 ```
-Subject: Breakthrough Starshot 2.0 - 0.50c quantum-validated
+Subject: other interstellar initiatives 2.0 - 0.50c quantum-validated
 
 Hi Mr. Milner,
 
-Soy Heinz Jungbluth, fundador de Warpeed. Leí que Breakthrough
 Starshot se quedó sin funding el año pasado.
 
 Hemos resuelto los problemas técnicos principales:
@@ -189,8 +187,8 @@ Heinz
 
 ## 🎤 ELEVATOR PITCH (30 segundos)
 
-**Versión 1 (Para Yuri Milner):**
-"Warpeed es Breakthrough Starshot 2.0. Usando IBM's quantum computer,
+**Versión 1 (Para private investors):**
+"Warpeed es other interstellar initiatives 2.0. Usando IBM's quantum computer,
 alcanzamos 0.50c en 8 años a $13B - 2.5× más rápido y 97% más barato
 que Starshot. 85% manufacturabilidad confirmada. Raising $2M seed."
 
@@ -209,7 +207,7 @@ Primera empresa con path económico a α Centauri. $2M seed."
 ## 📊 PROBABILIDADES DE ÉXITO
 
 **Tier 1 (Top 5):**
-- Yuri Milner: 40-60% (si logramos reunión)
+- private investors: 40-60% (si logramos reunión)
 - Quantonation: 30-40% (fit perfecto)
 - 55 North: 30-40% (timing perfecto)
 - Lux Capital: 20-30% (con warm intro)
@@ -244,7 +242,6 @@ Primera empresa con path económico a α Centauri. $2M seed."
 - Lux Capital: info@luxcapital.com
 - Space Capital: team@spacecapital.com
 - Y Combinator: Apply online
-- Breakthrough: Via website form
 
 **LinkedIn:**
 - Josh Wolfe (Lux Capital)
@@ -279,7 +276,7 @@ Primera empresa con path económico a α Centauri. $2M seed."
 **Meta inmediata:** $2M cerrado en 60-90 días
 
 **Composición ideal:**
-1. Lead investor: $500K-$1M (Yuri Milner o Lux Capital)
+1. Lead investor: $500K-$1M (private investors o Lux Capital)
 2. Co-lead: €500K (Quantonation o 55 North)
 3. Strategic: $300-500K (Airbus Ventures)
 4. Accelerator: $500K (Y Combinator)
@@ -297,7 +294,7 @@ Primera empresa con path económico a α Centauri. $2M seed."
 
 Las ventanas de oportunidad son:
 - 55 North acaba de cerrar fondo (desplegando ahora)
-- Breakthrough Starshot sin funding (ventana de partnership)
+- other interstellar initiatives sin funding (ventana de partnership)
 - NASA NIAC deadline próximo
 - Y Combinator W26 batch abierto
 

@@ -178,7 +178,7 @@
 - 31 space tech startups backed
 - Portfolio: Momentus (space propulsion), Rigetti (quantum computing)
 - Accelerator: 3-month program + demo day
-- Network: Access to Breakthrough Initiatives, NASA contacts
+- Network: Access to private investment partnerships, NASA contacts
 - **Application deadline:** Rolling (apply ASAP for W26 batch)
 
 **Contact Strategy:**
@@ -271,23 +271,22 @@
 
 ## 🏆 ANGEL INVESTORS & INDIVIDUALS
 
-### 21. **Yuri Milner** ⭐⭐⭐⭐⭐
-**Breakthrough Initiatives founder**
+### 21. **private investors** ⭐⭐⭐⭐⭐
+**private investment partnerships founder**
 **Net Worth:** $7.3B
 **Past Investments:** Facebook, Twitter, Airbnb, SpaceX
 
 **Why CRITICAL for Warpeed:**
-- Founded Breakthrough Starshot ($100M commitment)
+- Founded other interstellar initiatives ($100M commitment)
 - **Starshot project has run out of funding** (per 2024 reports)
 - Our tech: 2.5× faster, $13B vs $500B
 - Direct competition/partnership opportunity
 
 **Contact Strategy:**
 - **PRIORITY #1 TARGET**
-- Approach through: Breakthrough Initiatives (breakthroughinitiatives.org)
+- Approach through: private investment partnerships (breakthroughinitiatives.org)
 - Pitch: "We solved the problems that stopped Starshot"
 - Key stats: 0.50c (vs 0.20c), $13B (vs $500B), quantum-validated
-- Offer: Partnership or tech transfer to Breakthrough
 
 ---
 
@@ -335,7 +334,7 @@
 
 ---
 
-### 26. **Breakthrough Initiatives**
+### 26. **private investment partnerships**
 **Website:** https://breakthroughinitiatives.org
 **Grant Size:** $2M proof-of-concept funding
 
@@ -361,7 +360,7 @@
 
 ### **Phase 1: Immediate (Q1 2025)**
 1. Apply to Y Combinator (W26 batch) - **DEADLINE: January 2025**
-2. Reach out to Yuri Milner/Breakthrough Initiatives
+2. Reach out to private investors/private investment partnerships
 3. Contact Quantonation (quantum angle)
 4. Contact 55 North Ventures (URGENT - just closed €134M)
 
@@ -395,10 +394,10 @@
 - YC network → AngelList syndicate
 - Demo Day exposure to 100+ investors
 
-**Path 4: Breakthrough Starshot Alumni**
+**Path 4: other interstellar initiatives Alumni**
 - Prof. Martijn de Sterke (University of Sydney)
 - Stopped working due to funding running out
-- Potential technical advisor + intro to Yuri Milner
+- Potential technical advisor + intro to private investors
 
 ---
 
@@ -422,7 +421,6 @@
 - Publications: Target Nature/Science papers
 - Market: $250M quantum materials market by 2030
 
-### **For Yuri Milner/Breakthrough:**
 - Lead: "We solved Starshot's problems"
 - Direct comparison table (show Warpeed advantages)
 - Offer: Partnership or technology transfer
@@ -440,7 +438,7 @@ Hi [Name],
 I'm Heinz Jungbluth, founder of Warpeed. We've built the world's first quantum-optimized lightsail propulsion system, validated on IBM's 133-qubit Torino processor.
 
 **Key results:**
-- 0.50c velocity (2.5× faster than Breakthrough Starshot)
+- 0.50c velocity (2.5× faster than other interstellar initiatives)
 - $13B total mission cost (vs Starshot's $500B)
 - 8 years to α Centauri (vs 21.8 years)
 - 85.87% manufacturability confirmed across 512,000 configurations
@@ -469,7 +467,7 @@ www.warpeed.space
 ## 📞 NEXT STEPS (Action Items)
 
 - [ ] **Week 1:** Apply to Y Combinator W26 batch
-- [ ] **Week 1:** Email Yuri Milner via Breakthrough Initiatives
+- [ ] **Week 1:** Email private investors via private investment partnerships
 - [ ] **Week 1:** Contact 55 North Ventures (urgent - just raised €134M)
 - [ ] **Week 2:** Reach out to Quantonation (quantum angle)
 - [ ] **Week 2:** Request warm intro to Lux Capital via LinkedIn
@@ -490,9 +488,8 @@ www.warpeed.space
    - Space tech track announced
    - Startup Battlefield competition
 
-3. **Breakthrough Discuss 2025** (Berkeley, CA)
-   - Annual conference for Breakthrough Initiatives
-   - **CRITICAL:** Direct access to Yuri Milner
+   - Annual conference for private investment partnerships
+   - **CRITICAL:** Direct access to private investors
 
 4. **Q2B (Quantum for Business) 2025** (Silicon Valley)
    - Quantonation, 55 North Ventures attend
@@ -514,10 +511,10 @@ www.warpeed.space
 - Lux: Manufacturing + aerospace network
 - Quantonation: Quantum computing legitimacy
 - Airbus Ventures: Customer intro to aerospace primes
-- Yuri Milner: Breakthrough Initiatives partnership
+- private investors: private investment partnerships partnership
 
 ---
 
 **Document prepared by:** Claude Code
-**For:** Warpeed (Starshot Dynamics Inc.)
+**For:** Warpeed (Warpeed Technologies Inc.)
 **Confidential:** Investor targeting strategy
