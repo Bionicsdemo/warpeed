@@ -1,0 +1,17 @@
+LIGHTSAIL OPTIMIZATION RESULTS
+======================================================================
+
+BEST CONFIGURATION:
+  Material: metamaterial_perfect
+  Sail Area: 1.00 m²
+  Thickness: 1.00 nm
+  Laser Power: 100.00 GW
+
+PERFORMANCE:
+  Final Velocity: 1.332768c (3.996e+08 m/s)
+  Acceleration: 6.79e+04 g
+  Temperature: 1723.2 K
+  Total Mass: 1001.80 mg
+  Cost: $100.00 billion
+
+TIME TO α CENTAURI: 3.28 years

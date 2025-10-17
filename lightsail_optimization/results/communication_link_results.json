@@ -1,0 +1,50 @@
+{
+  "mission_parameters": {
+    "distance_light_years": 4.37,
+    "distance_km": 41300000000000.0,
+    "wavelength_nm": 1550,
+    "transmitter_power_W": 1.0,
+    "transmitter_diameter_m": 1.0,
+    "receiver_diameter_m": 100.0
+  },
+  "beam_divergence": {
+    "divergence_urad": 1.8910000000000002,
+    "beam_diameter_at_earth_km": 156196600.00000003,
+    "beam_area_m2": 1.9161655756328815e+22
+  },
+  "link_budget": {
+    "path_loss_dB": 470.4965643501641,
+    "spreading_loss_dB": 183.87343152330843,
+    "tx_gain_dBi": 124.58734389061942,
+    "rx_gain_dBi": 163.91787599431328,
+    "atmospheric_loss_dB": 1.7886537659153892,
+    "received_power_W": 4.1879373568984984e-19,
+    "received_power_dBm": -153.7799982311468,
+    "photons_per_second": 3.2677975489900324
+  },
+  "noise_analysis": {
+    "signal_current_A": 4.188009338785625e-19,
+    "total_noise_current_A": 3.371648890118294e-09,
+    "noise_power_W": 1.1368016238235923e-11
+  },
+  "performance": {
+    "SNR_dB": -74.33684508386946,
+    "required_SNR_dB": 10,
+    "link_margin_dB": -84.33684508386946,
+    "data_rate_bps": 26.574189529883657,
+    "data_rate_Mbps": 2.6574189529883656e-05,
+    "shannon_capacity_Mbps": 5.314837905976731e-05
+  },
+  "image_transmission": {
+    "bits_per_image": 16777216,
+    "time_per_image_hours": 175.37083388891523,
+    "time_per_image_days": 7.307118078704801,
+    "images_per_year": 49.9855067436848
+  },
+  "viability_assessment": {
+    "communication_viable": false,
+    "snr_adequate": false,
+    "data_rate_practical": true,
+    "time_reasonable": true
+  }
+}

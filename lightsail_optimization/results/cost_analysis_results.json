@@ -1,0 +1,222 @@
+{
+  "metadata": {
+    "program_name": "Warpeed Interstellar Lightsail Mission",
+    "target": "Alpha Centauri (4.37 light years)",
+    "timeline": "2026-2061 (35 years)",
+    "velocity": "0.111c (33,260 km/s)",
+    "travel_time_years": 39.4,
+    "generated_date": "2025-10-15T18:15:21.146116"
+  },
+  "cost_summary": {
+    "total_cost_billions": 254.0,
+    "rd_billions": 50.0,
+    "laser_array_billions": 99.394570024,
+    "laser_expansion_billions": 99.394570024,
+    "lightsails_billions": 0.000859952,
+    "spacecraft_billions": 0.01,
+    "launch_cost_billions": 2.0,
+    "operations_billions": 3.2,
+    "contingency_percent": 20.0
+  },
+  "detailed_breakdown": {
+    "rd_detail": {
+      "quantum_optimization": 5.0,
+      "material_research": 10.0,
+      "laser_prototypes": 15.0,
+      "sail_prototypes": 5.0,
+      "mission_planning": 3.0,
+      "ground_infrastructure_design": 7.0,
+      "personnel_rd": 5.0
+    },
+    "laser_detail": {
+      "laser_units": 40.0,
+      "solar_power_farm": 65.0,
+      "beam_director": 5.0,
+      "adaptive_optics": 5.0,
+      "power_conditioning": 10.0,
+      "cooling_systems": 8.0,
+      "facility_construction": 10.0,
+      "site_preparation": 5.0,
+      "control_systems": 3.0,
+      "energy_storage": 20.0,
+      "grid_connection": 2.0,
+      "backup_generators": 1.0,
+      "integration_testing": 7.0,
+      "environmental_mitigation": 2.0,
+      "contingency": 15.789140048000007
+    },
+    "lightsail_unit_cost": {
+      "substrate_sic": 1500,
+      "hfo2_coating": 2000,
+      "sio2_coating": 1500,
+      "cnt_cables": 400,
+      "titanium_pads": 40,
+      "nichrome_wire": 1,
+      "ald_coating": 500,
+      "capacitors": 5,
+      "labor_fabrication": 50,
+      "testing_qa": 20,
+      "integration": 30,
+      "packaging": 10,
+      "total_per_m2": 6056
+    },
+    "operations_annual": {
+      "laser_operations": 50000000.0,
+      "tracking_network": 30000000.0,
+      "mission_control": 20000000.0,
+      "data_processing": 15000000.0,
+      "facility_maintenance": 10000000.0,
+      "personnel": 15000000.0,
+      "utilities": 10000000.0,
+      "contingency": 10000000.0,
+      "total_annual": 160000000.0
+    }
+  },
+  "mission_parameters": {
+    "lightsail_area_m2": 1.42,
+    "lightsail_thickness_nm": 207.23,
+    "lightsail_quantity": 100,
+    "nanocraft_quantity": 100,
+    "nanocraft_mass_g": 1.0,
+    "laser_power_gw": 254,
+    "laser_units": 10000,
+    "laser_wavelength_nm": 1064
+  },
+  "cost_efficiency": {
+    "cost_per_kg_to_alpha_cen_millions": 2540000.0,
+    "total_payload_kg": 0.1,
+    "cost_per_gram_millions": 2540.0,
+    "cost_per_mission_millions": 2540.0
+  },
+  "top_cost_drivers": [
+    {
+      "component": "Laser: Solar Power Farm",
+      "cost_billions": 65.0
+    },
+    {
+      "component": "Laser: Laser Units",
+      "cost_billions": 40.0
+    },
+    {
+      "component": "Laser: Energy Storage",
+      "cost_billions": 20.0
+    },
+    {
+      "component": "Laser: Contingency",
+      "cost_billions": 15.789140048000007
+    },
+    {
+      "component": "R&D: Laser Prototypes",
+      "cost_billions": 15.0
+    },
+    {
+      "component": "Laser: Power Conditioning",
+      "cost_billions": 10.0
+    },
+    {
+      "component": "Laser: Facility Construction",
+      "cost_billions": 10.0
+    },
+    {
+      "component": "R&D: Material Research",
+      "cost_billions": 10.0
+    },
+    {
+      "component": "Laser: Cooling Systems",
+      "cost_billions": 8.0
+    },
+    {
+      "component": "Laser: Integration Testing",
+      "cost_billions": 7.0
+    }
+  ],
+  "sensitivity_analysis": {
+    "laser_plus_20": {
+      "parameter": "laser",
+      "variation_percent": 20,
+      "base_value_billions": 198.789140048,
+      "delta_billions": 39.757828009600004,
+      "new_total_billions": 293.7578280096,
+      "impact_percent": 15.652688192755907
+    },
+    "laser_minus_20": {
+      "parameter": "laser",
+      "variation_percent": -20,
+      "base_value_billions": 198.789140048,
+      "delta_billions": -39.757828009600004,
+      "new_total_billions": 214.24217199039998,
+      "impact_percent": -15.652688192755907
+    },
+    "operations_plus_20": {
+      "parameter": "operations",
+      "variation_percent": 20,
+      "base_value_billions": 3.2,
+      "delta_billions": 0.6400000000000001,
+      "new_total_billions": 254.64,
+      "impact_percent": 0.2519685039370079
+    },
+    "operations_minus_20": {
+      "parameter": "operations",
+      "variation_percent": -20,
+      "base_value_billions": 3.2,
+      "delta_billions": -0.6400000000000001,
+      "new_total_billions": 253.36,
+      "impact_percent": -0.2519685039370079
+    }
+  },
+  "program_comparisons": {
+    "Warpeed (Interstellar)": {
+      "cost_billions": 254,
+      "duration_years": 35,
+      "outcome": "Alpha Centauri in 39.4 years @ 0.111c"
+    },
+    "Apollo Program": {
+      "cost_billions": 283,
+      "duration_years": 11,
+      "outcome": "Moon landing, 6 missions, 12 astronauts"
+    },
+    "ISS": {
+      "cost_billions": 150,
+      "duration_years": 25,
+      "outcome": "Continuous human presence in orbit"
+    },
+    "James Webb Space Telescope": {
+      "cost_billions": 10,
+      "duration_years": 25,
+      "outcome": "Deep space observatory"
+    },
+    "Manhattan Project": {
+      "cost_billions": 22,
+      "duration_years": 3,
+      "outcome": "Nuclear weapons development"
+    },
+    "Large Hadron Collider": {
+      "cost_billions": 9,
+      "duration_years": 10,
+      "outcome": "Higgs boson discovery"
+    }
+  },
+  "cost_breakdown_justified": true,
+  "justification": {
+    "rd_phase": "Quantum optimization (IBM Torino), material development, laser prototypes, comprehensive testing over 10 years",
+    "laser_array": "$200B for 10,000x 50MW Nd:YAG lasers + 520 GW solar farm + beam control. Comparable to LHC ($9B) but 22x larger scale.",
+    "lightsails": "$574K per sail, quantum-optimized 8-stage design, 100 units for redundancy and multiple missions",
+    "spacecraft": "Ultra-miniaturized 1g nanocraft with camera, laser comm, RTG. 100 units @ $100K each.",
+    "launch": "100 missions via Falcon 9 rideshare @ $20M each = $2B total",
+    "operations": "20 years of tracking, mission control, data processing, facility maintenance @ $100M/year",
+    "total_justification": "Total $254B is 10% less than Apollo ($283B) but achieves interstellar travel. Cost driven by unprecedented 500 GW laser infrastructure, but amortized over 100+ missions = $2.54B per mission.",
+    "cost_per_kg_justification": "$2540000M per kg reflects extreme engineering challenge: delivery to another star system in 39 years. No precedent exists. Compare to ISS: $150B / 420,000 kg = $0.36M/kg to LEO."
+  },
+  "risk_factors": {
+    "technical": "Laser phasing at 500 GW scale, sail deployment reliability, tracking at 0.111c",
+    "schedule": "Environmental permits (Chile), laser manufacturing capacity, CSP tower construction",
+    "cost": "Laser unit learning curve, solar farm economies of scale, launch market pricing",
+    "mitigation": "20% contingency, phased approach (100 GW pilot first), multiple suppliers, international consortium"
+  },
+  "funding_strategy": {
+    "government": 152.0,
+    "private": 76.0,
+    "commercial": 26.0,
+    "structure": "International consortium model (like ISS, LHC)"
+  }
+}

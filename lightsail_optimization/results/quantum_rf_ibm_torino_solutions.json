@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "optimizer": "Quantum RF Communication Optimizer",
+    "backend": "IBM Torino",
+    "qubits": 20,
+    "shots": 10000,
+    "timestamp": "2025-10-15T22:27:59.875074",
+    "problem": "RF communication link optimization",
+    "mission": "Warpeed interstellar to Alpha Centauri"
+  },
+  "problem_statement": {
+    "optical_snr_db": -74.34,
+    "required_snr_db": 10.0,
+    "deficit_db": 84.34,
+    "solution_approach": "Switch to RF + quantum optimization"
+  },
+  "configurations": []
+}

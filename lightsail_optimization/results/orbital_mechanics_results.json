@@ -1,0 +1,43 @@
+{
+  "simulation_timestamp": "2025-10-15T17:39:25.260007",
+  "mission_parameters": {
+    "launch_altitude_km": 400.0,
+    "spacecraft_mass_g": 1.0,
+    "sail_area_m2": 16.0,
+    "laser_power_GW": 13.4,
+    "target_velocity_c": 0.5,
+    "acceleration_time_minutes": 40.0,
+    "distance_to_alpha_centauri_ly": 4.37
+  },
+  "results": {
+    "final_velocity_c": 0.51188065051984,
+    "final_velocity_m_s": 153457958.4219818,
+    "travel_time_years": 8.537169572944705,
+    "travel_time_seconds": 269412582.51515985,
+    "targeting_error_AU": 1.7084350486814783,
+    "targeting_error_km": 255578245.512,
+    "delta_v_corrections_m_s": 2845.95774942561,
+    "gravitational_losses_m_s": 15052163.07446599,
+    "velocity_change_coast_m_s": -3.3982246816158295,
+    "relativistic_time_dilation_seconds": 44201899.057990015,
+    "relativistic_time_dilation_years": 1.400673658896431,
+    "lorentz_factor": 1.1640676862429125,
+    "trajectory_success": true
+  },
+  "success_criteria": {
+    "velocity_target_met": true,
+    "time_target_met": true,
+    "targeting_precision_met": true
+  },
+  "acceleration_phase": {
+    "duration_seconds": 2400.0,
+    "final_velocity_c": 0.5118806618550974,
+    "distance_traveled_AU": 1.3776357987104817,
+    "gravitational_losses_km_s": 15052.16307446599
+  },
+  "coast_phase": {
+    "duration_years": 8.537093521533953,
+    "distance_traveled_ly": 4.3699729853581335,
+    "velocity_change_km_s": -0.0033982246816158294
+  }
+}

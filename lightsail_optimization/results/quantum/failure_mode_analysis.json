@@ -1,0 +1,1259 @@
+{
+  "timestamp": "2025-10-15T08:34:56.657820",
+  "backend": "ibm_torino",
+  "job_id": "d3nq5u8dd19c73999n8g",
+  "shots": 10000,
+  "num_qubits": 14,
+  "avg_success_pct": 43.480765030138926,
+  "std_success_pct": 1.494202437764411,
+  "best_case": {
+    "mitigation_quality": {
+      "coating_quality": 7,
+      "thermal_quality": 7,
+      "structural_quality": 7,
+      "separation_quality": 7,
+      "laser_quality": 3
+    },
+    "failure_probabilities": {
+      "coating_delamination": 0.01125,
+      "thermal_runaway": 0.0045000000000000005,
+      "structural_tear": 0.00675,
+      "stage_separation_fail": 0.02,
+      "laser_pointing_loss": 0.014,
+      "micrometeorite_impact": 0.4,
+      "electronics_failure": 0.08437499999999999,
+      "communication_loss": 0.1
+    },
+    "total_success_prob": 0.47750395985969696,
+    "full_success_prob": 0.4764319728647541,
+    "partial_success_prob": 0.4817919078394682,
+    "quantum_counts": 1
+  },
+  "worst_case": {
+    "mitigation_quality": {
+      "coating_quality": 0,
+      "thermal_quality": 0,
+      "structural_quality": 0,
+      "separation_quality": 0,
+      "laser_quality": 0
+    },
+    "failure_probabilities": {
+      "coating_delamination": 0.055,
+      "thermal_runaway": 0.022,
+      "structural_tear": 0.033,
+      "stage_separation_fail": 0.09,
+      "laser_pointing_loss": 0.044,
+      "micrometeorite_impact": 0.4,
+      "electronics_failure": 0.15,
+      "communication_loss": 0.1
+    },
+    "total_success_prob": 0.39593669540556414,
+    "full_success_prob": 0.38898746402216167,
+    "partial_success_prob": 0.42373362093917394,
+    "quantum_counts": 1
+  },
+  "high_success_count": 0,
+  "critical_mitigations": null,
+  "failure_modes": {
+    "coating_delamination": {
+      "name": "Coating Delamination",
+      "baseline_prob": 0.05,
+      "severity": "CRITICAL",
+      "mitigation": "Improved adhesion layer, thermal cycling tests"
+    },
+    "thermal_runaway": {
+      "name": "Thermal Runaway (melting)",
+      "baseline_prob": 0.02,
+      "severity": "CRITICAL",
+      "mitigation": "Real-time temperature monitoring, laser power control"
+    },
+    "structural_tear": {
+      "name": "Structural Tear/Rip",
+      "baseline_prob": 0.03,
+      "severity": "CRITICAL",
+      "mitigation": "Reinforced edges, stress testing"
+    },
+    "stage_separation_fail": {
+      "name": "Stage Separation Failure",
+      "baseline_prob": 0.08,
+      "severity": "HIGH",
+      "mitigation": "Redundant nichrome wires, backup pyrotechnic"
+    },
+    "laser_pointing_loss": {
+      "name": "Laser Pointing Loss",
+      "baseline_prob": 0.04,
+      "severity": "HIGH",
+      "mitigation": "Active tracking, beacon system"
+    },
+    "micrometeorite_impact": {
+      "name": "Micrometeorite Impact",
+      "baseline_prob": 0.4,
+      "severity": "MEDIUM",
+      "mitigation": "Launch multiple sails, small cross-section"
+    },
+    "electronics_failure": {
+      "name": "Electronics Failure (radiation)",
+      "baseline_prob": 0.15,
+      "severity": "MEDIUM",
+      "mitigation": "Radiation-hardened components, redundancy"
+    },
+    "communication_loss": {
+      "name": "Communication Loss",
+      "baseline_prob": 0.1,
+      "severity": "LOW",
+      "mitigation": "Autonomous operation, backup transmitter"
+    }
+  },
+  "top_scenarios": [
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 7,
+        "structural_quality": 7,
+        "separation_quality": 7,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.0045000000000000005,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.02,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.47750395985969696,
+      "full_success_prob": 0.4764319728647541,
+      "partial_success_prob": 0.4817919078394682,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 7,
+        "structural_quality": 7,
+        "separation_quality": 6,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.0045000000000000005,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.03,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4772651123407595,
+      "full_success_prob": 0.4761936615537973,
+      "partial_success_prob": 0.4815509154886081,
+      "quantum_counts": 2
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 7,
+        "structural_quality": 7,
+        "separation_quality": 5,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.0045000000000000005,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.04,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.47693072581424706,
+      "full_success_prob": 0.4758600257184578,
+      "partial_success_prob": 0.48121352619740393,
+      "quantum_counts": 2
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 7,
+        "structural_quality": 7,
+        "separation_quality": 2,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.0045000000000000005,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.06999999999999999,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4753543321892601,
+      "full_success_prob": 0.4742871710661432,
+      "partial_success_prob": 0.4796229766817275,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 6,
+        "structural_quality": 7,
+        "separation_quality": 4,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.007,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.05,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.47530416341355974,
+      "full_success_prob": 0.47423711491835724,
+      "partial_success_prob": 0.4795723573943696,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 5,
+        "structural_quality": 7,
+        "separation_quality": 7,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.0095,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.02,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.47510564765547947,
+      "full_success_prob": 0.474039044824248,
+      "partial_success_prob": 0.4793720589804051,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 5,
+        "structural_quality": 7,
+        "separation_quality": 6,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.0095,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.03,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4748679997724985,
+      "full_success_prob": 0.47380193045608865,
+      "partial_success_prob": 0.47913227703813793,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 6,
+        "thermal_quality": 7,
+        "structural_quality": 7,
+        "separation_quality": 5,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.0175,
+        "thermal_runaway": 0.0045000000000000005,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.04,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4739159930341318,
+      "full_success_prob": 0.4728520609541187,
+      "partial_success_prob": 0.478171721354184,
+      "quantum_counts": 2
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 6,
+        "thermal_quality": 7,
+        "structural_quality": 7,
+        "separation_quality": 4,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.0175,
+        "thermal_runaway": 0.0045000000000000005,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.05,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4734887851077188,
+      "full_success_prob": 0.47242581210109513,
+      "partial_success_prob": 0.4777406771342133,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 6,
+        "structural_quality": 7,
+        "separation_quality": 1,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.007,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.08,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4734458313460781,
+      "full_success_prob": 0.4723829547698042,
+      "partial_success_prob": 0.47769733765117356,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 4,
+        "structural_quality": 7,
+        "separation_quality": 5,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.012,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.04,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4733375761973643,
+      "full_success_prob": 0.4722749426517693,
+      "partial_success_prob": 0.47758811037974397,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 6,
+        "thermal_quality": 6,
+        "structural_quality": 7,
+        "separation_quality": 5,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.0175,
+        "thermal_runaway": 0.007,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.04,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4727258473961756,
+      "full_success_prob": 0.4716645871697035,
+      "partial_success_prob": 0.47697088830206397,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 7,
+        "structural_quality": 7,
+        "separation_quality": 7,
+        "laser_quality": 2
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.0045000000000000005,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.02,
+        "laser_pointing_loss": 0.024,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.47266112051020703,
+      "full_success_prob": 0.4716000055943204,
+      "partial_success_prob": 0.4769055801737535,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 6,
+        "thermal_quality": 5,
+        "structural_quality": 7,
+        "separation_quality": 7,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.0175,
+        "thermal_runaway": 0.0095,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.02,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.47210245139975593,
+      "full_success_prob": 0.47104259068503035,
+      "partial_success_prob": 0.4763418942586579,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 7,
+        "structural_quality": 6,
+        "separation_quality": 7,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.0045000000000000005,
+        "structural_tear": 0.010499999999999999,
+        "stage_separation_fail": 0.02,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.09375,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.47181337048017336,
+      "full_success_prob": 0.46977348561288873,
+      "partial_success_prob": 0.4799729099493117,
+      "quantum_counts": 3
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 7,
+        "structural_quality": 6,
+        "separation_quality": 6,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.0045000000000000005,
+        "structural_tear": 0.010499999999999999,
+        "stage_separation_fail": 0.03,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.09375,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.47157736939449907,
+      "full_success_prob": 0.4695385048777883,
+      "partial_success_prob": 0.4797328274613418,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 2,
+        "structural_quality": 7,
+        "separation_quality": 6,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.017,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.03,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.471272330920107,
+      "full_success_prob": 0.47021433380952554,
+      "partial_success_prob": 0.4755043193624327,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 6,
+        "structural_quality": 7,
+        "separation_quality": 6,
+        "laser_quality": 2
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.007,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.03,
+        "laser_pointing_loss": 0.024,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.47123829483901614,
+      "full_success_prob": 0.47018037413876707,
+      "partial_success_prob": 0.47546997764001225,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 4,
+        "structural_quality": 7,
+        "separation_quality": 1,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.012,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.08,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4710619147733385,
+      "full_success_prob": 0.4700043900428666,
+      "partial_success_prob": 0.475292013695226,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 6,
+        "thermal_quality": 4,
+        "structural_quality": 7,
+        "separation_quality": 7,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.0175,
+        "thermal_runaway": 0.012,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.02,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.47091087529829256,
+      "full_success_prob": 0.4698536896484704,
+      "partial_success_prob": 0.4751396178975811,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 3,
+        "structural_quality": 7,
+        "separation_quality": 2,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.0145,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.06999999999999999,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.47057930122804204,
+      "full_success_prob": 0.4695228599554838,
+      "partial_success_prob": 0.4748050663182747,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 7,
+        "structural_quality": 7,
+        "separation_quality": 2,
+        "laser_quality": 2
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.0045000000000000005,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.06999999999999999,
+        "laser_pointing_loss": 0.024,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.470533294337442,
+      "full_success_prob": 0.469476956349448,
+      "partial_success_prob": 0.47475864628941783,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 5,
+        "thermal_quality": 7,
+        "structural_quality": 7,
+        "separation_quality": 4,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.023750000000000004,
+        "thermal_runaway": 0.0045000000000000005,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.05,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4704767699352778,
+      "full_success_prob": 0.46942055884345457,
+      "partial_success_prob": 0.4747016143025707,
+      "quantum_counts": 2
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 4,
+        "structural_quality": 7,
+        "separation_quality": 0,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.012,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.09,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.47025595135232934,
+      "full_success_prob": 0.4692002359938801,
+      "partial_success_prob": 0.47447881278612586,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 5,
+        "structural_quality": 7,
+        "separation_quality": 6,
+        "laser_quality": 2
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.0095,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.03,
+        "laser_pointing_loss": 0.024,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4700518942981323,
+      "full_success_prob": 0.468996637043755,
+      "partial_success_prob": 0.4742729233156416,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 5,
+        "thermal_quality": 6,
+        "structural_quality": 7,
+        "separation_quality": 6,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.023750000000000004,
+        "thermal_runaway": 0.007,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.03,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4700480155249396,
+      "full_success_prob": 0.46899276697833175,
+      "partial_success_prob": 0.4742690097113708,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 2,
+        "structural_quality": 7,
+        "separation_quality": 3,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.017,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.060000000000000005,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4699987494032576,
+      "full_success_prob": 0.46894361145812363,
+      "partial_success_prob": 0.47421930118379335,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 6,
+        "structural_quality": 7,
+        "separation_quality": 3,
+        "laser_quality": 2
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.007,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.060000000000000005,
+        "laser_pointing_loss": 0.024,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.46996480530236784,
+      "full_success_prob": 0.4689097435610725,
+      "partial_success_prob": 0.474185052267549,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 5,
+        "thermal_quality": 7,
+        "structural_quality": 7,
+        "separation_quality": 3,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.023750000000000004,
+        "thermal_runaway": 0.0045000000000000005,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.060000000000000005,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.46995794843459726,
+      "full_success_prob": 0.46890290208683516,
+      "partial_success_prob": 0.4741781338256455,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 7,
+        "structural_quality": 7,
+        "separation_quality": 1,
+        "laser_quality": 2
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.0045000000000000005,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.08,
+        "laser_pointing_loss": 0.024,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4698240189465203,
+      "full_success_prob": 0.4687692732678239,
+      "partial_success_prob": 0.474043001661306,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 1,
+        "structural_quality": 7,
+        "separation_quality": 5,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.019500000000000003,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.04,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.46974442658048143,
+      "full_success_prob": 0.46868985958508075,
+      "partial_success_prob": 0.473962694562084,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 5,
+        "structural_quality": 7,
+        "separation_quality": 5,
+        "laser_quality": 2
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.0095,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.04,
+        "laser_pointing_loss": 0.024,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.46972256157267084,
+      "full_success_prob": 0.4686680436637825,
+      "partial_success_prob": 0.473940633208224,
+      "quantum_counts": 2
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 5,
+        "thermal_quality": 6,
+        "structural_quality": 7,
+        "separation_quality": 5,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.023750000000000004,
+        "thermal_runaway": 0.007,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.04,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4697186855170651,
+      "full_success_prob": 0.4686641763098453,
+      "partial_success_prob": 0.473936722345944,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 6,
+        "thermal_quality": 6,
+        "structural_quality": 7,
+        "separation_quality": 0,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.0175,
+        "thermal_runaway": 0.007,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.09,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.46964820516052347,
+      "full_success_prob": 0.4685938541803174,
+      "partial_success_prob": 0.47386560908134745,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 6,
+        "structural_quality": 6,
+        "separation_quality": 4,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.007,
+        "structural_tear": 0.010499999999999999,
+        "stage_separation_fail": 0.05,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.09375,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.46963978981305743,
+      "full_success_prob": 0.46760930242068155,
+      "partial_success_prob": 0.477761739382561,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 5,
+        "thermal_quality": 6,
+        "structural_quality": 7,
+        "separation_quality": 4,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.023750000000000004,
+        "thermal_runaway": 0.007,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.05,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.46929526122122645,
+      "full_success_prob": 0.4682417025932199,
+      "partial_success_prob": 0.47350949573325235,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 6,
+        "thermal_quality": 5,
+        "structural_quality": 7,
+        "separation_quality": 1,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.0175,
+        "thermal_runaway": 0.0095,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.08,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4692687031920743,
+      "full_success_prob": 0.4682152041863207,
+      "partial_success_prob": 0.47348269921508856,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 6,
+        "structural_quality": 6,
+        "separation_quality": 3,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.007,
+        "structural_tear": 0.010499999999999999,
+        "stage_separation_fail": 0.060000000000000005,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.09375,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4691218912979752,
+      "full_success_prob": 0.46709364303956585,
+      "partial_success_prob": 0.4772348843316127,
+      "quantum_counts": 3
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 4,
+        "structural_quality": 7,
+        "separation_quality": 7,
+        "laser_quality": 2
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.012,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.02,
+        "laser_pointing_loss": 0.024,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.46910013768366104,
+      "full_success_prob": 0.4680470171041573,
+      "partial_success_prob": 0.473312620001676,
+      "quantum_counts": 3
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 3,
+        "structural_quality": 7,
+        "separation_quality": 0,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.0145,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.09,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.46906603244708556,
+      "full_success_prob": 0.4680129884331669,
+      "partial_success_prob": 0.4732782085027602,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 0,
+        "structural_quality": 7,
+        "separation_quality": 6,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.022,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.03,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4688752183518461,
+      "full_success_prob": 0.4678226027118169,
+      "partial_success_prob": 0.4730856809119625,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 5,
+        "thermal_quality": 5,
+        "structural_quality": 7,
+        "separation_quality": 6,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.023750000000000004,
+        "thermal_runaway": 0.0095,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.03,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4688646116590661,
+      "full_success_prob": 0.4678120198308536,
+      "partial_success_prob": 0.4730749789719162,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 6,
+        "thermal_quality": 7,
+        "structural_quality": 6,
+        "separation_quality": 7,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.0175,
+        "thermal_runaway": 0.0045000000000000005,
+        "structural_tear": 0.010499999999999999,
+        "stage_separation_fail": 0.02,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.09375,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.46883098507890814,
+      "full_success_prob": 0.46680399455338895,
+      "partial_success_prob": 0.47693894718098484,
+      "quantum_counts": 2
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 1,
+        "structural_quality": 7,
+        "separation_quality": 3,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.019500000000000003,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.060000000000000005,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4688034321362096,
+      "full_success_prob": 0.4677509776548222,
+      "partial_success_prob": 0.4730132500617593,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 5,
+        "thermal_quality": 6,
+        "structural_quality": 7,
+        "separation_quality": 3,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.023750000000000004,
+        "thermal_runaway": 0.007,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.060000000000000005,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4687777426374235,
+      "full_success_prob": 0.4677253458284554,
+      "partial_success_prob": 0.47298732987329584,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 6,
+        "thermal_quality": 7,
+        "structural_quality": 7,
+        "separation_quality": 4,
+        "laser_quality": 2
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.0175,
+        "thermal_runaway": 0.0045000000000000005,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.05,
+        "laser_pointing_loss": 0.024,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.46868666761169736,
+      "full_success_prob": 0.4676344752643701,
+      "partial_success_prob": 0.4728954370010063,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 0,
+        "structural_quality": 7,
+        "separation_quality": 5,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.022,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.04,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4685467100415205,
+      "full_success_prob": 0.46749483189618457,
+      "partial_success_prob": 0.47275422262286393,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 6,
+        "thermal_quality": 5,
+        "structural_quality": 7,
+        "separation_quality": 0,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.0175,
+        "thermal_runaway": 0.0095,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.09,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4684658078665645,
+      "full_success_prob": 0.4674141113450196,
+      "partial_success_prob": 0.4726725939527439,
+      "quantum_counts": 2
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 7,
+        "thermal_quality": 5,
+        "structural_quality": 6,
+        "separation_quality": 4,
+        "laser_quality": 3
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.01125,
+        "thermal_runaway": 0.0095,
+        "structural_tear": 0.010499999999999999,
+        "stage_separation_fail": 0.05,
+        "laser_pointing_loss": 0.014,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.09375,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.46845741370577376,
+      "full_success_prob": 0.4664320383158963,
+      "partial_success_prob": 0.47655891526528366,
+      "quantum_counts": 1
+    },
+    {
+      "mitigation_quality": {
+        "coating_quality": 6,
+        "thermal_quality": 6,
+        "structural_quality": 7,
+        "separation_quality": 6,
+        "laser_quality": 2
+      },
+      "failure_probabilities": {
+        "coating_delamination": 0.0175,
+        "thermal_runaway": 0.007,
+        "structural_tear": 0.00675,
+        "stage_separation_fail": 0.03,
+        "laser_pointing_loss": 0.024,
+        "micrometeorite_impact": 0.4,
+        "electronics_failure": 0.08437499999999999,
+        "communication_loss": 0.1
+      },
+      "total_success_prob": 0.4682595445555837,
+      "full_success_prob": 0.4672083110911137,
+      "partial_success_prob": 0.4724644784134635,
+      "quantum_counts": 2
+    }
+  ]
+}

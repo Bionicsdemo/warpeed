@@ -1,0 +1,357 @@
+{
+  "required_power_analysis": {
+    "current_power_W": 1.0,
+    "required_power_W": 271446663.8215156,
+    "required_power_kW": 271446.6638215156,
+    "power_increase_factor": 271446663.8215156,
+    "snr_deficit_dB": 84.33684508386946
+  },
+  "minimum_viable_system": {
+    "min_power_W": 1817942.6656475961,
+    "min_power_kW": 1817.9426656475962,
+    "min_power_MW": 1.817942665647596,
+    "tx_diameter_m": 10.0,
+    "rx_diameter_m": 100.0,
+    "SNR_dB": 10.03356482220929,
+    "data_rate_Mbps": 1734.7857644680032,
+    "time_per_image_hours": 2.6864053609564503e-06
+  },
+  "power_sweep_scenarios": [
+    {
+      "tx_power_W": 1,
+      "tx_power_kW": 0.001,
+      "tx_power_MW": 1e-06,
+      "SNR_dB": -74.33684508386946,
+      "link_margin_dB": -84.33684508386946,
+      "data_rate_Mbps": 2.6574189529883656e-05,
+      "time_per_image_hours": 175.37083388891523,
+      "viable": false
+    },
+    {
+      "tx_power_W": 10,
+      "tx_power_kW": 0.01,
+      "tx_power_MW": 1e-05,
+      "SNR_dB": -64.33684508433082,
+      "link_margin_dB": -74.33684508433082,
+      "data_rate_Mbps": 0.0002657418504437187,
+      "time_per_image_hours": 17.53708634901219,
+      "viable": false
+    },
+    {
+      "tx_power_W": 100,
+      "tx_power_kW": 0.1,
+      "tx_power_MW": 0.0001,
+      "SNR_dB": -54.33684508894444,
+      "link_margin_dB": -64.33684508894444,
+      "data_rate_Mbps": 0.0026574140964590437,
+      "time_per_image_hours": 1.7537115438604747,
+      "viable": false
+    },
+    {
+      "tx_power_W": 1000,
+      "tx_power_kW": 1.0,
+      "tx_power_MW": 0.001,
+      "SNR_dB": -44.336845135080694,
+      "link_margin_dB": -54.336845135080694,
+      "data_rate_Mbps": 0.026573700152190363,
+      "time_per_image_hours": 0.17537406349464077,
+      "viable": false
+    },
+    {
+      "tx_power_W": 10000,
+      "tx_power_kW": 10.0,
+      "tx_power_MW": 0.01,
+      "SNR_dB": -34.336845596443155,
+      "link_margin_dB": -44.336845596443155,
+      "data_rate_Mbps": 0.2656929309277772,
+      "time_per_image_hours": 0.01754031528616239,
+      "viable": false
+    },
+    {
+      "tx_power_W": 100000,
+      "tx_power_kW": 100.0,
+      "tx_power_MW": 0.1,
+      "SNR_dB": -24.336850210065087,
+      "link_margin_dB": -34.33685021006509,
+      "data_rate_Mbps": 2.652532938821709,
+      "time_per_image_hours": 0.0017569387017105102,
+      "viable": false
+    },
+    {
+      "tx_power_W": 1000000.0,
+      "tx_power_kW": 1000.0,
+      "tx_power_MW": 1.0,
+      "SNR_dB": -14.336896346014782,
+      "link_margin_dB": -24.336896346014782,
+      "data_rate_Mbps": 26.096094644364776,
+      "time_per_image_hours": 0.00017858372454914964,
+      "viable": false
+    },
+    {
+      "tx_power_W": 10000000.0,
+      "tx_power_kW": 10000.0,
+      "tx_power_MW": 10.0,
+      "SNR_dB": -4.337357678557655,
+      "link_margin_dB": -14.337357678557655,
+      "data_rate_Mbps": 226.2202376289873,
+      "time_per_image_hours": 2.0600887995798895e-05,
+      "viable": false
+    },
+    {
+      "tx_power_W": 100000000.0,
+      "tx_power_kW": 100000.0,
+      "tx_power_MW": 100.0,
+      "SNR_dB": 5.658031689307701,
+      "link_margin_dB": -4.341968310692299,
+      "data_rate_Mbps": 1113.195950426903,
+      "time_per_image_hours": 4.186448734376522e-06,
+      "viable": false
+    },
+    {
+      "tx_power_W": 1000000000.0,
+      "tx_power_kW": 1000000.0,
+      "tx_power_MW": 1000.0,
+      "SNR_dB": 15.612192598909578,
+      "link_margin_dB": 5.612192598909578,
+      "data_rate_Mbps": 2612.673736412762,
+      "time_per_image_hours": 1.7837427279291624e-06,
+      "viable": true
+    },
+    {
+      "tx_power_W": 10000000000.0,
+      "tx_power_kW": 10000000.0,
+      "tx_power_MW": 10000.0,
+      "SNR_dB": 25.178596004069824,
+      "link_margin_dB": 15.178596004069824,
+      "data_rate_Mbps": 4184.260155022361,
+      "time_per_image_hours": 1.1137782081221652e-06,
+      "viable": true
+    }
+  ],
+  "aperture_combinations": [
+    {
+      "tx_diameter_m": 1,
+      "rx_diameter_m": 100,
+      "SNR_dB": -52.548191325641454,
+      "link_margin_dB": -62.548191325641454,
+      "data_rate_Mbps": 0.004011660784382692,
+      "time_per_image_hours": 1.1616978673571732,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 1,
+      "rx_diameter_m": 200,
+      "SNR_dB": -46.88232192745528,
+      "link_margin_dB": -56.88232192745528,
+      "data_rate_Mbps": 0.014787947460706682,
+      "time_per_image_hours": 0.3151443288638159,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 1,
+      "rx_diameter_m": 500,
+      "SNR_dB": -40.8241214464652,
+      "link_margin_dB": -50.8241214464652,
+      "data_rate_Mbps": 0.05966428462259438,
+      "time_per_image_hours": 0.0781093380613994,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 1,
+      "rx_diameter_m": 1000,
+      "SNR_dB": -38.35581200661157,
+      "link_margin_dB": -48.35581200661157,
+      "data_rate_Mbps": 0.10532504085201483,
+      "time_per_image_hours": 0.044247196488873965,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 5,
+      "rx_diameter_m": 100,
+      "SNR_dB": -38.56879142464865,
+      "link_margin_dB": -48.56879142464865,
+      "data_rate_Mbps": 0.10028482286492758,
+      "time_per_image_hours": 0.046471017693821226,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 5,
+      "rx_diameter_m": 200,
+      "SNR_dB": -32.902922525376525,
+      "link_margin_dB": -42.902922525376525,
+      "data_rate_Mbps": 0.36960771084190874,
+      "time_per_image_hours": 0.012608875954352398,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 5,
+      "rx_diameter_m": 500,
+      "SNR_dB": -26.844724122123687,
+      "link_margin_dB": -36.84472412212369,
+      "data_rate_Mbps": 1.4901276754188306,
+      "time_per_image_hours": 0.0031274754872718507,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 5,
+      "rx_diameter_m": 1000,
+      "SNR_dB": -24.3764167964569,
+      "link_margin_dB": -34.3764167964569,
+      "data_rate_Mbps": 2.6285204480341684,
+      "time_per_image_hours": 0.0017729889760846928,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 10,
+      "rx_diameter_m": 100,
+      "SNR_dB": -32.548192091767646,
+      "link_margin_dB": -42.548192091767646,
+      "data_rate_Mbps": 0.4010556128482977,
+      "time_per_image_hours": 0.011620178420344377,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 10,
+      "rx_diameter_m": 200,
+      "SNR_dB": -26.882324751601274,
+      "link_margin_dB": -36.882324751601274,
+      "data_rate_Mbps": 1.477295184162924,
+      "time_per_image_hours": 0.0031546422324651743,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 10,
+      "rx_diameter_m": 500,
+      "SNR_dB": -20.82413284126669,
+      "link_margin_dB": -30.82413284126669,
+      "data_rate_Mbps": 5.942118049356436,
+      "time_per_image_hours": 0.0007842889924212323,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 10,
+      "rx_diameter_m": 1000,
+      "SNR_dB": -18.355832122409826,
+      "link_margin_dB": -28.355832122409826,
+      "data_rate_Mbps": 10.457060947419675,
+      "time_per_image_hours": 0.0004456642072960028,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 20,
+      "rx_diameter_m": 100,
+      "SNR_dB": -26.527594500081698,
+      "link_margin_dB": -36.5275945000817,
+      "data_rate_Mbps": 1.6028854524674911,
+      "time_per_image_hours": 0.002907467761095234,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 20,
+      "rx_diameter_m": 200,
+      "SNR_dB": -20.861733396328603,
+      "link_margin_dB": -30.861733396328603,
+      "data_rate_Mbps": 5.8911027572052515,
+      "time_per_image_hours": 0.0007910807144006853,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 20,
+      "rx_diameter_m": 500,
+      "SNR_dB": -14.803567457505961,
+      "link_margin_dB": -24.803567457505963,
+      "data_rate_Mbps": 23.48012491497236,
+      "time_per_image_hours": 0.0001984801100783779,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 20,
+      "rx_diameter_m": 1000,
+      "SNR_dB": -12.33529316552566,
+      "link_margin_dB": -22.335293165525663,
+      "data_rate_Mbps": 40.94778428565723,
+      "time_per_image_hours": 0.00011381172044051608,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 50,
+      "rx_diameter_m": 100,
+      "SNR_dB": -18.56881057776195,
+      "link_margin_dB": -28.56881057776195,
+      "data_rate_Mbps": 9.960055539104816,
+      "time_per_image_hours": 0.0004679027902485609,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 50,
+      "rx_diameter_m": 200,
+      "SNR_dB": -12.902993128464324,
+      "link_margin_dB": -22.902993128464324,
+      "data_rate_Mbps": 36.053452281743375,
+      "time_per_image_hours": 0.00012926190095081862,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 50,
+      "rx_diameter_m": 500,
+      "SNR_dB": -6.845008983010859,
+      "link_margin_dB": -16.84500898301086,
+      "data_rate_Mbps": 135.5786623965089,
+      "time_per_image_hours": 3.4373681635450176e-05,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 50,
+      "rx_diameter_m": 1000,
+      "SNR_dB": -4.376919662898924,
+      "link_margin_dB": -14.376919662898924,
+      "data_rate_Mbps": 224.45721293971016,
+      "time_per_image_hours": 2.0762700011915223e-05,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 100,
+      "rx_diameter_m": 100,
+      "SNR_dB": -12.5482687037038,
+      "link_margin_dB": -22.548268703703798,
+      "data_rate_Mbps": 39.040231955799996,
+      "time_per_image_hours": 0.00011937269694130023,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 100,
+      "rx_diameter_m": 200,
+      "SNR_dB": -6.882607156926859,
+      "link_margin_dB": -16.88260715692686,
+      "data_rate_Mbps": 134.512454323744,
+      "time_per_image_hours": 3.464614337168584e-05,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 100,
+      "rx_diameter_m": 500,
+      "SNR_dB": -0.8252721704612354,
+      "link_margin_dB": -10.825272170461236,
+      "data_rate_Mbps": 434.71371222410255,
+      "time_per_image_hours": 1.0720475675667879e-05,
+      "viable": false
+    },
+    {
+      "tx_diameter_m": 100,
+      "rx_diameter_m": 1000,
+      "SNR_dB": 1.6421567681422613,
+      "link_margin_dB": -8.35784323185774,
+      "data_rate_Mbps": 649.1939388084656,
+      "time_per_image_hours": 7.178652632418888e-06,
+      "viable": false
+    }
+  ],
+  "conclusions": {
+    "baseline_viable": false,
+    "baseline_snr_dB": -74.33684508386946,
+    "baseline_snr_deficit_dB": 84.33684508386946,
+    "min_viable_power_MW": 1.817942665647596,
+    "total_viable_configurations": 0,
+    "recommendation": "Use radio wavelengths (X-band or Ka-band) for better link budget"
+  }
+}

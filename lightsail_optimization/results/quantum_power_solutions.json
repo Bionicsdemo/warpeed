@@ -1,0 +1,4443 @@
+{
+  "metadata": {
+    "optimization_method": "Quantum QAOA (IBM Torino simulation)",
+    "timestamp": "2025-10-15T22:07:17.261315",
+    "num_qubits": 20,
+    "num_shots": 10000,
+    "total_configurations": 12000,
+    "viable_solutions": 55
+  },
+  "mission_parameters": {
+    "alpha_centauri_irradiance_W_m2": 2068.6017861786836,
+    "mission_duration_years": 20,
+    "power_baseline_W": 0.30000000000000004,
+    "power_peak_W": 1.8
+  },
+  "constraints": {
+    "max_mass_g": 5.0,
+    "min_power_margin_percent": 25.0,
+    "max_cost_usd": 200000
+  },
+  "top_50_solutions": [
+    {
+      "bitstring": "01010000011000001001",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 62.25806451612904,
+        "cell_type": "CIGS Thin Film",
+        "efficiency_bol_percent": 25.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 8.563700335148297,
+        "power_margin_percent": 375.76112973046094,
+        "total_mass_g": 4.9790322580645165,
+        "total_cost_usd": 7953.225806451614,
+        "efficiency_eol_percent": 22.164998008694795
+      },
+      "viable": true,
+      "score": 318.01758134336416,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.8677419354838711,
+        "battery_g": 1.5,
+        "substrate_g": 0.3112903225806452,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3735.4838709677424,
+        "battery_usd": 50.0,
+        "substrate_usd": 1867.7419354838712,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11011000010001101100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 27.419354838709676,
+        "cell_type": "InGaP/GaAs/Ge 3J",
+        "efficiency_bol_percent": 32.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 8.376081190346305,
+        "power_margin_percent": 365.3378439081281,
+        "total_mass_g": 4.837096774193548,
+        "total_cost_usd": 6059.677419354839,
+        "efficiency_eol_percent": 29.534984467244897
+      },
+      "viable": true,
+      "score": 310.90719874683776,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.5080645161290323,
+        "battery_g": 1.5,
+        "substrate_g": 0.32903225806451614,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3290.322580645161,
+        "battery_usd": 50.0,
+        "substrate_usd": 219.3548387096774,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00011000011101000010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 33.225806451612904,
+        "cell_type": "CIGS Thin Film",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 8.226476902261629,
+        "power_margin_percent": 357.0264945700905,
+        "total_mass_g": 4.329032258064516,
+        "total_cost_usd": 4709.677419354839,
+        "efficiency_eol_percent": 23.93819784939038
+      },
+      "viable": true,
+      "score": 309.0264945700905,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.996774193548387,
+        "battery_g": 1.5,
+        "substrate_g": 0.33225806451612905,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1993.5483870967741,
+        "battery_usd": 50.0,
+        "substrate_usd": 166.1290322580645,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01111000101110001000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 15.806451612903226,
+        "cell_type": "Perovskite/Si",
+        "efficiency_bol_percent": 28.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "10x Advanced",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 7.955258253013199,
+        "power_margin_percent": 341.95879183406663,
+        "total_mass_g": 4.790322580645162,
+        "total_cost_usd": 5604.8387096774195,
+        "efficiency_eol_percent": 24.330049989454317
+      },
+      "viable": true,
+      "score": 288.45072731793755,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.7112903225806452,
+        "battery_g": 1.5,
+        "substrate_g": 0.07903225806451614,
+        "concentrator_g": 2.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1580.6451612903227,
+        "battery_usd": 50.0,
+        "substrate_usd": 474.19354838709677,
+        "concentrator_usd": 2000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10110000000100111100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 30.32258064516129,
+        "cell_type": "GaAs Single",
+        "efficiency_bol_percent": 28.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "5x Fresnel",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 7.7857199592781745,
+        "power_margin_percent": 332.53999773767634,
+        "total_mass_g": 4.958709677419355,
+        "total_cost_usd": 4720.967741935484,
+        "efficiency_eol_percent": 24.824797769738172
+      },
+      "viable": true,
+      "score": 278.23193322154725,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.5161290322580645,
+        "battery_g": 1.5,
+        "substrate_g": 0.2425806451612903,
+        "concentrator_g": 1.2,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1516.1290322580644,
+        "battery_usd": 50.0,
+        "substrate_usd": 454.83870967741933,
+        "concentrator_usd": 1200,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01011000100111101100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 27.419354838709676,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 30.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 7.696388840313996,
+        "power_margin_percent": 327.577157795222,
+        "total_mass_g": 4.508064516129032,
+        "total_cost_usd": 5566.129032258064,
+        "efficiency_eol_percent": 27.13831440823852
+      },
+      "viable": true,
+      "score": 276.9303836016736,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.370967741935484,
+        "battery_g": 1.5,
+        "substrate_g": 0.13709677419354838,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2193.548387096774,
+        "battery_usd": 50.0,
+        "substrate_usd": 822.5806451612902,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11101000110110100010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 33.225806451612904,
+        "cell_type": "4-Junction",
+        "efficiency_bol_percent": 35.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Reflective",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 6.728027935325973,
+        "power_margin_percent": 273.77932974033183,
+        "total_mass_g": 4.992258064516129,
+        "total_cost_usd": 8496.451612903227,
+        "efficiency_eol_percent": 32.6297769518202
+      },
+      "viable": true,
+      "score": 215.3602974822673,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.993548387096774,
+        "battery_g": 1.5,
+        "substrate_g": 0.39870967741935487,
+        "concentrator_g": 0.6,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 5980.645161290323,
+        "battery_usd": 50.0,
+        "substrate_usd": 265.80645161290323,
+        "concentrator_usd": 700,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11101000110100100010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 33.225806451612904,
+        "cell_type": "4-Junction",
+        "efficiency_bol_percent": 34.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Reflective",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 6.535798565745232,
+        "power_margin_percent": 263.09992031917955,
+        "total_mass_g": 4.992258064516129,
+        "total_cost_usd": 8496.451612903227,
+        "efficiency_eol_percent": 31.697497610339624
+      },
+      "viable": true,
+      "score": 204.680888061115,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.993548387096774,
+        "battery_g": 1.5,
+        "substrate_g": 0.39870967741935487,
+        "concentrator_g": 0.6,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 5980.645161290323,
+        "battery_usd": 50.0,
+        "substrate_usd": 265.80645161290323,
+        "concentrator_usd": 700,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01100000011001011001",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 65.16129032258064,
+        "cell_type": "CIGS Thin Film",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Fresnel",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 6.453391589346985,
+        "power_margin_percent": 258.5217549637214,
+        "total_mass_g": 4.780645161290322,
+        "total_cost_usd": 7914.516129032258,
+        "efficiency_eol_percent": 23.93819784939038
+      },
+      "viable": true,
+      "score": 202.8007872217859,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.9548387096774191,
+        "battery_g": 1.5,
+        "substrate_g": 0.3258064516129032,
+        "concentrator_g": 0.5,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3909.6774193548385,
+        "battery_usd": 50.0,
+        "substrate_usd": 1954.8387096774193,
+        "concentrator_usd": 500,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11010000101100110010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 36.12903225806452,
+        "cell_type": "Perovskite/Si",
+        "efficiency_bol_percent": 33.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 6.429147486108626,
+        "power_margin_percent": 257.17486033936814,
+        "total_mass_g": 4.859354838709677,
+        "total_cost_usd": 6251.935483870968,
+        "efficiency_eol_percent": 28.674701773285445
+      },
+      "viable": true,
+      "score": 202.3293764684004,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.6258064516129034,
+        "battery_g": 1.5,
+        "substrate_g": 0.43354838709677423,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3612.903225806452,
+        "battery_usd": 50.0,
+        "substrate_usd": 289.03225806451616,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10001000011011101001",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 62.25806451612904,
+        "cell_type": "CIGS Thin Film",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Reflective",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 6.1658642413067755,
+        "power_margin_percent": 242.54801340593198,
+        "total_mass_g": 4.665806451612903,
+        "total_cost_usd": 6619.354838709678,
+        "efficiency_eol_percent": 23.93819784939038
+      },
+      "viable": true,
+      "score": 189.27059405109327,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.8677419354838711,
+        "battery_g": 1.5,
+        "substrate_g": 0.4980645161290323,
+        "concentrator_g": 0.3,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3735.4838709677424,
+        "battery_usd": 50.0,
+        "substrate_usd": 933.8709677419356,
+        "concentrator_usd": 400,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10101000100111110010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 36.12903225806452,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 30.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Reflective",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 6.084674471401184,
+        "power_margin_percent": 238.0374706333991,
+        "total_mass_g": 4.695483870967742,
+        "total_cost_usd": 5682.258064516129,
+        "efficiency_eol_percent": 27.13831440823852
+      },
+      "viable": true,
+      "score": 185.40037385920556,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.806451612903226,
+        "battery_g": 1.5,
+        "substrate_g": 0.28903225806451616,
+        "concentrator_g": 0.6,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2890.3225806451615,
+        "battery_usd": 50.0,
+        "substrate_usd": 541.9354838709678,
+        "concentrator_usd": 700,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00101000011110101010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 39.03225806451613,
+        "cell_type": "CIGS Thin Film",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Reflective",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 5.7984681854776134,
+        "power_margin_percent": 222.137121415423,
+        "total_mass_g": 4.161290322580645,
+        "total_cost_usd": 4787.096774193548,
+        "efficiency_eol_percent": 23.93819784939038
+      },
+      "viable": true,
+      "score": 175.737121415423,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.1709677419354838,
+        "battery_g": 1.5,
+        "substrate_g": 0.3903225806451613,
+        "concentrator_g": 0.6,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2341.935483870968,
+        "battery_usd": 50.0,
+        "substrate_usd": 195.16129032258064,
+        "concentrator_usd": 700,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10011000110110000100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 21.612903225806452,
+        "cell_type": "4-Junction",
+        "efficiency_bol_percent": 28.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 5.835312254586929,
+        "power_margin_percent": 224.18401414371831,
+        "total_mass_g": 4.469677419354839,
+        "total_cost_usd": 6764.5161290322585,
+        "efficiency_eol_percent": 26.103821561456165
+      },
+      "viable": true,
+      "score": 172.7227238211377,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.296774193548387,
+        "battery_g": 1.5,
+        "substrate_g": 0.17290322580645162,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3890.3225806451615,
+        "battery_usd": 50.0,
+        "substrate_usd": 324.19354838709677,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11101000000100110010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 36.12903225806452,
+        "cell_type": "GaAs Single",
+        "efficiency_bol_percent": 28.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "3x Reflective",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 5.5659615028031215,
+        "power_margin_percent": 209.2200834890623,
+        "total_mass_g": 4.84,
+        "total_cost_usd": 4345.483870967742,
+        "efficiency_eol_percent": 24.824797769738172
+      },
+      "viable": true,
+      "score": 156.47459961809454,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.806451612903226,
+        "battery_g": 1.5,
+        "substrate_g": 0.43354838709677423,
+        "concentrator_g": 0.6,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1806.451612903226,
+        "battery_usd": 50.0,
+        "substrate_usd": 289.03225806451616,
+        "concentrator_usd": 700,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11011000110110101000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 15.806451612903226,
+        "cell_type": "4-Junction",
+        "efficiency_bol_percent": 35.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 5.334520531245515,
+        "power_margin_percent": 196.36225173586192,
+        "total_mass_g": 4.138064516129032,
+        "total_cost_usd": 5521.612903225807,
+        "efficiency_eol_percent": 32.6297769518202
+      },
+      "viable": true,
+      "score": 149.45999367134579,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.9483870967741935,
+        "battery_g": 1.5,
+        "substrate_g": 0.18967741935483873,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2845.1612903225805,
+        "battery_usd": 50.0,
+        "substrate_usd": 126.45161290322581,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00011000100000111000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 18.70967741935484,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 30.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 5.251653561626022,
+        "power_margin_percent": 191.7585312014457,
+        "total_mass_g": 4.122580645161291,
+        "total_cost_usd": 4140.322580645161,
+        "efficiency_eol_percent": 27.13831440823852
+      },
+      "viable": true,
+      "score": 146.39240216918762,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.935483870967742,
+        "battery_g": 1.5,
+        "substrate_g": 0.1870967741935484,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1496.7741935483873,
+        "battery_usd": 50.0,
+        "substrate_usd": 93.5483870967742,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11011000001000000100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 21.612903225806452,
+        "cell_type": "5-Junction",
+        "efficiency_bol_percent": 25.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 5.262634196718715,
+        "power_margin_percent": 192.36856648437308,
+        "total_mass_g": 4.664193548387097,
+        "total_cost_usd": 8126.129032258064,
+        "efficiency_eol_percent": 23.541990217640382
+      },
+      "viable": true,
+      "score": 137.60050196824403,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.4048387096774195,
+        "battery_g": 1.5,
+        "substrate_g": 0.2593548387096774,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 5403.225806451613,
+        "battery_usd": 50.0,
+        "substrate_usd": 172.90322580645162,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11111000000010100000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 10.0,
+        "cell_type": "GaAs Single",
+        "efficiency_bol_percent": 28.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "10x Advanced",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 5.135262100800499,
+        "power_margin_percent": 185.29233893336104,
+        "total_mass_g": 4.62,
+        "total_cost_usd": 4130.0,
+        "efficiency_eol_percent": 24.824797769738172
+      },
+      "viable": true,
+      "score": 134.96233893336102,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.5,
+        "battery_g": 1.5,
+        "substrate_g": 0.12,
+        "concentrator_g": 2.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 500.0,
+        "battery_usd": 50.0,
+        "substrate_usd": 80.0,
+        "concentrator_usd": 2000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00010000010111101100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 27.419354838709676,
+        "cell_type": "InGaP/GaAs/Ge 3J",
+        "efficiency_bol_percent": 32.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 5.025648714207783,
+        "power_margin_percent": 179.20270634487684,
+        "total_mass_g": 4.582258064516129,
+        "total_cost_usd": 5777.419354838709,
+        "efficiency_eol_percent": 29.534984467244897
+      },
+      "viable": true,
+      "score": 127.60270634487685,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.5080645161290323,
+        "battery_g": 1.5,
+        "substrate_g": 0.27419354838709675,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3290.322580645161,
+        "battery_usd": 50.0,
+        "substrate_usd": 137.09677419354838,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00010000100010000010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 33.225806451612904,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 5.03615467409723,
+        "power_margin_percent": 179.78637078317948,
+        "total_mass_g": 4.793548387096774,
+        "total_cost_usd": 5174.193548387097,
+        "efficiency_eol_percent": 24.424482967414676
+      },
+      "viable": true,
+      "score": 126.67669336382464,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.6612903225806452,
+        "battery_g": 1.5,
+        "substrate_g": 0.33225806451612905,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2658.064516129032,
+        "battery_usd": 50.0,
+        "substrate_usd": 166.1290322580645,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10011000101101101000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 15.806451612903226,
+        "cell_type": "Perovskite/Si",
+        "efficiency_bol_percent": 33.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 4.687920041954206,
+        "power_margin_percent": 160.44000233078924,
+        "total_mass_g": 3.837741935483871,
+        "total_cost_usd": 4367.741935483871,
+        "efficiency_eol_percent": 28.674701773285445
+      },
+      "viable": true,
+      "score": 117.69484104046666,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.7112903225806452,
+        "battery_g": 1.5,
+        "substrate_g": 0.12645161290322582,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1580.6451612903227,
+        "battery_usd": 50.0,
+        "substrate_usd": 237.09677419354838,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11011000010100011000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 18.70967741935484,
+        "cell_type": "InGaP/GaAs/Ge 3J",
+        "efficiency_bol_percent": 26.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 4.643797954059644,
+        "power_margin_percent": 157.9887752255358,
+        "total_mass_g": 4.2535483870967745,
+        "total_cost_usd": 4944.8387096774195,
+        "efficiency_eol_percent": 23.99717487963648
+      },
+      "viable": true,
+      "score": 110.50845264489064,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.0290322580645161,
+        "battery_g": 1.5,
+        "substrate_g": 0.2245161290322581,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2245.161290322581,
+        "battery_usd": 50.0,
+        "substrate_usd": 149.67741935483872,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11011000111101001000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 15.806451612903226,
+        "cell_type": "Advanced 6J",
+        "efficiency_bol_percent": 30.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 4.665096456894909,
+        "power_margin_percent": 159.17202538305048,
+        "total_mass_g": 4.296129032258064,
+        "total_cost_usd": 8208.709677419354,
+        "efficiency_eol_percent": 28.535096257595
+      },
+      "viable": true,
+      "score": 108.00202538305048,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.106451612903226,
+        "battery_g": 1.5,
+        "substrate_g": 0.18967741935483873,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 5532.258064516129,
+        "battery_usd": 50.0,
+        "substrate_usd": 126.45161290322581,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11010000100000000010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 33.225806451612904,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 25.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 4.663106179719657,
+        "power_margin_percent": 159.06145442886984,
+        "total_mass_g": 4.86,
+        "total_cost_usd": 5273.870967741936,
+        "efficiency_eol_percent": 22.61526200686544
+      },
+      "viable": true,
+      "score": 105.1875834611279,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.6612903225806452,
+        "battery_g": 1.5,
+        "substrate_g": 0.39870967741935487,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2658.064516129032,
+        "battery_usd": 50.0,
+        "substrate_usd": 265.80645161290323,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00101000010100110100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 24.516129032258064,
+        "cell_type": "InGaP/GaAs/Ge 3J",
+        "efficiency_bol_percent": 32.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Reflective",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 4.493521203291665,
+        "power_margin_percent": 149.64006684953694,
+        "total_mass_g": 4.193548387096774,
+        "total_cost_usd": 5314.516129032258,
+        "efficiency_eol_percent": 29.534984467244897
+      },
+      "viable": true,
+      "score": 102.39006684953694,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.3483870967741935,
+        "battery_g": 1.5,
+        "substrate_g": 0.24516129032258063,
+        "concentrator_g": 0.6,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2941.935483870968,
+        "battery_usd": 50.0,
+        "substrate_usd": 122.58064516129032,
+        "concentrator_usd": 700,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01100000000000100110",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 44.83870967741935,
+        "cell_type": "GaAs Single",
+        "efficiency_bol_percent": 28.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "2x Fresnel",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 4.605170529104963,
+        "power_margin_percent": 155.84280717249794,
+        "total_mass_g": 4.966129032258064,
+        "total_cost_usd": 5637.096774193548,
+        "efficiency_eol_percent": 24.824797769738172
+      },
+      "viable": true,
+      "score": 100.54442007572375,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 2.2419354838709675,
+        "battery_g": 1.5,
+        "substrate_g": 0.22419354838709676,
+        "concentrator_g": 0.5,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2241.935483870968,
+        "battery_usd": 50.0,
+        "substrate_usd": 1345.1612903225805,
+        "concentrator_usd": 500,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10010000010111010100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 24.516129032258064,
+        "cell_type": "InGaP/GaAs/Ge 3J",
+        "efficiency_bol_percent": 32.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 4.493521203291665,
+        "power_margin_percent": 149.64006684953694,
+        "total_mass_g": 4.344516129032258,
+        "total_cost_usd": 5659.677419354839,
+        "efficiency_eol_percent": 29.534984467244897
+      },
+      "viable": true,
+      "score": 100.53522813985953,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.3483870967741935,
+        "battery_g": 1.5,
+        "substrate_g": 0.19612903225806452,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2941.935483870968,
+        "battery_usd": 50.0,
+        "substrate_usd": 367.741935483871,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10001000001000110010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 36.12903225806452,
+        "cell_type": "5-Junction",
+        "efficiency_bol_percent": 33.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Reflective",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 4.644942326226239,
+        "power_margin_percent": 158.05235145701332,
+        "total_mass_g": 4.93741935483871,
+        "total_cost_usd": 11524.193548387098,
+        "efficiency_eol_percent": 31.075427087285306
+      },
+      "viable": true,
+      "score": 97.15396436023912,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 2.3483870967741938,
+        "battery_g": 1.5,
+        "substrate_g": 0.28903225806451616,
+        "concentrator_g": 0.3,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 9032.25806451613,
+        "battery_usd": 50.0,
+        "substrate_usd": 541.9354838709678,
+        "concentrator_usd": 400,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11010000110100011100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 30.32258064516129,
+        "cell_type": "4-Junction",
+        "efficiency_bol_percent": 26.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 4.561248342284793,
+        "power_margin_percent": 153.4026856824885,
+        "total_mass_g": 4.983225806451613,
+        "total_cost_usd": 8050.645161290323,
+        "efficiency_eol_percent": 24.23926287849501
+      },
+      "viable": true,
+      "score": 95.51978245668205,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.8193548387096772,
+        "battery_g": 1.5,
+        "substrate_g": 0.36387096774193545,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 5458.064516129032,
+        "battery_usd": 50.0,
+        "substrate_usd": 242.5806451612903,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00010000000000101100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 27.419354838709676,
+        "cell_type": "GaAs Single",
+        "efficiency_bol_percent": 28.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 4.224167211948797,
+        "power_margin_percent": 134.6759562193776,
+        "total_mass_g": 4.445161290322581,
+        "total_cost_usd": 3858.064516129032,
+        "efficiency_eol_percent": 24.824797769738172
+      },
+      "viable": true,
+      "score": 86.36627880002277,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.370967741935484,
+        "battery_g": 1.5,
+        "substrate_g": 0.27419354838709675,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1370.967741935484,
+        "battery_usd": 50.0,
+        "substrate_usd": 137.09677419354838,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00100000011001111010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 41.935483870967744,
+        "cell_type": "CIGS Thin Film",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Fresnel",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 4.153172805025289,
+        "power_margin_percent": 130.73182250140493,
+        "total_mass_g": 4.17741935483871,
+        "total_cost_usd": 4775.806451612903,
+        "efficiency_eol_percent": 23.93819784939038
+      },
+      "viable": true,
+      "score": 84.18182250140492,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.2580645161290323,
+        "battery_g": 1.5,
+        "substrate_g": 0.41935483870967744,
+        "concentrator_g": 0.5,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2516.1290322580644,
+        "battery_usd": 50.0,
+        "substrate_usd": 209.67741935483872,
+        "concentrator_usd": 500,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10110000100010001000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 15.806451612903226,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Fresnel",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 3.993067621857028,
+        "power_margin_percent": 121.83709010316824,
+        "total_mass_g": 4.1167741935483875,
+        "total_cost_usd": 4251.612903225807,
+        "efficiency_eol_percent": 24.424482967414676
+      },
+      "viable": true,
+      "score": 76.41773526445856,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.7903225806451614,
+        "battery_g": 1.5,
+        "substrate_g": 0.12645161290322582,
+        "concentrator_g": 1.2,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1264.516129032258,
+        "battery_usd": 50.0,
+        "substrate_usd": 237.09677419354838,
+        "concentrator_usd": 1200,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01100000110011111100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 30.32258064516129,
+        "cell_type": "4-Junction",
+        "efficiency_bol_percent": 35.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Fresnel",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 4.0934279994863525,
+        "power_margin_percent": 127.41266663813072,
+        "total_mass_g": 4.470967741935484,
+        "total_cost_usd": 8417.741935483871,
+        "efficiency_eol_percent": 32.6297769518202
+      },
+      "viable": true,
+      "score": 74.28524728329201,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.8193548387096772,
+        "battery_g": 1.5,
+        "substrate_g": 0.15161290322580645,
+        "concentrator_g": 0.5,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 5458.064516129032,
+        "battery_usd": 50.0,
+        "substrate_usd": 909.6774193548387,
+        "concentrator_usd": 500,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11011000101011110000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 12.903225806451612,
+        "cell_type": "Perovskite/Si",
+        "efficiency_bol_percent": 33.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 3.826873503636086,
+        "power_margin_percent": 112.6040835353381,
+        "total_mass_g": 3.735483870967742,
+        "total_cost_usd": 3943.548387096774,
+        "efficiency_eol_percent": 28.674701773285445
+      },
+      "viable": true,
+      "score": 71.30569643856393,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.5806451612903225,
+        "battery_g": 1.5,
+        "substrate_g": 0.15483870967741936,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1290.3225806451612,
+        "battery_usd": 50.0,
+        "substrate_usd": 103.2258064516129,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01110000101011110000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 12.903225806451612,
+        "cell_type": "Perovskite/Si",
+        "efficiency_bol_percent": 33.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Fresnel",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 3.826873503636086,
+        "power_margin_percent": 112.6040835353381,
+        "total_mass_g": 3.8451612903225802,
+        "total_cost_usd": 4427.419354838709,
+        "efficiency_eol_percent": 28.674701773285445
+      },
+      "viable": true,
+      "score": 69.72505127727361,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.5806451612903225,
+        "battery_g": 1.5,
+        "substrate_g": 0.06451612903225806,
+        "concentrator_g": 1.2,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1290.3225806451612,
+        "battery_usd": 50.0,
+        "substrate_usd": 387.09677419354836,
+        "concentrator_usd": 1200,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00110000111101100000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 10.0,
+        "cell_type": "Advanced 6J",
+        "efficiency_bol_percent": 38.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Fresnel",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 3.7384242355253074,
+        "power_margin_percent": 107.69023530696151,
+        "total_mass_g": 4.0,
+        "total_cost_usd": 6300.0,
+        "efficiency_eol_percent": 36.14445525962034
+      },
+      "viable": true,
+      "score": 61.390235306961515,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.7000000000000001,
+        "battery_g": 1.5,
+        "substrate_g": 0.1,
+        "concentrator_g": 1.2,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3500.0,
+        "battery_usd": 50.0,
+        "substrate_usd": 50.0,
+        "concentrator_usd": 1200,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01101000100101100100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 21.612903225806452,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 30.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Reflective",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 3.639939192713207,
+        "power_margin_percent": 102.21884403962262,
+        "total_mass_g": 3.788709677419355,
+        "total_cost_usd": 4627.41935483871,
+        "efficiency_eol_percent": 27.13831440823852
+      },
+      "viable": true,
+      "score": 59.704327910590365,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.0806451612903227,
+        "battery_g": 1.5,
+        "substrate_g": 0.10806451612903226,
+        "concentrator_g": 0.6,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1729.032258064516,
+        "battery_usd": 50.0,
+        "substrate_usd": 648.3870967741935,
+        "concentrator_usd": 700,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00001000111100101100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 27.419354838709676,
+        "cell_type": "Advanced 6J",
+        "efficiency_bol_percent": 34.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Reflective",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 3.6686064654221178,
+        "power_margin_percent": 103.81147030122877,
+        "total_mass_g": 4.493548387096774,
+        "total_cost_usd": 11683.870967741936,
+        "efficiency_eol_percent": 32.33977575860767
+      },
+      "viable": true,
+      "score": 47.1921154625191,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.9193548387096775,
+        "battery_g": 1.5,
+        "substrate_g": 0.27419354838709675,
+        "concentrator_g": 0.3,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 9596.774193548386,
+        "battery_usd": 50.0,
+        "substrate_usd": 137.09677419354838,
+        "concentrator_usd": 400,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01011000110010100000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 10.0,
+        "cell_type": "4-Junction",
+        "efficiency_bol_percent": 35.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 3.3749007442573657,
+        "power_margin_percent": 87.49448579207588,
+        "total_mass_g": 3.65,
+        "total_cost_usd": 4650.0,
+        "efficiency_eol_percent": 32.6297769518202
+      },
+      "viable": true,
+      "score": 46.34448579207588,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.6,
+        "battery_g": 1.5,
+        "substrate_g": 0.05,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1800.0,
+        "battery_usd": 50.0,
+        "substrate_usd": 300.0,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01001000110101011100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 30.32258064516129,
+        "cell_type": "4-Junction",
+        "efficiency_bol_percent": 30.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Reflective",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 3.5086525709883025,
+        "power_margin_percent": 94.92514283268348,
+        "total_mass_g": 4.2709677419354835,
+        "total_cost_usd": 8317.741935483871,
+        "efficiency_eol_percent": 27.968380244417318
+      },
+      "viable": true,
+      "score": 43.89772347784477,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.8193548387096772,
+        "battery_g": 1.5,
+        "substrate_g": 0.15161290322580645,
+        "concentrator_g": 0.3,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 5458.064516129032,
+        "battery_usd": 50.0,
+        "substrate_usd": 909.6774193548387,
+        "concentrator_usd": 400,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10001000100001111100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 30.32258064516129,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 30.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Reflective",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 3.4045202399506613,
+        "power_margin_percent": 89.1400133305923,
+        "total_mass_g": 4.058709677419355,
+        "total_cost_usd": 4830.645161290322,
+        "efficiency_eol_percent": 27.13831440823852
+      },
+      "viable": true,
+      "score": 43.72227139510843,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.5161290322580645,
+        "battery_g": 1.5,
+        "substrate_g": 0.2425806451612903,
+        "concentrator_g": 0.3,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2425.806451612903,
+        "battery_usd": 50.0,
+        "substrate_usd": 454.83870967741933,
+        "concentrator_usd": 400,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10110000001010010000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 12.903225806451612,
+        "cell_type": "5-Junction",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Fresnel",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 3.393220855197739,
+        "power_margin_percent": 88.51226973320773,
+        "total_mass_g": 4.141935483870967,
+        "total_cost_usd": 6169.354838709677,
+        "efficiency_eol_percent": 25.425349435051615
+      },
+      "viable": true,
+      "score": 40.92356005578838,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.8387096774193548,
+        "battery_g": 1.5,
+        "substrate_g": 0.1032258064516129,
+        "concentrator_g": 1.2,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3225.806451612903,
+        "battery_usd": 50.0,
+        "substrate_usd": 193.54838709677418,
+        "concentrator_usd": 1200,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10010000000101000100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 21.612903225806452,
+        "cell_type": "GaAs Single",
+        "efficiency_bol_percent": 28.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 3.329637684712581,
+        "power_margin_percent": 84.97987137292115,
+        "total_mass_g": 4.053548387096774,
+        "total_cost_usd": 3754.8387096774195,
+        "efficiency_eol_percent": 24.824797769738172
+      },
+      "viable": true,
+      "score": 40.689548792275986,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.0806451612903227,
+        "battery_g": 1.5,
+        "substrate_g": 0.17290322580645162,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1080.6451612903227,
+        "battery_usd": 50.0,
+        "substrate_usd": 324.19354838709677,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01100000000000000010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 33.225806451612904,
+        "cell_type": "GaAs Single",
+        "efficiency_bol_percent": 25.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Fresnel",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 3.046843297133936,
+        "power_margin_percent": 69.26907206299646,
+        "total_mass_g": 4.327419354838709,
+        "total_cost_usd": 4708.064516129032,
+        "efficiency_eol_percent": 22.164998008694795
+      },
+      "viable": true,
+      "score": 21.28681399848033,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.6612903225806452,
+        "battery_g": 1.5,
+        "substrate_g": 0.16612903225806452,
+        "concentrator_g": 0.5,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1661.2903225806451,
+        "battery_usd": 50.0,
+        "substrate_usd": 996.7741935483871,
+        "concentrator_usd": 500,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00100000110001001100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 27.419354838709676,
+        "cell_type": "4-Junction",
+        "efficiency_bol_percent": 29.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "2x Fresnel",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 3.066960492016371,
+        "power_margin_percent": 70.3866940009095,
+        "total_mass_g": 4.419354838709677,
+        "total_cost_usd": 7122.58064516129,
+        "efficiency_eol_percent": 27.036100902936745
+      },
+      "viable": true,
+      "score": 19.070564968651443,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.6451612903225805,
+        "battery_g": 1.5,
+        "substrate_g": 0.27419354838709675,
+        "concentrator_g": 0.5,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 4935.4838709677415,
+        "battery_usd": 50.0,
+        "substrate_usd": 137.09677419354838,
+        "concentrator_usd": 500,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00010000011110111000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 18.70967741935484,
+        "cell_type": "CIGS Thin Film",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 2.779431031055385,
+        "power_margin_percent": 54.4128350586325,
+        "total_mass_g": 3.548387096774194,
+        "total_cost_usd": 3566.1290322580644,
+        "efficiency_eol_percent": 23.93819784939038
+      },
+      "viable": true,
+      "score": 15.362835058632502,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.5612903225806452,
+        "battery_g": 1.5,
+        "substrate_g": 0.1870967741935484,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1122.5806451612905,
+        "battery_usd": 50.0,
+        "substrate_usd": 93.5483870967742,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01000000101001101110",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 50.64516129032258,
+        "cell_type": "Perovskite/Si",
+        "efficiency_bol_percent": 33.0,
+        "battery_wh": 0.1,
+        "concentrator": "None",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 3.0040957003543274,
+        "power_margin_percent": 66.8942055752404,
+        "total_mass_g": 4.532258064516129,
+        "total_cost_usd": 8133.870967741935,
+        "efficiency_eol_percent": 28.674701773285445
+      },
+      "viable": true,
+      "score": 13.437753962337183,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 2.279032258064516,
+        "battery_g": 1.5,
+        "substrate_g": 0.2532258064516129,
+        "concentrator_g": 0.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 5064.516129032258,
+        "battery_usd": 50.0,
+        "substrate_usd": 1519.3548387096773,
+        "concentrator_usd": 0,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00001000100111110100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 24.516129032258064,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 30.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Reflective",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 2.752590832300535,
+        "power_margin_percent": 52.92171290558526,
+        "total_mass_g": 3.7709677419354835,
+        "total_cost_usd": 4033.8709677419356,
+        "efficiency_eol_percent": 27.13831440823852
+      },
+      "viable": true,
+      "score": 11.17816451848849,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.2258064516129032,
+        "battery_g": 1.5,
+        "substrate_g": 0.24516129032258063,
+        "concentrator_g": 0.3,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1961.2903225806451,
+        "battery_usd": 50.0,
+        "substrate_usd": 122.58064516129032,
+        "concentrator_usd": 400,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01010000011000011000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 18.70967741935484,
+        "cell_type": "CIGS Thin Film",
+        "efficiency_bol_percent": 25.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 2.5735472509772084,
+        "power_margin_percent": 42.974847276511575,
+        "total_mass_g": 3.4548387096774196,
+        "total_cost_usd": 4033.8709677419356,
+        "efficiency_eol_percent": 22.164998008694795
+      },
+      "viable": true,
+      "score": 4.392589211995447,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.5612903225806452,
+        "battery_g": 1.5,
+        "substrate_g": 0.0935483870967742,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1122.5806451612905,
+        "battery_usd": 50.0,
+        "substrate_usd": 561.2903225806452,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    }
+  ],
+  "viable_solutions": [
+    {
+      "bitstring": "01010000011000001001",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 62.25806451612904,
+        "cell_type": "CIGS Thin Film",
+        "efficiency_bol_percent": 25.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 8.563700335148297,
+        "power_margin_percent": 375.76112973046094,
+        "total_mass_g": 4.9790322580645165,
+        "total_cost_usd": 7953.225806451614,
+        "efficiency_eol_percent": 22.164998008694795
+      },
+      "viable": true,
+      "score": 318.01758134336416,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.8677419354838711,
+        "battery_g": 1.5,
+        "substrate_g": 0.3112903225806452,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3735.4838709677424,
+        "battery_usd": 50.0,
+        "substrate_usd": 1867.7419354838712,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11011000010001101100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 27.419354838709676,
+        "cell_type": "InGaP/GaAs/Ge 3J",
+        "efficiency_bol_percent": 32.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 8.376081190346305,
+        "power_margin_percent": 365.3378439081281,
+        "total_mass_g": 4.837096774193548,
+        "total_cost_usd": 6059.677419354839,
+        "efficiency_eol_percent": 29.534984467244897
+      },
+      "viable": true,
+      "score": 310.90719874683776,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.5080645161290323,
+        "battery_g": 1.5,
+        "substrate_g": 0.32903225806451614,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3290.322580645161,
+        "battery_usd": 50.0,
+        "substrate_usd": 219.3548387096774,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00011000011101000010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 33.225806451612904,
+        "cell_type": "CIGS Thin Film",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 8.226476902261629,
+        "power_margin_percent": 357.0264945700905,
+        "total_mass_g": 4.329032258064516,
+        "total_cost_usd": 4709.677419354839,
+        "efficiency_eol_percent": 23.93819784939038
+      },
+      "viable": true,
+      "score": 309.0264945700905,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.996774193548387,
+        "battery_g": 1.5,
+        "substrate_g": 0.33225806451612905,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1993.5483870967741,
+        "battery_usd": 50.0,
+        "substrate_usd": 166.1290322580645,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01111000101110001000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 15.806451612903226,
+        "cell_type": "Perovskite/Si",
+        "efficiency_bol_percent": 28.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "10x Advanced",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 7.955258253013199,
+        "power_margin_percent": 341.95879183406663,
+        "total_mass_g": 4.790322580645162,
+        "total_cost_usd": 5604.8387096774195,
+        "efficiency_eol_percent": 24.330049989454317
+      },
+      "viable": true,
+      "score": 288.45072731793755,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.7112903225806452,
+        "battery_g": 1.5,
+        "substrate_g": 0.07903225806451614,
+        "concentrator_g": 2.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1580.6451612903227,
+        "battery_usd": 50.0,
+        "substrate_usd": 474.19354838709677,
+        "concentrator_usd": 2000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10110000000100111100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 30.32258064516129,
+        "cell_type": "GaAs Single",
+        "efficiency_bol_percent": 28.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "5x Fresnel",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 7.7857199592781745,
+        "power_margin_percent": 332.53999773767634,
+        "total_mass_g": 4.958709677419355,
+        "total_cost_usd": 4720.967741935484,
+        "efficiency_eol_percent": 24.824797769738172
+      },
+      "viable": true,
+      "score": 278.23193322154725,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.5161290322580645,
+        "battery_g": 1.5,
+        "substrate_g": 0.2425806451612903,
+        "concentrator_g": 1.2,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1516.1290322580644,
+        "battery_usd": 50.0,
+        "substrate_usd": 454.83870967741933,
+        "concentrator_usd": 1200,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01011000100111101100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 27.419354838709676,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 30.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 7.696388840313996,
+        "power_margin_percent": 327.577157795222,
+        "total_mass_g": 4.508064516129032,
+        "total_cost_usd": 5566.129032258064,
+        "efficiency_eol_percent": 27.13831440823852
+      },
+      "viable": true,
+      "score": 276.9303836016736,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.370967741935484,
+        "battery_g": 1.5,
+        "substrate_g": 0.13709677419354838,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2193.548387096774,
+        "battery_usd": 50.0,
+        "substrate_usd": 822.5806451612902,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11101000110110100010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 33.225806451612904,
+        "cell_type": "4-Junction",
+        "efficiency_bol_percent": 35.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Reflective",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 6.728027935325973,
+        "power_margin_percent": 273.77932974033183,
+        "total_mass_g": 4.992258064516129,
+        "total_cost_usd": 8496.451612903227,
+        "efficiency_eol_percent": 32.6297769518202
+      },
+      "viable": true,
+      "score": 215.3602974822673,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.993548387096774,
+        "battery_g": 1.5,
+        "substrate_g": 0.39870967741935487,
+        "concentrator_g": 0.6,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 5980.645161290323,
+        "battery_usd": 50.0,
+        "substrate_usd": 265.80645161290323,
+        "concentrator_usd": 700,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11101000110100100010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 33.225806451612904,
+        "cell_type": "4-Junction",
+        "efficiency_bol_percent": 34.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Reflective",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 6.535798565745232,
+        "power_margin_percent": 263.09992031917955,
+        "total_mass_g": 4.992258064516129,
+        "total_cost_usd": 8496.451612903227,
+        "efficiency_eol_percent": 31.697497610339624
+      },
+      "viable": true,
+      "score": 204.680888061115,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.993548387096774,
+        "battery_g": 1.5,
+        "substrate_g": 0.39870967741935487,
+        "concentrator_g": 0.6,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 5980.645161290323,
+        "battery_usd": 50.0,
+        "substrate_usd": 265.80645161290323,
+        "concentrator_usd": 700,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01100000011001011001",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 65.16129032258064,
+        "cell_type": "CIGS Thin Film",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Fresnel",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 6.453391589346985,
+        "power_margin_percent": 258.5217549637214,
+        "total_mass_g": 4.780645161290322,
+        "total_cost_usd": 7914.516129032258,
+        "efficiency_eol_percent": 23.93819784939038
+      },
+      "viable": true,
+      "score": 202.8007872217859,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.9548387096774191,
+        "battery_g": 1.5,
+        "substrate_g": 0.3258064516129032,
+        "concentrator_g": 0.5,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3909.6774193548385,
+        "battery_usd": 50.0,
+        "substrate_usd": 1954.8387096774193,
+        "concentrator_usd": 500,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11010000101100110010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 36.12903225806452,
+        "cell_type": "Perovskite/Si",
+        "efficiency_bol_percent": 33.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 6.429147486108626,
+        "power_margin_percent": 257.17486033936814,
+        "total_mass_g": 4.859354838709677,
+        "total_cost_usd": 6251.935483870968,
+        "efficiency_eol_percent": 28.674701773285445
+      },
+      "viable": true,
+      "score": 202.3293764684004,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.6258064516129034,
+        "battery_g": 1.5,
+        "substrate_g": 0.43354838709677423,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3612.903225806452,
+        "battery_usd": 50.0,
+        "substrate_usd": 289.03225806451616,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10001000011011101001",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 62.25806451612904,
+        "cell_type": "CIGS Thin Film",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Reflective",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 6.1658642413067755,
+        "power_margin_percent": 242.54801340593198,
+        "total_mass_g": 4.665806451612903,
+        "total_cost_usd": 6619.354838709678,
+        "efficiency_eol_percent": 23.93819784939038
+      },
+      "viable": true,
+      "score": 189.27059405109327,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.8677419354838711,
+        "battery_g": 1.5,
+        "substrate_g": 0.4980645161290323,
+        "concentrator_g": 0.3,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3735.4838709677424,
+        "battery_usd": 50.0,
+        "substrate_usd": 933.8709677419356,
+        "concentrator_usd": 400,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10101000100111110010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 36.12903225806452,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 30.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Reflective",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 6.084674471401184,
+        "power_margin_percent": 238.0374706333991,
+        "total_mass_g": 4.695483870967742,
+        "total_cost_usd": 5682.258064516129,
+        "efficiency_eol_percent": 27.13831440823852
+      },
+      "viable": true,
+      "score": 185.40037385920556,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.806451612903226,
+        "battery_g": 1.5,
+        "substrate_g": 0.28903225806451616,
+        "concentrator_g": 0.6,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2890.3225806451615,
+        "battery_usd": 50.0,
+        "substrate_usd": 541.9354838709678,
+        "concentrator_usd": 700,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00101000011110101010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 39.03225806451613,
+        "cell_type": "CIGS Thin Film",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Reflective",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 5.7984681854776134,
+        "power_margin_percent": 222.137121415423,
+        "total_mass_g": 4.161290322580645,
+        "total_cost_usd": 4787.096774193548,
+        "efficiency_eol_percent": 23.93819784939038
+      },
+      "viable": true,
+      "score": 175.737121415423,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.1709677419354838,
+        "battery_g": 1.5,
+        "substrate_g": 0.3903225806451613,
+        "concentrator_g": 0.6,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2341.935483870968,
+        "battery_usd": 50.0,
+        "substrate_usd": 195.16129032258064,
+        "concentrator_usd": 700,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10011000110110000100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 21.612903225806452,
+        "cell_type": "4-Junction",
+        "efficiency_bol_percent": 28.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 5.835312254586929,
+        "power_margin_percent": 224.18401414371831,
+        "total_mass_g": 4.469677419354839,
+        "total_cost_usd": 6764.5161290322585,
+        "efficiency_eol_percent": 26.103821561456165
+      },
+      "viable": true,
+      "score": 172.7227238211377,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.296774193548387,
+        "battery_g": 1.5,
+        "substrate_g": 0.17290322580645162,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3890.3225806451615,
+        "battery_usd": 50.0,
+        "substrate_usd": 324.19354838709677,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11101000000100110010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 36.12903225806452,
+        "cell_type": "GaAs Single",
+        "efficiency_bol_percent": 28.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "3x Reflective",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 5.5659615028031215,
+        "power_margin_percent": 209.2200834890623,
+        "total_mass_g": 4.84,
+        "total_cost_usd": 4345.483870967742,
+        "efficiency_eol_percent": 24.824797769738172
+      },
+      "viable": true,
+      "score": 156.47459961809454,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.806451612903226,
+        "battery_g": 1.5,
+        "substrate_g": 0.43354838709677423,
+        "concentrator_g": 0.6,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1806.451612903226,
+        "battery_usd": 50.0,
+        "substrate_usd": 289.03225806451616,
+        "concentrator_usd": 700,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11011000110110101000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 15.806451612903226,
+        "cell_type": "4-Junction",
+        "efficiency_bol_percent": 35.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 5.334520531245515,
+        "power_margin_percent": 196.36225173586192,
+        "total_mass_g": 4.138064516129032,
+        "total_cost_usd": 5521.612903225807,
+        "efficiency_eol_percent": 32.6297769518202
+      },
+      "viable": true,
+      "score": 149.45999367134579,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.9483870967741935,
+        "battery_g": 1.5,
+        "substrate_g": 0.18967741935483873,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2845.1612903225805,
+        "battery_usd": 50.0,
+        "substrate_usd": 126.45161290322581,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00011000100000111000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 18.70967741935484,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 30.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 5.251653561626022,
+        "power_margin_percent": 191.7585312014457,
+        "total_mass_g": 4.122580645161291,
+        "total_cost_usd": 4140.322580645161,
+        "efficiency_eol_percent": 27.13831440823852
+      },
+      "viable": true,
+      "score": 146.39240216918762,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.935483870967742,
+        "battery_g": 1.5,
+        "substrate_g": 0.1870967741935484,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1496.7741935483873,
+        "battery_usd": 50.0,
+        "substrate_usd": 93.5483870967742,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11011000001000000100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 21.612903225806452,
+        "cell_type": "5-Junction",
+        "efficiency_bol_percent": 25.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 5.262634196718715,
+        "power_margin_percent": 192.36856648437308,
+        "total_mass_g": 4.664193548387097,
+        "total_cost_usd": 8126.129032258064,
+        "efficiency_eol_percent": 23.541990217640382
+      },
+      "viable": true,
+      "score": 137.60050196824403,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.4048387096774195,
+        "battery_g": 1.5,
+        "substrate_g": 0.2593548387096774,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 5403.225806451613,
+        "battery_usd": 50.0,
+        "substrate_usd": 172.90322580645162,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11111000000010100000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 10.0,
+        "cell_type": "GaAs Single",
+        "efficiency_bol_percent": 28.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "10x Advanced",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 5.135262100800499,
+        "power_margin_percent": 185.29233893336104,
+        "total_mass_g": 4.62,
+        "total_cost_usd": 4130.0,
+        "efficiency_eol_percent": 24.824797769738172
+      },
+      "viable": true,
+      "score": 134.96233893336102,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.5,
+        "battery_g": 1.5,
+        "substrate_g": 0.12,
+        "concentrator_g": 2.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 500.0,
+        "battery_usd": 50.0,
+        "substrate_usd": 80.0,
+        "concentrator_usd": 2000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00010000010111101100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 27.419354838709676,
+        "cell_type": "InGaP/GaAs/Ge 3J",
+        "efficiency_bol_percent": 32.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 5.025648714207783,
+        "power_margin_percent": 179.20270634487684,
+        "total_mass_g": 4.582258064516129,
+        "total_cost_usd": 5777.419354838709,
+        "efficiency_eol_percent": 29.534984467244897
+      },
+      "viable": true,
+      "score": 127.60270634487685,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.5080645161290323,
+        "battery_g": 1.5,
+        "substrate_g": 0.27419354838709675,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3290.322580645161,
+        "battery_usd": 50.0,
+        "substrate_usd": 137.09677419354838,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00010000100010000010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 33.225806451612904,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 5.03615467409723,
+        "power_margin_percent": 179.78637078317948,
+        "total_mass_g": 4.793548387096774,
+        "total_cost_usd": 5174.193548387097,
+        "efficiency_eol_percent": 24.424482967414676
+      },
+      "viable": true,
+      "score": 126.67669336382464,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.6612903225806452,
+        "battery_g": 1.5,
+        "substrate_g": 0.33225806451612905,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2658.064516129032,
+        "battery_usd": 50.0,
+        "substrate_usd": 166.1290322580645,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10011000101101101000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 15.806451612903226,
+        "cell_type": "Perovskite/Si",
+        "efficiency_bol_percent": 33.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 4.687920041954206,
+        "power_margin_percent": 160.44000233078924,
+        "total_mass_g": 3.837741935483871,
+        "total_cost_usd": 4367.741935483871,
+        "efficiency_eol_percent": 28.674701773285445
+      },
+      "viable": true,
+      "score": 117.69484104046666,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.7112903225806452,
+        "battery_g": 1.5,
+        "substrate_g": 0.12645161290322582,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1580.6451612903227,
+        "battery_usd": 50.0,
+        "substrate_usd": 237.09677419354838,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11011000010100011000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 18.70967741935484,
+        "cell_type": "InGaP/GaAs/Ge 3J",
+        "efficiency_bol_percent": 26.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 4.643797954059644,
+        "power_margin_percent": 157.9887752255358,
+        "total_mass_g": 4.2535483870967745,
+        "total_cost_usd": 4944.8387096774195,
+        "efficiency_eol_percent": 23.99717487963648
+      },
+      "viable": true,
+      "score": 110.50845264489064,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.0290322580645161,
+        "battery_g": 1.5,
+        "substrate_g": 0.2245161290322581,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2245.161290322581,
+        "battery_usd": 50.0,
+        "substrate_usd": 149.67741935483872,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11011000111101001000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 15.806451612903226,
+        "cell_type": "Advanced 6J",
+        "efficiency_bol_percent": 30.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 4.665096456894909,
+        "power_margin_percent": 159.17202538305048,
+        "total_mass_g": 4.296129032258064,
+        "total_cost_usd": 8208.709677419354,
+        "efficiency_eol_percent": 28.535096257595
+      },
+      "viable": true,
+      "score": 108.00202538305048,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.106451612903226,
+        "battery_g": 1.5,
+        "substrate_g": 0.18967741935483873,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 5532.258064516129,
+        "battery_usd": 50.0,
+        "substrate_usd": 126.45161290322581,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11010000100000000010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 33.225806451612904,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 25.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 4.663106179719657,
+        "power_margin_percent": 159.06145442886984,
+        "total_mass_g": 4.86,
+        "total_cost_usd": 5273.870967741936,
+        "efficiency_eol_percent": 22.61526200686544
+      },
+      "viable": true,
+      "score": 105.1875834611279,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.6612903225806452,
+        "battery_g": 1.5,
+        "substrate_g": 0.39870967741935487,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2658.064516129032,
+        "battery_usd": 50.0,
+        "substrate_usd": 265.80645161290323,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00101000010100110100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 24.516129032258064,
+        "cell_type": "InGaP/GaAs/Ge 3J",
+        "efficiency_bol_percent": 32.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Reflective",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 4.493521203291665,
+        "power_margin_percent": 149.64006684953694,
+        "total_mass_g": 4.193548387096774,
+        "total_cost_usd": 5314.516129032258,
+        "efficiency_eol_percent": 29.534984467244897
+      },
+      "viable": true,
+      "score": 102.39006684953694,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.3483870967741935,
+        "battery_g": 1.5,
+        "substrate_g": 0.24516129032258063,
+        "concentrator_g": 0.6,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2941.935483870968,
+        "battery_usd": 50.0,
+        "substrate_usd": 122.58064516129032,
+        "concentrator_usd": 700,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01100000000000100110",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 44.83870967741935,
+        "cell_type": "GaAs Single",
+        "efficiency_bol_percent": 28.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "2x Fresnel",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 4.605170529104963,
+        "power_margin_percent": 155.84280717249794,
+        "total_mass_g": 4.966129032258064,
+        "total_cost_usd": 5637.096774193548,
+        "efficiency_eol_percent": 24.824797769738172
+      },
+      "viable": true,
+      "score": 100.54442007572375,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 2.2419354838709675,
+        "battery_g": 1.5,
+        "substrate_g": 0.22419354838709676,
+        "concentrator_g": 0.5,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2241.935483870968,
+        "battery_usd": 50.0,
+        "substrate_usd": 1345.1612903225805,
+        "concentrator_usd": 500,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10010000010111010100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 24.516129032258064,
+        "cell_type": "InGaP/GaAs/Ge 3J",
+        "efficiency_bol_percent": 32.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 4.493521203291665,
+        "power_margin_percent": 149.64006684953694,
+        "total_mass_g": 4.344516129032258,
+        "total_cost_usd": 5659.677419354839,
+        "efficiency_eol_percent": 29.534984467244897
+      },
+      "viable": true,
+      "score": 100.53522813985953,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.3483870967741935,
+        "battery_g": 1.5,
+        "substrate_g": 0.19612903225806452,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2941.935483870968,
+        "battery_usd": 50.0,
+        "substrate_usd": 367.741935483871,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10001000001000110010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 36.12903225806452,
+        "cell_type": "5-Junction",
+        "efficiency_bol_percent": 33.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Reflective",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 4.644942326226239,
+        "power_margin_percent": 158.05235145701332,
+        "total_mass_g": 4.93741935483871,
+        "total_cost_usd": 11524.193548387098,
+        "efficiency_eol_percent": 31.075427087285306
+      },
+      "viable": true,
+      "score": 97.15396436023912,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 2.3483870967741938,
+        "battery_g": 1.5,
+        "substrate_g": 0.28903225806451616,
+        "concentrator_g": 0.3,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 9032.25806451613,
+        "battery_usd": 50.0,
+        "substrate_usd": 541.9354838709678,
+        "concentrator_usd": 400,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11010000110100011100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 30.32258064516129,
+        "cell_type": "4-Junction",
+        "efficiency_bol_percent": 26.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 4.561248342284793,
+        "power_margin_percent": 153.4026856824885,
+        "total_mass_g": 4.983225806451613,
+        "total_cost_usd": 8050.645161290323,
+        "efficiency_eol_percent": 24.23926287849501
+      },
+      "viable": true,
+      "score": 95.51978245668205,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.8193548387096772,
+        "battery_g": 1.5,
+        "substrate_g": 0.36387096774193545,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 5458.064516129032,
+        "battery_usd": 50.0,
+        "substrate_usd": 242.5806451612903,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00010000000000101100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 27.419354838709676,
+        "cell_type": "GaAs Single",
+        "efficiency_bol_percent": 28.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 4.224167211948797,
+        "power_margin_percent": 134.6759562193776,
+        "total_mass_g": 4.445161290322581,
+        "total_cost_usd": 3858.064516129032,
+        "efficiency_eol_percent": 24.824797769738172
+      },
+      "viable": true,
+      "score": 86.36627880002277,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.370967741935484,
+        "battery_g": 1.5,
+        "substrate_g": 0.27419354838709675,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1370.967741935484,
+        "battery_usd": 50.0,
+        "substrate_usd": 137.09677419354838,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00100000011001111010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 41.935483870967744,
+        "cell_type": "CIGS Thin Film",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Fresnel",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 4.153172805025289,
+        "power_margin_percent": 130.73182250140493,
+        "total_mass_g": 4.17741935483871,
+        "total_cost_usd": 4775.806451612903,
+        "efficiency_eol_percent": 23.93819784939038
+      },
+      "viable": true,
+      "score": 84.18182250140492,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.2580645161290323,
+        "battery_g": 1.5,
+        "substrate_g": 0.41935483870967744,
+        "concentrator_g": 0.5,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2516.1290322580644,
+        "battery_usd": 50.0,
+        "substrate_usd": 209.67741935483872,
+        "concentrator_usd": 500,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10110000100010001000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 15.806451612903226,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Fresnel",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 3.993067621857028,
+        "power_margin_percent": 121.83709010316824,
+        "total_mass_g": 4.1167741935483875,
+        "total_cost_usd": 4251.612903225807,
+        "efficiency_eol_percent": 24.424482967414676
+      },
+      "viable": true,
+      "score": 76.41773526445856,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.7903225806451614,
+        "battery_g": 1.5,
+        "substrate_g": 0.12645161290322582,
+        "concentrator_g": 1.2,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1264.516129032258,
+        "battery_usd": 50.0,
+        "substrate_usd": 237.09677419354838,
+        "concentrator_usd": 1200,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01100000110011111100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 30.32258064516129,
+        "cell_type": "4-Junction",
+        "efficiency_bol_percent": 35.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Fresnel",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 4.0934279994863525,
+        "power_margin_percent": 127.41266663813072,
+        "total_mass_g": 4.470967741935484,
+        "total_cost_usd": 8417.741935483871,
+        "efficiency_eol_percent": 32.6297769518202
+      },
+      "viable": true,
+      "score": 74.28524728329201,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.8193548387096772,
+        "battery_g": 1.5,
+        "substrate_g": 0.15161290322580645,
+        "concentrator_g": 0.5,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 5458.064516129032,
+        "battery_usd": 50.0,
+        "substrate_usd": 909.6774193548387,
+        "concentrator_usd": 500,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11011000101011110000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 12.903225806451612,
+        "cell_type": "Perovskite/Si",
+        "efficiency_bol_percent": 33.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 3.826873503636086,
+        "power_margin_percent": 112.6040835353381,
+        "total_mass_g": 3.735483870967742,
+        "total_cost_usd": 3943.548387096774,
+        "efficiency_eol_percent": 28.674701773285445
+      },
+      "viable": true,
+      "score": 71.30569643856393,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.5806451612903225,
+        "battery_g": 1.5,
+        "substrate_g": 0.15483870967741936,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1290.3225806451612,
+        "battery_usd": 50.0,
+        "substrate_usd": 103.2258064516129,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01110000101011110000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 12.903225806451612,
+        "cell_type": "Perovskite/Si",
+        "efficiency_bol_percent": 33.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Fresnel",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 3.826873503636086,
+        "power_margin_percent": 112.6040835353381,
+        "total_mass_g": 3.8451612903225802,
+        "total_cost_usd": 4427.419354838709,
+        "efficiency_eol_percent": 28.674701773285445
+      },
+      "viable": true,
+      "score": 69.72505127727361,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.5806451612903225,
+        "battery_g": 1.5,
+        "substrate_g": 0.06451612903225806,
+        "concentrator_g": 1.2,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1290.3225806451612,
+        "battery_usd": 50.0,
+        "substrate_usd": 387.09677419354836,
+        "concentrator_usd": 1200,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00110000111101100000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 10.0,
+        "cell_type": "Advanced 6J",
+        "efficiency_bol_percent": 38.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Fresnel",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 3.7384242355253074,
+        "power_margin_percent": 107.69023530696151,
+        "total_mass_g": 4.0,
+        "total_cost_usd": 6300.0,
+        "efficiency_eol_percent": 36.14445525962034
+      },
+      "viable": true,
+      "score": 61.390235306961515,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.7000000000000001,
+        "battery_g": 1.5,
+        "substrate_g": 0.1,
+        "concentrator_g": 1.2,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3500.0,
+        "battery_usd": 50.0,
+        "substrate_usd": 50.0,
+        "concentrator_usd": 1200,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01101000100101100100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 21.612903225806452,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 30.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Reflective",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 3.639939192713207,
+        "power_margin_percent": 102.21884403962262,
+        "total_mass_g": 3.788709677419355,
+        "total_cost_usd": 4627.41935483871,
+        "efficiency_eol_percent": 27.13831440823852
+      },
+      "viable": true,
+      "score": 59.704327910590365,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.0806451612903227,
+        "battery_g": 1.5,
+        "substrate_g": 0.10806451612903226,
+        "concentrator_g": 0.6,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1729.032258064516,
+        "battery_usd": 50.0,
+        "substrate_usd": 648.3870967741935,
+        "concentrator_usd": 700,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00001000111100101100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 27.419354838709676,
+        "cell_type": "Advanced 6J",
+        "efficiency_bol_percent": 34.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Reflective",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 3.6686064654221178,
+        "power_margin_percent": 103.81147030122877,
+        "total_mass_g": 4.493548387096774,
+        "total_cost_usd": 11683.870967741936,
+        "efficiency_eol_percent": 32.33977575860767
+      },
+      "viable": true,
+      "score": 47.1921154625191,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.9193548387096775,
+        "battery_g": 1.5,
+        "substrate_g": 0.27419354838709675,
+        "concentrator_g": 0.3,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 9596.774193548386,
+        "battery_usd": 50.0,
+        "substrate_usd": 137.09677419354838,
+        "concentrator_usd": 400,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01011000110010100000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 10.0,
+        "cell_type": "4-Junction",
+        "efficiency_bol_percent": 35.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Reflective",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 3.3749007442573657,
+        "power_margin_percent": 87.49448579207588,
+        "total_mass_g": 3.65,
+        "total_cost_usd": 4650.0,
+        "efficiency_eol_percent": 32.6297769518202
+      },
+      "viable": true,
+      "score": 46.34448579207588,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.6,
+        "battery_g": 1.5,
+        "substrate_g": 0.05,
+        "concentrator_g": 1.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1800.0,
+        "battery_usd": 50.0,
+        "substrate_usd": 300.0,
+        "concentrator_usd": 1000,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01001000110101011100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 30.32258064516129,
+        "cell_type": "4-Junction",
+        "efficiency_bol_percent": 30.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Reflective",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 3.5086525709883025,
+        "power_margin_percent": 94.92514283268348,
+        "total_mass_g": 4.2709677419354835,
+        "total_cost_usd": 8317.741935483871,
+        "efficiency_eol_percent": 27.968380244417318
+      },
+      "viable": true,
+      "score": 43.89772347784477,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.8193548387096772,
+        "battery_g": 1.5,
+        "substrate_g": 0.15161290322580645,
+        "concentrator_g": 0.3,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 5458.064516129032,
+        "battery_usd": 50.0,
+        "substrate_usd": 909.6774193548387,
+        "concentrator_usd": 400,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10001000100001111100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 30.32258064516129,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 30.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Reflective",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 3.4045202399506613,
+        "power_margin_percent": 89.1400133305923,
+        "total_mass_g": 4.058709677419355,
+        "total_cost_usd": 4830.645161290322,
+        "efficiency_eol_percent": 27.13831440823852
+      },
+      "viable": true,
+      "score": 43.72227139510843,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.5161290322580645,
+        "battery_g": 1.5,
+        "substrate_g": 0.2425806451612903,
+        "concentrator_g": 0.3,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 2425.806451612903,
+        "battery_usd": 50.0,
+        "substrate_usd": 454.83870967741933,
+        "concentrator_usd": 400,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10110000001010010000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 12.903225806451612,
+        "cell_type": "5-Junction",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "5x Fresnel",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 3.393220855197739,
+        "power_margin_percent": 88.51226973320773,
+        "total_mass_g": 4.141935483870967,
+        "total_cost_usd": 6169.354838709677,
+        "efficiency_eol_percent": 25.425349435051615
+      },
+      "viable": true,
+      "score": 40.92356005578838,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.8387096774193548,
+        "battery_g": 1.5,
+        "substrate_g": 0.1032258064516129,
+        "concentrator_g": 1.2,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3225.806451612903,
+        "battery_usd": 50.0,
+        "substrate_usd": 193.54838709677418,
+        "concentrator_usd": 1200,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10010000000101000100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 21.612903225806452,
+        "cell_type": "GaAs Single",
+        "efficiency_bol_percent": 28.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 3.329637684712581,
+        "power_margin_percent": 84.97987137292115,
+        "total_mass_g": 4.053548387096774,
+        "total_cost_usd": 3754.8387096774195,
+        "efficiency_eol_percent": 24.824797769738172
+      },
+      "viable": true,
+      "score": 40.689548792275986,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.0806451612903227,
+        "battery_g": 1.5,
+        "substrate_g": 0.17290322580645162,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1080.6451612903227,
+        "battery_usd": 50.0,
+        "substrate_usd": 324.19354838709677,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01100000000000000010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 33.225806451612904,
+        "cell_type": "GaAs Single",
+        "efficiency_bol_percent": 25.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Fresnel",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 3.046843297133936,
+        "power_margin_percent": 69.26907206299646,
+        "total_mass_g": 4.327419354838709,
+        "total_cost_usd": 4708.064516129032,
+        "efficiency_eol_percent": 22.164998008694795
+      },
+      "viable": true,
+      "score": 21.28681399848033,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.6612903225806452,
+        "battery_g": 1.5,
+        "substrate_g": 0.16612903225806452,
+        "concentrator_g": 0.5,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1661.2903225806451,
+        "battery_usd": 50.0,
+        "substrate_usd": 996.7741935483871,
+        "concentrator_usd": 500,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00100000110001001100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 27.419354838709676,
+        "cell_type": "4-Junction",
+        "efficiency_bol_percent": 29.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "2x Fresnel",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 3.066960492016371,
+        "power_margin_percent": 70.3866940009095,
+        "total_mass_g": 4.419354838709677,
+        "total_cost_usd": 7122.58064516129,
+        "efficiency_eol_percent": 27.036100902936745
+      },
+      "viable": true,
+      "score": 19.070564968651443,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.6451612903225805,
+        "battery_g": 1.5,
+        "substrate_g": 0.27419354838709675,
+        "concentrator_g": 0.5,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 4935.4838709677415,
+        "battery_usd": 50.0,
+        "substrate_usd": 137.09677419354838,
+        "concentrator_usd": 500,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00010000011110111000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 18.70967741935484,
+        "cell_type": "CIGS Thin Film",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 2.779431031055385,
+        "power_margin_percent": 54.4128350586325,
+        "total_mass_g": 3.548387096774194,
+        "total_cost_usd": 3566.1290322580644,
+        "efficiency_eol_percent": 23.93819784939038
+      },
+      "viable": true,
+      "score": 15.362835058632502,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.5612903225806452,
+        "battery_g": 1.5,
+        "substrate_g": 0.1870967741935484,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1122.5806451612905,
+        "battery_usd": 50.0,
+        "substrate_usd": 93.5483870967742,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01000000101001101110",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 50.64516129032258,
+        "cell_type": "Perovskite/Si",
+        "efficiency_bol_percent": 33.0,
+        "battery_wh": 0.1,
+        "concentrator": "None",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 3.0040957003543274,
+        "power_margin_percent": 66.8942055752404,
+        "total_mass_g": 4.532258064516129,
+        "total_cost_usd": 8133.870967741935,
+        "efficiency_eol_percent": 28.674701773285445
+      },
+      "viable": true,
+      "score": 13.437753962337183,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 2.279032258064516,
+        "battery_g": 1.5,
+        "substrate_g": 0.2532258064516129,
+        "concentrator_g": 0.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 5064.516129032258,
+        "battery_usd": 50.0,
+        "substrate_usd": 1519.3548387096773,
+        "concentrator_usd": 0,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00001000100111110100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 24.516129032258064,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 30.0,
+        "battery_wh": 0.1,
+        "concentrator": "2x Reflective",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 2.752590832300535,
+        "power_margin_percent": 52.92171290558526,
+        "total_mass_g": 3.7709677419354835,
+        "total_cost_usd": 4033.8709677419356,
+        "efficiency_eol_percent": 27.13831440823852
+      },
+      "viable": true,
+      "score": 11.17816451848849,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.2258064516129032,
+        "battery_g": 1.5,
+        "substrate_g": 0.24516129032258063,
+        "concentrator_g": 0.3,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1961.2903225806451,
+        "battery_usd": 50.0,
+        "substrate_usd": 122.58064516129032,
+        "concentrator_usd": 400,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "01010000011000011000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 18.70967741935484,
+        "cell_type": "CIGS Thin Film",
+        "efficiency_bol_percent": 25.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Graphene"
+      },
+      "performance": {
+        "power_eol_W": 2.5735472509772084,
+        "power_margin_percent": 42.974847276511575,
+        "total_mass_g": 3.4548387096774196,
+        "total_cost_usd": 4033.8709677419356,
+        "efficiency_eol_percent": 22.164998008694795
+      },
+      "viable": true,
+      "score": 4.392589211995447,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.5612903225806452,
+        "battery_g": 1.5,
+        "substrate_g": 0.0935483870967742,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 1122.5806451612905,
+        "battery_usd": 50.0,
+        "substrate_usd": 561.2903225806452,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00000000100101110110",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 47.74193548387097,
+        "cell_type": "GaAs Multi",
+        "efficiency_bol_percent": 30.0,
+        "battery_wh": 0.1,
+        "concentrator": "None",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 2.6801542314505213,
+        "power_margin_percent": 48.897457302806735,
+        "total_mass_g": 4.864516129032258,
+        "total_cost_usd": 5608.064516129032,
+        "efficiency_eol_percent": 27.13831440823852
+      },
+      "viable": true,
+      "score": -5.355768503644874,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 2.3870967741935485,
+        "battery_g": 1.5,
+        "substrate_g": 0.4774193548387097,
+        "concentrator_g": 0.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 3819.3548387096776,
+        "battery_usd": 50.0,
+        "substrate_usd": 238.70967741935485,
+        "concentrator_usd": 0,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "00010000011101101000",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 15.806451612903226,
+        "cell_type": "CIGS Thin Film",
+        "efficiency_bol_percent": 27.0,
+        "battery_wh": 0.1,
+        "concentrator": "3x Fresnel",
+        "substrate": "Kapton"
+      },
+      "performance": {
+        "power_eol_W": 2.348140008995067,
+        "power_margin_percent": 30.452222721948154,
+        "total_mass_g": 3.4322580645161294,
+        "total_cost_usd": 3377.4193548387098,
+        "efficiency_eol_percent": 23.93819784939038
+      },
+      "viable": true,
+      "score": -7.247777278051851,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 0.47419354838709676,
+        "battery_g": 1.5,
+        "substrate_g": 0.15806451612903227,
+        "concentrator_g": 0.8,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 948.3870967741935,
+        "battery_usd": 50.0,
+        "substrate_usd": 79.03225806451613,
+        "concentrator_usd": 800,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "11100000001001000100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 21.612903225806452,
+        "cell_type": "5-Junction",
+        "efficiency_bol_percent": 29.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "2x Fresnel",
+        "substrate": "Polyimide"
+      },
+      "performance": {
+        "power_eol_W": 2.441862267277484,
+        "power_margin_percent": 35.659014848749116,
+        "total_mass_g": 4.164193548387097,
+        "total_cost_usd": 7626.129032258064,
+        "efficiency_eol_percent": 27.308708652462848
+      },
+      "viable": true,
+      "score": -13.609049667379914,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.4048387096774195,
+        "battery_g": 1.5,
+        "substrate_g": 0.2593548387096774,
+        "concentrator_g": 0.5,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 5403.225806451613,
+        "battery_usd": 50.0,
+        "substrate_usd": 172.90322580645162,
+        "concentrator_usd": 500,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10100000001110000100",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 21.612903225806452,
+        "cell_type": "5-Junction",
+        "efficiency_bol_percent": 28.000000000000004,
+        "battery_wh": 0.1,
+        "concentrator": "2x Fresnel",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 2.3576601201299843,
+        "power_margin_percent": 30.981117784999125,
+        "total_mass_g": 4.077741935483871,
+        "total_cost_usd": 7777.419354838709,
+        "efficiency_eol_percent": 26.367029043757228
+      },
+      "viable": true,
+      "score": -17.573720924678298,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.4048387096774195,
+        "battery_g": 1.5,
+        "substrate_g": 0.17290322580645162,
+        "concentrator_g": 0.5,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 5403.225806451613,
+        "battery_usd": 50.0,
+        "substrate_usd": 324.19354838709677,
+        "concentrator_usd": 500,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    },
+    {
+      "bitstring": "10000000101101011010",
+      "count": 1,
+      "configuration": {
+        "area_cm2": 41.935483870967744,
+        "cell_type": "Perovskite/Si",
+        "efficiency_bol_percent": 30.0,
+        "battery_wh": 0.1,
+        "concentrator": "None",
+        "substrate": "Carbon Fiber"
+      },
+      "performance": {
+        "power_eol_W": 2.2613343430576873,
+        "power_margin_percent": 25.62968572542707,
+        "total_mass_g": 4.22258064516129,
+        "total_cost_usd": 6372.580645161291,
+        "efficiency_eol_percent": 26.06791070298676
+      },
+      "viable": true,
+      "score": -22.968701371347123,
+      "constraints": {
+        "mass_ok": true,
+        "margin_ok": true,
+        "power_ok": true,
+        "cost_ok": true
+      },
+      "mass_breakdown": {
+        "cells_g": 1.8870967741935485,
+        "battery_g": 1.5,
+        "substrate_g": 0.33548387096774196,
+        "concentrator_g": 0.0,
+        "electronics_g": 0.5
+      },
+      "cost_breakdown": {
+        "cells_usd": 4193.548387096775,
+        "battery_usd": 50.0,
+        "substrate_usd": 629.0322580645161,
+        "concentrator_usd": 0,
+        "electronics_usd": 500,
+        "integration_usd": 1000
+      }
+    }
+  ],
+  "statistics": {
+    "best_power_margin_percent": 375.76112973046094,
+    "lowest_mass_g": 3.4322580645161294,
+    "lowest_cost_usd": 3377.4193548387098,
+    "avg_power_margin_percent": 160.8005797344373,
+    "avg_mass_g": 4.37299706744868,
+    "avg_cost_usd": 5967.1202346041055
+  }
+}
