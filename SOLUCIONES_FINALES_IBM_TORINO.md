@@ -447,7 +447,7 @@ Con masa 1,401 kg (vs diseño baseline 5g):
 
 **PRÓXIMOS PASOS INMEDIATOS:**
 1. Funding: Asegurar $8B para Fase 1 (2026-2035)
-2. Partnerships: NASA, ESA, Breakthrough Initiatives
+2. Partnerships: NASA, ESA, private investment partnerships
 3. Technology development: Laser 50W, pointing <10nrad, relay sat prototype
 4. IBM Quantum: Upgrade a plan con acceso a Sessions para validación hardware real
 

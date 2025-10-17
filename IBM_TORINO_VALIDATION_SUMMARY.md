@@ -147,7 +147,7 @@
 
 ### Comparison
 - **Our Design:** 1.496 kg (quantum-validated)
-- **Breakthrough Starshot:** 1.0 kg (theoretical, no validation)
+- **other interstellar initiatives:** 1.0 kg (theoretical, no validation)
 - **Advantage:** Our design is manufacturable with 85.87% yield
 
 ---
@@ -291,7 +291,7 @@ All configurations validated by IBM Torino quantum processor:
 
 ## COMPETITIVE ADVANTAGE
 
-### vs. Breakthrough Starshot
+### vs. other interstellar initiatives
 
 | Parameter                  | Starshot (Theoretical) | Warpeed (Quantum-Validated) |
 |----------------------------|------------------------|------------------------------|

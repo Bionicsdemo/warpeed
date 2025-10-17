@@ -1127,7 +1127,7 @@ Final velocity: v = a×t = 66,667 m/s² × 600 s = 40,000,000 m/s = 0.133c ✅
 
 ## APPENDIX C: REFERENCES
 
-1. **Breakthrough Starshot Technical Roadmap** (2016)
+1. **other interstellar initiatives Technical Roadmap** (2016)
 2. **DE-STAR Phased Array Laser Propulsion** - Lubin et al., JBIS (2014)
 3. **High-Power Laser Diode Arrays** - Coherent Inc. Product Catalog
 4. **Adaptive Optics for Astronomy** - Tyson & Frazier (2022)
