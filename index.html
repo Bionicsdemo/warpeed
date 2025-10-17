@@ -1253,6 +1253,119 @@
         </div>
     </section>
 
+    <!-- Interactive Demos & Animations -->
+    <section style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(10, 10, 10, 0) 100%);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Interactive Demos & Animations</h2>
+                <p class="section-subtitle">
+                    Explore SPECTRIX mission through interactive 3D visualizations and animations
+                </p>
+            </div>
+
+            <!-- 3D Lightsail Viewer -->
+            <div style="border-radius: 20px; overflow: hidden; border: 2px solid rgba(102, 126, 234, 0.3); margin-bottom: 3rem; box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);">
+                <iframe src="animations/3d_lightsail_canvas.html"
+                        style="width: 100%; height: 700px; border: none; display: block;"
+                        title="3D Lightsail Viewer">
+                </iframe>
+            </div>
+
+            <!-- Animation Cards Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <!-- Deployment Animation Card -->
+                <div class="business-card">
+                    <div class="business-icon">🚀</div>
+                    <h3 class="business-title">Deployment Sequence</h3>
+                    <div class="business-revenue">Interactive Animation</div>
+                    <p class="business-description">
+                        Watch the complete deployment from launch to laser acceleration.
+                        Interactive controls let you step through each phase: solar panels → lightsail → laser propulsion.
+                    </p>
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(102, 126, 234, 0.1); border-radius: 12px;">
+                        <ul style="color: var(--text-dark); font-size: 0.9rem; line-height: 1.8;">
+                            <li>5-phase timeline visualization</li>
+                            <li>Real-time velocity counter (0 → 0.15c)</li>
+                            <li>Manual & auto-play controls</li>
+                            <li>Laser beam animation</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="animations/deployment_animation.html" target="_blank"
+                           style="display: inline-block; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s;">
+                            Launch Animation →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Trajectory Animation Card -->
+                <div class="business-card">
+                    <div class="business-icon">🌍</div>
+                    <h3 class="business-title">Mission Trajectory</h3>
+                    <div class="business-revenue">SVG Animated Diagram</div>
+                    <p class="business-description">
+                        Follow SPECTRIX's journey from Earth to the Oort Cloud.
+                        Animated path showing planetary flybys with real mission timings.
+                    </p>
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(102, 126, 234, 0.1); border-radius: 12px;">
+                        <ul style="color: var(--text-dark); font-size: 0.9rem; line-height: 1.8;">
+                            <li>36 hours to Pluto (highlighted)</li>
+                            <li>138 days to Oort Cloud</li>
+                            <li>Animated CubeSat along path</li>
+                            <li>Real-time speed display</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="animations/mission_trajectory_svg.html" target="_blank"
+                           style="display: inline-block; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s;">
+                            View Trajectory →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3D Viewer Card -->
+                <div class="business-card">
+                    <div class="business-icon">🎮</div>
+                    <h3 class="business-title">3D Lightsail Viewer</h3>
+                    <div class="business-revenue">Canvas 3D Rendering</div>
+                    <p class="business-description">
+                        Interactive 3D visualization of the 100 m² lightsail with CubeSat.
+                        Rotate, zoom, and watch 200 laser photons hitting the sail in real-time.
+                    </p>
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(102, 126, 234, 0.1); border-radius: 12px;">
+                        <ul style="color: var(--text-dark); font-size: 0.9rem; line-height: 1.8;">
+                            <li>Real-time 3D rendering</li>
+                            <li>200 animated photon particles</li>
+                            <li>Interactive camera controls</li>
+                            <li>Live statistics panel</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="animations/3d_lightsail_canvas.html" target="_blank"
+                           style="display: inline-block; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s;">
+                            Open 3D Viewer →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- All Animations Link -->
+            <div style="text-align: center; margin-top: 4rem; padding: 2rem; background: rgba(102, 126, 234, 0.1); border-radius: 20px; border: 2px solid rgba(102, 126, 234, 0.3);">
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.5rem;">
+                    Complete Animation Suite
+                </h3>
+                <p style="color: var(--text-light); margin-bottom: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    All animations are built with vanilla JavaScript/CSS - no external dependencies.
+                    Lightweight (<25KB each), GPU-accelerated, and mobile-responsive.
+                </p>
+                <a href="animations.html"
+                   style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 1.1rem; transition: all 0.3s; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);">
+                    🎬 View All Animations & Video Generation Guide →
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">

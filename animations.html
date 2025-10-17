@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPECTRIX Mission Animations | Warpeed</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .nav-links {
+            margin-top: 1rem;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-description {
+            text-align: center;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .animation-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s;
+        }
+
+        .animation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .animation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .animation-title {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .animation-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .animation-preview {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .animation-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-block h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: #ffffff;
+        }
+
+        .info-block ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-block ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .info-block ul li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: rgba(255, 255, 255, 0.9);
+            color: #764ba2;
+        }
+
+        .btn-primary:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .video-prompts-section {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-top: 4rem;
+        }
+
+        .prompt-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .prompt-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .prompt-text {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .tool-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .tool-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tool-card .price {
+            font-size: 1.1rem;
+            color: #ffd700;
+            margin: 0.5rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffd700;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 3rem 0;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .footer p {
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .animation-preview {
+                height: 400px;
+            }
+
+            .animation-info {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>SPECTRIX Mission Animations</h1>
+        <p>Interactive visualizations and AI-generated video resources</p>
+        <div class="nav-links">
+            <a href="index.html">← Home</a>
+            <a href="spectrix.html">SPECTRIX Mission</a>
+            <a href="animations/README.md" target="_blank">Documentation</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Interactive HTML Animations</h2>
+        <p class="section-description">
+            Three standalone, fully interactive animations created with vanilla JavaScript and CSS.
+            No external dependencies, optimized for performance, and mobile-responsive.
+        </p>
+
+        <!-- Animation 1: Deployment Sequence -->
+        <div class="animation-card">
+            <div class="animation-header">
+                <h3 class="animation-title">1. Deployment Sequence Animation</h3>
+                <span class="animation-badge">Interactive Controls</span>
+            </div>
+
+            <iframe class="animation-preview" src="animations/deployment_animation.html"></iframe>
+
+            <div class="animation-info">
+                <div class="info-block">
+                    <h3>Features</h3>
+                    <ul>
+                        <li>5-phase deployment timeline</li>
+                        <li>Real-time velocity counter (0 → 45,000 km/s)</li>
+                        <li>Distance and time tracking</li>
+                        <li>Manual step-by-step controls</li>
+                        <li>Automated full sequence playback</li>
+                        <li>Visual laser beam animation</li>
+                    </ul>
+                </div>
+                <div class="info-block">
+                    <h3>Mission Phases</h3>
+                    <ul>
+                        <li>T+0: Launch & Initial Orbit</li>
+                        <li>T+10 min: Solar Panel Deployment</li>
+                        <li>T+2 weeks: Lightsail Deployment</li>
+                        <li>T+4 weeks: Laser Acceleration</li>
+                        <li>Final: Interstellar Coast (0.15c)</li>
+                    </ul>
+                </div>
+                <div class="info-block">
+                    <h3>Technical Details</h3>
+                    <ul>
+                        <li>Type: CSS/JavaScript</li>
+                        <li>Duration: ~15 seconds</li>
+                        <li>File Size: ~25 KB</li>
+                        <li>GPU-accelerated transforms</li>
+                        <li>Mobile-responsive design</li>
+                        <li>No external dependencies</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <a href="animations/deployment_animation.html" target="_blank" class="btn btn-primary">🚀 Open Full Screen</a>
+                <a href="animations/deployment_animation.html" download class="btn btn-secondary">💾 Download HTML</a>
+            </div>
+        </div>
+
+        <!-- Animation 2: Mission Trajectory -->
+        <div class="animation-card">
+            <div class="animation-header">
+                <h3 class="animation-title">2. Solar System Trajectory</h3>
+                <span class="animation-badge">SVG Animation</span>
+            </div>
+
+            <iframe class="animation-preview" src="animations/mission_trajectory_svg.html" style="height: 800px;"></iframe>
+
+            <div class="animation-info">
+                <div class="info-block">
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Animated path from Earth to Oort Cloud</li>
+                        <li>Planet milestones with timestamps</li>
+                        <li>Real-time speed counter (0 → 45,000 km/s)</li>
+                        <li>Mission timeline progress bar</li>
+                        <li>Play, pause, and reset controls</li>
+                        <li>Scalable vector graphics (SVG)</li>
+                    </ul>
+                </div>
+                <div class="info-block">
+                    <h3>Key Destinations</h3>
+                    <ul>
+                        <li>Earth (1 AU) - Departure</li>
+                        <li>Mars (1.5 AU) - T+1.7 hours</li>
+                        <li>Jupiter (5.2 AU) - T+9.6 hours</li>
+                        <li>Pluto (39.5 AU) - T+36 hours ⭐</li>
+                        <li>Oort Cloud (2000 AU) - T+138 days</li>
+                    </ul>
+                </div>
+                <div class="info-block">
+                    <h3>Technical Details</h3>
+                    <ul>
+                        <li>Type: SVG + JavaScript</li>
+                        <li>Duration: 10 seconds</li>
+                        <li>File Size: ~20 KB</li>
+                        <li>Crisp at any resolution</li>
+                        <li>Smooth path animations</li>
+                        <li>CSS filter effects</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <a href="animations/mission_trajectory_svg.html" target="_blank" class="btn btn-primary">🌟 Open Full Screen</a>
+                <a href="animations/mission_trajectory_svg.html" download class="btn btn-secondary">💾 Download HTML</a>
+            </div>
+        </div>
+
+        <!-- Animation 3: 3D Lightsail Viewer -->
+        <div class="animation-card">
+            <div class="animation-header">
+                <h3 class="animation-title">3. 3D Lightsail Viewer</h3>
+                <span class="animation-badge">Real-time 3D</span>
+            </div>
+
+            <iframe class="animation-preview" src="animations/3d_lightsail_canvas.html" style="height: 700px;"></iframe>
+
+            <div class="animation-info">
+                <div class="info-block">
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Real-time 3D rendering (Canvas API)</li>
+                        <li>200 animated photon particles</li>
+                        <li>Rotating 100 m² lightsail</li>
+                        <li>6U CubeSat model</li>
+                        <li>Interactive camera controls</li>
+                        <li>Live statistics display</li>
+                    </ul>
+                </div>
+                <div class="info-block">
+                    <h3>Components</h3>
+                    <ul>
+                        <li>Lightsail membrane (iridescent)</li>
+                        <li>4× carbon fiber booms</li>
+                        <li>6U CubeSat (detailed model)</li>
+                        <li>Laser photons with trails</li>
+                        <li>Background stars (twinkling)</li>
+                        <li>Dynamic lighting effects</li>
+                    </ul>
+                </div>
+                <div class="info-block">
+                    <h3>Technical Details</h3>
+                    <ul>
+                        <li>Type: Canvas/JavaScript 3D</li>
+                        <li>Duration: Continuous loop</li>
+                        <li>File Size: ~22 KB</li>
+                        <li>Perspective projection</li>
+                        <li>60 FPS rendering</li>
+                        <li>Custom 3D math engine</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <a href="animations/3d_lightsail_canvas.html" target="_blank" class="btn btn-primary">⚛️ Open Full Screen</a>
+                <a href="animations/3d_lightsail_canvas.html" download class="btn btn-secondary">💾 Download HTML</a>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">3</div>
+                <div class="stat-label">HTML Animations</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">~70 KB</div>
+                <div class="stat-label">Total File Size</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Mobile Compatible</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">0</div>
+                <div class="stat-label">External Dependencies</div>
+            </div>
+        </div>
+
+        <!-- Video AI Generation Section -->
+        <div class="video-prompts-section">
+            <h2 class="section-title">AI Video Generation Guide</h2>
+            <p class="section-description">
+                Professional video prompts optimized for leading AI video generation tools.
+                Budget-friendly workflow to create stunning mission videos (estimated cost: $20-50 for all 10 videos).
+            </p>
+
+            <!-- Tool Overview -->
+            <div class="tool-grid">
+                <div class="tool-card">
+                    <h4>Runway ML Gen-3</h4>
+                    <p class="price">~$0.05/second</p>
+                    <p>4 prompts for deployment, laser firing, and acceleration sequences</p>
+                </div>
+                <div class="tool-card">
+                    <h4>Pika Labs</h4>
+                    <p class="price">~$0.08/second</p>
+                    <p>2 prompts for Pluto flyby and deep space journey (uses existing images)</p>
+                </div>
+                <div class="tool-card">
+                    <h4>Luma AI Dream Machine</h4>
+                    <p class="price">Free tier available</p>
+                    <p>2 prompts for Oort Cloud journey and launch sequence</p>
+                </div>
+                <div class="tool-card">
+                    <h4>Stable Diffusion Video</h4>
+                    <p class="price">Free (self-hosted)</p>
+                    <p>2 prompts for technical diagrams and physics simulations</p>
+                </div>
+            </div>
+
+            <!-- Sample Prompts -->
+            <h3 style="font-size: 2rem; margin-top: 3rem; margin-bottom: 1.5rem;">Sample Video Prompts</h3>
+
+            <div class="prompt-card">
+                <h3>Runway ML Gen-3 - Lightsail Deployment</h3>
+                <div class="prompt-text">
+Extreme close-up of a compact CubeSat in space as a massive 100 square meter lightsail rapidly unfolds in 30 seconds. Four carbon fiber booms extend from corners. Ultra-thin iridescent mirror sail catches sunlight creating rainbow shimmer effect. Camera pulls back to reveal full sail deployed - tiny CubeSat in center dwarfed by enormous square sail. Earth rotating slowly in background. Sail fabric has metallic sheen with subtle wave motion. Photorealistic space documentary style, NASA quality, dramatic lighting from Sun behind sail creating glow at edges.
+                </div>
+                <p><strong>Settings:</strong> Duration: 10s | Motion: High | Resolution: 4K | Camera: Close-up to wide pullback</p>
+            </div>
+
+            <div class="prompt-card">
+                <h3>Runway ML Gen-3 - Ground Laser Facility</h3>
+                <div class="prompt-text">
+Night shot in Atacama Desert. 500-element phased array laser facility arranged in hexagonal pattern on ground. Camera starts at ground level showing individual laser emitters. Brilliant green-yellow laser beams (1064nm near-infrared) fire upward converging into single powerful beam shooting straight up into starry night sky. Milky Way visible. Beam reaches tiny bright point of light (satellite) thousands of kilometers above. Long exposure star trails in background. Atmospheric distortion visible around beam. Cinematic sci-fi realism, Interstellar movie quality, dramatic nighttime photography.
+                </div>
+                <p><strong>Settings:</strong> Duration: 8s | Motion: Medium | Resolution: 4K | Camera: Ground to sky crane shot</p>
+            </div>
+
+            <div class="prompt-card">
+                <h3>Pika Labs - Pluto Flyby (Image-to-Video)</h3>
+                <div class="prompt-text">
+Camera tracking shot following CubeSat with deployed lightsail as it approaches Pluto at 45,000 km/s. Pluto's heart-shaped Tombaugh Regio growing larger. Charon moon rising on horizon. Motion blur on edges indicating extreme speed. Sail edge-on to flight direction (minimal drag). Sun as bright star in background. 3 second flyby, dramatic space documentary style.
+                </div>
+                <p><strong>Base Image:</strong> cubestat.png | <strong>Motion Strength:</strong> 0.8 | <strong>Duration:</strong> 3s | <strong>FPS:</strong> 24</p>
+            </div>
+
+            <div class="prompt-card">
+                <h3>Luma AI Dream Machine - Oort Cloud Journey</h3>
+                <div class="prompt-text">
+A lightsail spacecraft sailing through the Oort Cloud 2000 AU from Sun. Massive square sail illuminated only by faint starlight. Primordial icy comet nuclei floating in background - dark irregular shapes. Milky Way galaxy prominent across sky. Sun visible as just a bright star (no longer a disk). Cosmic dust particles illuminated by spacecraft's passing. Extreme deep space isolation. Sail has subtle rainbow iridescence. Ultra-realistic space photography, sense of vast distance, contemplative mood. Camera: slow dolly forward following spacecraft deeper into cloud.
+                </div>
+                <p><strong>Mode:</strong> Text-to-Video | <strong>Duration:</strong> 5s (extend to 10s) | <strong>Style:</strong> Photorealistic</p>
+            </div>
+
+            <!-- Full Documentation Link -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="animations/VIDEO_AI_PROMPTS.md" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                    📖 View Complete Video Generation Guide (10 Prompts)
+                </a>
+            </div>
+        </div>
+
+        <!-- Usage Guide Section -->
+        <div style="margin-top: 4rem; background: rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 3rem;">
+            <h2 class="section-title">Integration & Usage</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div style="background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 2rem;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">🌐 Website Integration</h3>
+                    <p style="margin-bottom: 1rem;">Embed animations using iframes:</p>
+                    <div style="background: rgba(0, 0, 0, 0.3); padding: 1rem; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
+&lt;iframe src="animations/deployment_animation.html"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="width: 100%; height: 600px;"&gt;<br>
+&lt;/iframe&gt;
+                    </div>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 2rem;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">📊 Presentations</h3>
+                    <p style="margin-bottom: 1rem;">Perfect for investor pitch decks:</p>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="padding: 0.5rem 0;">→ PowerPoint: Insert as video file</li>
+                        <li style="padding: 0.5rem 0;">→ Google Slides: Embed via iframe</li>
+                        <li style="padding: 0.5rem 0;">→ Keynote: Export as GIF/MP4</li>
+                    </ul>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 2rem;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">📱 Social Media</h3>
+                    <p style="margin-bottom: 1rem;">Screen record and share:</p>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="padding: 0.5rem 0;">→ Instagram/TikTok: 3-10s clips</li>
+                        <li style="padding: 0.5rem 0;">→ Twitter/X: Convert to GIF</li>
+                        <li style="padding: 0.5rem 0;">→ YouTube: Mission overview</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="animations/README.md" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                    📚 Read Full Documentation & Customization Guide
+                </a>
+            </div>
+        </div>
+
+        <!-- Download All Section -->
+        <div style="margin-top: 4rem; text-align: center; background: rgba(0, 0, 0, 0.2); border-radius: 20px; padding: 3rem;">
+            <h2 class="section-title">Ready to Use?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
+                All animations are standalone HTML files with no external dependencies.
+                Download, customize colors, and integrate into your projects immediately.
+            </p>
+            <div class="button-group" style="justify-content: center;">
+                <a href="animations/" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                    📦 Browse All Animation Files
+                </a>
+                <a href="index.html" class="btn btn-secondary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                    ← Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>SPECTRIX Mission Animations</strong></p>
+        <p>Created for Warpeed Space Technologies</p>
+        <p style="margin-top: 2rem; font-size: 0.9rem;">
+            Contact: <a href="mailto:heinz@warpeed.space" style="color: #ffffff;">heinz@warpeed.space</a> |
+            <a href="https://warpeed.space" target="_blank" style="color: #ffffff;">warpeed.space</a>
+        </p>
+        <p style="margin-top: 1rem; opacity: 0.7;">
+            All HTML animations are free to use and modify. Video AI tools have individual licensing terms.
+        </p>
+    </div>
+</body>
+</html>
