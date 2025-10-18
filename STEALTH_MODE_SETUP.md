@@ -35,6 +35,7 @@ This stealth mode system protects all website content with email-based verificat
 - Page protection on all HTML files
 - Logout functionality
 - Session expiry warnings
+- **Creator bypass for instant access**
 
 ### ⚠️ Demo Mode (Needs Production Setup)
 
@@ -42,6 +43,34 @@ The system currently runs in **DEMO MODE** where:
 - Verification codes are logged to console
 - No actual emails are sent
 - Everything else works as production
+
+## Creator Access (Bypass Email Verification)
+
+As the website creator, you can bypass the email verification system and access immediately:
+
+### Option 1: Use Master Code
+1. Go to `access.html`
+2. Fill in any name and email
+3. In the **Organization** field, enter: `WARPEED2025CREATOR`
+4. Accept NDA and click "Request Access Code"
+5. You'll be granted immediate access without email verification
+
+### Option 2: Use Creator Email
+1. Go to `access.html`
+2. Fill in any name
+3. In the **Email** field, enter: `heinz@warpeed.space`
+4. Accept NDA and click "Request Access Code"
+5. You'll be granted immediate access without email verification
+
+### Changing the Master Code
+
+To change the master code for security, edit `auth.js` line 10:
+
+```javascript
+creatorMasterCode: 'WARPEED2025CREATOR', // Change this to your preferred code
+```
+
+**IMPORTANT:** Keep this code secret and change it periodically for security.
 
 ## Production Setup - Email Integration
 

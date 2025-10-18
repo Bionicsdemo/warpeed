@@ -6,7 +6,9 @@ const AUTH_CONFIG = {
     emailJsTemplateId: 'YOUR_EMAILJS_TEMPLATE_ID', // Replace with your EmailJS template ID
     emailJsPublicKey: 'YOUR_EMAILJS_PUBLIC_KEY', // Replace with your EmailJS public key
     sessionDuration: 24 * 60 * 60 * 1000, // 24 hours in milliseconds
-    codeExpiration: 15 * 60 * 1000 // 15 minutes in milliseconds
+    codeExpiration: 15 * 60 * 1000, // 15 minutes in milliseconds
+    creatorMasterCode: 'WARPEED2025CREATOR', // Master code for creator access (change this!)
+    creatorEmail: 'heinz@warpeed.space' // Creator email for bypass
 };
 
 // Global state
@@ -57,6 +59,20 @@ async function handleAccessRequest(e) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         showMessage('Please enter a valid email address.', 'error');
+        return;
+    }
+
+    // CREATOR BYPASS: Check for master code
+    if (organization === AUTH_CONFIG.creatorMasterCode || email === AUTH_CONFIG.creatorEmail) {
+        const creatorData = {
+            fullName: fullName || 'Creator',
+            email: email || AUTH_CONFIG.creatorEmail,
+            organization: 'Warpeed Technologies',
+            ndaAccepted: true,
+            ndaAcceptedTimestamp: new Date().toISOString(),
+            isCreator: true
+        };
+        grantAccess(creatorData);
         return;
     }
 
