@@ -515,7 +515,7 @@
                 <div class="step-number">5</div>
                 <div class="step-info">
                     <div class="step-title">Interstellar Coast</div>
-                    <div class="step-time">0.15c → Pluto in 36 hours</div>
+                    <div class="step-time">0.5c → Pluto in 11 hours</div>
                 </div>
             </div>
         </div>
@@ -648,7 +648,7 @@
 
             // Animate velocity counter
             let velocity = 7.8;
-            const targetVelocity = 45000;
+            const targetVelocity = 150000;
             const duration = 5000; // 5 seconds
             const steps = 100;
             const increment = (targetVelocity - velocity) / steps;
@@ -668,10 +668,10 @@
                     );
                 } else if (currentStep === steps) {
                     updateStats(
-                        '45,000 km/s',
-                        '2.7M km',
+                        '150,000 km/s',
+                        '9M km',
                         'T+4 weeks + 15 min',
-                        'Coast (0.15c)'
+                        'Coast (0.5c)'
                     );
                     updateStep(5);
                     clearInterval(counter);
