@@ -1,0 +1,102 @@
+qiskit_runtime_service._discover_account:WARNING:2025-10-18 15:02:04,122: Loading account with the given token. A saved account will not be used.
+qiskit_runtime_service.__init__:WARNING:2025-10-18 15:02:09,616: Instance was not set at service instantiation. Free and trial plan instances will be prioritized. Based on the following filters: (tags: None, region: us-east, eu-de), and available plans: (open), the available account instances are: bioql. If you need a specific instance set it explicitly either by using a saved account with a saved default instance or passing it in directly to QiskitRuntimeService().
+qiskit_runtime_service.backends:WARNING:2025-10-18 15:02:09,616: Using instance: bioql, plan: open
+================================================================================
+IBM TORINO - QUANTUM IMPACT PROTECTION OPTIMIZER
+================================================================================
+Start time: 2025-10-18 15:02:04
+
+QUANTUM CIRCUIT CONFIGURATION:
+  Backend: IBM Torino (133 qubits)
+  Qubits used: 20
+  Shots: 8000
+  Optimization parameters: 9
+
+IMPACT THREAT ANALYSIS:
+  interstellar_dust:
+    - Threat level: HIGH
+    - Velocity: 30 km/s
+    - Encounter rate: 1.0e+09 impacts/m²/year
+    - Damage type: Erosion, perforation
+  micrometeoroids:
+    - Threat level: MEDIUM
+    - Velocity: 20 km/s
+    - Encounter rate: 1.0e+03 impacts/m²/year
+    - Damage type: Puncture, crater
+  orbital_debris:
+    - Threat level: LOW
+    - Velocity: 10 km/s
+    - Encounter rate: 1.0e+01 impacts/m²/year
+    - Damage type: Catastrophic if hit
+  relativistic_erosion:
+    - Threat level: CRITICAL
+    - Velocity: 150000 km/s
+    - Encounter rate: CONTINUOUS
+    - Damage type: Continuous ablation
+
+Connecting to IBM Quantum Runtime...
+✓ Connected to: ibm_torino
+  Qubits available: 133
+  Quantum volume: N/A
+
+Building quantum circuit for impact protection optimization...
+  Stage 1: Creating superposition of protection configurations...
+  Stage 2: Encoding Whipple shield parameters...
+  Stage 3: Encoding self-healing coverage...
+  Stage 4: Encoding redundant cell architecture...
+  Stage 5: Encoding graphene layer configuration...
+  Stage 6: Encoding damage detection sensors...
+  Stage 7: Encoding impact survival probability...
+  Stage 8: Encoding mass penalty constraint...
+  Stage 9: Creating entanglement between protection layers...
+  Stage 10: Implementing constraint oracle...
+  Stage 11: Amplifying optimal solutions...
+  Stage 12: Adding measurement gates...
+
+Circuit depth: 29
+Circuit gates: 241
+Circuit qubits: 20
+
+Transpiling circuit for IBM Torino...
+✓ Transpilation complete
+  Time: 0.21s
+  Transpiled depth: 342
+  Transpiled gates: 796
+
+Submitting job to IBM Torino...
+  Shots: 8000
+  Estimated queue time: 2-5 minutes
+
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.13/site-packages/qiskit_ibm_runtime/api/session.py", line 329, in request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/lib/python3.13/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://us-east.quantum-computing.cloud.ibm.com/sessions
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/heinzjungbluth/Desktop/Warp/lightsail_optimization/src/quantum/quantum_impact_protection_optimizer.py", line 301, in <module>
+    with Session(backend=backend) as session:
+         ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.13/site-packages/qiskit_ibm_runtime/session.py", line 131, in __init__
+    self._session_id = self._create_session(create_new=create_new)
+                       ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.13/site-packages/qiskit_ibm_runtime/session.py", line 136, in _create_session
+    session = self._service._get_api_client(self._instance).create_session(
+        self.backend(), self._instance, self._max_time, "dedicated"
+    )
+  File "/opt/homebrew/lib/python3.13/site-packages/qiskit_ibm_runtime/api/clients/runtime.py", line 219, in create_session
+    return self._api.runtime_session(session_id=None).create(backend, instance, max_time, mode)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.13/site-packages/qiskit_ibm_runtime/api/rest/runtime_session.py", line 61, in create
+    return self.session.post(url, json=payload, headers=self._HEADER_JSON_CONTENT).json()
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.13/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.13/site-packages/qiskit_ibm_runtime/api/session.py", line 357, in request
+    raise RequestsApiError(message, status_code) from ex
+qiskit_ibm_runtime.api.exceptions.RequestsApiError: '400 Client Error: Bad Request for url: https://us-east.quantum-computing.cloud.ibm.com/sessions. {"errors":[{"code":1352,"message":"You are not authorized to run a session when using the open plan.","solution":"Create an instance of a different plan type or use a different [execution mode](https://quantum.cloud.ibm.com/docs/guides/execution-modes).","more_info":"https://cloud.ibm.com/apidocs/quantum-computing#error-handling"}],"trace":"48af5a56-8cf1-46eb-ab49-1cf0ad0ff518"}\n'

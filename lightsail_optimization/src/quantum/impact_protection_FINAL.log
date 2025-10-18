@@ -1,0 +1,73 @@
+qiskit_runtime_service._discover_account:WARNING:2025-10-18 15:02:39,132: Loading account with the given token. A saved account will not be used.
+qiskit_runtime_service.__init__:WARNING:2025-10-18 15:02:44,215: Instance was not set at service instantiation. Free and trial plan instances will be prioritized. Based on the following filters: (tags: None, region: us-east, eu-de), and available plans: (open), the available account instances are: bioql. If you need a specific instance set it explicitly either by using a saved account with a saved default instance or passing it in directly to QiskitRuntimeService().
+qiskit_runtime_service.backends:WARNING:2025-10-18 15:02:44,215: Using instance: bioql, plan: open
+================================================================================
+IBM TORINO - QUANTUM IMPACT PROTECTION OPTIMIZER
+================================================================================
+Start time: 2025-10-18 15:02:39
+
+QUANTUM CIRCUIT CONFIGURATION:
+  Backend: IBM Torino (133 qubits)
+  Qubits used: 20
+  Shots: 8000
+  Optimization parameters: 9
+
+IMPACT THREAT ANALYSIS:
+  interstellar_dust:
+    - Threat level: HIGH
+    - Velocity: 30 km/s
+    - Encounter rate: 1.0e+09 impacts/m²/year
+    - Damage type: Erosion, perforation
+  micrometeoroids:
+    - Threat level: MEDIUM
+    - Velocity: 20 km/s
+    - Encounter rate: 1.0e+03 impacts/m²/year
+    - Damage type: Puncture, crater
+  orbital_debris:
+    - Threat level: LOW
+    - Velocity: 10 km/s
+    - Encounter rate: 1.0e+01 impacts/m²/year
+    - Damage type: Catastrophic if hit
+  relativistic_erosion:
+    - Threat level: CRITICAL
+    - Velocity: 150000 km/s
+    - Encounter rate: CONTINUOUS
+    - Damage type: Continuous ablation
+
+Connecting to IBM Quantum Runtime...
+✓ Connected to: ibm_torino
+  Qubits available: 133
+  Quantum volume: N/A
+
+Building quantum circuit for impact protection optimization...
+  Stage 1: Creating superposition of protection configurations...
+  Stage 2: Encoding Whipple shield parameters...
+  Stage 3: Encoding self-healing coverage...
+  Stage 4: Encoding redundant cell architecture...
+  Stage 5: Encoding graphene layer configuration...
+  Stage 6: Encoding damage detection sensors...
+  Stage 7: Encoding impact survival probability...
+  Stage 8: Encoding mass penalty constraint...
+  Stage 9: Creating entanglement between protection layers...
+  Stage 10: Implementing constraint oracle...
+  Stage 11: Amplifying optimal solutions...
+  Stage 12: Adding measurement gates...
+
+Circuit depth: 29
+Circuit gates: 241
+Circuit qubits: 20
+
+Transpiling circuit for IBM Torino...
+✓ Transpilation complete
+  Time: 0.18s
+  Transpiled depth: 351
+  Transpiled gates: 766
+
+Submitting job to IBM Torino...
+  Shots: 8000
+  Estimated queue time: 2-5 minutes
+
+Traceback (most recent call last):
+  File "/Users/heinzjungbluth/Desktop/Warp/lightsail_optimization/src/quantum/quantum_impact_protection_optimizer.py", line 302, in <module>
+    sampler = Sampler(backend=backend)
+TypeError: SamplerV2.__init__() got an unexpected keyword argument 'backend'

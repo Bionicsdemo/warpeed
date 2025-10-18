@@ -1,0 +1,299 @@
+qiskit_runtime_service._discover_account:WARNING:2025-10-18 15:09:28,237: Loading account with the given token. A saved account will not be used.
+qiskit_runtime_service.__init__:WARNING:2025-10-18 15:09:32,498: Instance was not set at service instantiation. Free and trial plan instances will be prioritized. Based on the following filters: (tags: None, region: us-east, eu-de), and available plans: (open), the available account instances are: bioql. If you need a specific instance set it explicitly either by using a saved account with a saved default instance or passing it in directly to QiskitRuntimeService().
+qiskit_runtime_service.backends:WARNING:2025-10-18 15:09:32,498: Using instance: bioql, plan: open
+================================================================================
+IBM TORINO - QUANTUM IMPACT PROTECTION OPTIMIZER
+================================================================================
+Start time: 2025-10-18 15:09:28
+
+QUANTUM CIRCUIT CONFIGURATION:
+  Backend: IBM Torino (133 qubits)
+  Qubits used: 20
+  Shots: 8000
+  Optimization parameters: 9
+
+IMPACT THREAT ANALYSIS:
+  interstellar_dust:
+    - Threat level: HIGH
+    - Velocity: 30 km/s
+    - Encounter rate: 1.0e+09 impacts/m²/year
+    - Damage type: Erosion, perforation
+  micrometeoroids:
+    - Threat level: MEDIUM
+    - Velocity: 20 km/s
+    - Encounter rate: 1.0e+03 impacts/m²/year
+    - Damage type: Puncture, crater
+  orbital_debris:
+    - Threat level: LOW
+    - Velocity: 10 km/s
+    - Encounter rate: 1.0e+01 impacts/m²/year
+    - Damage type: Catastrophic if hit
+  relativistic_erosion:
+    - Threat level: CRITICAL
+    - Velocity: 150000 km/s
+    - Encounter rate: CONTINUOUS
+    - Damage type: Continuous ablation
+
+Connecting to IBM Quantum Runtime...
+✓ Connected to: ibm_torino
+  Qubits available: 133
+  Quantum volume: N/A
+
+Building quantum circuit for impact protection optimization...
+  Stage 1: Creating superposition of protection configurations...
+  Stage 2: Encoding Whipple shield parameters...
+  Stage 3: Encoding self-healing coverage...
+  Stage 4: Encoding redundant cell architecture...
+  Stage 5: Encoding graphene layer configuration...
+  Stage 6: Encoding damage detection sensors...
+  Stage 7: Encoding impact survival probability...
+  Stage 8: Encoding mass penalty constraint...
+  Stage 9: Creating entanglement between protection layers...
+  Stage 10: Implementing constraint oracle...
+  Stage 11: Amplifying optimal solutions...
+  Stage 12: Adding measurement gates...
+
+Circuit depth: 29
+Circuit gates: 241
+Circuit qubits: 20
+
+Transpiling circuit for IBM Torino...
+✓ Transpilation complete
+  Time: 0.51s
+  Transpiled depth: 349
+  Transpiled gates: 758
+
+Submitting job to IBM Torino...
+  Shots: 8000
+  Estimated queue time: 2-5 minutes
+
+✓ Job submitted successfully
+  Job ID: d3pv7vjgrqts7384rgig
+  Status: QUEUED
+
+Waiting for results...
+✓ Execution complete
+  Execution time: 6.71s
+
+================================================================================
+ANALYZING QUANTUM OPTIMIZATION RESULTS
+================================================================================
+
+DEBUG: pub_result.data attributes: ['_FIELDS', '_FIELD_TYPES', '_RESTRICTED_NAMES', '_SHAPE', '__abstractmethods__', '__annotations__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__firstlineno__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__module__', '__ne__', '__new__', '__non_callable_proto_members__', '__parameters__', '__protocol_attrs__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__slots__', '__static_attributes__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_data', '_is_protocol', '_is_runtime_protocol', '_shape', 'c', 'items', 'keys', 'ndim', 'shape', 'size', 'values']
+
+Unique configurations sampled: 7941
+
+TOP 5 OPTIMAL PROTECTION CONFIGURATIONS:
+
+1. CONFIGURATION (Probability: 0.0004)
+   Bitstring: 11110100100101000001
+   ─────────────────────────────────────────────────────
+   WHIPPLE SHIELD:
+     • Outer sacrificial layer: 90 nm
+     • Spacing gap: 7 mm
+     • Inner catch layer: 130 nm
+   SELF-HEALING:
+     • Coverage: 50%
+   REDUNDANCY:
+     • Cell size: 10 cm × 10 cm
+   REINFORCEMENT:
+     • Graphene layers: 2
+   MONITORING:
+     • Sensor density: 1%
+   PERFORMANCE:
+     • Survival probability: 60%
+     • Total mass: 0.002 g/m²
+
+2. CONFIGURATION (Probability: 0.0003)
+   Bitstring: 00110101110000110000
+   ─────────────────────────────────────────────────────
+   WHIPPLE SHIELD:
+     • Outer sacrificial layer: 30 nm
+     • Spacing gap: 7 mm
+     • Inner catch layer: 150 nm
+   SELF-HEALING:
+     • Coverage: 75%
+   REDUNDANCY:
+     • Cell size: 5 cm × 5 cm
+   REINFORCEMENT:
+     • Graphene layers: 1
+   MONITORING:
+     • Sensor density: 16%
+   PERFORMANCE:
+     • Survival probability: 60%
+     • Total mass: 0.004 g/m²
+
+3. CONFIGURATION (Probability: 0.0003)
+   Bitstring: 00111011001010100100
+   ─────────────────────────────────────────────────────
+   WHIPPLE SHIELD:
+     • Outer sacrificial layer: 30 nm
+     • Spacing gap: 10 mm
+     • Inner catch layer: 110 nm
+   SELF-HEALING:
+     • Coverage: 0%
+   REDUNDANCY:
+     • Cell size: 15 cm × 15 cm
+   REINFORCEMENT:
+     • Graphene layers: 3
+   MONITORING:
+     • Sensor density: 11%
+   PERFORMANCE:
+     • Survival probability: 70%
+     • Total mass: 0.005 g/m²
+
+4. CONFIGURATION (Probability: 0.0003)
+   Bitstring: 10111011000111100100
+   ─────────────────────────────────────────────────────
+   WHIPPLE SHIELD:
+     • Outer sacrificial layer: 70 nm
+     • Spacing gap: 10 mm
+     • Inner catch layer: 110 nm
+   SELF-HEALING:
+     • Coverage: 0%
+   REDUNDANCY:
+     • Cell size: 10 cm × 10 cm
+   REINFORCEMENT:
+     • Graphene layers: 4
+   MONITORING:
+     • Sensor density: 11%
+   PERFORMANCE:
+     • Survival probability: 70%
+     • Total mass: 0.006 g/m²
+
+5. CONFIGURATION (Probability: 0.0003)
+   Bitstring: 00100101010101101100
+   ─────────────────────────────────────────────────────
+   WHIPPLE SHIELD:
+     • Outer sacrificial layer: 30 nm
+     • Spacing gap: 1 mm
+     • Inner catch layer: 150 nm
+   SELF-HEALING:
+     • Coverage: 25%
+   REDUNDANCY:
+     • Cell size: 10 cm × 10 cm
+   REINFORCEMENT:
+     • Graphene layers: 2
+   MONITORING:
+     • Sensor density: 11%
+   PERFORMANCE:
+     • Survival probability: 90%
+     • Total mass: 0.004 g/m²
+
+================================================================================
+RECOMMENDED PROTECTION SYSTEM
+================================================================================
+
+INTEGRATION WITH EXISTING LIGHTSAIL STRUCTURE:
+  ✓ Base structure (validated): SiC + 50×(HfO₂/SiO₂)
+  ✓ Reflectivity maintained: 98.92% @ 1064nm
+  ✓ Base mass: ~50 mg/m²
+  ✓ Protection layers EXTERNAL to reflective stack
+
+MULTI-LAYER IMPACT PROTECTION ARCHITECTURE (ADDED LAYERS):
+
+Layer 1 - SACRIFICIAL WHIPPLE SHIELD (FRONT SURFACE):
+  Material: Graphene-reinforced SiC nanocomposite (compatible with base)
+  Thickness: 90 nm
+  Function: Vaporize incoming particles
+  Mass: 0.0002 g/m²
+
+Layer 2 - VACUUM SPACING GAP:
+  Thickness: 7 mm
+  Function: Allow vapor cloud expansion
+  Implementation: Micro-struts (negligible mass)
+
+Layer 3 - FRAGMENT CATCHER:
+  Material: Kevlar + Carbon nanotube composite
+  Thickness: 130 nm
+  Function: Stop fragmented particles
+  Mass: 0.0002 g/m²
+
+Layer 4 - SELF-HEALING MATRIX:
+  Coverage: 50% of sail area
+  Material: PDMS with microencapsulated DCPD
+  Healing time: 30 minutes (passive)
+  Max repairable damage: 1 mm punctures
+  Healing efficiency: 90%
+
+Layer 5 - GRAPHENE REINFORCEMENT:
+  Layers: 2
+  Tensile strength: 130 GPa
+  Mass: 0.0015 g/m²
+  Optical transparency: 0.9545 (@ 1064nm)
+
+Layer 6 - DAMAGE DETECTION:
+  Sensor type: Piezoelectric PVDF film
+  Coverage: 1% of sail area
+  Detection threshold: 10 μm punctures
+  Response time: 1 ms
+  Mass: 0.0002 g/m²
+
+REDUNDANT CELL ARCHITECTURE:
+  Cell size: 10 cm × 10 cm
+  Cells per m²: 100
+  Isolation method: Tear-resistant boundaries
+  Failure containment: 95%
+  Sail survival threshold: 70% cells intact
+
+================================================================================
+MISSION SURVIVAL ANALYSIS
+================================================================================
+
+Mission parameters:
+  Sail area: 100 m²
+  Mission duration: 8 years
+  Cruise velocity: 0.5c (150,000 km/s)
+
+INTERSTELLAR_DUST:
+  Expected impacts: 8.00e+11
+  Survival probability per impact: 0.6000
+  Mission survival probability: 0.6000
+
+MICROMETEOROIDS:
+  Expected impacts: 8.00e+05
+  Survival probability per impact: 0.6000
+  Mission survival probability: 0.6000
+
+ORBITAL_DEBRIS:
+  Expected impacts: 8.00e+03
+  Survival probability per impact: 0.6000
+  Mission survival probability: 0.6000
+
+RELATIVISTIC_EROSION:
+  Threat level: CRITICAL
+  Exposure: CONTINUOUS throughout mission
+  Mitigation: Whipple shield + graphene reinforcement
+  Expected erosion: <1% thickness loss over 8 years
+
+================================================================================
+TOTAL MASS BUDGET
+================================================================================
+
+Base lightsail structure (SiC+HfO₂/SiO₂): ~0.050 g/m²
+Protection system (added layers): 0.002 g/m²
+──────────────────────────────────────────────
+TOTAL lightsail with protection: 0.052 g/m²
+
+For 100 m² sail:
+  Base structure: 5 g
+  Protection: 0.2 g
+  TOTAL: 5.2 g
+Percentage of payload (1000 g): 0.5%
+
+✓ Results saved to: quantum_impact_protection_results_20251018_150941.json
+
+================================================================================
+QUANTUM OPTIMIZATION COMPLETE
+================================================================================
+End time: 2025-10-18 15:09:41
+
+SUMMARY:
+  ✓ Optimized multi-layer protection system
+  ✓ Whipple shield: 90nm / 7mm / 130nm
+  ✓ Self-healing coverage: 50%
+  ✓ Graphene reinforcement: 2 layers
+  ✓ Impact survival: 60%
+  ✓ Total mass: 0.002 g/m² (0.2 g for 100m²)
+
+Ready for manufacturing validation and ground testing!

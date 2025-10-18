@@ -2,8 +2,53 @@
 ## GPU + Quantum Computing for Interstellar Travel
 
 **Project Status:** ✅ COMPLETE
-**Date:** October 14, 2025
-**Optimization:** Modal A100 GPU + BioQL Quantum Computing + Classical NumPy
+**Date:** October 17, 2025 (Reorganized)
+**Optimization:** Modal A100 GPU + IBM Quantum + BioQL + Classical NumPy
+
+---
+
+## 📂 PROJECT STRUCTURE
+
+```
+lightsail_optimization/
+├── README.md                    # This file (project overview)
+│
+├── src/                         # Source code (Python modules)
+│   ├── quantum/                 # Quantum optimization algorithms
+│   ├── analysis/                # Data analysis scripts
+│   ├── optimization/            # Classical optimization
+│   └── validation/              # Validation & testing
+│
+├── scripts/                     # Executable scripts
+│   ├── run_all_tests.sh         # Run full test suite
+│   └── run_ibm_torino_optimization.py
+│
+├── docs/                        # Documentation
+│   ├── engineering/             # Technical specifications
+│   ├── business/                # Business plans & investor docs
+│   ├── research/                # Research papers & reports
+│   ├── validations/             # Validation reports
+│   ├── company/                 # Company information
+│   └── infrastructure/          # Infrastructure documentation
+│
+├── website/                     # Warpeed website
+│   ├── index.html               # Main landing page
+│   ├── spectrix.html            # SPECTRIX mission page
+│   ├── animations/              # Interactive animations
+│   └── [other HTML pages]
+│
+├── assets/                      # Media & presentations
+│   ├── images/                  # Images, diagrams, photos
+│   └── presentations/           # PowerPoint, Keynote
+│
+├── results/                     # Optimization results
+│   ├── quantum/                 # Quantum computing results
+│   └── simulations/             # Simulation outputs
+│
+├── logs/                        # Log files
+│
+└── tests/                       # Unit tests
+```
 
 ---
 
@@ -29,22 +74,38 @@ Total Cost:       $254 billion
 
 ---
 
-## 📁 PROJECT FILES
+## 📁 KEY FILES & LOCATIONS
 
 ### Main Documentation
-- `PRODUCTION_SPECIFICATIONS_FINAL.md` - Complete technical specifications (English)
-- `RESUMEN_EJECUTIVO_ESPAÑOL.md` - Executive summary (Spanish)
-- `README.md` - This file
+- `README.md` - This file (project overview)
+- `docs/engineering/` - Technical specifications & engineering docs
+- `docs/business/` - Business plans, investor presentations
+- `docs/validations/` - Validation reports (IBM Quantum, materials, laser)
 
-### Code Files
-- `modal_lightsail_optimizer_corrected.py` - GPU optimization (Modal A100)
-- `lightsail_optimizer_local.py` - Local optimization + quantum
-- `modal_lightsail_optimizer.py` - Original Modal code (uncorrected)
+### Source Code
+- `src/quantum/` - Quantum optimization algorithms (13 modules)
+- `src/optimization/` - Classical optimization (Modal, local)
+- `src/analysis/` - Analysis & cost calculations
+- `src/validation/` - Validation & testing scripts
+
+### Executable Scripts
+- `scripts/run_all_tests.sh` - Run full test suite
+- `scripts/run_ibm_torino_optimization.py` - Execute quantum optimization
 
 ### Results
-- `modal_results.json` - GPU optimization results (JSON)
-- `optimization_results.txt` - Local optimization results
-- `LIGHTSAIL_DESIGN_COMPLETE.md` - Previous design iteration
+- `results/quantum/` - Quantum computing results (JSON)
+- `results/simulations/` - Simulation outputs
+- `results/advanced_comm_solutions.json` - Communication system results
+- `logs/quantum_run.log` - Execution logs
+
+### Website
+- `website/index.html` - Warpeed main landing page
+- `website/spectrix.html` - SPECTRIX mission page
+- `website/animations/` - Interactive 3D animations
+
+### Media & Presentations
+- `assets/images/` - All project images (lightsails, lasers, materials)
+- `assets/presentations/` - PowerPoint decks for investors
 
 ---
 
@@ -58,27 +119,51 @@ python -m modal setup
 
 # Run optimization on A100 GPU
 cd /Users/heinzjungbluth/Desktop/Warp/lightsail_optimization
-python -m modal run modal_lightsail_optimizer_corrected.py
+python -m modal run src/optimization/modal_lightsail_optimizer.py
 ```
 
 **Expected output:**
 - Optimal design for 3 materials
-- Results saved to `modal_results.json`
+- Results saved to `results/modal_results.json`
 - Execution time: ~3-5 minutes
 
 ### Run Local Optimization (CPU + Quantum)
 
 ```bash
-# Run with NumPy + BioQL quantum
+# Run with NumPy + quantum optimization
 cd /Users/heinzjungbluth/Desktop/Warp/lightsail_optimization
-python3 lightsail_optimizer_local.py
+python3 src/optimization/lightsail_optimizer_local.py
 ```
 
 **Expected output:**
 - Classical optimization: 125,000 configurations
-- Quantum VQE: 8,192 shots (BioQL)
-- Results saved to `optimization_results.txt`
+- Results saved to `results/optimization_results.txt`
 - Execution time: ~3 minutes
+
+### Run IBM Quantum Optimization
+
+```bash
+# Run quantum optimization using IBM Torino
+cd /Users/heinzjungbluth/Desktop/Warp/lightsail_optimization
+python3 scripts/run_ibm_torino_optimization.py
+```
+
+**Expected output:**
+- Quantum circuit execution on IBM hardware
+- Results saved to `results/quantum/`
+- Validation reports generated in `docs/validations/`
+
+### Run Full Test Suite
+
+```bash
+# Execute all tests
+cd /Users/heinzjungbluth/Desktop/Warp/lightsail_optimization
+bash scripts/run_all_tests.sh
+```
+
+**Expected output:**
+- Validation tests for all subsystems
+- Test results logged to `logs/`
 
 ---
 
@@ -336,31 +421,45 @@ TOTAL:                $254B
 
 ## 📚 DOCUMENTATION
 
-### Technical Specifications
-
-**PRODUCTION_SPECIFICATIONS_FINAL.md** (20,000 words)
-- Complete material specifications
-- Laser system design
-- Manufacturing process
-- Cost analysis
-- Development roadmap
+### Technical Specifications (`docs/engineering/`)
+- Complete material specifications (metamaterial, dielectric)
+- Laser system design (phased array, tracking)
+- Manufacturing processes & tolerances
+- Physics corrections & validations
 - Mathematical derivations
 
-### Executive Summary (Spanish)
+### Business Documents (`docs/business/`)
+- Investor presentations & pitch decks
+- Cost analysis & breakdowns
+- Development roadmap (2026-2050)
+- Business model & revenue streams
+- Target investor lists
 
-**RESUMEN_EJECUTIVO_ESPAÑOL.md** (8,000 words)
-- Summary of results
-- Key findings
-- Cost breakdown
-- Business model
-- Next steps
+### Validation Reports (`docs/validations/`)
+- IBM Quantum validation results
+- Material structure validation
+- Laser system validation
+- Communication system analysis
 
-### Design Documents
+### Research Documents (`docs/research/`)
+- Master research document
+- Project completion summaries
+- Physics corrections documentation
+- Performance metrics & comparisons
 
-**LIGHTSAIL_DESIGN_COMPLETE.md** (previous iteration)
-- Earlier design with v = 0.20c goal
-- Before physics corrections
-- Useful for comparison
+### Company Information (`docs/company/`)
+- Company overview
+- Team information
+- Mission statements
+- Contact information
+
+### Website (`website/`)
+- Full Warpeed website with:
+  - SPECTRIX mission page
+  - Interactive 3D animations
+  - Laser system visualization
+  - Team profiles
+  - Application forms (YC, NIAC)
 
 ---
 
@@ -511,9 +610,26 @@ This project demonstrates that **interstellar travel is achievable** with:
 
 ---
 
-**Project Status:** ✅ COMPLETE
-**Date:** October 14, 2025
-**Version:** 2.0 (CORRECTED PHYSICS)
+**Project Status:** ✅ COMPLETE & ORGANIZED
+**Date:** October 17, 2025
+**Version:** 2.1 (REORGANIZED STRUCTURE + CORRECTED PHYSICS)
+
+**Recent Updates:**
+- ✅ Complete project reorganization (October 17, 2025)
+- ✅ Source code modularized into `src/` subdirectories
+- ✅ Documentation consolidated in `docs/` by category
+- ✅ Website integrated with interactive animations
+- ✅ All media centralized in `assets/`
+- ✅ Results & logs separated from source code
+- ✅ Clean root directory with clear structure
+
+**Find Everything:**
+- **Code:** `src/quantum/`, `src/optimization/`, `src/analysis/`, `src/validation/`
+- **Docs:** `docs/engineering/`, `docs/business/`, `docs/validations/`, `docs/research/`
+- **Website:** `website/index.html`, `website/spectrix.html`, `website/animations/`
+- **Media:** `assets/images/`, `assets/presentations/`
+- **Results:** `results/quantum/`, `results/simulations/`
+- **Scripts:** `scripts/run_all_tests.sh`, `scripts/run_ibm_torino_optimization.py`
 
 ---
 

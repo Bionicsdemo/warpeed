@@ -1,0 +1,167 @@
+{
+  "timestamp": "2025-10-18T15:09:41.293635",
+  "backend": "ibm_torino",
+  "qubits_used": 20,
+  "shots": 8000,
+  "execution_time_s": 6.70850682258606,
+  "job_id": "d3pv7vjgrqts7384rgig",
+  "best_configuration": {
+    "probability": 0.000375,
+    "bitstring": "11110100100101000001",
+    "parameters": {
+      "whipple_outer_nm": 90,
+      "whipple_spacing_mm": 7,
+      "whipple_inner_nm": 130,
+      "healing_coverage_%": 50,
+      "cell_size_cm": 10,
+      "graphene_layers": 2,
+      "sensor_density_%": 1,
+      "survival_probability_%": 60,
+      "mass_penalty_g_m2": 0.6,
+      "total_mass_g_m2": 0.0021702
+    }
+  },
+  "top_5_configurations": [
+    {
+      "probability": 0.000375,
+      "bitstring": "11110100100101000001",
+      "parameters": {
+        "whipple_outer_nm": 90,
+        "whipple_spacing_mm": 7,
+        "whipple_inner_nm": 130,
+        "healing_coverage_%": 50,
+        "cell_size_cm": 10,
+        "graphene_layers": 2,
+        "sensor_density_%": 1,
+        "survival_probability_%": 60,
+        "mass_penalty_g_m2": 0.6,
+        "total_mass_g_m2": 0.0021702
+      }
+    },
+    {
+      "probability": 0.00025,
+      "bitstring": "00110101110000110000",
+      "parameters": {
+        "whipple_outer_nm": 30,
+        "whipple_spacing_mm": 7,
+        "whipple_inner_nm": 150,
+        "healing_coverage_%": 75,
+        "cell_size_cm": 5,
+        "graphene_layers": 1,
+        "sensor_density_%": 16,
+        "survival_probability_%": 60,
+        "mass_penalty_g_m2": 0.1,
+        "total_mass_g_m2": 0.004267
+      }
+    },
+    {
+      "probability": 0.00025,
+      "bitstring": "00111011001010100100",
+      "parameters": {
+        "whipple_outer_nm": 30,
+        "whipple_spacing_mm": 10,
+        "whipple_inner_nm": 110,
+        "healing_coverage_%": 0,
+        "cell_size_cm": 15,
+        "graphene_layers": 3,
+        "sensor_density_%": 11,
+        "survival_probability_%": 70,
+        "mass_penalty_g_m2": 0.1,
+        "total_mass_g_m2": 0.0047494
+      }
+    },
+    {
+      "probability": 0.00025,
+      "bitstring": "10111011000111100100",
+      "parameters": {
+        "whipple_outer_nm": 70,
+        "whipple_spacing_mm": 10,
+        "whipple_inner_nm": 110,
+        "healing_coverage_%": 0,
+        "cell_size_cm": 10,
+        "graphene_layers": 4,
+        "sensor_density_%": 11,
+        "survival_probability_%": 70,
+        "mass_penalty_g_m2": 0.1,
+        "total_mass_g_m2": 0.0056274
+      }
+    },
+    {
+      "probability": 0.00025,
+      "bitstring": "00100101010101101100",
+      "parameters": {
+        "whipple_outer_nm": 30,
+        "whipple_spacing_mm": 1,
+        "whipple_inner_nm": 150,
+        "healing_coverage_%": 25,
+        "cell_size_cm": 10,
+        "graphene_layers": 2,
+        "sensor_density_%": 11,
+        "survival_probability_%": 90,
+        "mass_penalty_g_m2": 0.1,
+        "total_mass_g_m2": 0.004037000000000001
+      }
+    }
+  ],
+  "impact_scenarios": {
+    "interstellar_dust": {
+      "mass_range_kg": [
+        1e-12,
+        1e-06
+      ],
+      "size_range_um": [
+        0.1,
+        100
+      ],
+      "velocity_km_s": 30,
+      "density_particles_m3": 1000000.0,
+      "encounter_rate_per_m2_per_year": 1000000000.0,
+      "threat_level": "HIGH",
+      "damage_type": "Erosion, perforation"
+    },
+    "micrometeoroids": {
+      "mass_range_kg": [
+        1e-09,
+        0.001
+      ],
+      "size_range_um": [
+        1,
+        1000
+      ],
+      "velocity_km_s": 20,
+      "density_particles_m3": 0.001,
+      "encounter_rate_per_m2_per_year": 1000,
+      "threat_level": "MEDIUM",
+      "damage_type": "Puncture, crater"
+    },
+    "orbital_debris": {
+      "mass_range_kg": [
+        1e-06,
+        1
+      ],
+      "size_range_um": [
+        10,
+        100000
+      ],
+      "velocity_km_s": 10,
+      "density_particles_m3": 1e-06,
+      "encounter_rate_per_m2_per_year": 10,
+      "threat_level": "LOW",
+      "damage_type": "Catastrophic if hit"
+    },
+    "relativistic_erosion": {
+      "mass_range_kg": null,
+      "size_range_um": null,
+      "velocity_km_s": 150000,
+      "density_particles_m3": 1000000.0,
+      "encounter_rate_per_m2_per_year": Infinity,
+      "threat_level": "CRITICAL",
+      "damage_type": "Continuous ablation"
+    }
+  },
+  "mission_parameters": {
+    "sail_area_m2": 100,
+    "mission_duration_years": 8,
+    "cruise_velocity_c": 0.5
+  }
+}
