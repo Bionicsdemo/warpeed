@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WARPEED - Reach α Centauri in 8 Years | Quantum-Optimized Lightsail</title>
+    <script src="auth-check.js"></script>
+    <meta name="description" content="Quantum-optimized 8-stage lightsail system achieving 0.50c velocity. First close-up images of α Centauri in 8 years with IBM Torino optimization.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #f093fb;
+            --text-light: #e0e0e0;
+            --text-dark: #a0a0a0;
+            --bg-dark: #0a0a0a;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background: var(--bg-dark);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+            transition: all 0.3s;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .nav-logo {
+            height: 50px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .nav-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            color: white !important;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            filter: brightness(0.6);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg,
+                rgba(10, 10, 10, 0.7) 0%,
+                rgba(26, 26, 46, 0.5) 50%,
+                rgba(10, 10, 10, 0.9) 100%
+            );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            padding: 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-logo {
+            max-width: 400px;
+            width: 80%;
+            margin: 0 auto 2rem;
+            filter: drop-shadow(0 10px 30px rgba(102, 126, 234, 0.5));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-tagline {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff 0%, var(--primary-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            animation: fadeInUp 1s ease-out 0.9s both;
+        }
+
+        .stat {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            border-radius: 15px;
+            padding: 1.5rem 1rem;
+            transition: all 0.3s;
+        }
+
+        .stat:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-color) 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            gap: 1.5rem;
+            animation: fadeInUp 1s ease-out 1.2s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.5);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+        }
+
+        .cta-button.secondary:hover {
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        .scroll-indicator span {
+            display: block;
+            width: 30px;
+            height: 50px;
+            border: 2px solid var(--primary-color);
+            border-radius: 25px;
+            position: relative;
+        }
+
+        .scroll-indicator span::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            animation: scroll 2s infinite;
+        }
+
+        @keyframes scroll {
+            0% { opacity: 1; transform: translateX(-50%) translateY(0); }
+            100% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* How It Works Section - NEW */
+        .how-it-works {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .step-card {
+            position: relative;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .step-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            transition: all 0.3s;
+        }
+
+        .step-card:hover .step-image {
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            transform: scale(1.02);
+        }
+
+        .step-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .step-description {
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        /* Image Section - Lightsail */
+        .lightsail-showcase {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 4rem 0;
+            position: relative;
+        }
+
+        .lightsail-image-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            align-items: center;
+        }
+
+        .lightsail-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .lightsail-content {
+            padding: 4rem;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+        }
+
+        .lightsail-content h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .lightsail-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .lightsail-content li {
+            margin: 1rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .lightsail-content li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* Laser System Section - NEW */
+        .laser-system-section {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+        }
+
+        .laser-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .laser-image-large {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .laser-specs {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 2.5rem;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+        }
+
+        .laser-specs h3 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .spec-row:last-child {
+            border-bottom: none;
+        }
+
+        .spec-label {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .spec-value {
+            color: var(--text-light);
+            font-weight: 600;
+            text-align: right;
+        }
+
+        /* Technology Grid */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .tech-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .tech-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+            border-color: var(--primary-color);
+        }
+
+        .tech-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* Material Layer Section */
+        .material-section {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .material-image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .material-specs {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+        }
+
+        .material-specs h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .spec-label {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .spec-value {
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        /* Comparison Table */
+        .comparison {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 3rem 0;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 1.2rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        th {
+            background: rgba(102, 126, 234, 0.2);
+            font-weight: 600;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+        }
+
+        .highlight {
+            background: rgba(102, 126, 234, 0.1);
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+            margin: 3rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(180deg,
+                var(--primary-color) 0%,
+                var(--secondary-color) 50%,
+                var(--accent-color) 100%
+            );
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 5rem;
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.6s;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 18px;
+            top: 5px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
+            z-index: 2;
+        }
+
+        .timeline-year {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .timeline-content:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .timeline-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Investment Section */
+        .investment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .investment-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            border-radius: 15px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .investment-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 50px rgba(102, 126, 234, 0.3);
+        }
+
+        .investment-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .investment-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-color) 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .investment-label {
+            color: var(--text-dark);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+        }
+
+        /* Parallax Section */
+        .parallax-section {
+            position: relative;
+            height: 60vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 4rem 0;
+        }
+
+        .parallax-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 10, 0.7);
+        }
+
+        .parallax-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+        }
+
+        .parallax-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .parallax-content p {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h4 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin: 0.8rem 0;
+        }
+
+        .footer-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-dark);
+        }
+
+        .footer-logo {
+            height: 60px;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .lightsail-image-container,
+            .material-section,
+            .laser-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-tagline {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .cta-button {
+                width: 100%;
+            }
+
+            .timeline::before {
+                left: 15px;
+            }
+
+            .timeline-item {
+                padding-left: 3rem;
+            }
+
+            .timeline-dot {
+                left: 3px;
+            }
+
+            .parallax-section {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <img src="logo.png" alt="Warpeed Logo" class="nav-logo" onclick="window.location.href='index.html'">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="yc-application.html">YC Application</a></li>
+                <li><a href="niac-application.html">NIAC</a></li>
+                <li><a href="breakthrough-pitch.html">Breakthrough</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="lightsail front.png" alt="Warpeed Lightsail" class="hero-background">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="logo.png" alt="Warpeed" class="hero-logo">
+            <div class="hero-tagline">Reach α Centauri in 8.7 Years</div>
+            <div class="hero-subtitle">
+                Quantum-optimized 8-stage lightsail • 0.50c velocity • IBM Torino powered
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">0.50c</div>
+                    <div class="stat-label">Velocity</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Years to α Cen</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Stage Cascade</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">$13B</div>
+                    <div class="stat-label">Total Program</div>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <a href="#how-it-works" class="cta-button">See How It Works</a>
+                <a href="research.html" class="cta-button" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">Our Research</a>
+                <a href="https://www.canva.com/design/DAG11cbk1ZE/Q5jFNgfXrAv9319nZYCstQ/view?utm_content=DAG11cbk1ZE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="cta-button secondary">View Pitch Deck</a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </div>
+
+    <!-- How It Works Section - NEW -->
+    <section id="how-it-works">
+        <div class="section-header">
+            <h2>How It Works</h2>
+            <p class="section-subtitle">
+                Three revolutionary components working in perfect synchronization to achieve
+                unprecedented 0.50c interstellar velocity in just 40 minutes.
+            </p>
+        </div>
+
+        <div class="how-it-works">
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <img src="laser1.png" alt="500 GW Laser Array" class="step-image">
+                    <h3 class="step-title">500 GW Laser Array</h3>
+                    <p class="step-description">
+                        10,000 phased Nd:YAG lasers on the lunar surface deliver
+                        500 GW of coherent power, creating the most powerful directed
+                        energy system ever built.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <img src="lasermovingsail.png" alt="Laser Propulsion" class="step-image">
+                    <h3 class="step-title">Laser Acceleration</h3>
+                    <p class="step-description">
+                        Laser beam transfers momentum to ultra-reflective sail through
+                        radiation pressure, accelerating from 0 to 0.50c in 40 minutes
+                        across 8 deployment stages.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <img src="lightsail.png" alt="8-Stage Lightsail" class="step-image">
+                    <h3 class="step-title">8-Stage Cascade</h3>
+                    <p class="step-description">
+                        Progressive mass reduction through 8 stages (9.23g → 1.2g),
+                        each optimized by IBM Torino quantum computer for maximum
+                        velocity gain.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightsail Showcase -->
+    <section>
+        <div class="lightsail-showcase">
+            <div class="lightsail-image-container">
+                <img src="lightsail.png" alt="Warpeed Lightsail Design" class="lightsail-image">
+                <div class="lightsail-content">
+                    <h3>8-Stage Cascade System</h3>
+                    <p style="margin-bottom: 2rem; color: var(--text-dark);">
+                        Our quantum-optimized design achieves unprecedented 0.50c velocity through
+                        progressive mass reduction across 8 deployment stages.
+                    </p>
+                    <ul>
+                        <li><strong>Stage 1:</strong> 32.0 m² | 2.618 g</li>
+                        <li><strong>Progressive reduction:</strong> 0.7× per stage</li>
+                        <li><strong>Stage 8:</strong> 2.6 m² | 1.2 g final</li>
+                        <li><strong>Total area:</strong> 101 m² combined</li>
+                        <li><strong>Acceleration:</strong> 40 minutes total</li>
+                        <li><strong>Final velocity:</strong> 149,896 km/s</li>
+                    </ul>
+                    <a href="#design" class="cta-button" style="margin-top: 2rem; display: inline-block;">View Full Design</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Laser System Section - NEW -->
+    <section id="laser-system">
+        <div class="section-header">
+            <h2>500 GW Laser Propulsion System</h2>
+            <p class="section-subtitle">
+                The world's most powerful directed energy system, featuring 10,000 phased lasers
+                on the lunar surface delivering 40 minutes of continuous acceleration power.
+            </p>
+        </div>
+
+        <div class="laser-system-section">
+            <div class="laser-grid">
+                <img src="laser1.png" alt="Laser Array System" class="laser-image-large">
+                <div class="laser-specs">
+                    <h3>System Specifications</h3>
+                    <div class="spec-row">
+                        <span class="spec-label">Total Power</span>
+                        <span class="spec-value">500 GW</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Number of Lasers</span>
+                        <span class="spec-value">10,000 units</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Power per Unit</span>
+                        <span class="spec-value">50 MW</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Wavelength</span>
+                        <span class="spec-value">1064 nm (Nd:YAG)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Location</span>
+                        <span class="spec-value">Lunar Surface</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Facility Type</span>
+                        <span class="spec-value">Permanent Moon Base</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Array Size</span>
+                        <span class="spec-value">2 km × 5 km</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Beam Quality</span>
+                        <span class="spec-value">M² < 1.2</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Pointing Accuracy</span>
+                        <span class="spec-value">10 nanoradians</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Acceleration Time</span>
+                        <span class="spec-value">40 minutes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; text-align: center; padding: 2rem; background: rgba(102, 126, 234, 0.1); border-radius: 15px;">
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.8rem;">Power Generation</h3>
+                <p style="font-size: 1.1rem; color: var(--text-dark); margin-bottom: 1rem;">
+                    520 GW from 260 Concentrated Solar Power (CSP) towers with molten salt storage
+                </p>
+                <p style="font-size: 1rem; color: var(--text-dark);">
+                    6.5 million heliostats • 1,300 km² solar farm • 16 hours energy storage
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology">
+        <div class="section-header">
+            <h2>Quantum-Optimized Technology</h2>
+            <p class="section-subtitle">
+                Powered by IBM Torino quantum computer (133 qubits), our design achieves
+                <strong>4.5× faster velocity</strong> than classical optimization methods.
+            </p>
+        </div>
+
+        <div class="tech-grid">
+            <div class="tech-card">
+                <div class="tech-icon">⚛️</div>
+                <div class="tech-title">Quantum Optimization</div>
+                <p>IBM Torino (133 qubits, 4,000 shots) discovered 283 feasible configurations using Variational Quantum Eigensolver (VQE) algorithm, selecting optimal 8-stage design.</p>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-icon">🔬</div>
+                <div class="tech-title">Advanced Materials</div>
+                <p>Silicon Carbide + HfO₂/SiO₂ metamaterial stack with 99.95% reflectivity @ 1064nm, engineered for 2,973K thermal limits during acceleration.</p>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-icon">⚡</div>
+                <div class="tech-title">500 GW Laser Array</div>
+                <p>Phased array of 10,000 Nd:YAG lasers (50 MW each) on the lunar surface delivering 40-minute acceleration burst with no atmospheric interference.</p>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-icon">🚀</div>
+                <div class="tech-title">Multi-Stage Cascade</div>
+                <p>Progressive mass reduction through 8 deployment stages, each optimized for maximum velocity gain with minimal structural mass penalty.</p>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-icon">📡</div>
+                <div class="tech-title">1g Nanocraft Payload</div>
+                <p>Ultra-miniaturized scientific package: camera, laser comm (1W), RTG power, computer, and sensors for α Centauri flyby imaging.</p>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-icon">🎯</div>
+                <div class="tech-title">Production Ready</div>
+                <p>Complete engineering specifications, validated manufacturing processes, established supply chain. Ready for Phase 1 development in 2026.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Material Layer Section -->
+    <section id="design">
+        <div class="section-header">
+            <h2>Material Engineering</h2>
+            <p class="section-subtitle">
+                Ultra-thin metamaterial stack designed for extreme conditions: 500 GW laser power,
+                2,973K thermal limits, 99.95% reflectivity.
+            </p>
+        </div>
+
+        <div class="material-section">
+            <img src="material_layer.png" alt="Material Layer Structure" class="material-image">
+            <div>
+                <div class="material-specs">
+                    <h3>Layer Composition</h3>
+                    <div class="spec-item">
+                        <span class="spec-label">Total Thickness</span>
+                        <span class="spec-value">20.5 μm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Layer 1 - SiC Substrate</span>
+                        <span class="spec-value">5 nm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Layer 2 - HfO₂ (50 layers)</span>
+                        <span class="spec-value">6.34 μm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Layer 3 - SiO₂ (50 layers)</span>
+                        <span class="spec-value">9.17 μm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Reflectivity @ 1064nm</span>
+                        <span class="spec-value">99.95%</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Max Temperature</span>
+                        <span class="spec-value">2,973 K</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Density (avg)</span>
+                        <span class="spec-value">4,697 kg/m³</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Cost per m²</span>
+                        <span class="spec-value">$5,000</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(102, 126, 234, 0.1); border-radius: 15px; border: 1px solid rgba(102, 126, 234, 0.3);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Manufacturing Process</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 0.5rem 0;">✓ Ion-beam sputtering (IBS) deposition</li>
+                        <li style="margin: 0.5rem 0;">✓ Atomic layer etching (ALE) for substrate</li>
+                        <li style="margin: 0.5rem 0;">✓ 100 dielectric layers (50 pairs)</li>
+                        <li style="margin: 0.5rem 0;">✓ Laser damage threshold: 100 J/cm²</li>
+                        <li style="margin: 0.5rem 0;">✓ Production-ready in 2030</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Section - Mission Concept -->
+    <div class="parallax-section" style="background-image: url('moonlaser.png');">
+        <div class="parallax-overlay"></div>
+        <div class="parallax-content">
+            <h2>From Earth to the Stars</h2>
+            <p>
+                Launch from low Earth orbit, accelerate past the Moon in minutes,
+                reach 0.50c at 100,000 km altitude, and cruise to α Centauri —
+                all powered by laser light from Earth.
+            </p>
+        </div>
+    </div>
+
+    <!-- Parallax Section 2 - Arrival -->
+    <div class="parallax-section" style="background-image: url('lightsail front.png');">
+        <div class="parallax-overlay"></div>
+        <div class="parallax-content">
+            <h2>First Close-Up Images of Another Star System</h2>
+            <p>
+                In 8 years, Warpeed will capture the first detailed images of α Centauri A, B,
+                and Proxima Centauri — along with potential exoplanets — revolutionizing our
+                understanding of the nearest stellar system.
+            </p>
+        </div>
+    </div>
+
+    <!-- Comparison Section -->
+    <section id="comparison">
+        <div class="section-header">
+            <h2>Competitive Advantage</h2>
+            <p class="section-subtitle">
+                Warpeed delivers 2.5× faster missions at half the cost, powered by quantum optimization
+                breakthrough and production-ready engineering.
+            </p>
+        </div>
+
+        <div class="comparison">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th class="highlight">WARPEED</th>
+                        <th>other interstellar initiatives</th>
+                        <th>Voyager 1</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Velocity</strong></td>
+                        <td class="highlight">0.50c (149,896 km/s)</td>
+                        <td>0.20c (59,958 km/s)</td>
+                        <td>0.000057c (17 km/s)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Time to α Centauri</strong></td>
+                        <td class="highlight">8 years</td>
+                        <td>21.8 years</td>
+                        <td>76,600 years</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Optimization</strong></td>
+                        <td class="highlight">IBM Torino Quantum (133 qubits)</td>
+                        <td>Classical</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td><strong>System Design</strong></td>
+                        <td class="highlight">8-stage cascade</td>
+                        <td>Single-stage</td>
+                        <td>Chemical rocket</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Laser Power</strong></td>
+                        <td class="highlight">500 GW (10,000 units)</td>
+                        <td>100 GW (conceptual)</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total Program Cost</strong></td>
+                        <td class="highlight">$13B</td>
+                        <td>$500B (estimated)</td>
+                        <td>$1B</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Status</strong></td>
+                        <td class="highlight">Production-ready specs</td>
+                        <td>Conceptual</td>
+                        <td>Active mission</td>
+                    </tr>
+                    <tr>
+                        <td><strong>First Launch</strong></td>
+                        <td class="highlight">2040</td>
+                        <td>2060+ (estimated)</td>
+                        <td>1977 (launched)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: rgba(102, 126, 234, 0.1); border-radius: 15px;">
+            <h3 style="color: var(--primary-color); font-size: 2rem; margin-bottom: 1rem;">
+                2.5× Faster • $487B Cheaper • Quantum-Optimized
+            </h3>
+            <p style="font-size: 1.2rem; color: var(--text-dark);">
+                Results in a single decade (2045-2057) vs multiple generations (2060-2090+)
+            </p>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline">
+        <div class="section-header">
+            <h2>Mission Timeline</h2>
+            <p class="section-subtitle">
+                From company formation to first data received on Earth: a comprehensive 22-year program
+                delivering humanity's first interstellar mission.
+            </p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2026</div>
+                <div class="timeline-content">
+                    <h3>Phase 1: Foundation</h3>
+                    <p>Incorporate Warpeed Technologies Inc. • Seed funding ($50M) • Assemble founding team (20 people) • Begin technology validation</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2027-2030</div>
+                <div class="timeline-content">
+                    <h3>Technology Development</h3>
+                    <p>Build first 1 m² prototype sail • 1 MW laser test at JPL • Publish in Nature • Series A funding ($8M) • NASA/ESA partnerships • 10 MW test mission</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2030-2035</div>
+                <div class="timeline-content">
+                    <h3>Phase 2: Pilot System ($100B)</h3>
+                    <p>100 GW laser array (2,000 units) • 104 GW solar farm • First complete 8-stage system • Test missions: 0.30c, 0.40c • Lunar base construction</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2035-2040</div>
+                <div class="timeline-content">
+                    <h3>Phase 3: Full System ($100B)</h3>
+                    <p>500 GW laser array operational (10,000 units) • 520 GW power generation • Manufacturing: 100 systems/year • First 0.50c test mission • System certification</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2040</div>
+                <div class="timeline-content">
+                    <h3>🚀 First Operational Launch</h3>
+                    <p>Lightsail launches to 100,000 km • 40-minute laser acceleration (8 stages) • Achieves 0.50c final velocity • Trajectory to α Centauri confirmed • Cruise phase begins</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2044</div>
+                <div class="timeline-content">
+                    <h3>🌟 Arrival at α Centauri</h3>
+                    <p>Flyby at 0.50c (18 millisecond observation window) • 1,000 high-resolution images captured • Targets: α Cen A, B, Proxima Centauri, exoplanets • Laser communication to Earth initiated</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2048</div>
+                <div class="timeline-content">
+                    <h3>🎊 First Data Received on Earth</h3>
+                    <p>After 4.37 year light-time delay • First close-up images of another star system • Scientific data: planetary atmospheres, stellar characteristics • MISSION SUCCESS!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Section -->
+    <section id="investment" style="background: rgba(102, 126, 234, 0.05); border-radius: 20px; padding: 6rem 2rem;">
+        <div class="section-header">
+            <h2>Investment Opportunity</h2>
+            <p class="section-subtitle">
+                $13B total program over 20 years with diversified funding from government (60%),
+                private sector (30%), and commercial revenues (10%).
+            </p>
+        </div>
+
+        <div class="investment-grid">
+            <div class="investment-card">
+                <div class="investment-icon">💰</div>
+                <div class="investment-amount">$7.8B</div>
+                <div class="investment-label">Government (60%)</div>
+                <p style="margin-top: 1rem; color: var(--text-dark);">
+                    NASA, ESA, JAXA, CNSA<br>
+                    Multi-national consortium
+                </p>
+            </div>
+
+            <div class="investment-card">
+                <div class="investment-icon">🏢</div>
+                <div class="investment-amount">$3.9B</div>
+                <div class="investment-label">Private (30%)</div>
+                <p style="margin-top: 1rem; color: var(--text-dark);">
+                    private investment partnerships<br>
+                    VCs, tech billionaires
+                </p>
+            </div>
+
+            <div class="investment-card">
+                <div class="investment-icon">📈</div>
+                <div class="investment-amount">$1.3B</div>
+                <div class="investment-label">Commercial (10%)</div>
+                <p style="margin-top: 1rem; color: var(--text-dark);">
+                    Payload slots, IP licensing<br>
+                    Data sales, spinoffs
+                </p>
+            </div>
+        </div>
+
+        <div style="max-width: 900px; margin: 4rem auto 0; padding: 3rem; background: rgba(0, 0, 0, 0.5); border-radius: 15px; border: 1px solid rgba(102, 126, 234, 0.3);">
+            <h3 style="color: var(--primary-color); text-align: center; margin-bottom: 2rem; font-size: 1.8rem;">
+                Current Funding Round
+            </h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                <div>
+                    <div style="color: var(--text-dark); margin-bottom: 0.5rem;">Seeking</div>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--accent-color);">$50M Seed</div>
+                </div>
+                <div>
+                    <div style="color: var(--text-dark); margin-bottom: 0.5rem;">Valuation</div>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--accent-color);">$83.3M post-money</div>
+                </div>
+            </div>
+            <div style="margin-bottom: 2rem;">
+                <div style="color: var(--text-dark); margin-bottom: 0.5rem;">Equity Offered</div>
+                <div style="font-size: 1.5rem; font-weight: 700; color: var(--text-light);">40% (10M shares @ $5/share)</div>
+            </div>
+            <div style="text-align: center;">
+                <a href="https://www.canva.com/design/DAG11cbk1ZE/Q5jFNgfXrAv9319nZYCstQ/view?utm_content=DAG11cbk1ZE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="cta-button">View Pitch Deck</a>
+            </div>
+        </div>
+
+        <div class="tech-grid" style="margin-top: 4rem;">
+            <div class="tech-card" style="background: rgba(255, 255, 255, 0.03);">
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Revenue Streams</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin: 0.8rem 0;">🚀 Mission contracts: $100M</li>
+                    <li style="margin: 0.8rem 0;">📜 IP licensing: $200M</li>
+                    <li style="margin: 0.8rem 0;">📊 Data sales: $50M</li>
+                    <li style="margin: 0.8rem 0;">🎓 Government grants: $1.0B</li>
+                    <li style="margin: 0.8rem 0;">💡 Spinoff tech: $100B+ est.</li>
+                </ul>
+            </div>
+
+            <div class="tech-card" style="background: rgba(255, 255, 255, 0.03);">
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Key Metrics</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin: 0.8rem 0;">⏰ Break-even: Year 2040</li>
+                    <li style="margin: 0.8rem 0;">💵 Cost/mission: $2.54B</li>
+                    <li style="margin: 0.8rem 0;">📊 Success rate: 60-70%</li>
+                    <li style="margin: 0.8rem 0;">🎯 ROI timeline: Single decade</li>
+                    <li style="margin: 0.8rem 0;">📈 Total revenue: $13.76B</li>
+                </ul>
+            </div>
+
+            <div class="tech-card" style="background: rgba(255, 255, 255, 0.03);">
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Milestones</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin: 0.8rem 0;">✓ IBM Torino validation</li>
+                    <li style="margin: 0.8rem 0;">✓ Production-ready specs</li>
+                    <li style="margin: 0.8rem 0;">⏳ 1m² prototype (2027)</li>
+                    <li style="margin: 0.8rem 0;">⏳ Nature publication (2028)</li>
+                    <li style="margin: 0.8rem 0;">⏳ First mission (2040)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="text-align: center; padding: 6rem 2rem;">
+        <h2 style="margin-bottom: 2rem;">Join the Mission</h2>
+        <p style="font-size: 1.3rem; color: var(--text-dark); max-width: 700px; margin: 0 auto 3rem; line-height: 1.8;">
+            Be part of humanity's first interstellar mission. We're seeking partners, investors,
+            engineers, scientists, and visionaries to make this historic achievement a reality.
+        </p>
+
+        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 4rem;">
+            <a href="mailto:info@warpeed.space" class="cta-button">General Inquiries</a>
+            <a href="research.html" class="cta-button" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">Our Research</a>
+            <a href="https://www.canva.com/design/DAG11cbk1ZE/Q5jFNgfXrAv9319nZYCstQ/view?utm_content=DAG11cbk1ZE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="cta-button" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">View Pitch Deck</a>
+            <a href="mailto:careers@warpeed.space" class="cta-button" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">Careers</a>
+            <a href="mailto:partners@warpeed.space" class="cta-button secondary">Partnerships</a>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto; padding: 3rem; background: rgba(255, 255, 255, 0.03); border-radius: 15px; border: 1px solid rgba(102, 126, 234, 0.2);">
+            <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">Warpeed Technologies Inc.</h3>
+            <p style="color: var(--text-dark); margin-bottom: 1rem;">DBA: Warpeed</p>
+            <p style="color: var(--text-dark); margin-bottom: 1rem;">Delaware C-Corporation (Formation: Q1 2026)</p>
+            <p style="color: var(--text-dark);">
+                <strong>Email:</strong> info@warpeed.space<br>
+                <strong>Investment:</strong> invest@warpeed.space<br>
+                <strong>Press:</strong> press@warpeed.space
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="logo.png" alt="Warpeed Logo" class="footer-logo">
+                <p style="color: var(--text-dark); margin-top: 1rem;">
+                    Quantum-optimized interstellar lightsail system.
+                    Reaching α Centauri in 8 years at 0.50c velocity.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Technology</h4>
+                <ul class="footer-links">
+                    <li><a href="#technology">Quantum Optimization</a></li>
+                    <li><a href="#design">Material Engineering</a></li>
+                    <li><a href="#how-it-works">8-Stage Cascade</a></li>
+                    <li><a href="#laser-system">500 GW Laser System</a></li>
+                    <li><a href="#design">Nanocraft Payload</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="#timeline">Mission Timeline</a></li>
+                    <li><a href="#investment">Investment</a></li>
+                    <li><a href="mailto:careers@warpeed.space">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="research.html">Scientific Research</a></li>
+                    <li><a href="yc-application.html">YC Application</a></li>
+                    <li><a href="niac-application.html">NASA NIAC</a></li>
+                    <li><a href="breakthrough-pitch.html">Breakthrough Pitch</a></li>
+                    <li><a href="https://www.canva.com/design/DAG11cbk1ZE/Q5jFNgfXrAv9319nZYCstQ/view?utm_content=DAG11cbk1ZE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Pitch Deck</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p style="margin-bottom: 1rem;">
+                &copy; 2025 Warpeed Technologies Inc. (DBA: Warpeed) • All rights reserved.
+            </p>
+            <p style="color: #555; font-size: 0.9rem; margin-bottom: 1rem;">
+                Quantum-optimized with IBM Torino (133 qubits) • Production-ready specifications • $13B program
+            </p>
+            <p style="color: var(--primary-color); font-size: 1.3rem; font-weight: 600;">
+                0.50c to α Centauri in 8 years. The stars are within reach.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations with Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+
+                    // Special handling for timeline items
+                    if (entry.target.classList.contains('timeline-item')) {
+                        entry.target.classList.add('visible');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements
+        document.querySelectorAll('.tech-card, .investment-card, .timeline-item, .step-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            observer.observe(el);
+        });
+
+        // Parallax effect for hero background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroBackground = document.querySelector('.hero-background');
+            if (heroBackground) {
+                heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Stats counter animation
+        const animateValue = (element, start, end, duration) => {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = progress * (end - start) + start;
+
+                if (element.textContent.includes('c')) {
+                    element.textContent = value.toFixed(2) + 'c';
+                } else if (element.textContent.includes('$')) {
+                    element.textContent = '$' + Math.floor(value) + 'B';
+                } else {
+                    element.textContent = Math.floor(value);
+                }
+
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        };
+
+        // Trigger counter animation when stats are visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumber = entry.target.querySelector('.stat-number');
+                    if (statNumber && !statNumber.dataset.animated) {
+                        statNumber.dataset.animated = 'true';
+                        const text = statNumber.textContent;
+
+                        if (text.includes('0.50c')) {
+                            animateValue(statNumber, 0, 0.50, 2000);
+                        } else if (text.includes('8.7')) {
+                            animateValue(statNumber, 0, 8.7, 2000);
+                        } else if (text.includes('8')) {
+                            animateValue(statNumber, 0, 8, 2000);
+                        } else if (text.includes('254')) {
+                            animateValue(statNumber, 0, 254, 2000);
+                        }
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat').forEach(stat => {
+            statsObserver.observe(stat);
+        });
+    </script>
+</body>
+</html>
