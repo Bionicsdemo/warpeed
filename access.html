@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warpeed Technologies | Stealth Mode Access</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(30, 30, 50, 0.95) 100%),
+                        url('laserwarpeed2.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        .company-name {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: #a0a0a0;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
+        .access-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .stealth-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .description {
+            color: #c0c0c0;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .warning-box {
+            background: rgba(255, 193, 7, 0.1);
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .warning-box p {
+            color: #ffd54f;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #e0e0e0;
+            font-size: 0.95rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            font-size: 1rem;
+            color: #ffffff;
+            transition: all 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus {
+            outline: none;
+            border-color: #667eea;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+        }
+
+        input::placeholder {
+            color: #808080;
+        }
+
+        .checkbox-group {
+            margin: 2rem 0;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            cursor: pointer;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .checkbox-label:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            margin-top: 2px;
+        }
+
+        .checkbox-text {
+            flex: 1;
+            font-size: 0.9rem;
+            color: #c0c0c0;
+            line-height: 1.6;
+        }
+
+        .nda-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .nda-link:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 1.2rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .verification-section {
+            display: none;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .verification-section.active {
+            display: block;
+        }
+
+        .code-input {
+            text-align: center;
+            font-size: 1.5rem;
+            letter-spacing: 0.5em;
+            font-weight: 700;
+        }
+
+        .success-message {
+            background: rgba(0, 255, 136, 0.1);
+            border-left: 4px solid #00ff88;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            color: #00ff88;
+        }
+
+        .error-message {
+            background: rgba(255, 107, 107, 0.1);
+            border-left: 4px solid #ff6b6b;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            color: #ff6b6b;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: #808080;
+            font-size: 0.85rem;
+        }
+
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 2rem auto;
+            display: none;
+        }
+
+        .spinner.active {
+            display: block;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .access-card {
+                padding: 2rem;
+            }
+
+            .company-name {
+                font-size: 2rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="logo.png" alt="Warpeed Logo" class="logo">
+            <div class="company-name">WARPEED</div>
+            <div class="tagline">Interstellar Technologies</div>
+        </div>
+
+        <div class="access-card">
+            <span class="stealth-badge">🔒 Stealth Mode</span>
+
+            <h1>Confidential Access Request</h1>
+
+            <p class="description">
+                Warpeed Technologies is currently in stealth mode as we finalize our founding team
+                and validate our quantum-optimized lightsail propulsion technology. The information
+                you are about to access is highly confidential and subject to a Non-Disclosure Agreement.
+            </p>
+
+            <div class="warning-box">
+                <p>
+                    <strong>⚠️ Notice:</strong> We are currently reviewing candidates for our founding team.
+                    Access to this information requires verification and acceptance of confidentiality terms.
+                    By proceeding, you acknowledge that all technical data, research findings, and business
+                    information are proprietary and protected.
+                </p>
+            </div>
+
+            <div id="messageContainer"></div>
+
+            <form id="accessForm">
+                <div class="form-group">
+                    <label for="fullName">Full Legal Name *</label>
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        required
+                        placeholder="John Michael Smith"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="your.email@company.com"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="organization">Organization / Affiliation (Optional)</label>
+                    <input
+                        type="text"
+                        id="organization"
+                        name="organization"
+                        placeholder="Company, University, or Institution"
+                    >
+                </div>
+
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="ndaAccept" required>
+                        <span class="checkbox-text">
+                            I hereby acknowledge and accept that by accessing the Warpeed Technologies
+                            platform, I am bound by a <a href="#" class="nda-link" onclick="showNDA(); return false;">Non-Disclosure Agreement (NDA)</a>.
+                            I agree to keep all proprietary information, technical data, research findings,
+                            and business strategies strictly confidential. I will not share, reproduce,
+                            or disclose any information without explicit written permission from Warpeed Technologies.
+                        </span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="submitBtn">
+                    Request Access Code
+                </button>
+            </form>
+
+            <div class="spinner" id="loadingSpinner"></div>
+
+            <div class="verification-section" id="verificationSection">
+                <h2 style="margin-bottom: 1rem;">Enter Verification Code</h2>
+                <p style="color: #c0c0c0; margin-bottom: 1.5rem;">
+                    A 6-digit verification code has been sent to your email address.
+                    Please check your inbox and spam folder.
+                </p>
+
+                <form id="verificationForm">
+                    <div class="form-group">
+                        <label for="verificationCode">Verification Code</label>
+                        <input
+                            type="tel"
+                            id="verificationCode"
+                            name="verificationCode"
+                            maxlength="6"
+                            pattern="[0-9]{6}"
+                            class="code-input"
+                            placeholder="000000"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Verify & Enter
+                    </button>
+                </form>
+
+                <p style="text-align: center; margin-top: 1rem; color: #808080; font-size: 0.9rem;">
+                    Didn't receive the code?
+                    <a href="#" onclick="resendCode(); return false;" style="color: #667eea;">Resend Code</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            © 2025 Warpeed Technologies Inc. | All Rights Reserved | Confidential Information
+        </div>
+    </div>
+
+    <!-- NDA Modal -->
+    <div id="ndaModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 10000; overflow-y: auto; padding: 2rem;">
+        <div style="max-width: 800px; margin: 0 auto; background: #1a1a1a; border-radius: 20px; padding: 3rem; border: 2px solid rgba(102, 126, 234, 0.3);">
+            <h2 style="margin-bottom: 2rem; color: #667eea;">Non-Disclosure Agreement</h2>
+
+            <div style="color: #c0c0c0; line-height: 1.8; max-height: 400px; overflow-y: auto; padding-right: 1rem;">
+                <h3 style="color: #fff; margin-top: 1.5rem;">1. Confidential Information</h3>
+                <p>The term "Confidential Information" refers to all proprietary and confidential information disclosed by Warpeed Technologies, including but not limited to:</p>
+                <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                    <li>Quantum optimization algorithms and methodologies</li>
+                    <li>Lightsail material compositions and specifications</li>
+                    <li>Laser propulsion system designs and configurations</li>
+                    <li>Mission parameters and trajectory calculations</li>
+                    <li>Business strategies, financial projections, and partnership discussions</li>
+                    <li>Research findings, experimental results, and validation data</li>
+                    <li>Technical documentation, source code, and simulation results</li>
+                </ul>
+
+                <h3 style="color: #fff; margin-top: 1.5rem;">2. Obligations</h3>
+                <p>You agree to:</p>
+                <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                    <li>Maintain strict confidentiality of all information accessed</li>
+                    <li>Not reproduce, distribute, or share any materials without written permission</li>
+                    <li>Use the information solely for the purpose of evaluating potential collaboration</li>
+                    <li>Immediately notify Warpeed Technologies of any unauthorized disclosure</li>
+                    <li>Return or destroy all materials upon request</li>
+                </ul>
+
+                <h3 style="color: #fff; margin-top: 1.5rem;">3. Duration</h3>
+                <p>This agreement remains in effect for 5 years from the date of acceptance or until the information becomes publicly available through no fault of yours.</p>
+
+                <h3 style="color: #fff; margin-top: 1.5rem;">4. Legal Jurisdiction</h3>
+                <p>This agreement is governed by the laws of California, United States. Any disputes will be resolved in the courts of Santa Clara County.</p>
+
+                <h3 style="color: #fff; margin-top: 1.5rem;">5. Acceptance</h3>
+                <p>By checking the NDA acceptance box, you electronically sign this agreement and acknowledge that it is legally binding.</p>
+            </div>
+
+            <button onclick="closeNDA()" style="margin-top: 2rem; padding: 1rem 2rem; background: #667eea; color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; width: 100%;">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>
