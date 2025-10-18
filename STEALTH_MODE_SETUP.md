@@ -46,16 +46,40 @@ The system currently runs in **DEMO MODE** where:
 
 ## Creator Access (Bypass Email Verification)
 
-As the website creator, you can bypass the email verification system and access immediately:
+As the website creator, you have **THREE** methods to bypass the email verification system:
 
-### Option 1: Use Master Code
+### ⭐ Option 1: Secret Admin Portal (RECOMMENDED - Fastest)
+
+**Direct URL access with automatic login:**
+
+1. Navigate to: `warp-admin-hj2025.html`
+2. That's it! Automatic session creation and redirect to index.html
+
+**Full URL:** `https://yourdomain.com/warp-admin-hj2025.html`
+
+**Benefits:**
+- Zero clicks - instant access
+- No form filling required
+- Automatic 24-hour session
+- Bookmark this URL for one-click access
+- Completely hidden from public (no links to it anywhere)
+
+**Security Notes:**
+- DO NOT share this URL with anyone
+- Consider renaming the file periodically for extra security
+- No auth-check.js protection (bypasses all authentication)
+- Creates creator session with full privileges
+
+### Option 2: Use Master Code via Access Form
+
 1. Go to `access.html`
 2. Fill in any name and email
 3. In the **Organization** field, enter: `WARPEED2025CREATOR`
 4. Accept NDA and click "Request Access Code"
 5. You'll be granted immediate access without email verification
 
-### Option 2: Use Creator Email
+### Option 3: Use Creator Email via Access Form
+
 1. Go to `access.html`
 2. Fill in any name
 3. In the **Email** field, enter: `heinz@warpeed.space`
@@ -71,6 +95,16 @@ creatorMasterCode: 'WARPEED2025CREATOR', // Change this to your preferred code
 ```
 
 **IMPORTANT:** Keep this code secret and change it periodically for security.
+
+### Renaming the Admin Portal (Extra Security)
+
+To rename the secret admin portal URL, simply rename the file:
+
+```bash
+mv warp-admin-hj2025.html your-custom-name.html
+```
+
+Choose a non-obvious name that only you would know.
 
 ## Production Setup - Email Integration
 
