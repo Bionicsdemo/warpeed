@@ -475,6 +475,15 @@
             .nav-links {
                 display: none;
             }
+
+            /* Responsive images for mission gallery */
+            .hero-content > div[style*="grid"] {
+                grid-template-columns: 1fr !important;
+            }
+
+            .container > div[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+            }
         }
     </style>
 </head>
@@ -504,23 +513,32 @@
                 Powered by Quantum-Optimized Lightsail Propulsion at 0.5c
             </p>
 
-            <!-- Mission Images -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0;">
-                <div style="border-radius: 12px; overflow: hidden; border: 2px solid rgba(102, 126, 234, 0.3);">
-                    <img src="cubestat.png" alt="SPECTRIX CubeSat with deployed lightsail approaching Pluto" style="width: 100%; height: auto; display: block;">
-                    <div style="padding: 1rem; background: rgba(26, 26, 26, 0.9); text-align: center;">
-                        <p style="color: var(--text-light); font-size: 0.9rem; margin: 0;">
-                            <strong>Pluto Encounter</strong><br>
-                            SPECTRIX approaching Pluto at 0.5c with 100 m² lightsail deployed
+            <!-- Mission Concept Art Gallery -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin: 4rem 0;">
+                <div style="border-radius: 20px; overflow: hidden; border: 3px solid rgba(102, 126, 234, 0.4); box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3); transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 30px 80px rgba(102, 126, 234, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 60px rgba(102, 126, 234, 0.3)'">
+                    <img src="spectrix-mission-1.png" alt="SPECTRIX mission concept - Lightsail propulsion to Oort Cloud" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 1.5rem; background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(102, 126, 234, 0.1) 100%); text-align: center;">
+                        <p style="color: var(--text-light); font-size: 1rem; margin: 0; font-weight: 600;">
+                            <strong style="color: var(--primary-color);">SPECTRIX Mission Concept</strong><br>
+                            <span style="color: var(--text-dark); font-size: 0.9rem;">Quantum-optimized lightsail reaching the outer solar system</span>
                         </p>
                     </div>
                 </div>
-                <div style="border-radius: 12px; overflow: hidden; border: 2px solid rgba(102, 126, 234, 0.3);">
-                    <img src="cubestat2.png" alt="SPECTRIX CubeSat sailing through deep space with Milky Way" style="width: 100%; height: auto; display: block;">
-                    <div style="padding: 1rem; background: rgba(26, 26, 26, 0.9); text-align: center;">
-                        <p style="color: var(--text-light); font-size: 0.9rem; margin: 0;">
-                            <strong>Deep Space Journey</strong><br>
-                            CubeSat navigating through interstellar space toward the Oort Cloud
+                <div style="border-radius: 20px; overflow: hidden; border: 3px solid rgba(102, 126, 234, 0.4); box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3); transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 30px 80px rgba(102, 126, 234, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 60px rgba(102, 126, 234, 0.3)'">
+                    <img src="spectrix-mission-2.png" alt="SPECTRIX approaching Pluto with deployed lightsail" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 1.5rem; background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(102, 126, 234, 0.1) 100%); text-align: center;">
+                        <p style="color: var(--text-light); font-size: 1rem; margin: 0; font-weight: 600;">
+                            <strong style="color: var(--primary-color);">Pluto Flyby</strong><br>
+                            <span style="color: var(--text-dark); font-size: 0.9rem;">High-speed encounter at 0.5c (150,000 km/s)</span>
+                        </p>
+                    </div>
+                </div>
+                <div style="border-radius: 20px; overflow: hidden; border: 3px solid rgba(102, 126, 234, 0.4); box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3); transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 30px 80px rgba(102, 126, 234, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 60px rgba(102, 126, 234, 0.3)'">
+                    <img src="spectrix-mission-3.png" alt="SPECTRIX deep space journey to Oort Cloud" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 1.5rem; background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(102, 126, 234, 0.1) 100%); text-align: center;">
+                        <p style="color: var(--text-light); font-size: 1rem; margin: 0; font-weight: 600;">
+                            <strong style="color: var(--primary-color);">Interstellar Voyage</strong><br>
+                            <span style="color: var(--text-dark); font-size: 0.9rem;">Journey beyond the solar system into the Oort Cloud</span>
                         </p>
                     </div>
                 </div>
@@ -542,6 +560,53 @@
                 <div class="stat-card">
                     <div class="stat-value">2,000 AU</div>
                     <div class="stat-label">Oort Cloud Entry</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Mission Gallery -->
+    <section class="container" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(10, 10, 10, 0.95) 100%); padding: 60px 2rem; border-radius: 30px;">
+        <h2 class="section-title">Mission Visualization</h2>
+        <p class="section-subtitle">
+            Concept art depicting SPECTRIX's revolutionary journey through the outer solar system
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem;">
+            <!-- Large featured image -->
+            <div style="grid-column: 1 / -1; border-radius: 20px; overflow: hidden; border: 3px solid rgba(102, 126, 234, 0.5); box-shadow: 0 30px 80px rgba(102, 126, 234, 0.4);">
+                <img src="spectrix-mission-1.png" alt="SPECTRIX Mission Overview" style="width: 100%; height: auto; display: block;">
+                <div style="padding: 2rem; background: rgba(10, 10, 10, 0.95); border-top: 2px solid rgba(102, 126, 234, 0.3);">
+                    <h3 style="color: var(--primary-color); font-size: 1.8rem; margin-bottom: 1rem;">The SPECTRIX Mission: Pushing the Boundaries of Exploration</h3>
+                    <p style="color: var(--text-light); font-size: 1.1rem; line-height: 1.8; margin: 0;">
+                        A quantum-optimized lightsail spacecraft accelerated to 0.5c by a 50 GW ground-based laser array,
+                        reaching Pluto in just 11 hours and continuing into the mysterious Oort Cloud — the solar system's
+                        final frontier. This revolutionary propulsion system eliminates the need for onboard fuel, enabling
+                        unprecedented velocities and opening the door to true interstellar exploration.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Two column images -->
+            <div style="border-radius: 15px; overflow: hidden; border: 2px solid rgba(102, 126, 234, 0.3); box-shadow: 0 10px 40px rgba(102, 126, 234, 0.2);">
+                <img src="spectrix-mission-2.png" alt="Pluto Encounter" style="width: 100%; height: 300px; object-fit: cover; display: block;">
+                <div style="padding: 1.5rem; background: var(--bg-card);">
+                    <h4 style="color: var(--success-color); font-size: 1.3rem; margin-bottom: 0.75rem;">⚡ Ultra-Fast Pluto Flyby</h4>
+                    <p style="color: var(--text-dark); font-size: 0.95rem; margin: 0; line-height: 1.6;">
+                        9.5 years reduced to 11 hours — a 7,567× speed improvement over New Horizons.
+                        High-resolution imaging during 5-minute encounter window captures unprecedented detail of Pluto's surface.
+                    </p>
+                </div>
+            </div>
+
+            <div style="border-radius: 15px; overflow: hidden; border: 2px solid rgba(102, 126, 234, 0.3); box-shadow: 0 10px 40px rgba(102, 126, 234, 0.2);">
+                <img src="spectrix-mission-3.png" alt="Deep Space Journey" style="width: 100%; height: 300px; object-fit: cover; display: block;">
+                <div style="padding: 1.5rem; background: var(--bg-card);">
+                    <h4 style="color: var(--accent-color); font-size: 1.3rem; margin-bottom: 0.75rem;">🌌 Into the Unknown</h4>
+                    <p style="color: var(--text-dark); font-size: 0.95rem; margin: 0; line-height: 1.6;">
+                        First spacecraft to directly observe and characterize the Oort Cloud — a vast spherical shell
+                        of icy objects extending 2,000-50,000 AU from the Sun, the birthplace of comets.
+                    </p>
                 </div>
             </div>
         </div>

@@ -2,9 +2,9 @@
 // This system uses EmailJS for email verification (you'll need to set up an account)
 
 const AUTH_CONFIG = {
-    emailJsServiceId: 'YOUR_EMAILJS_SERVICE_ID', // Replace with your EmailJS service ID
-    emailJsTemplateId: 'YOUR_EMAILJS_TEMPLATE_ID', // Replace with your EmailJS template ID
-    emailJsPublicKey: 'YOUR_EMAILJS_PUBLIC_KEY', // Replace with your EmailJS public key
+    emailJsServiceId: 'service_2bdmaks', // EmailJS Service ID
+    emailJsTemplateId: 'template_qd1we8t', // EmailJS Template ID
+    emailJsPublicKey: 'Uoq5AonGyDGvl5kvE', // EmailJS Public Key
     sessionDuration: 24 * 60 * 60 * 1000, // 24 hours in milliseconds
     codeExpiration: 15 * 60 * 1000, // 15 minutes in milliseconds
     creatorMasterCode: 'WARPEED2025CREATOR', // Master code for creator access (change this!)
@@ -188,17 +188,37 @@ function generateVerificationCode() {
 }
 
 async function sendVerificationEmail(name, email, code) {
-    // For demo purposes, this will show the code in console
+    // Always log for debugging (check console in case of issues)
     console.log('=================================');
-    console.log('VERIFICATION CODE:', code);
+    console.log('SENDING VERIFICATION CODE');
     console.log('EMAIL:', email);
+    console.log('NAME:', name);
+    console.log('CODE:', code);
     console.log('=================================');
 
-    // In production, integrate with EmailJS:
-    /*
+    // Check if EmailJS is configured
+    const isConfigured = AUTH_CONFIG.emailJsServiceId !== 'YOUR_EMAILJS_SERVICE_ID' &&
+                        AUTH_CONFIG.emailJsTemplateId !== 'YOUR_EMAILJS_TEMPLATE_ID' &&
+                        AUTH_CONFIG.emailJsPublicKey !== 'YOUR_EMAILJS_PUBLIC_KEY';
+
+    if (!isConfigured) {
+        console.warn('⚠️ EmailJS not configured. Running in DEMO MODE.');
+        console.log('📧 Demo verification code:', code);
+        // Simulate async operation in demo mode
+        return new Promise(resolve => setTimeout(resolve, 1000));
+    }
+
+    // Production mode with EmailJS
     try {
-        // Make sure to include EmailJS SDK in your HTML:
-        // <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        // Check if emailjs is available
+        if (typeof emailjs === 'undefined') {
+            console.error('❌ EmailJS SDK not loaded!');
+            throw new Error('EmailJS SDK not loaded');
+        }
+
+        console.log('✓ EmailJS SDK loaded');
+        console.log('Service ID:', AUTH_CONFIG.emailJsServiceId);
+        console.log('Template ID:', AUTH_CONFIG.emailJsTemplateId);
 
         const templateParams = {
             to_name: name,
@@ -207,21 +227,35 @@ async function sendVerificationEmail(name, email, code) {
             company_name: 'Warpeed Technologies'
         };
 
+        console.log('Template params:', templateParams);
+        console.log('Sending email via EmailJS...');
+
         const response = await emailjs.send(
             AUTH_CONFIG.emailJsServiceId,
             AUTH_CONFIG.emailJsTemplateId,
-            templateParams,
-            AUTH_CONFIG.emailJsPublicKey
+            templateParams
         );
+
+        console.log('✅ Email sent successfully!');
+        console.log('Response status:', response.status);
+        console.log('Response text:', response.text);
+        console.log('Full response:', response);
 
         return response;
     } catch (error) {
-        throw new Error('Failed to send verification email');
-    }
-    */
+        console.error('❌ FAILED TO SEND EMAIL');
+        console.error('Error type:', error.name);
+        console.error('Error message:', error.message);
+        console.error('Error details:', error.text || error);
+        console.error('Full error object:', error);
 
-    // Simulate async operation
-    return new Promise(resolve => setTimeout(resolve, 1000));
+        // Provide more specific error messages
+        if (error.text) {
+            throw new Error('EmailJS error: ' + error.text);
+        } else {
+            throw new Error('Failed to send verification email: ' + error.message);
+        }
+    }
 }
 
 function resendCode() {
