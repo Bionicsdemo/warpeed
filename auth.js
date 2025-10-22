@@ -219,6 +219,11 @@ async function sendVerificationEmail(name, email, code) {
         console.log('✓ EmailJS SDK loaded');
         console.log('Service ID:', AUTH_CONFIG.emailJsServiceId);
         console.log('Template ID:', AUTH_CONFIG.emailJsTemplateId);
+        console.log('Public Key:', AUTH_CONFIG.emailJsPublicKey);
+
+        // Ensure EmailJS is initialized
+        emailjs.init(AUTH_CONFIG.emailJsPublicKey);
+        console.log('✓ EmailJS initialized');
 
         const templateParams = {
             to_name: name,
